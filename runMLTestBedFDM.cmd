@@ -1,0 +1,1 @@
+java -jar MLTestBed.jar import=FDM >> out.txt

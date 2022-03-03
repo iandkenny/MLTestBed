@@ -1,0 +1,1 @@
+java -Xmx8G -jar SwarmTestBed.jar 

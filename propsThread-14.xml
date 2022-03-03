@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>05-Feb-2007</comment>
+<entry key="dimensions">30</entry>
+<entry key="connection">SwarmExperiments</entry>
+<entry key="iterations">1000</entry>
+<entry key="Vmax">2.0</entry>
+<entry key="k">2</entry>
+<entry key="c2">2.0</entry>
+<entry key="userid"></entry>
+<entry key="runs">1</entry>
+<entry key="c1">2.0</entry>
+<entry key="objective">testFunctions.multiModal.Griewank</entry>
+<entry key="swarm">classic PSO - no inertia weight</entry>
+<entry key="neighbourhood">Lbest Topology</entry>
+<entry key="password"></entry>
+<entry key="particles">40</entry>
+<entry key="driver">sun.jdbc.odbc.JdbcOdbcDriver</entry>
+</properties>

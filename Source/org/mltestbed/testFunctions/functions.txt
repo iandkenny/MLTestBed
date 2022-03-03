@@ -1,0 +1,19 @@
+  // insert this for the Rosenbrock function. 
+    return 100 * (input[0] * input[0] - input[1]) * (input[0] * input[0] - input[1])
+            + (1 - input[0]) * (1 - input[0]);  
+    
+    // insert this for the Griewank function. 
+    /* float sum = 0;
+    float product = 1;
+    for (int i = 0; i < NUMARGS; i++)
+    {
+      sum += (input[i] * input[i] / 4000);
+      product *= (Math.cos(input[i] / Math.sqrt(i + 1)));
+    }
+    return 1 + sum - product;  */
+    
+    // insert this for the second Schaffer function 
+    /* return (float)(Math.pow(input[0] * input[0] + input[1] * input[1], 0.25) 
+            * (Math.pow(Math.sin(50.0 * Math.pow(input[0] * input[0] + input[1] 
+            * input[1], 0.1)), 2.0) + 1.0));*/
+  

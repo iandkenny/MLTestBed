@@ -1,0 +1,1 @@
+java -jar MLTestBed.jar import=ingber >> out.txt

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="Source">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Jars/javatar-2.5/jars/activation.jar"/>
+	<classpathentry kind="lib" path="Jars/javatar-2.5/jars/tar.jar"/>
+	<classpathentry kind="lib" path="Jars/commons-math-1.2.jar"/>
+	<classpathentry kind="lib" path="Jars/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="Jars/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="Jars/mariadb-java-client-1.5.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

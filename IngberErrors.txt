@@ -1,0 +1,241 @@
+SwarmRuntime.properties (The system cannot find the file specified)
+testFunctions.uniModal.MyTest
+testFunctions.uniModal.Sphere
+testFunctions.uniModal.Trid
+testFunctions.multiModal.DeJongsF3
+testFunctions.multiModal.GeneralisedRosenbrock
+testFunctions.multiModal.Griewank
+testFunctions.multiModal.Ingber
+testFunctions.multiModal.Rastrigin
+testFunctions.multiModal.Shubert
+testFunctions.heirarchy.EuclideanDistance$Sorted
+testFunctions.heirarchy.EuclideanDistance
+testFunctions.uniModal.MyTest
+testFunctions.uniModal.Sphere
+testFunctions.uniModal.Trid
+testFunctions.multiModal.DeJongsF3
+testFunctions.multiModal.GeneralisedRosenbrock
+testFunctions.multiModal.Griewank
+testFunctions.multiModal.Ingber
+testFunctions.multiModal.Rastrigin
+testFunctions.multiModal.Shubert
+testFunctions.heirarchy.EuclideanDistance$Sorted
+testFunctions.heirarchy.EuclideanDistance
+heuristics.PSO.BaseSwarm
+heuristics.PSO.CFPSO
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+Constriction Factor PSO
+heuristics.PSO.ClassicPSO
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+Classic PSO - no inertia weight
+heuristics.PSO.FDRPSO
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+Fitness Distance Ratio PSO
+heuristics.PSO.IWPSO
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+Inertia Weight PSO
+heuristics.PSO.NewIWPSO
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+New IWPSO based
+heuristics.PSO.BaseSwarm
+heuristics.PSO.CFPSO
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+Constriction Factor PSO
+heuristics.PSO.ClassicPSO
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been providedClassic PSO - no inertia weight
+heuristics.PSO.FDRPSO
+
+PSOProps.properties (The system cannot find the file specified)
+Fitness Distance Ratio PSO
+heuristics.PSO.IWPSO
+PSOProps.properties (The system cannot find the file specified)
+Inertia Weight PSO
+heuristics.PSO.NewIWPSO
+PSOProps.properties (The system cannot find the file specified)
+New IWPSO based
+No objective function has been provided
+No objective function has been provided
+No objective function has been provided
+neighbourhoods.Lbest
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+lBestNeighbourhood.properties (The system cannot find the file specified)
+neighbourhoods.Star
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+neighbourhoods.Topology
+neighbourhoods.vonNeumann
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+vonNeumannNeighbourhood.properties (The system cannot find the file specified)
+vonNeumannNeighbourhood.properties (The system cannot find the file specified)
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+lBestNeighbourhood.properties (The system cannot find the file specified)
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+PSOProps.properties (The system cannot find the file specified)
+No objective function has been provided
+SwarmRuntime.properties (The system cannot find the file specified)
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=78) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=78 And sample <= 132) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=80) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=80 And sample <= 248) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=8) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=8 And sample <= 228) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=13) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=13 And sample <= 54) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=37) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=37 And sample <= 177) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=33) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=33 And sample <= 175) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=87) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=87 And sample <= 152) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=63) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=63 And sample <= 53) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=21) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=21 And sample <= 147) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=102) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=102 And sample <= 142) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=94) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=94 And sample <= 49) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=96) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=96 And sample <= 238) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=31) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=31 And sample <= 18) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=86) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=86 And sample <= 62) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=44) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=44 And sample <= 205) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=71) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=71 And sample <= 16) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=59) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=59 And sample <= 87) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=55) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=55 And sample <= 51) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=52) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=52 And sample <= 89) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=5) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=5 And sample <= 6) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=61) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=61 And sample <= 138) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=106) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=106 And sample <= 106) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=33) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=33 And sample <= 250) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=25) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=25 And sample <= 12) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=42) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=42 And sample <= 88) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=103) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=103 And sample <= 218) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=61) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=61 And sample <= 190) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=78) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=78 And sample <= 19) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=31) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=31 And sample <= 63) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=89) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=89 And sample <= 236) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=6) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=6 And sample <= 119) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 254) ORDER BY id,trial,sample,sensor
+There is no data for this query Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 254) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=49) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=49 And sample <= 150) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 190) ORDER BY id,trial,sample,sensor
+There is no data for this query Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 190) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=108) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=108 And sample <= 17) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=12) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=12 And sample <= 25) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=49) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=49 And sample <= 197) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=34) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=34 And sample <= 248) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=100) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=100 And sample <= 201) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=22) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=22 And sample <= 168) ORDER BY id,trial,sample,sensor
+ERROR:  ''
+null
+java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0
+	at java.util.Vector.get(Unknown Source)
+	at neighbourhoods.Topology.min(Topology.java:114)
+	at neighbourhoods.Topology.getGBest(Topology.java:88)
+	at heuristics.PSO.BaseSwarm.getGBest(BaseSwarm.java:268)
+	at data.OutputResults.writeIterResultData(OutputResults.java:458)
+	at data.OutputResults.storeResultsDB(OutputResults.java:622)
+	at data.Results.store(Results.java:62)
+	at heuristics.PSO.BaseSwarm.run(BaseSwarm.java:581)
+Array index out of range: 0
+Array index out of range: 1
+Array index out of range: 2
+Array index out of range: 3
+Array index out of range: 4
+Array index out of range: 5
+Array index out of range: 6
+Array index out of range: 7
+Array index out of range: 8
+Array index out of range: 9
+Array index out of range: 10
+Array index out of range: 11
+Array index out of range: 12
+Array index out of range: 13
+Array index out of range: 14
+Array index out of range: 15
+Array index out of range: 16
+Array index out of range: 17
+Array index out of range: 18
+Array index out of range: 19
+Array index out of range: 20
+Array index out of range: 21
+Array index out of range: 22
+Array index out of range: 23
+Array index out of range: 24
+Array index out of range: 25
+Array index out of range: 26
+Array index out of range: 27
+Array index out of range: 28
+Array index out of range: 29
+Array index out of range: 30
+Array index out of range: 31
+Array index out of range: 32
+Array index out of range: 33
+Array index out of range: 34
+Array index out of range: 35
+Array index out of range: 36
+Array index out of range: 37
+Array index out of range: 38
+Array index out of range: 39
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=78) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=78 And sample <= 132) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=80) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=80 And sample <= 248) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=8) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=8 And sample <= 228) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=13) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=13 And sample <= 54) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=37) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=37 And sample <= 177) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=33) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=33 And sample <= 175) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=87) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=87 And sample <= 152) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=63) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=63 And sample <= 53) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=21) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=21 And sample <= 147) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=102) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=102 And sample <= 142) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=94) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=94 And sample <= 49) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=96) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=96 And sample <= 238) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=31) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=31 And sample <= 18) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=86) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=86 And sample <= 62) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=44) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=44 And sample <= 205) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=71) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=71 And sample <= 16) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=59) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=59 And sample <= 87) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=55) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=55 And sample <= 51) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=52) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=52 And sample <= 89) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=5) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=5 And sample <= 6) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=61) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=61 And sample <= 138) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=106) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=106 And sample <= 106) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=33) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=33 And sample <= 250) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=25) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=25 And sample <= 12) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=42) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=42 And sample <= 88) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=103) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=103 And sample <= 218) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=61) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=61 And sample <= 190) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=78) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=78 And sample <= 19) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=31) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=31 And sample <= 63) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=89) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=89 And sample <= 236) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=6) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=6 And sample <= 119) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 254) ORDER BY id,trial,sample,sensor
+There is no data for this query Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 254) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=49) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=49 And sample <= 150) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 190) ORDER BY id,trial,sample,sensor
+There is no data for this query Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=2) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=2 And sample <= 190) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=108) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=108 And sample <= 17) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=12) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=12 And sample <= 25) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=49) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=49 And sample <= 197) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=34) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=34 And sample <= 248) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=100) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=100 And sample <= 201) ORDER BY id,trial,sample,sensor
+Retrieving: Select * From EEGData Where id = 'co2c0000378.rd' And trial In (Select  Max(trial) From EEGData Where id = 'co2c0000378.rd' And trial <=22) And sample In (Select  Max(sample) From EEGData Where id = 'co2c0000378.rd' And trial <=22 And sample <= 168) ORDER BY id,trial,sample,sensor
+A constaints violation has occurred whilst running Inertia Weight PSO Array index out of range: 0
+java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0
+	at java.util.Vector.get(Unknown Source)
+	at neighbourhoods.Topology.min(Topology.java:114)
+	at neighbourhoods.Topology.getGBest(Topology.java:88)
+	at heuristics.PSO.BaseSwarm.run(BaseSwarm.java:612)

@@ -1,0 +1,2 @@
+jdbc:sqlserver://localhost:1433;databaseName=testdb;integratedSecurity=true;
+com.microsoft.sqlserver.jdbc.SQLServerDriver
