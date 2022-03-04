@@ -38,7 +38,7 @@ public class Log
 		logger.setLevel(Level.ALL);
 		try
 		{
-			fh = new FileHandler("swarm.%u.%g.log.xml", 1024 * 1024, 100);
+			fh = new FileHandler("mltestbed.%u.%g.log.xml", 1024 * 1024, 100);
 			mh = new MemoryHandler(fh, 50, Level.SEVERE);
 			logger.addHandler(mh);
 		} catch (SecurityException e)
