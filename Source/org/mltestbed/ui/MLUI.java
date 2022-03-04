@@ -96,7 +96,7 @@ public class MLUI extends JPanel
 			ListSelectionListener,
 			TreeSelectionListener
 {
-	private static final String ABOUT_VERSION = "ML Test Bed\n Copyright Ian Kenny (2006-2020)\n Version 2.0.0";
+	private static final String ABOUT_VERSION = "Machine Learning Test Bed\n Copyright Ian Kenny (2006-2022)\n Version 2.5.0";
 
 	private static final String ADD = "Add>>";
 
@@ -113,9 +113,9 @@ public class MLUI extends JPanel
 
 	private static final String DB_CONNECTION = "DB Connection";
 
-	private static final String DEFAULT_CONNECTION_STRING = "MLExperiments";
+	private static final String DEFAULT_CONNECTION_STRING = "MLTestBedExperiments";
 
-	private static final String DEFAULT_DRIVER = "sun.jdbc.odbc.JdbcOdbcDriver";
+	private static final String DEFAULT_DRIVER = "com.mysql.cj.jdbc.Driver";
 
 	private static final String DEFAULT_URL = "jdbc:odbc:";
 
@@ -208,7 +208,7 @@ public class MLUI extends JPanel
 
 	private static final String RESULTS_LOG = "Results Log:";
 
-	private static final String RUNTIME_PROPERTIES = "MLRuntime.properties";
+	private static final String RUNTIME_PROPERTIES = "MLTestBedRuntime.properties";
 
 	private static final long serialVersionUID = 1L;
 

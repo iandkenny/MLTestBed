@@ -43,7 +43,7 @@ public class Main
 		Main.log = log;
 	}
 
-	private static final String SWARMLOG_XML = "swarmlog.xml";
+	private static final String MLTESTBEDLOG_XML = "mltestbedlog.xml";
 	private static final int MaxThreads = 10;
 	/**
 	 * Create the GUI and show it. For thread safety, this method should be
@@ -55,7 +55,7 @@ public class Main
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		JDialog.setDefaultLookAndFeelDecorated(true);
 		// Create and set up the window.
-		final JFrame frame = new JFrame("Swarm Test Bed");
+		final JFrame frame = new JFrame("Machine Learning Test Bed");
 		final MLUI swarmUI = new MLUI(frame);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frame.addWindowListener(new WindowAdapter()
@@ -85,7 +85,7 @@ public class Main
 
 			// Create a file handler that write log record to a file called
 
-			FileHandler handler = new FileHandler(SWARMLOG_XML);
+			FileHandler handler = new FileHandler(MLTESTBEDLOG_XML);
 
 			new Log();
 
