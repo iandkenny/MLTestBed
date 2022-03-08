@@ -4,4 +4,4 @@
 /bin/
 *xml
 *xml*
-*properties
+*.properties
