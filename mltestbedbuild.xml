@@ -15,6 +15,9 @@
             <fileset dir="${dir.jarfile}/bin"/>
             <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/activation.jar"/>
             <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/tar.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/mariadb-java-client-2.4.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/mysql-connector-java-8.0.17.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/sqljdbc4.jar"/>
         </jar>
     </target>
 </project>

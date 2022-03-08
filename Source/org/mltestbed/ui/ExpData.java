@@ -218,7 +218,7 @@ public class ExpData
 				try
 				{
 					Clob clob = rs.getClob(3);
-					buf = new String(clob.getSubString(1, (int) clob.length()));
+					buf = clob.getSubString(1, (int) clob.length());
 				} catch (UnsupportedOperationException e)
 				{
 					buf = rs.getString(3);
