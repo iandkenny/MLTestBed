@@ -113,7 +113,7 @@ public class MLUI extends JPanel
 
 	private static final String DB_CONNECTION = "DB Connection";
 
-	private static final String DEFAULT_CONNECTION_STRING = "MLTestBedExperiments";
+	private static final String DEFAULT_CONNECTION_STRING = "SwarmExperiments"; // old name kept for compatibility
 
 	private static final String DEFAULT_DRIVER = "com.mysql.cj.jdbc.Driver";
 

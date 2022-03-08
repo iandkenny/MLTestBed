@@ -65,7 +65,6 @@ public class ExpData
 	 */
 	public ExpData(Properties prop, JTree tree) throws Exception
 	{
-
 		if (tree == null || topNode == null)
 		{
 			if (this.topNode == null)
@@ -219,14 +218,15 @@ public class ExpData
 				try
 				{
 					Clob clob = rs.getClob(3);
-					buf = clob.getSubString(1, (int) clob.length());
-					clob = null;
+					buf = new String(clob.getSubString(1, (int) clob.length()));
 				} catch (UnsupportedOperationException e)
 				{
 					buf = rs.getString(3);
 					// e.printStackTrace();
 				}
-
+				// backwards compatibility 
+				buf = new String(buf.replaceAll("com.swarmtestbed", "org.mltestbed"));
+				//
 				newExp = load(buf);
 				if (newExp != null)
 				{
@@ -235,6 +235,8 @@ public class ExpData
 					newExp.setNotes(
 							"*** Automatic rerun of Experiment " + expNo);
 				}
+				rs.close();
+				rs = null;
 
 			}
 		} catch (SQLException e)

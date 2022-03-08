@@ -2,5 +2,6 @@
 /build/
 /.settings/
 /bin/
-*log.xml
-*.properties
+*xml
+*xml*
+*properties
