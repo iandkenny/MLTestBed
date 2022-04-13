@@ -3,12 +3,13 @@ package org.mltestbed.util;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Vector;
+import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.logging.Level;
 
 /*
  * This calculates the Hausdorff distances between any two sets of points, passed to the class
- * as ArrayList<Vector<Double>>.  
+ * as ArrayList<ArrayList<Double>>.  
  * 
  *  
  */
@@ -19,12 +20,34 @@ public class HausdorffCalculator {
 	private double hausGenToInput;
 	private double hausInputToGen;
 
+
 	/*
-	 * constructor - accepts two ArrayLists of Vectors of type Double
+	 * constructor - default
 	 */ 
-	public HausdorffCalculator (ArrayList<Vector<Double>> a1,
-								ArrayList<Vector<Double>> a2){
+	public HausdorffCalculator ()		
+	{		
+	}
+
+	/*
+	 * constructor - accepts two ArrayLists of ArrayLists of type Double
+	 */ 
+	public HausdorffCalculator (LinkedList<ArrayList<Double>> a1,
+								LinkedList<ArrayList<Double>> a2){
 		
+		hausdorffDist(a1, a2);
+		
+		
+	}
+
+
+	/**
+	 * @param data
+	 * @param predictedData
+	 * @return 
+	 */
+	public double  hausdorffDist(LinkedList<ArrayList<Double>> data,
+			LinkedList<ArrayList<Double>> predictedData)
+	{
 		// Loop through all points in theInputVertices, and calculate distance to each point in 
 		// theSimplifiedVertices.
 		// Keep a running variable (initialised to zero) that is the greatest distance yet seen.
@@ -32,16 +55,16 @@ public class HausdorffCalculator {
 			
 		hausInputToGen = 0.0;	
 		
-		for(int i=0; i < a1.size(); i++){
+		for(int i=0; i < data.size(); i++){
 			
 			double measure = Double.MAX_VALUE;					
-			for(int j=0; j < a2.size(); j++){
+			for(int j=0; j < predictedData.size(); j++){
 				
 				double measurePrime = 0.0;
 				
 				try
 				{
-					measurePrime = d(a1.get(i), a2.get(j));
+					measurePrime = d(data.get(i), predictedData.get(j));
 				} catch (Exception e)
 				{
 					Log.getLogger().log(Level.SEVERE, e.getMessage());
@@ -66,17 +89,17 @@ public class HausdorffCalculator {
 		
 		hausGenToInput = 0.0;
 		
-		for(int i=0; i < a2.size(); i++){
+		for(int i=0; i < predictedData.size(); i++){
 			
 			double measure = Double.MAX_VALUE;	
 			
-			for(int j=0; j < a1.size(); j++){
+			for(int j=0; j < data.size(); j++){
 				
 				double measurePrime = 0.0;
 				
 				try
 				{
-					measurePrime = d(a2.get(i), a1.get(j));
+					measurePrime = d(predictedData.get(i), data.get(j));
 				} catch (Exception e)
 				{
 					Log.getLogger().log(Level.SEVERE, e.getMessage());
@@ -106,12 +129,11 @@ public class HausdorffCalculator {
 		Log.getLogger().info("h(v2 to v1) = " + roundTwoDecimals(hausGenToInput) + " m \n");
 		Log.getLogger().info("* H(v1, v2) = " + roundTwoDecimals(hausdorffDist) + " m \n");
 		Log.getLogger().info("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		
-		
+		return hausdorffDist;
 	}
 
 
-	private double d(Vector<Double> x, Vector<Double> y) throws Exception
+	private double d(ArrayList<Double> x, ArrayList<Double> y) throws Exception
 	{
 		if (x.size() != y.size())
 			throw new Exception("Vectors are not the same size");

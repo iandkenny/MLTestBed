@@ -13,6 +13,7 @@ import java.util.Random;
 import java.util.Vector;
 import java.util.logging.Level;
 
+import org.mltestbed.util.HausdorffCalculator;
 import org.mltestbed.util.Log;
 import org.mltestbed.util.Particle;
 import org.mltestbed.util.RandGen;
@@ -34,12 +35,14 @@ public class IFS extends TestBase
 	protected int factor = 2;
 	protected int inputs = 0;
 	private double[][] matrix = null;
-	private int noTrials = 1000;
+	private int noTrials = 1;
 	private int numFuncs = 4;
 	private Random rand;
 	private int funcLen = 0;
 	private double[] vector = null;
 	private int skipFirst;
+	private HausdorffCalculator hausdorff = new HausdorffCalculator();
+	private boolean log2n = false;
 	/**
 	 * 
 	 */
@@ -49,10 +52,10 @@ public class IFS extends TestBase
 		description = "IFS support";
 		info = "Functions for IFS analysis";
 	}
-	protected Vector<Double> calc(Vector<Double> v, Vector<Double> input)
+	protected ArrayList<Double> calc(Vector<Double> v, ArrayList<Double> input)
 			throws Exception
 	{
-		Vector<Double> res = new Vector<Double>();
+		ArrayList<Double> res = new ArrayList<Double>();
 		Vector<Double> vec = new Vector<Double>(v);
 		Vector<Double> subV = new Vector<Double>();
 		double A[][] = null;
@@ -176,7 +179,7 @@ public class IFS extends TestBase
 	protected void createParams()
 	{
 		numFuncs = 4;
-		noTrials = 1000;
+		noTrials = 1;
 		skipFirst = 100;
 		factor = 2;
 		params.setProperty(FACTOR, Integer.toString(factor));
@@ -362,12 +365,12 @@ public class IFS extends TestBase
 				A[i][0] = scaleRange(sum, 0, total, 0, 1);
 
 			}
-			Vector<Double> predictedRow = new Vector<Double>();
+			ArrayList<Double> predictedRow = new ArrayList<Double>();
 			Vector<Double> selFunction = new Vector<Double>();
 
-			LinkedList<Vector<Double>> predictedData = new LinkedList<Vector<Double>>();
+			LinkedList<ArrayList<Double>> predictedData = new LinkedList<ArrayList<Double>>();
 
-			ArrayList<Double> row;
+			ArrayList<Double> expectedRow;
 			for (int i = 0; i < noTrials; i++)
 			{
 				predictedData.clear();
@@ -381,7 +384,7 @@ public class IFS extends TestBase
 				for (Iterator<ArrayList<Double>> iterator = data
 						.iterator(); iterator.hasNext();)
 				{
-					row = iterator.next();
+					expectedRow = iterator.next();
 					r = rand.nextDouble();
 					index = 0;
 					total = 0;
@@ -399,9 +402,9 @@ public class IFS extends TestBase
 					}
 					predictedRow = calc(selFunction, predictedRow);
 					predictedData.add(predictedRow);
-					for (int j = 0; j < row.size(); j++)
+					for (int j = 0; j < expectedRow.size(); j++)
 					{
-						requiredValue = row.get(j);
+						requiredValue = expectedRow.get(j);
 						expected.add(requiredValue);
 						reqSum += requiredValue;
 						double predictedValue = predictedRow.get(j);
@@ -412,7 +415,7 @@ public class IFS extends TestBase
 					}
 
 				}
-				mResult += sum;
+//				mResult += sum;
 			}
 			matrix = A;
 			p.setFuncSpecific(null, true);
@@ -424,7 +427,10 @@ public class IFS extends TestBase
 						+ "</RequiredValue></Output>", false);
 
 			}
-			p.setFuncSpecific("<Sum>" + sum + "</Sum><ReqSum>" + reqSum
+			double hausdorffDist = hausdorff.hausdorffDist(data, predictedData);
+			mResult = Math.sqrt(Math.pow(hausdorffDist, 2));
+			p.setFuncSpecific("<Hausdorff>" + hausdorffDist
+					+ "</Hausdorff><Sum>" + sum + "</Sum><ReqSum>" + reqSum
 					+ "</ReqSum><AvgSum>" + (sum / count)
 					+ "</AvgSum><AvgRequiredSum>" + (reqSum / count)
 					+ "</AvgRequiredSum><AME description = \"Absolute Maximum Error\">"
@@ -452,7 +458,7 @@ public class IFS extends TestBase
 	 * @param A
 	 * @param skip
 	 */
-	private Vector<Double> skip(double[][] A, int skip)
+	private ArrayList<Double> skip(double[][] A, int skip)
 	{
 		int index = -1;
 		double r = rand.nextDouble();
@@ -463,8 +469,8 @@ public class IFS extends TestBase
 			total += A[index][0];
 		} while (r > total && index < numFuncs - 1);
 
-		Vector<Double> predictedRow = new Vector<>();
-		Vector<Double> selFunction = new Vector<>();
+		ArrayList<Double> predictedRow = new ArrayList<Double>();
+		Vector<Double> selFunction = new Vector<Double>();
 		for (int j = A[index].length - 1; predictedRow.size() != inputs; j--)
 			predictedRow.add(0, A[index][j]);
 		try
@@ -618,9 +624,13 @@ public class IFS extends TestBase
 		try
 		{
 			String funcsstr = params.getProperty(NUMBER_OF_FUNCTIONS, "auto");
+			log2n = false;
 			if (Util.isNumeric(funcsstr))
 				numFuncs = Integer.parseInt(funcsstr);
-			else
+			else if (funcsstr.equalsIgnoreCase("log2n"))
+				log2n = true;
+
+			else // need to code EMD requirement here log2N
 				numFuncs = (int) (inputs + Math.floor(inputs / 3));
 			noTrials = Integer.parseInt(params.getProperty(NUMBER_OF_TRIALS,
 					Integer.toString(noTrials)));
@@ -676,17 +686,18 @@ public class IFS extends TestBase
 	{
 		// +1 because db.getDim() returns inputs -1 because it assumes that the
 		// last column is the value to be predicted
-		inputs = dimension = 1;
+		inputs = dimension + 1;
+		if (log2n && db != null)
+			numFuncs = (int) Util.log2(db.getRecordCount());
 
-		//+1 to allow for the probability value assigned to each function
+		// +1 to allow for the probability value assigned to each function
 		funcLen = (inputs * factor) + inputs + 1;
 		super.setMDimension(numFuncs * funcLen);
 	}
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.testFunctions.TestBase#setParams(java.util.Properties)
+	 * @see org.mltestbed.testFunctions.TestBase#setParams(java.util.Properties)
 	 */
 	@Override
 	public void setParams(Properties params)

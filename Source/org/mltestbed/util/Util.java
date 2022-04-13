@@ -22,7 +22,8 @@ public class Util
 {
 	private static long minMem;
 	private static Runtime runtime = Runtime.getRuntime();
-	private static final long MIN_MEM_CALC = Math.floorDiv(runtime.freeMemory(),20);
+	private static final long MIN_MEM_CALC = Math.floorDiv(runtime.freeMemory(),
+			20);
 	private static MLUI swarmui;
 	private static boolean useMem = true;
 	private static long limit = MIN_MEM_CALC;
@@ -132,8 +133,9 @@ public class Util
 	}
 	public static boolean isNumeric(String str)
 	{
-		return str.matches("-?\\d+(\\.\\d+)?"); // match a number with optional
-												// '-' and decimal.
+		return str.trim().matches("-?\\d+(\\.\\d+)?"); // match a number with
+														// optional
+		// '-' and decimal.
 	}
 	/**
 	 * @return the useMem
@@ -142,6 +144,12 @@ public class Util
 	{
 		return useMem;
 	}
+
+	public static double log2(long l)
+	{
+		return Math.log(l) / Math.log(2);
+	}
+
 	/**
 	 * @param useMem
 	 *            the useMem to set

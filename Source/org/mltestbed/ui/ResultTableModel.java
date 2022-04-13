@@ -40,8 +40,8 @@ public class ResultTableModel extends AbstractTableModel
 //	private ResultSetMetaData rsmd;
 	private final String resultSQL = "select * from results";
 	private long ExpNum = -1;
-	private String uid;
-	private String pwd;
+	private String uid = "";
+	private String pwd = "";
 
 	/**
 	 * 
@@ -60,8 +60,8 @@ public class ResultTableModel extends AbstractTableModel
 		connectString = runparams.getProperty("connection",connectString);
 		driver = runparams.getProperty("driver","sun.jdbc.odbc.JdbcOdbcDriver");
 		url = runparams.getProperty("url",url);
-		uid = runparams.getProperty("userid");
-		pwd = runparams.getProperty("password");
+		uid = runparams.getProperty("userid","");
+		pwd = runparams.getProperty("password","");
 
 	}
 
@@ -200,7 +200,7 @@ public class ResultTableModel extends AbstractTableModel
 	{
 		Connection con;
 		Class.forName(driver);
-		if(!uid.equals(""))
+		if(!uid.isEmpty())
 			con = DriverManager.getConnection(url + connectString);
 		else
 			con = DriverManager.getConnection(url + connectString,uid,pwd);

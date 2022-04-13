@@ -474,6 +474,8 @@ public class MLUI extends JPanel
 
 	private JLabel velocityInitLabel;
 
+	private JMenuItem MinasPassageMenuItem;
+
 	/**
 	 * @param frame
 	 */
@@ -536,6 +538,16 @@ public class MLUI extends JPanel
 		GasSpecMenuItem.getAccessibleContext()
 				.setAccessibleDescription("Imports Gas Spectrometry Data");
 		menu.add(GasSpecMenuItem);
+		
+		MinasPassageMenuItem = new JMenuItem("Minas Passage Data Import",
+				KeyEvent.VK_M);
+		MinasPassageMenuItem.setAccelerator(
+				KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.ALT_MASK));
+		MinasPassageMenuItem.addActionListener(this);
+		MinasPassageMenuItem.getAccessibleContext()
+				.setAccessibleDescription("Minas Passage Data");
+		menu.add(MinasPassageMenuItem);
+
 
 		menu.add(new JSeparator());
 		aboutMenuItem = new JMenuItem("About Box", KeyEvent.VK_A);
@@ -1371,7 +1383,27 @@ public class MLUI extends JPanel
 				}
 			});
 
-		} else if (source == progressLoggable)
+		} 
+		else if (source == MinasPassageMenuItem)
+		{
+
+			javax.swing.SwingUtilities.invokeLater(new Runnable()
+			{
+				public void run()
+				{
+					Properties prop = null;
+					ImportMinasGUI ing = new ImportMinasGUI(prop);
+					ing.pack();
+					// Show it.
+					ing.setSize(new Dimension(300, 150));
+					ing.setLocationRelativeTo(frame);
+					ing.setVisible(true);
+
+				}
+			});
+		}
+		else
+			if (source == progressLoggable)
 			isLogging = progressLoggable.isSelected();
 		else if (source == heuristicFuncCombo)
 		{

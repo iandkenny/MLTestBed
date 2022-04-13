@@ -25,6 +25,7 @@ import java.util.Set;
 import java.util.Vector;
 import java.util.logging.Level;
 
+import org.mltestbed.ui.MLUI;
 import org.mltestbed.util.Log;
 import org.mltestbed.util.Util;
 
@@ -50,40 +51,41 @@ abstract public class ReadData
 		}
 		return true;
 	}
+	private ArrayList<String> columnNames;
 	protected String connectString = "";
-	protected Vector<Vector<Object>> dataCollection;
+	protected Vector<Vector<Object>> dataCollection = null;
 	protected String driver = "";
-	private ResultSet masterRS;
-	protected Properties prop;
+	private ResultSet masterRS = null;
+	protected Properties prop = new Properties();
 	protected String pwd = "";
-	protected String SQLString;
-	protected Statement stmt;
+	protected String SQLString = "";
 
+	protected Statement stmt = null;
 	protected String uid = "";
-	protected String url = "jdbc:odbc:";
+	protected String url = "jdbc:";
+
 	/**
 	 * 
 	 */
 	public ReadData()
 	{
 		super();
+		initProps();
 		dataCollection = null;
-		connectString = "";
-		SQLString = "";
-		driver = "";
-		uid = "";
-		pwd = "";
-		prop = new Properties();
 		try
 		{
-			prop.setProperty("driver", Util.getSwarmui().getRunparams()
-					.getProperty("driver", driver));
-			prop.setProperty("url",
-					Util.getSwarmui().getRunparams().getProperty("url", url));
-			prop.setProperty("userid", Util.getSwarmui().getRunparams()
-					.getProperty("userid", uid));
-			prop.setProperty("password", Util.getSwarmui().getRunparams()
-					.getProperty("password", pwd));
+			MLUI swarmui = Util.getSwarmui();
+			if (swarmui != null)
+			{
+				prop.setProperty("driver",
+						swarmui.getRunparams().getProperty("driver", driver));
+				prop.setProperty("url",
+						swarmui.getRunparams().getProperty("url", url));
+				prop.setProperty("userid",
+						swarmui.getRunparams().getProperty("userid", uid));
+				prop.setProperty("password",
+						swarmui.getRunparams().getProperty("password", pwd));
+			}
 
 		} catch (Exception e)
 		{
@@ -198,6 +200,34 @@ abstract public class ReadData
 
 	}
 
+	public ArrayList<String> columnNames(ResultSet rs)
+	{
+
+		try
+		{
+			if (rs != null)
+			{
+				columnNames = new ArrayList<String>();
+				ResultSetMetaData metaData = rs.getMetaData();
+				for (int column = 1; column <= metaData
+						.getColumnCount(); column++)
+				{
+
+					columnNames.add(metaData.getColumnName(column));
+				}
+			} else
+				columnNames = new ArrayList<String>();
+		} catch (SQLException e)
+		{
+			Log.getLogger().info(e.getMessage());
+			// e.printStackTrace();
+		} catch (Exception e)
+		{
+			Log.getLogger().info(e.getMessage());
+			// e.printStackTrace();
+		}
+		return columnNames;
+	}
 	public void deleteSelected()
 	{
 		try
@@ -240,6 +270,14 @@ abstract public class ReadData
 		super.finalize();
 	}
 	/**
+	 * @return the columnNames
+	 */
+	public ArrayList<String> getColumnNames()
+	{
+		return columnNames;
+	}
+
+	/**
 	 * @return Returns the ConnectString.
 	 */
 	public String getConnectString()
@@ -253,6 +291,7 @@ abstract public class ReadData
 		try
 		{
 			ResultSet rs = populateRS(SQLString);
+			columnNames(rs);
 			do
 			{
 				currRow = getRow(rs);
@@ -275,62 +314,6 @@ abstract public class ReadData
 	 * @param key
 	 * @return the selected data
 	 */
-	public synchronized LinkedList<ArrayList<Double>> getData(
-			HashMap<String, String> key)
-	{
-		LinkedList<ArrayList<Double>> data = new LinkedList<ArrayList<Double>>();
-		ArrayList<Double> row;
-		String bufSQL;
-		try
-		{
-			bufSQL = buildSQL(key);
-			ResultSet rs = populateRS(bufSQL);
-			int cols = rs.getMetaData().getColumnCount();
-			if (rs.next())
-			{
-				do
-				{
-					row = new ArrayList<Double>();
-					for (int i = 1; i <= cols; i++)
-					{
-						String s = rs.getString(i);
-						double d = 0;
-						if (isNumeric(s))
-							d = rs.getDouble(i);
-						else
-							d = 0; // not ideal but we need some way to handle
-									// missing values numerically
-						row.add(d);
-					}
-					data.add(row);
-					// keys.add(rs.getString(0));
-				} while (rs.next());
-				rs.getStatement().close();
-				rs = null;
-			} else
-				Log.log(Level.SEVERE, new Exception(
-						"There is no data for this query " + bufSQL));
-			// rsmd = rs.getMetaData();
-		} catch (SQLException e)
-		{
-			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
-		} catch (NullPointerException e)
-		{
-			Log.log(Level.SEVERE, e);
-		} catch (Exception e)
-		{
-			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
-		}
-
-		return data;
-	}
-
-	/**
-	 * @param key
-	 * @return the selected data
-	 */
 	public synchronized ArrayList<ArrayList<Object>> getData(boolean reset)
 	{
 		ArrayList<ArrayList<Object>> data = new ArrayList<ArrayList<Object>>();
@@ -349,8 +332,9 @@ abstract public class ReadData
 				}
 				bufSQL = buildSQL(hashkeys);
 				masterRS = populateRS(bufSQL);
+				columnNames(masterRS);
 			}
-			
+
 			if (masterRS.next())
 			{
 				int cols = masterRS.getMetaData().getColumnCount();
@@ -391,6 +375,65 @@ abstract public class ReadData
 	}
 
 	/**
+	 * @param key
+	 * @return the selected data
+	 */
+	public synchronized LinkedList<ArrayList<Double>> getData(
+			HashMap<String, String> key)
+	{
+		LinkedList<ArrayList<Double>> data = new LinkedList<ArrayList<Double>>();
+		ArrayList<Double> row;
+		String bufSQL;
+		try
+		{
+			if (key != null)
+				bufSQL = buildSQL(key);
+			else
+				bufSQL = SQLString;
+			ResultSet rs = populateRS(bufSQL);
+			int cols = rs.getMetaData().getColumnCount();
+			columnNames(rs);
+			if (rs.next())
+			{
+				do
+				{
+					row = new ArrayList<Double>();
+					for (int i = 1; i <= cols; i++)
+					{
+						String s = rs.getString(i);
+						double d = 0;
+						if (isNumeric(s))
+							d = rs.getDouble(i);
+						else
+							d = 0; // not ideal but we need some way to handle
+									// missing values numerically
+						row.add(d);
+					}
+					data.add(row);
+					// keys.add(rs.getString(0));
+				} while (rs.next());
+				rs.getStatement().close();
+				rs = null;
+			} else
+				Log.log(Level.SEVERE, new Exception(
+						"There is no data for this query " + bufSQL));
+			// rsmd = rs.getMetaData();
+		} catch (SQLException e)
+		{
+			Log.log(Level.SEVERE, e);
+			e.printStackTrace();
+		} catch (NullPointerException e)
+		{
+			Log.log(Level.SEVERE, e);
+		} catch (Exception e)
+		{
+			Log.log(Level.SEVERE, e);
+			e.printStackTrace();
+		}
+
+		return data;
+	}
+	/**
 	 * @return Returns the dataCollection.
 	 */
 	public Vector<Vector<Object>> getDataCollection()
@@ -400,10 +443,12 @@ abstract public class ReadData
 
 	public int getDim()
 	{
-		String buf[] = SQLString.substring(0, SQLString.indexOf("FROM"))
+		String buf[] = SQLString
+				.substring(0, SQLString.toUpperCase().indexOf("FROM"))
 				.split(",");
 		return buf.length - 1;
 	}
+
 	protected abstract Vector<String> getKeys();
 	public Connection getLocalConnection()
 	{
@@ -586,13 +631,37 @@ abstract public class ReadData
 
 		return data.isEmpty() ? null : data;
 	}
-
 	/**
 	 * @return Returns the prop.
 	 */
 	public Properties getProp()
 	{
 		return prop;
+	}
+
+	public long getRecordCount()
+	{
+		long count = 0;
+		try
+		{
+			Statement stmt = getStatement();
+			String sql = "SELECT COUNT(*) " + SQLString
+					.substring(SQLString.toUpperCase().indexOf("FROM"));
+			logSQL(sql);
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs != null && rs.next())
+			{
+				count = rs.getLong(1);
+				rs.close();
+			}
+			stmt.close();
+
+		} catch (SQLException e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
+		}
+		return count;
 	}
 	/**
 	 * @param rs
@@ -683,10 +752,12 @@ abstract public class ReadData
 	}
 	protected void initProps()
 	{
+		if (prop == null)
+			prop = new Properties();
 		connectString = prop.getProperty("connection", connectString);
-		uid = prop.getProperty("userid");
-		pwd = prop.getProperty("password");
-		driver = prop.getProperty("driver", "sun.jdbc.odbc.JdbcOdbcDriver");
+		uid = prop.getProperty("userid", uid);
+		pwd = prop.getProperty("password", pwd);
+		driver = prop.getProperty("driver", driver);
 		url = prop.getProperty("url", url);
 
 	}

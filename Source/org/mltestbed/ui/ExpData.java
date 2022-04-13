@@ -53,11 +53,11 @@ public class ExpData
 
 	private String url = "jdbc:odbc:";
 
-	private String uid;
+	private String uid = "";
 
-	private String pwd;
+	private String pwd = "";
 
-	private JTree tree;
+	private JTree tree = null;
 
 	/**
 	 * @throws Exception
@@ -112,10 +112,11 @@ public class ExpData
 		Statement stmt = null;
 		try
 		{
-			Driver d = (Driver) Class.forName(driver).getDeclaredConstructor().newInstance();
+			Driver d = (Driver) Class.forName(driver).getDeclaredConstructor()
+					.newInstance();
 			DriverManager.registerDriver(d);
 			Connection con;
-			if (!uid.equals(""))
+			if (!uid.isEmpty())
 				con = DriverManager.getConnection(url + connectString, uid,
 						pwd);
 			else
@@ -123,7 +124,9 @@ public class ExpData
 			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
 					ResultSet.CONCUR_READ_ONLY);
 		} catch (ClassNotFoundException | InstantiationException
-				| IllegalAccessException | SQLException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e)
+				| IllegalAccessException | SQLException
+				| IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException e)
 		{
 			Log.log(Level.SEVERE, e);
 			// e.printStackTrace();
@@ -156,7 +159,7 @@ public class ExpData
 						expandAPath(tree.getPathForRow(0));
 						if (topNode.getChildCount() != 0 && tree != null)
 							tree.setRootVisible(false);
-						
+
 						tree.updateUI();
 					}
 				}
@@ -165,8 +168,7 @@ public class ExpData
 		{
 			Log.log(Level.SEVERE, e);
 			// e.printStackTrace();
-		}
-		catch (Exception e)
+		} catch (Exception e)
 		{
 			Log.log(Level.SEVERE, e);
 			// e.printStackTrace();
@@ -205,39 +207,43 @@ public class ExpData
 		try
 		{
 			Statement stmt = getStatement();
-			String sqlWhere;
-			if (expNo == null)
-				sqlWhere = " where Expnum IN (Select Max(Expnum) From notebook)";
-			else
-				sqlWhere = " where Expnum = " + expNo.toString().trim();
-			ResultSet rs = stmt.executeQuery(SQLString + sqlWhere);
-
-			String buf;
-			if (rs.first())
+			if (stmt != null)
 			{
-				try
-				{
-					Clob clob = rs.getClob(3);
-					buf = clob.getSubString(1, (int) clob.length());
-				} catch (UnsupportedOperationException e)
-				{
-					buf = rs.getString(3);
-					// e.printStackTrace();
-				}
-				// backwards compatibility 
-				buf = new String(buf.replaceAll("com.swarmtestbed", "org.mltestbed"));
-				//
-				newExp = load(buf);
-				if (newExp != null)
-				{
-					newExp.setRuns(runs);
+				String sqlWhere;
+				if (expNo == null)
+					sqlWhere = " where Expnum IN (Select Max(Expnum) From notebook)";
+				else
+					sqlWhere = " where Expnum = " + expNo.toString().trim();
+				ResultSet rs = stmt.executeQuery(SQLString + sqlWhere);
 
-					newExp.setNotes(
-							"*** Automatic rerun of Experiment " + expNo);
-				}
-				rs.close();
-				rs = null;
+				String buf;
+				if (rs.first())
+				{
+					try
+					{
+						Clob clob = rs.getClob(3);
+						buf = clob.getSubString(1, (int) clob.length());
+					} catch (UnsupportedOperationException e)
+					{
+						buf = rs.getString(3);
+						// e.printStackTrace();
+					}
+					// backwards compatibility
+					buf = new String(buf.replaceAll("com.swarmtestbed",
+							"org.mltestbed"));
+					//
+					newExp = load(buf);
+					if (newExp != null)
+					{
+						newExp.setRuns(runs);
 
+						newExp.setNotes(
+								"*** Automatic rerun of Experiment " + expNo);
+					}
+					rs.close();
+					rs = null;
+
+				}
 			}
 		} catch (SQLException e)
 		{
@@ -266,7 +272,8 @@ public class ExpData
 			{
 				Class<?> class1 = (Class<?>) Class.forName(buf);
 
-				swarm = (BaseSwarm) class1.getDeclaredConstructor().newInstance();
+				swarm = (BaseSwarm) class1.getDeclaredConstructor()
+						.newInstance();
 				swarm.setRunParams(runparams);
 				swarm.load(params);
 
@@ -279,7 +286,7 @@ public class ExpData
 				Class<?> class1 = (Class<?>) Class.forName(buf);
 				Constructor<?> constructor = (Constructor<?>) class1
 						.getConstructor(new Class[]
-				{BaseSwarm.class});
+						{BaseSwarm.class});
 				neighbourhood = (Topology) constructor.newInstance(new Object[]
 				{new ClassicPSO()});
 				neighbourhood.load(params);
@@ -291,7 +298,8 @@ public class ExpData
 			{
 				Class<?> class1 = (Class<?>) Class.forName(buf);
 
-				objective = (TestBase) class1.getDeclaredConstructor().newInstance();
+				objective = (TestBase) class1.getDeclaredConstructor()
+						.newInstance();
 				objective.load(params);
 				swarm.setTestFunction(objective);
 			}
@@ -303,7 +311,8 @@ public class ExpData
 				Properties heirProp = new Properties();
 				heirProp.loadFromXML(new ByteArrayInputStream(buf.getBytes()));
 				buf = params.getProperty("heirarchyclass");
-				BaseSwarm master = (BaseSwarm) Class.forName(buf).getDeclaredConstructor().newInstance();
+				BaseSwarm master = (BaseSwarm) Class.forName(buf)
+						.getDeclaredConstructor().newInstance();
 				master.load(heirProp);
 				buf = params.getProperty("heirarchyobjective");
 				HeirarchyTestBase testFunct = (HeirarchyTestBase) Class

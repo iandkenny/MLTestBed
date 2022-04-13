@@ -71,6 +71,7 @@ public class ImportFDMUI extends JDialog
 		sourceEdit = new JFormattedTextField(folder);
 		sourceEdit.addActionListener(this);
 		setContentPane(new JPanel(new BorderLayout()));
+		// button
 		// Create the dialog button panel
 		JPanel buttonPane = new JPanel(new GridLayout()); // Create a panel to
 															// hold buttons
@@ -82,7 +83,6 @@ public class ImportFDMUI extends JDialog
 		// Create and add the buttons to the buttonPane
 		buttonPane.add(ok = createButton("OK")); // Add the OK button
 		buttonPane.add(cancel = createButton("Cancel")); // Add the Cancel
-															// button
 		getContentPane().add(buttonPane, BorderLayout.SOUTH);// Add pane to
 																// content pane
 
