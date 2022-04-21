@@ -6,6 +6,7 @@ package org.mltestbed.testFunctions;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Properties;
@@ -27,22 +28,23 @@ import org.mltestbed.util.Util;
 public class IFS extends TestBase
 {
 
-	private static final String SKIP_FIRST = "skipFirst";
+	private static final String FACTOR = "factor";
 	private static final String NUMBER_OF_FUNCTIONS = "Number of Functions";
 	private static final String NUMBER_OF_TRIALS = "Number of Trials";
-	private static final String FACTOR = "factor";
+	private static final String SKIP_FIRST = "skipFirst";
 
 	protected int factor = 2;
+	private int funcLen = 0;
+	private HashMap<Integer, Vector<Double>> functions = new HashMap<Integer, Vector<Double>>();
+	private HausdorffCalculator hausdorff = new HausdorffCalculator();
 	protected int inputs = 0;
+	private boolean log2n = false;
 	private double[][] matrix = null;
 	private int noTrials = 1;
 	private int numFuncs = 4;
 	private Random rand;
-	private int funcLen = 0;
-	private double[] vector = null;
 	private int skipFirst;
-	private HausdorffCalculator hausdorff = new HausdorffCalculator();
-	private boolean log2n = false;
+	private double[] vector = null;
 	/**
 	 * 
 	 */
@@ -170,6 +172,7 @@ public class IFS extends TestBase
 
 		return res;
 	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -254,7 +257,6 @@ public class IFS extends TestBase
 		return result;
 
 	}
-
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -291,6 +293,7 @@ public class IFS extends TestBase
 		else
 			return Double.NaN;
 	}
+
 	/*
 	 * Mean Error
 	 */
@@ -309,7 +312,6 @@ public class IFS extends TestBase
 		else
 			return Double.NaN;
 	}
-
 	/*
 	 * Vector norm
 	 */
@@ -341,6 +343,7 @@ public class IFS extends TestBase
 		Vector<Double> expected = new Vector<Double>();
 		Vector<Double> predicted = new Vector<Double>();
 
+		functions = new HashMap<Integer, Vector<Double>>();
 		mResult = 0;
 		try
 		{
@@ -374,7 +377,6 @@ public class IFS extends TestBase
 			for (int i = 0; i < noTrials; i++)
 			{
 				predictedData.clear();
-				double r;
 				sum = 0;
 				reqSum = 0;
 				predictedRow = skip(A, skipFirst);
@@ -385,21 +387,8 @@ public class IFS extends TestBase
 						.iterator(); iterator.hasNext();)
 				{
 					expectedRow = iterator.next();
-					r = rand.nextDouble();
-					index = 0;
-					total = 0;
-					do
-					{
-						total += A[index][0];
-						index++;
-					} while (r > total && index < numFuncs);
 
-					// very inefficient done for quick compatibility
-					selFunction.clear();
-					for (int j = 1; j < A[index].length; j++)
-					{
-						selFunction.add(A[index][j]);
-					}
+					selFunction = pickFunction(A);
 					predictedRow = calc(selFunction, predictedRow);
 					predictedData.add(predictedRow);
 					for (int j = 0; j < expectedRow.size(); j++)
@@ -453,49 +442,6 @@ public class IFS extends TestBase
 		}
 
 		return super.Objective(p);
-	}
-	/**
-	 * @param A
-	 * @param skip
-	 */
-	private ArrayList<Double> skip(double[][] A, int skip)
-	{
-		int index = -1;
-		double r = rand.nextDouble();
-		double total = 0;
-		do
-		{
-			index++;
-			total += A[index][0];
-		} while (r > total && index < numFuncs - 1);
-
-		ArrayList<Double> predictedRow = new ArrayList<Double>();
-		Vector<Double> selFunction = new Vector<Double>();
-		for (int j = A[index].length - 1; predictedRow.size() != inputs; j--)
-			predictedRow.add(0, A[index][j]);
-		try
-		{
-			for (int i = 0; i < skip; i++)
-			{
-
-				r = rand.nextDouble();
-				index = 0;
-				while (r > A[index][0] && index < numFuncs - 1)
-					index++;
-				// very inefficient done for quick compatibility
-				selFunction.clear();
-				for (int j = 1; j < A[index].length; j++)
-				{
-					selFunction.add(A[index][j]);
-				}
-				predictedRow = calc(selFunction, predictedRow);
-			}
-		} catch (Exception e)
-		{
-			Log.log(Level.SEVERE, e);
-			// e.printStackTrace();
-		}
-		return predictedRow;
 	}
 	protected Vector<Double> oldcalc(Vector<Double> v, Vector<Double> input)
 			throws Exception
@@ -592,6 +538,60 @@ public class IFS extends TestBase
 
 		return res;
 	}
+	/**
+	 * 
+	 */
+	private void performTest()
+	{
+		try
+		{
+			String funcsstr = params.getProperty(NUMBER_OF_FUNCTIONS, "auto");
+			log2n = false;
+			if (Util.isNumeric(funcsstr))
+				numFuncs = Integer.parseInt(funcsstr);
+			else if (funcsstr.equalsIgnoreCase("log2n"))
+				log2n = true;
+
+			else 
+				numFuncs = (int) (inputs + Math.floor(inputs / 3));
+			noTrials = Integer.parseInt(params.getProperty(NUMBER_OF_TRIALS,
+					Integer.toString(noTrials)));
+			skipFirst = Integer.parseInt(params.getProperty(SKIP_FIRST,
+					Integer.toString(skipFirst)));
+		} catch (NumberFormatException e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
+		}
+	}
+	// very poor; done for backwards compatibility 
+	protected Vector<Double> pickFunction(double[][] A)
+	{
+		Vector<Double> selFunction;
+		double r = rand.nextDouble();
+		r = rand.nextDouble();
+		int index = 0;
+		double total = 0.0;
+		do
+		{
+			total += A[index][0];
+			index++;
+		} while (r > total && index < numFuncs - 1);
+
+		if (functions.containsKey(index))
+			// selFunction.clear();
+			selFunction = functions.get(index);
+		else
+		{
+			selFunction = new Vector<Double>();
+			for (int j = 1; j < A[index].length; j++)
+			{
+				selFunction.add(A[index][j]);
+			}
+			functions.put(index, selFunction);
+		}
+		return selFunction;
+	}
 
 	/*
 	 * Relative Absolute Error
@@ -616,32 +616,6 @@ public class IFS extends TestBase
 		else
 			return Double.NaN;
 	}
-	/**
-	 * 
-	 */
-	private void performTest()
-	{
-		try
-		{
-			String funcsstr = params.getProperty(NUMBER_OF_FUNCTIONS, "auto");
-			log2n = false;
-			if (Util.isNumeric(funcsstr))
-				numFuncs = Integer.parseInt(funcsstr);
-			else if (funcsstr.equalsIgnoreCase("log2n"))
-				log2n = true;
-
-			else // need to code EMD requirement here log2N
-				numFuncs = (int) (inputs + Math.floor(inputs / 3));
-			noTrials = Integer.parseInt(params.getProperty(NUMBER_OF_TRIALS,
-					Integer.toString(noTrials)));
-			skipFirst = Integer.parseInt(params.getProperty(SKIP_FIRST,
-					Integer.toString(skipFirst)));
-		} catch (NumberFormatException e)
-		{
-			Log.log(Level.SEVERE, e);
-			// e.printStackTrace();
-		}
-	}
 	/*
 	 * Root mean square error
 	 */
@@ -662,7 +636,6 @@ public class IFS extends TestBase
 		else
 			return Double.NaN;
 	}
-
 	/**
 	 * @param value
 	 * @param oldMin
@@ -676,6 +649,7 @@ public class IFS extends TestBase
 	{
 		return (value / ((oldMax - oldMin) / (newMax - newMin))) + newMin;
 	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -720,6 +694,40 @@ public class IFS extends TestBase
 			mMin[i * funcLen] = 0;
 		}
 
+	}
+	/**
+	 * @param A
+	 * @param skip
+	 */
+	private ArrayList<Double> skip(double[][] A, int skip)
+	{
+		int index = -1;
+		double r = rand.nextDouble();
+		double total = 0;
+		do
+		{
+			index++;
+			total += A[index][0];
+		} while (r > total && index < numFuncs - 1);
+
+		ArrayList<Double> predictedRow = new ArrayList<Double>();
+		Vector<Double> selFunction = new Vector<Double>();
+		for (int j = A[index].length - 1; predictedRow.size() != inputs; j--)
+			predictedRow.add(0, A[index][j]);
+		try
+		{
+			for (int i = 0; i < skip; i++)
+			{
+
+				selFunction = pickFunction(A);
+				predictedRow = calc(selFunction, predictedRow);
+			}
+		} catch (Exception e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
+		}
+		return predictedRow;
 	}
 
 	protected double StdDev(Vector<Double> elements)

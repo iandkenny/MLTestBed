@@ -8,7 +8,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.logging.Level;
+
 import org.mltestbed.data.readDB.ReadMinas;
+import org.mltestbed.util.Log;
 import org.mltestbed.util.Util;
 
 public class Emd
