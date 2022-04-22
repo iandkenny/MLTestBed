@@ -300,11 +300,11 @@ abstract public class ReadData
 			rs.close();
 		} catch (SQLException e)
 		{
-			Log.getLogger().info(e.getMessage());
+			Log.log(Level.SEVERE,e.getMessage());
 			// e.printStackTrace();
 		} catch (Exception e)
 		{
-			Log.getLogger().info(e.getMessage());
+			Log.log(Level.SEVERE,e.getMessage());
 			// e.printStackTrace();
 		}
 
@@ -361,14 +361,14 @@ abstract public class ReadData
 		} catch (SQLException e)
 		{
 			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
+//			e.printStackTrace();
 		} catch (NullPointerException e)
 		{
 			Log.log(Level.SEVERE, e);
 		} catch (Exception e)
 		{
 			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 
 		return data.isEmpty() ? null : data;

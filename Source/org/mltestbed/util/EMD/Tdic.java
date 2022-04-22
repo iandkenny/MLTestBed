@@ -7,12 +7,15 @@ import org.mltestbed.util.Log;
 public class Tdic
 {
 
+	private double[][] c = null;// is the correlation matrix
+	private double[][] p = null;// is the indicator for student-test
+	private int[] scale = null;// is the time scale
+	private double[] tx = null; // is the time axis
 
 	public Tdic()
 	{
 	}
-
-	private static double betacf_sc(Double arg0, Double arg1, Double arg2)
+	private double betacf_sc(Double arg0, Double arg1, Double arg2)
 	{
 		/*
 		 * Ported from the original C code,written by Yongxiang HUANG 04-2012,
@@ -93,8 +96,9 @@ public class Tdic
 
 				del = d * c;
 				h = h * del;
-				
-				// could be coded better
+
+				// could be coded better for Java, as coded is consistent with
+				// the original C
 				if (Math.abs(del - 1.0) <= eps)
 				{
 					out1 = h;
@@ -106,13 +110,11 @@ public class Tdic
 		} catch (Exception e)
 		{
 			Log.log(Level.SEVERE, e);
-//	e.printStackTrace();
 		}
-
+		// must have default return in Java
 		return out1;
-
 	}
-	private static double betai_s(double a, double b, double x)
+	private double betai_s(double a, double b, double x)
 	{
 		/*
 		 * Ported from the original MATLAB code,written by Yongxiang HUANG
@@ -134,8 +136,7 @@ public class Tdic
 																// transformation.
 		return prob;
 	}
-
-	private static double btc(Double arg0, Double arg1, Double arg2)
+	private double btc(Double arg0, Double arg1, Double arg2)
 	{
 		/*
 		 * Ported from the original C code,written by Yongxiang HUANG 04-2012,
@@ -222,7 +223,26 @@ public class Tdic
 		return out1;
 	}
 
-	private static double[] myxcorrc(double[] x, double[] y, int df)
+	public double[][] getCorrelationMatrix()
+	{
+		return c;
+	}
+
+	public int[] getScaleAxis()
+	{
+		return scale;
+	}
+	public double[][] getStudentTest()
+	{
+		return p;
+	}
+
+	public double[] getTimeAxis()
+	{
+		return tx;
+	}
+
+	private double[] myxcorrc(double[] x, double[] y, int df)
 	{
 		/*
 		 * Ported from the original C code,written by Yongxiang HUANG 04-2012,
@@ -305,7 +325,7 @@ public class Tdic
 		return out1;
 	}
 
-	private static double studentc(Double arg0, Integer arg1)
+	private double studentc(Double arg0, Integer arg1)
 	{
 
 		/* declarations */
@@ -449,34 +469,36 @@ public class Tdic
 		}
 		return out1;
 	}
-	public static void tdic(double[] x, double[] y, int[] ifz, Integer ntime,
+	public void tdic(double[] x, double[] y, int[] ifz, Integer ntime,
 			Integer nct, Boolean it)
 	{
 		/*
-		 * Ported from the MATLAB code by Ian Kenny 04-2022 % [c,p,tx,scale]=
-		 * tdic(x,y,ifz,ntime,nct,it) % Input % x is the time series of the
-		 * first variable % y is the time series of the second variable % ifz is
-		 * the instantaneous period provided by the zero-crossing method % it is
-		 * the output of the function maxlocalperiod % ntime is the maximum
-		 * window size, the default value is half of the length % of the data %
-		 * nct is the maximum size of moving time window % - it: definition of
-		 * degree of freedom % - 0: means default, i.e., d.o.f. = n-2 % - 1:
-		 * means how many cycles included in the region % Output % c is the
-		 * correlation matrix % p is the indicator for student-test % tx is the
-		 * time axis % scale is the time scale % %
-		 * [c,p,tx,scale]=tdicnew(x,y,pp);
+		 * Ported from the MATLAB code by Ian Kenny 04-2022 Original comment
+		 * below:
 		 * 
+		 * % [c,p,tx,scale]= tdic(x,y,ifz,ntime,nct,it) % Input % x is the time
+		 * series of the first variable % y is the time series of the second
+		 * variable % ifz is the instantaneous period provided by the
+		 * zero-crossing method % it is the output of the function
+		 * maxlocalperiod % ntime is the maximum window size, the default value
+		 * is half of the length % of the data % nct is the maximum size of
+		 * moving time window % - it: definition of degree of freedom % - 0:
+		 * means default, i.e., d.o.f. = n-2 % - 1: means how many cycles
+		 * included in the region % Output % c is the correlation matrix % p is
+		 * the indicator for student-test % tx is the time axis % scale is the
+		 * time scale % % [c,p,tx,scale]=tdicnew(x,y,pp);
+		 *
 		 * % To show the result: surf(tx,scale,(c.*p))
 		 * 
 		 * % Written by Yongxiang HUANG 04-2012
 		 * 
-		 * 
+		 */
+		/*
 		 * %check input
 		 * 
 		 */
 		double[] out1;
 		double r;
-		int[] scale;
 		double t;
 		double z;
 
@@ -507,8 +529,8 @@ public class Tdic
 			if (it == null)
 				it = false;
 
-			double[][] c = new double[ncct][ntime];// *nan;//%initial the output
-			double[][] p = new double[ncct][ntime];// *nan;//%initial the output
+			c = new double[ncct][ntime];// *nan;//%initial the output
+			p = new double[ncct][ntime];// *nan;//%initial the output
 			for (int j = 0; j < c.length; j++)
 				for (int k = 0; k < c[0].length; k++)
 				{
@@ -517,7 +539,7 @@ public class Tdic
 				}
 
 //			p=c; // looking at the code below we need two arrays
-			double[] tx = new double[ntime];
+			tx = new double[ntime];
 			for (int k = 0; k < ntime; k++)
 				tx[k] = Double.NaN;// zeros(1,ntime)*nan;
 
@@ -558,15 +580,15 @@ public class Tdic
 						System.arraycopy(y, 0, suby, 0, len);
 
 						out1 = myxcorrc(subx, suby, df);// %calculate the
-																// local
-																// correlation
+														// local
+														// correlation
 						r = out1[1];
 						z = out1[2];
 						t = out1[3];
 
 						double prob = betai_s(0.5e0 * df, 0.5e0,
 								df / Math.pow(df + t, 22));// % student's t
-																// probability.
+															// probability.
 //			            %%%%%
 
 						c[i][j] = r;
