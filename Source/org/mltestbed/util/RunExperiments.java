@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.mltestbed.data.Experiment;
 import org.mltestbed.ui.MLUI;
+import org.mltestbed.ui.Main;
 
 
 
@@ -34,7 +35,7 @@ public class RunExperiments extends Thread
 			{
 				Set<String> keySet = experiments.keySet();
 				MLUI swarmui = Util.getSwarmui();
-				Util.setUseMem(swarmui.getUseMemBuffersCheck().isSelected());
+				Main.setUseMem(swarmui.getUseMemBuffersCheck().isSelected());
 				for (Iterator<String> iter = keySet.iterator(); iter.hasNext();)
 				{
 					String key = (String) iter.next();

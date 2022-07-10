@@ -20,6 +20,7 @@ public class ReadMinas extends ReadData
 {
 	private static final String PROPS = "ReadMinas.properties";
 	private boolean MinasT1 = false;
+	private boolean MinasT2 = false;
 	/**
 	 * 
 	 */
@@ -64,16 +65,14 @@ public class ReadMinas extends ReadData
 	{
 		Vector<String> keys = new Vector<String>();
 		String bufSQL = SQLString.substring(SQLString.indexOf("FROM"));
-		String replacestr = "ORDER BY [France Date /Time]";
-		if (bufSQL.trim().contains(replacestr))
-		{
-			bufSQL = bufSQL.replace(replacestr, "A").replaceFirst("FROM",
-					"SELECT DISTINCT A.date FROM")
-					+ " WHERE A.date NOT IN (SELECT day FROM selectedDays)";
-		} else
-			bufSQL = bufSQL.replace("ORDER BY Date", "A").replaceFirst("FROM",
-					"SELECT DISTINCT A.date FROM")
-					+ " WHERE A.date NOT IN (SELECT day FROM selectedDays)";
+		int idx;
+		bufSQL = bufSQL
+				.substring(0,
+						((idx = bufSQL.indexOf("ORDER BY")) > -1)
+								? idx
+								: bufSQL.length())
+				.replaceFirst("FROM", "SELECT DISTINCT A.date FROM")
+				+ "A WHERE A.date NOT IN (SELECT day FROM selectedDays)";
 
 		try
 		{
@@ -90,8 +89,8 @@ public class ReadMinas extends ReadData
 			// e.printStackTrace();
 		} catch (Exception e)
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.log(Level.SEVERE, e);
+//			e.printStackTrace();
 		}
 
 		return keys;
@@ -104,9 +103,14 @@ public class ReadMinas extends ReadData
 	{
 		Vector<String> keys = new Vector<String>();
 		String bufSQL = SQLString.substring(SQLString.indexOf("FROM"));
-		bufSQL = bufSQL.replaceFirst("ORDER BY Date", "A").replaceFirst("FROM",
-				"SELECT DISTINCT A.year FROM")
-				+ " WHERE A.year NOT IN (SELECT id FROM selectedKeys)";
+		int idx;
+		bufSQL = bufSQL
+				.substring(0,
+						((idx = bufSQL.indexOf("ORDER BY")) > -1)
+								? idx
+								: bufSQL.length())
+				.replaceFirst("FROM", "SELECT DISTINCT A.year FROM")
+				+ "A WHERE A.year NOT IN (SELECT id FROM selectedKeys)";
 
 		try
 		{
@@ -123,8 +127,8 @@ public class ReadMinas extends ReadData
 			// e.printStackTrace();
 		} catch (Exception e)
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.log(Level.SEVERE, e);
+//			e.printStackTrace();
 		}
 
 		return keys;
@@ -155,12 +159,20 @@ public class ReadMinas extends ReadData
 		}
 
 		prop.setProperty("MinasT1", prop.getProperty("MinasT1", "SELECT"
+				+ " minasPassage2015Restricted.avgHourlyAirTemp,"
+				+ " minasPassage2015Restricted.avgHourlyHumidity,"
+				+ " minasPassage2015Restricted.avgHourlyRainfallRate,"
+				+ " minasPassage2015Restricted.avgHourlyBarometricPressure"
+				+ " FROM MinasPassage.minasPassage2015Restricted ORDER BY minasPassage2015Restricted.Date, minasPassage2015Restricted.Hour"));
+		setSQLString(prop.getProperty("MinasT1"));
+		prop.setProperty("MinasT2", prop.getProperty("MinasT2", "SELECT"
 				+ " minasPassage2015.avgHourlyAirTemp,"
 				+ " minasPassage2015.avgHourlyHumidity,"
 				+ " minasPassage2015.avgHourlyRainfallRate,"
 				+ " minasPassage2015.avgHourlyBarometricPressure"
-				+ " FROM MinasPassage.minasPassage2015 ORDER BY minasPassage2015.date, minasPassage2015.hour LIMIT 0, 1000"));
-		setSQLString(prop.getProperty("MinasT1"));
+				+ " FROM MinasPassage.minasPassage2015 ORDER BY minasPassage2015.Date, minasPassage2015.Hour"));
+		setSQLString(prop.getProperty("MinasT2"));
+
 		String connect = prop.getProperty("connection", connectString);
 		connectString = connect.isEmpty() ? connectString : connect;
 		prop.setProperty("connection", connectString);
@@ -191,6 +203,13 @@ public class ReadMinas extends ReadData
 		return MinasT1;
 	}
 
+	/**
+	 * @return the MinasT2
+	 */
+	public boolean isMinasT2()
+	{
+		return MinasT2;
+	}
 	public String selectRandomDay()
 	{
 		String key = null;
@@ -230,10 +249,26 @@ public class ReadMinas extends ReadData
 	{
 		MinasT1 = minasT1;
 	}
+
+	/**
+	 * @param minasT2
+	 *            the minasT2 to set
+	 */
+	public void setMinasT2(boolean minasT2)
+	{
+		MinasT2 = minasT2;
+	}
+
 	public void useMinasT1()
 	{
 		setMinasT1(true);
 		setSQLString(prop.getProperty("MinasT1"));
+
+	}
+	public void useMinasT2()
+	{
+		setMinasT2(true);
+		setSQLString(prop.getProperty("MinasT2"));
 
 	}
 

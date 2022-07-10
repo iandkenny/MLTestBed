@@ -27,6 +27,24 @@ import org.mltestbed.util.Log;
 public class Main
 {
 	private static Logger log = Logger.getLogger(MLUI.class.getName());
+	private static boolean useMem = true;
+	private static boolean useLog = false;;
+	/**
+	 * @return the useLog
+	 */
+	public static boolean isUseLog()
+	{
+		return useLog;
+	}
+
+	/**
+	 * @param useLog the useLog to set
+	 */
+	public static void setUseLog(boolean useLog)
+	{
+		Main.useLog = useLog;
+	}
+
 	/**
 	 * @return the log
 	 */
@@ -36,15 +54,31 @@ public class Main
 	}
 
 	/**
-	 * @param log the log to set
+	 * @param log
+	 *            the log to set
 	 */
 	public static void setLog(Logger log)
 	{
 		Main.log = log;
 	}
 
-	private static final String MLTESTBEDLOG_XML = "mltestbedlog.xml";
 	private static final int MaxThreads = 10;
+	/**
+	 * @param useMem
+	 *            the useMem to set
+	 */
+	public static void setUseMem(boolean useMem)
+	{
+		Main.useMem = useMem;
+	}
+	/**
+	 * @return the useMem
+	 */
+	public static boolean isUseMem()
+	{
+		return useMem;
+	}
+
 	/**
 	 * Create the GUI and show it. For thread safety, this method should be
 	 * invoked from the event-dispatching thread.
@@ -80,24 +114,7 @@ public class Main
 	 */
 	static void createLog()
 	{
-		try
-		{
-
-			// Create a file handler that write log record to a file called
-
-			FileHandler handler = new FileHandler(MLTESTBEDLOG_XML);
-
-			new Log();
-
-			// Add to the desired logger
-			MemoryHandler memhandler = new MemoryHandler(handler, 500,
-					Level.FINE);
-			log.addHandler(memhandler);
-		} catch (IOException e)
-		{
-			e.getMessage();
-			e.printStackTrace();
-		}
+		new Log();
 	}
 	public static ArrayList<Class<Object>> getClasses(String pckgname)
 			throws ClassNotFoundException

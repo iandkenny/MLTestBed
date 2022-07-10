@@ -19,11 +19,11 @@ import org.mltestbed.util.Util;
 
 /*
  * Implementation of:
- * Liu, Qingxue, et al. ‘DSSPSO Small World Network Topology for Particle Swarm Optimization’. International Journal of Pattern Recognition and Artificial Intelligence 30, no. 09 (22 July 2016).
+ * Liu, Qingxue, et al. ‘Dynamic Small World Network Topology for Particle Swarm Optimization’. International Journal of Pattern Recognition and Artificial Intelligence 30, no. 09 (22 July 2016).
  */
-public class DTSWPSO extends Topology
+public class DSWPSO extends Topology
 {
-	private static final String PROPS = "DTSWPSONeighbourhood.properties";
+	private static final String PROPS = "DSWPSONeighbourhood.properties";
 	private List<Particle> swarmMembers = null;
 	private int size = 0;
 	private static ConcurrentHashMap<Particle, List<Particle>> neighbourhoods = new ConcurrentHashMap<Particle, List<Particle>>();
@@ -32,11 +32,11 @@ public class DTSWPSO extends Topology
 	private double probability;
 	private Random rnd;
 
-	public DTSWPSO(BaseSwarm swarm)
+	public DSWPSO(BaseSwarm swarm)
 	{
 		super(swarm);
 		setDescription(
-				"DTSWPSO - Dynamic Topology Particle Swarm Optimization");
+				"DSWPSO - Dynamic Small World Particle Swarm Optimization");
 		MaxiterationsDivTen = swarm.getMaxIterations() / 10;
 		probability = 0.9;
 		rnd = RandGen.getLastCreated();

@@ -15,9 +15,6 @@ import java.util.logging.Level;
 import org.mltestbed.data.ReadData;
 import org.mltestbed.util.Log;
 
-
-
-
 public class ReadNERC extends ReadData
 {
 	private static final String PROPS = "ReadNERC.properties";
@@ -54,8 +51,8 @@ public class ReadNERC extends ReadData
 		String bufSQL = SQLString;
 
 		if (!currKey.equals(""))
-			bufSQL = bufSQL.replaceFirst("ORDER", " WHERE Year = " + currKey
-					+ " ORDER");
+			bufSQL = bufSQL.replaceFirst("ORDER",
+					" WHERE Year = " + currKey + " ORDER");
 
 		return super.buildSQL(bufSQL, currKey);
 	}
@@ -82,17 +79,14 @@ public class ReadNERC extends ReadData
 	{
 		Vector<String> keys = new Vector<String>();
 		String bufSQL = SQLString.substring(SQLString.indexOf("FROM"));
-		String replacestr = "ORDER BY [France Date /Time]";
-		if(bufSQL.trim().contains(replacestr))
-		{
-			bufSQL = bufSQL.replace(replacestr, "A")
-					.replaceFirst("FROM", "SELECT DISTINCT A.date FROM")
-					+ " WHERE A.date NOT IN (SELECT day FROM selectedDays)";
-		}
-		else
-			bufSQL = bufSQL.replace("ORDER BY Date", "A")
-			.replaceFirst("FROM", "SELECT DISTINCT A.date FROM")
-			+ " WHERE A.date NOT IN (SELECT day FROM selectedDays)";
+		int idx;
+		bufSQL = bufSQL
+				.substring(0,
+						((idx = bufSQL.indexOf("ORDER BY")) > -1)
+								? idx
+								: bufSQL.length())
+				.replaceFirst("FROM", "SELECT DISTINCT A.date FROM")
+				+ "A WHERE A.date NOT IN (SELECT day FROM selectedDays)";
 
 		try
 		{
@@ -123,14 +117,14 @@ public class ReadNERC extends ReadData
 	{
 		Vector<String> keys = new Vector<String>();
 		String bufSQL = SQLString.substring(SQLString.indexOf("FROM"));
-		if (LSSQL)
-			bufSQL = bufSQL.replaceFirst("ORDER BY Year, Seq", "A")
-					.replaceFirst("FROM", "SELECT DISTINCT A.year FROM")
-					+ " WHERE A.year NOT IN (SELECT id FROM selectedKeys)";
-		else
-			bufSQL = bufSQL.replaceFirst("ORDER BY Date", "A").replaceFirst(
-					"FROM", "SELECT DISTINCT A.year FROM")
-					+ " WHERE A.year NOT IN (SELECT id FROM selectedKeys)";
+		int idx;
+		bufSQL = bufSQL
+				.substring(0,
+						((idx = bufSQL.indexOf("ORDER BY")) > -1)
+								? idx
+								: bufSQL.length())
+				.replaceFirst("FROM", "SELECT DISTINCT A.year FROM")
+				+ "A WHERE A.year NOT IN (SELECT id FROM selectedKeys)";
 
 		try
 		{
@@ -177,68 +171,44 @@ public class ReadNERC extends ReadData
 		}
 
 		super.initProps();
-		prop.setProperty(
-				"SQLString",
-				prop.getProperty(
-						"SQLString",
-						"Select  AvgDryBulb, AvgRain, AvgHafrenValue, AvgHoreValue, AvgTanllwythValue, AvgSevenValue FROM DailyAvgFlow ORDER BY Date"));
+		prop.setProperty("SQLString", prop.getProperty("SQLString",
+				"Select  AvgDryBulb, AvgRain, AvgHafrenValue, AvgHoreValue, AvgTanllwythValue, AvgSevenValue FROM DailyAvgFlow ORDER BY Date"));
 		setSQLString(prop.getProperty("SQLString"));
-		prop.setProperty(
-				"HourlySQLString",
-				prop.getProperty(
-						"HourlySQLString",
-						"Select  AvgHafrenValue, AvgHoreValue, AvgTanllwythValue, AvgSevenValue FROM HourlyAvgFlowPerDay ORDER BY Date,Hour"));
-		prop.setProperty(
-				"LSSQLString",
-				prop.getProperty(
-						"LSSQLString",
-						"SELECT [In1 54005 t] AS in1, [In2 54020 t] AS in2, [In3 54018 t] AS in3, [In4 54012 t] AS in4, [In5 54005 t-1] AS in5, [In6 54020 t-1] AS in6, [In7 54018 t-1] AS in7, [In8 54012 t-1] AS in8, [Out 54095 t] AS out FROM LSRSevern ORDER BY Year, Seq"));
+		prop.setProperty("HourlySQLString", prop.getProperty("HourlySQLString",
+				"Select  AvgHafrenValue, AvgHoreValue, AvgTanllwythValue, AvgSevenValue FROM HourlyAvgFlowPerDay ORDER BY Date,Hour"));
+		prop.setProperty("LSSQLString", prop.getProperty("LSSQLString",
+				"SELECT [In1 54005 t] AS in1, [In2 54020 t] AS in2, [In3 54018 t] AS in3, [In4 54012 t] AS in4, [In5 54005 t-1] AS in5, [In6 54020 t-1] AS in6, [In7 54018 t-1] AS in7, [In8 54012 t-1] AS in8, [Out 54095 t] AS out FROM LSRSevern ORDER BY Year, Seq"));
 
-		prop.setProperty(
-				"Q95Test1",
+		prop.setProperty("Q95Test1",
 				"SELECT [S at M (t-1)] AS in1, [P at Y (t-1)] AS in2, [RB at H (t-1)] AS in3, [T at W (t-1)] AS in4,[S at B (t)] AS out FROM RSevernQ95 ORDER BY [Date]");
-		prop.setProperty(
-				"Q95Test2",
+		prop.setProperty("Q95Test2",
 				"SELECT [S at M (t-2)] AS in1,[P at Y (t-2)] AS in2,[RB at H (t-2)] AS in3, [T at W (t-2)] AS in4, [S at M (t-1)] AS in5, [P at Y (t-1)] AS in6, [RB at H (t-1)] AS in7, [T at W (t-1)] AS in8,[S at B (t)] AS out FROM RSevernQ95 ORDER BY [Date]");
-		prop.setProperty(
-				"Q95Test3",
+		prop.setProperty("Q95Test3",
 				"SELECT [S at M (t-3)] AS in1,[P at Y (t-3)] AS in2,[RB at H (t-3)] AS in3,[T at W (t-3)] AS in4,[S at M (t-2)] AS in5,[P at Y (t-2)] AS in6,[RB at H (t-2)] AS in7,[T at W (t-2)] AS in8,[S at M (t-1)] AS in9,[P at Y (t-1)] AS in10,[RB at H (t-1)] AS in11,[T at W (t-1)] AS in12, [S at B (t)] AS out FROM RSevernQ95 ORDER BY [Date]");
-		prop.setProperty(
-				"FullTraining",
+		prop.setProperty("FullTraining",
 				"SELECT [S at M (t-3)] AS in1 ,[P at Y (t-3)] AS in2,[RB at H (t-3)] AS in3,[T at W (t-3)] AS in4,[S at M (t-2)] AS in5,[P at Y (t-2)] AS in6,[RB at H (t-2)] AS in7,[T at W (t-2)] AS in8,[S at M (t-1)] AS in9,[P at Y (t-1)] AS in10,[RB at H (t-1)] AS in11,[T at W (t-1)] AS in12,[S at M (t)] AS in13,[P at Y (t)] AS in14,[RB at H (t)] AS in15,[T at W (t)] AS in16,[S at B (t)] AS out FROM [Full Training Data] ORDER BY [Date]");
-		prop.setProperty(
-				"TrainingLessQ95",
+		prop.setProperty("TrainingLessQ95",
 				"SELECT [S at M (t-3)] AS in1,[P at Y (t-3)] AS in2,[RB at H (t-3)] AS in3,[T at W (t-3)] AS in4,[S at M (t-2)] AS in5,[P at Y (t-2)] AS in6,[RB at H (t-2)] AS in7,[T at W (t-2)] AS in8,[S at M (t-1)] AS in9,[P at Y (t-1)] AS in10,[RB at H (t-1)] AS in11,[T at W (t-1)] AS in12,[S at M (t)] AS in13,[P at Y (t)] AS in14,[RB at H (t)] AS in15,[T at W (t)] AS in16,[S at B (t)] AS out FROM [Training Less Than Q95 Data] ORDER BY [Date]");
-		prop.setProperty(
-				"ResidT1",
+		prop.setProperty("ResidT1",
 				"SELECT [S at M (t-1) (In1)] as in1,[P at Y (t-1) (In2)] as in2, [RB at H (t-1) (In 3)] as in3,[T at W (t-1) (In 4)] as in4, [S at B (t) (Out)] as in5, [Multiple Regression Residual (MRR)] as out  FROM [Residual modelling]");
-		prop.setProperty(
-				"RSDailyAvgT1",
+		prop.setProperty("RSDailyAvgT1",
 				"SELECT [S at M (t-1) (In1)] as in1,[P at Y (t-1) (In2)] as in2, [RB at H (t-1) (In 3)] as in3,[T at W (t-1) (In 4)] as in4, [S at B (t) (Out)] as out FROM [Full Training Data] ORDER BY [Date]");
-
 
 		prop.setProperty("ResidT2",
 				"SELECT in1, in2, in3, in4, out  FROM [AvgResidual]");
-		prop.setProperty(
-				"GlacierT1",
+		prop.setProperty("GlacierT1",
 				"SELECT [Noir Air Temp] as in1,[Noir Q] as in2,[Blanc Q] as in3,[Noir Inst# Load] as in4,[Blanc Inst# Load] as in5,[Road Br SSL] as out FROM [Glacier Data] ORDER BY [France Date /Time]");
-		prop.setProperty(
-				"GlacierT2",
+		prop.setProperty("GlacierT2",
 				"SELECT [Noir Q] as in2,[Blanc Q] as in3,[Noir Inst# Load] as in4,[Blanc Inst# Load] as in5,[Road Br SSL] as out FROM [Glacier Data] ORDER BY [France Date /Time]");
-		prop.setProperty(
-				"GlacierT3",
+		prop.setProperty("GlacierT3",
 				"SELECT [Noir Air Temp] as in1,[Noir Q] as in2,[Blanc Q] as in3,[Noir Inst# Load] as in4,[Blanc Inst# Load] as in5,[Road Br SSL] as out FROM [Glacier Data] WHERE [Date] NOT IN ('2005-07-12') ORDER BY [France Date /Time]");
-		prop.setProperty(
-				"GlacierT4",
+		prop.setProperty("GlacierT4",
 				"SELECT in1, in2, in3, in4, output FROM GlacierT4 ORDER BY Date");
-		prop.setProperty(
-				"GlacierT4Complete",
+		prop.setProperty("GlacierT4Complete",
 				"SELECT in1, in2, in3, in4, output FROM GlacierT4Complete ORDER BY Date");
-		prop.setProperty(
-				"GlacierT5",
+		prop.setProperty("GlacierT5",
 				"SELECT in1, in2, in3, in4, output FROM GlacierT5 ORDER BY Date");
-		prop.setProperty(
-				"GlacierT6",
+		prop.setProperty("GlacierT6",
 				"SELECT in1, in2, in3, in4, output FROM GlacierT6 ORDER BY Date");
 
 		prop.setProperty("connection",
@@ -361,7 +331,7 @@ public class ReadNERC extends ReadData
 	{
 		return TLQ95;
 	}
-	
+
 	public String selectRandomDay()
 	{
 		String key = null;
@@ -393,21 +363,24 @@ public class ReadNERC extends ReadData
 		return key;
 	}
 	/**
-	 * @param fTSQL the fTSQL to set
+	 * @param fTSQL
+	 *            the fTSQL to set
 	 */
 	public void setFTSQL(boolean fTSQL)
 	{
 		FTSQL = fTSQL;
 	}
 	/**
-	 * @param glacierT1 the glacierT1 to set
+	 * @param glacierT1
+	 *            the glacierT1 to set
 	 */
 	public void setGlacierT1(boolean glacierT1)
 	{
 		GlacierT1 = glacierT1;
 	}
 	/**
-	 * @param glacierT2 the glacierT2 to set
+	 * @param glacierT2
+	 *            the glacierT2 to set
 	 */
 	public void setGlacierT2(boolean glacierT2)
 	{
@@ -415,14 +388,16 @@ public class ReadNERC extends ReadData
 	}
 
 	/**
-	 * @param glacierT3 the glacierT3 to set
+	 * @param glacierT3
+	 *            the glacierT3 to set
 	 */
 	public void setGlacierT3(boolean glacierT3)
 	{
 		GlacierT3 = glacierT3;
 	}
 	/**
-	 * @param glacierT4 the glacierT4 to set
+	 * @param glacierT4
+	 *            the glacierT4 to set
 	 */
 	public void setGlacierT4(boolean glacierT4)
 	{
@@ -430,7 +405,8 @@ public class ReadNERC extends ReadData
 	}
 
 	/**
-	 * @param glacierT4Complete the glacierT4Complete to set
+	 * @param glacierT4Complete
+	 *            the glacierT4Complete to set
 	 */
 	public void setGlacierT4Complete(boolean glacierT4Complete)
 	{
@@ -438,21 +414,24 @@ public class ReadNERC extends ReadData
 	}
 
 	/**
-	 * @param q95t1 the q95T1 to set
+	 * @param q95t1
+	 *            the q95T1 to set
 	 */
 	public void setQ95T1(boolean q95t1)
 	{
 		Q95T1 = q95t1;
 	}
 	/**
-	 * @param q95t2 the q95T2 to set
+	 * @param q95t2
+	 *            the q95T2 to set
 	 */
 	public void setQ95T2(boolean q95t2)
 	{
 		Q95T2 = q95t2;
 	}
 	/**
-	 * @param q95t3 the q95T3 to set
+	 * @param q95t3
+	 *            the q95T3 to set
 	 */
 	public void setQ95T3(boolean q95t3)
 	{
@@ -460,7 +439,8 @@ public class ReadNERC extends ReadData
 	}
 
 	/**
-	 * @param residT1 the residT1 to set
+	 * @param residT1
+	 *            the residT1 to set
 	 */
 	public void setResidT1(boolean residT1)
 	{
@@ -468,7 +448,8 @@ public class ReadNERC extends ReadData
 	}
 
 	/**
-	 * @param residT2 the residT2 to set
+	 * @param residT2
+	 *            the residT2 to set
 	 */
 	public void setResidT2(boolean residT2)
 	{
@@ -476,7 +457,8 @@ public class ReadNERC extends ReadData
 	}
 
 	/**
-	 * @param rSDailyAvgT1 the rSDailyAvgT1 to set
+	 * @param rSDailyAvgT1
+	 *            the rSDailyAvgT1 to set
 	 */
 	public void setRSDailyAvgT1(boolean rSDailyAvgT1)
 	{
@@ -484,7 +466,8 @@ public class ReadNERC extends ReadData
 	}
 
 	/**
-	 * @param tLQ95 the tLQ95 to set
+	 * @param tLQ95
+	 *            the tLQ95 to set
 	 */
 	public void setTLQ95(boolean tLQ95)
 	{
@@ -606,7 +589,7 @@ public class ReadNERC extends ReadData
 	public void useTestData()
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void useTLQ95()
@@ -620,7 +603,7 @@ public class ReadNERC extends ReadData
 	public void useTrainData()
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void writeSelectedDay(String key)

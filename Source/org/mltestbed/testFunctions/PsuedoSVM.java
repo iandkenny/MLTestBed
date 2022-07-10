@@ -333,6 +333,11 @@ public class PsuedoSVM extends TestBase
 		return distance;
 	}
 
+	/**
+	 * This function will return the determinant of any two dimensional matrix.
+	 * For this particular function a two dimensional double matrix needs to be
+	 * passed as arguments - Avishek Ghosh
+	 */
 	public double determinant(double[][] mat)
 	{
 
@@ -836,11 +841,6 @@ public class PsuedoSVM extends TestBase
 		return super.Objective(null);
 	}
 
-	/*
-	 * This function will return the determinant of any two dimensional matrix.
-	 * For this particular function a two dimensional double matrix needs to be
-	 * passed as arguments - Avishek Ghosh
-	 */
 
 	/*
 	 * (non-Javadoc)
@@ -1371,7 +1371,7 @@ public class PsuedoSVM extends TestBase
 		int add = (subVec) ? inputs : 0;
 		add += (powVec) ? inputs : 0;
 		add += (logVec) ? inputs : 0;
-
+		
 		super.setMDimension(dimension + add);
 	}
 

@@ -452,20 +452,7 @@ abstract public class ReadData
 	protected abstract Vector<String> getKeys();
 	public Connection getLocalConnection()
 	{
-		Connection con = null;
-		try
-		{
-			Class.forName(driver);
-			con = DriverManager.getConnection(url + connectString, uid, pwd);
-		} catch (ClassNotFoundException e)
-		{
-			Log.getLogger().info(e.getMessage());
-			// e.printStackTrace();
-		} catch (SQLException e)
-		{
-			Log.getLogger().info(e.getMessage());
-			// e.printStackTrace();
-		}
+		Connection con = getNewConnection();
 		return con;
 
 	}

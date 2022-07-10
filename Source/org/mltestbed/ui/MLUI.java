@@ -15,6 +15,8 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+
+import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -113,7 +115,11 @@ public class MLUI extends JPanel
 
 	private static final String DB_CONNECTION = "DB Connection";
 
-	private static final String DEFAULT_CONNECTION_STRING = "SwarmExperiments"; // old name kept for compatibility
+	private static final String DEFAULT_CONNECTION_STRING = "SwarmExperiments"; // old
+																				// name
+																				// kept
+																				// for
+																				// compatibility
 
 	private static final String DEFAULT_DRIVER = "com.mysql.cj.jdbc.Driver";
 
@@ -232,6 +238,8 @@ public class MLUI extends JPanel
 	private static final String USE_FIPS_NEIGHBOURHOOD = "Use FIPS Neighbourhood";
 
 	private static final String USE_MEMORY_BUFFERS = "Use Memory Buffers:";
+	
+	private static final String USE_FILE_LOG = "Log Errors to File:";
 
 	private static final String USE_PARALLEL_PROCESSING_TO_EVALUATE_PARTICLES = "Use Parallel Processing to Evaluate Particles:";
 
@@ -476,6 +484,11 @@ public class MLUI extends JPanel
 
 	private JMenuItem MinasPassageMenuItem;
 
+	private JLabel useLogFileLabel;
+
+	private AbstractButton useLogFileCheckBox;
+
+
 	/**
 	 * @param frame
 	 */
@@ -538,7 +551,7 @@ public class MLUI extends JPanel
 		GasSpecMenuItem.getAccessibleContext()
 				.setAccessibleDescription("Imports Gas Spectrometry Data");
 		menu.add(GasSpecMenuItem);
-		
+
 		MinasPassageMenuItem = new JMenuItem("Minas Passage Data Import",
 				KeyEvent.VK_M);
 		MinasPassageMenuItem.setAccelerator(
@@ -547,7 +560,6 @@ public class MLUI extends JPanel
 		MinasPassageMenuItem.getAccessibleContext()
 				.setAccessibleDescription("Minas Passage Data");
 		menu.add(MinasPassageMenuItem);
-
 
 		menu.add(new JSeparator());
 		aboutMenuItem = new JMenuItem("About Box", KeyEvent.VK_A);
@@ -649,6 +661,7 @@ public class MLUI extends JPanel
 		randLabel = new JLabel(RANDOM_NUMBER_GENERATOR);
 		paraLabel = new JLabel(USE_PARALLEL_PROCESSING_TO_EVALUATE_PARTICLES);
 		useMemBuffersLabel = new JLabel(USE_MEMORY_BUFFERS);
+		useLogFileLabel = new JLabel(USE_FILE_LOG);
 
 		heuristicLabel = new JLabel(HEURISTIC_METHOD_LIST);
 		heuristicParamsLabel = new JLabel(HEURISTIC_SETTINGS);
@@ -695,6 +708,10 @@ public class MLUI extends JPanel
 
 		useMemBuffersCheck = new JCheckBox();
 		useMemBuffersCheck.setSelected(false);
+		useMemBuffersCheck.addPropertyChangeListener("value", this);
+		
+		useLogFileCheckBox = new JCheckBox();
+		useLogFileCheckBox.setSelected(false);
 		useMemBuffersCheck.addPropertyChangeListener("value", this);
 
 		paraCheck = new JCheckBox();
@@ -794,6 +811,7 @@ public class MLUI extends JPanel
 		randLabel.setLabelFor(randCombo);
 		paraLabel.setLabelFor(paraCheck);
 		useMemBuffersLabel.setLabelFor(useMemBuffersCheck);
+		useLogFileLabel.setLabelFor(useLogFileCheckBox);
 		enableHeirarchy.setLabelFor(heirarchyCheckBox);
 		heirarchySwitchOpsLabel.setLabelFor(switchOpsCheckBox);
 		heirarchyPassGBLabel.setLabelFor(passGBCheckBox);
@@ -971,6 +989,8 @@ public class MLUI extends JPanel
 		experimentalPane.add(paraLabel, c);
 		c.gridy++;
 		experimentalPane.add(useMemBuffersLabel, c);
+		c.gridy++;
+		experimentalPane.add(useLogFileLabel, c);
 
 		c.gridx = 1;
 		c.gridy = 0;
@@ -991,6 +1011,8 @@ public class MLUI extends JPanel
 		experimentalPane.add(paraCheck, c);
 		c.gridy++;
 		experimentalPane.add(useMemBuffersCheck, c);
+		c.gridy++;
+		experimentalPane.add(useLogFileCheckBox, c);
 
 		// setup neighbourhood pane
 		JPanel neighbourhoodPane = new JPanel(new GridBagLayout());
@@ -1383,8 +1405,7 @@ public class MLUI extends JPanel
 				}
 			});
 
-		} 
-		else if (source == MinasPassageMenuItem)
+		} else if (source == MinasPassageMenuItem)
 		{
 
 			javax.swing.SwingUtilities.invokeLater(new Runnable()
@@ -1401,9 +1422,7 @@ public class MLUI extends JPanel
 
 				}
 			});
-		}
-		else
-			if (source == progressLoggable)
+		} else if (source == progressLoggable)
 			isLogging = progressLoggable.isSelected();
 		else if (source == heuristicFuncCombo)
 		{
@@ -1999,6 +2018,8 @@ public class MLUI extends JPanel
 					.parseBoolean(runparams.getProperty("paraeval", "false")));
 			useMemBuffersCheck.setSelected(Boolean.parseBoolean(
 					runparams.getProperty("usemembuffers", "false")));
+			useLogFileCheckBox.setSelected(Boolean.parseBoolean(
+					runparams.getProperty("logerrorstofile", "false")));
 
 			// Output tab
 			driverBox.setText(runparams.getProperty("driver", driver));
@@ -2364,6 +2385,8 @@ public class MLUI extends JPanel
 				Boolean.toString(paraCheck.isSelected()));
 		runparams.setProperty("usemembuffers",
 				Boolean.toString(useMemBuffersCheck.isSelected()));
+		runparams.setProperty("logerrorstofile",
+				Boolean.toString(useLogFileCheckBox.isSelected()));
 
 		runparams.setProperty("topologyclass",
 				topologies.get(neighbourhoodCombo.getSelectedItem()));
@@ -2424,10 +2447,10 @@ public class MLUI extends JPanel
 			testfunctions.clear();
 			classes = (ArrayList<Class<Object>>) Main
 					.getClasses("org.mltestbed.testFunctions.uniModal");
-			classes.addAll(Main
-					.getClasses("org.mltestbed.testFunctions.multiModal"));
-			classes.addAll(Main
-					.getClasses("org.mltestbed.testFunctions.heirarchy"));
+			classes.addAll(
+					Main.getClasses("org.mltestbed.testFunctions.multiModal"));
+			classes.addAll(
+					Main.getClasses("org.mltestbed.testFunctions.heirarchy"));
 			for (int i = 0; i < classes.size(); i++)
 			{
 				Class<Object> class1 = classes.get(i);
@@ -2466,19 +2489,19 @@ public class MLUI extends JPanel
 						// e.printStackTrace();
 					} catch (IllegalArgumentException e)
 					{
-						// TODO Auto-generated catch block
+						Log.log(Level.SEVERE, e);
 						e.printStackTrace();
 					} catch (InvocationTargetException e)
 					{
-						// TODO Auto-generated catch block
+						Log.log(Level.SEVERE, e);
 						e.printStackTrace();
 					} catch (NoSuchMethodException e)
 					{
-						// TODO Auto-generated catch block
+						Log.log(Level.SEVERE, e);
 						e.printStackTrace();
 					} catch (SecurityException e)
 					{
-						// TODO Auto-generated catch block
+						Log.log(Level.SEVERE, e);
 						e.printStackTrace();
 					}
 
@@ -2826,7 +2849,12 @@ public class MLUI extends JPanel
 		{
 			runparams.setProperty("usemembuffers",
 					Boolean.toString(useMemBuffersCheck.isSelected()));
-			Util.setUseMem(useMemBuffersCheck.isSelected());
+			Main.setUseMem(useMemBuffersCheck.isSelected());
+		}if (source == useLogFileCheckBox)
+		{
+			runparams.setProperty("logerrorstofile",
+					Boolean.toString(useLogFileCheckBox.isSelected()));
+			Main.setUseLog(useLogFileCheckBox.isSelected());
 		} else if (source == swarmsField)
 			heirarchyParams.setProperty("noswarms",
 					swarmsField.getValue().toString());

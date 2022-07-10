@@ -27,7 +27,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-import org.mltestbed.data.ReadData;
 import org.mltestbed.data.rawimport.ImportMinasPassageData;
 
 public class ImportMinasGUI extends JDialog
@@ -41,7 +40,7 @@ public class ImportMinasGUI extends JDialog
 	private static final String JDBC_CONNECT = "JDBC Connect:";
 	private static Logger logger = Logger
 			.getLogger("org.mltestbed.data.rawimport.ImportMinasPassageData");
-	private static final int MAX_THREADS = 5;
+	private static final int MAX_THREADS = 10;
 	private static final String MINASPASSAGE_IMPORT_PROPERTIES = "MinasPassageImport.properties";
 	private static final String S_MINAS_DATA = "S:\\Minas Passage\\";
 	private static final long serialVersionUID = 1L;
@@ -106,6 +105,7 @@ public class ImportMinasGUI extends JDialog
 			// importData();
 		}
 	}
+	
 	// Method to create a button
 	private JButton createButton(String label)
 	{
@@ -138,13 +138,14 @@ public class ImportMinasGUI extends JDialog
 		buttonPane.add(progressbar = new JProgressBar(0, 100));
 		progressbar.setStringPainted(true);
 		progressbar.setString("");
+		progressbar.setValue(0);
 		progressbar.addPropertyChangeListener("value", this);
 		
 		// Create and add the buttons to the buttonPane
-		buttonPane.add(progressLabel = new JLabel(""));
+//		buttonPane.add(progressLabel = new JLabel(""));
 		buttonPane.add(ok = createButton("OK")); // Add the OK button
 		buttonPane.add(cancel = createButton("Cancel")); // Add the Cancel button
-		progressLabel.addPropertyChangeListener("value",this);
+//		progressLabel.addPropertyChangeListener("value",this);
 		getContentPane().add(buttonPane, BorderLayout.SOUTH);// Add pane to
 																// content pane
 
@@ -226,35 +227,47 @@ public class ImportMinasGUI extends JDialog
 
 	}
 
+	
 	/**
 	 * 
 	 */
-	public void eventprocess()
+	private boolean eventprocess()
 	{
 		boolean flag = true;
-		for (int i = 0; i < MAX_THREADS; i++)
+		if (progressbar !=null)
 		{
-			flag &= ing[i].isFinished();
-			if (i == 0)
+			// progressbar.setValue( new Integer((String) evt.getNewValue()));
+			// progressbar.updateUI();
+			progressbar.setValue(progressbar.getValue() + 1);
+//			progressbar.updateUI();
+			for (int i = 0; i < MAX_THREADS; i++)
+				if (ing[i] != null && ing[i].isAlive())
+				{
+					progressbar.setString(ing[i].getCurFilename());
+					progressbar.setMaximum(progressbar.getMaximum() < ing[i]
+							.getFilestoprocess()
+									? ing[i].getFilestoprocess()
+									: progressbar.getMaximum());
+					flag &= ing[i].isFinished();
+				}
+			if (flag)
 			{
-				progressLabel.setText(ing[i].getMessage());
-				progressLabel.updateUI();
-				progressbar.setString(ing[i].getMessage());
-			}
-		}
-		progressbar.setValue(progressbar.getValue()+1);
-		if (flag)
-		{
-			progressbar.setIndeterminate(false);
-			progressbar.updateUI();
-			ok.setEnabled(true);
-			JOptionPane.showMessageDialog(this, DATA_INPUT_COMPLETE);
+				if(ok!= null) ok.setEnabled(true);
+				progressbar.setIndeterminate(false);
+				progressbar.updateUI();
+				JOptionPane.showMessageDialog(this, DATA_INPUT_COMPLETE);
 
+			} 
 		}
+		return flag;
 	}
 	public JProgressBar getProgressBar()
 	{
 		return progressbar;
+	}
+	public void fireEvent()
+	{
+		eventprocess();		
 	}
 
 }

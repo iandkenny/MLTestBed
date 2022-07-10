@@ -31,7 +31,7 @@ public class IFSGlacierData extends IFS
 		description = "Glacier Data - IFS implementation";
 		info = "IFS function for Glacier Data";
 		minimised = true;
-		createParams();
+//		createParams();
 	}
 
 	/*

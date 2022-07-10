@@ -23,7 +23,6 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.swing.JDialog;
 import javax.swing.JProgressBar;
 
 import org.mltestbed.ui.ImportMinasGUI;
@@ -111,7 +110,8 @@ public class ImportMinasPassageData extends Thread
 		logger.setLevel(Level.ALL);
 
 		// Send logger output to our FileHandler.
-		logger.addHandler(fh);
+		if (fh != null)
+			logger.addHandler(fh);
 		// Initialise properties
 		this.prop = prop;
 		this.dialog = dialog;
@@ -125,7 +125,7 @@ public class ImportMinasPassageData extends Thread
 		{
 			String line;
 			logger.log(Level.INFO, "Processing... " + fileName + " body");
-			int i = 0;
+			long i = 0;
 			while ((line = buf.readLine()) != null)
 			{
 				if (line.charAt(0) != '#')
@@ -181,7 +181,7 @@ public class ImportMinasPassageData extends Thread
 		{
 			String line;
 			logger.log(Level.INFO, "Processing... " + fileName + " body");
-			int i = 0;
+			long i = 0;
 			while ((line = buf.readLine()) != null)
 			{
 				if (line.charAt(0) != '#')
@@ -300,7 +300,19 @@ public class ImportMinasPassageData extends Thread
 			con = DriverManager.getConnection(url + connectString);
 		return con;
 	}
-
+	private Connection getNewConnection()
+			throws ClassNotFoundException, SQLException
+	{
+		Connection con = null;
+		Class.forName(driver);
+		int i = 0;
+		while (con ==null && i<5)
+		{
+			con = DriverManager.getConnection(url + connectString);
+			i++;
+		}
+		return con;
+	}
 	/**
 	 * @return the curFilename
 	 */
@@ -359,7 +371,7 @@ public class ImportMinasPassageData extends Thread
 		{
 			String line;
 			logger.log(Level.INFO, "Processing... " + fileName + " body");
-			int i = 0;
+			long i = 0;
 			while ((line = buf.readLine()) != null)
 			{
 				if (line.charAt(0) != '#')
@@ -419,36 +431,7 @@ public class ImportMinasPassageData extends Thread
 			{
 				updateProcessed(curFilename);
 
-				FileInputStream file;
-				try
-				{
-					File rawFile = new File(folder + File.separator + subfolder,
-							curFilename);
-					logger.log(Level.INFO, "Starting " + curFilename);
-					putMessage("Starting " + curFilename);
-					file = new FileInputStream(rawFile);
-					BufferedReader buf = new BufferedReader(
-							new InputStreamReader(file));
-					if (subfolder.equals(AIR_TEMP))
-						airTempReadData(buf, curFilename);
-					else if (subfolder.equals(HUMIDITY))
-						humidityReadData(buf, curFilename);
-					else if (subfolder.equals(PRECIPITATION))
-						precipitationReadData(buf, curFilename);
-					else if (subfolder.equals(BAROMETRIC))
-						barometricReadData(buf, curFilename);
-
-					buf.close();
-					putMessage("Finished " + curFilename);
-				} catch (FileNotFoundException e)
-				{
-
-					logger.log(Level.SEVERE, e.getMessage());
-				} catch (IOException e)
-				{
-
-					logger.log(Level.SEVERE, e.getMessage());
-				}
+				processfile(curFilename,subfolder);
 
 				logger.log(Level.INFO, "Finished: File " + curFilename);
 				curFilename = "";
@@ -457,7 +440,43 @@ public class ImportMinasPassageData extends Thread
 		logger.log(Level.INFO, "Processing finished");
 		bFinished = true;
 		if(dialog != null)
-			dialog.eventprocess();
+			dialog.fireEvent();
+	}
+	/**
+	 * @param subfolder
+	 */
+	public void processfile(String curFilename,String subfolder)
+	{
+		FileInputStream file;
+		try
+		{
+			File rawFile = new File(folder + File.separator + subfolder,
+					curFilename);
+			logger.log(Level.INFO, "Starting " + curFilename);
+			putMessage("Starting " + curFilename);
+			file = new FileInputStream(rawFile);
+			BufferedReader buf = new BufferedReader(
+					new InputStreamReader(file));
+			if (subfolder.equals(AIR_TEMP))
+				airTempReadData(buf, curFilename);
+			else if (subfolder.equals(HUMIDITY))
+				humidityReadData(buf, curFilename);
+			else if (subfolder.equals(PRECIPITATION))
+				precipitationReadData(buf, curFilename);
+			else if (subfolder.equals(BAROMETRIC))
+				barometricReadData(buf, curFilename);
+
+			buf.close();
+			putMessage("Finished " + curFilename);
+		} catch (FileNotFoundException e)
+		{
+
+			logger.log(Level.SEVERE, e.getMessage());
+		} catch (IOException e)
+		{
+
+			logger.log(Level.SEVERE, e.getMessage());
+		}
 	}
 	private void initProps()
 	{
@@ -513,11 +532,10 @@ public class ImportMinasPassageData extends Thread
 //				fSQL.write(sql +LINESEPARATOR);
 //			} catch (IOException e)
 //			{
-//				logger.log(Level.SEVERE,e.getMessage());;
 //				logger.log(Level.SEVERE,e.getMessage());
 //			}
 
-//		Log.getLogger().info("SQL: "+ sql);
+		logger.log(Level.INFO,"SQL: "+ sql);
 	}
 	@SuppressWarnings("unused")
 	private void openDB()
@@ -550,7 +568,7 @@ public class ImportMinasPassageData extends Thread
 		{
 			String line;
 			logger.log(Level.INFO, "Processing... " + fileName + " body");
-			int i = 0;
+			long i = 0;
 			while ((line = buf.readLine()) != null)
 			{
 				if (line.charAt(0) != '#')
@@ -614,8 +632,6 @@ public class ImportMinasPassageData extends Thread
 				Connection con = getConnection();
 				Statement stmt = con.createStatement();
 				File files[] = fileImport.listFiles();
-				progress.setMinimum(0);
-				progress.setMinimum(files.length - 1);
 				for (int i = 0; i < files.length; i++)
 				{
 					if (!files[i].isDirectory())
@@ -642,6 +658,13 @@ public class ImportMinasPassageData extends Thread
 		}
 	}
 
+	/**
+	 * @return the filestoprocess
+	 */
+	public int getFilestoprocess()
+	{
+		return filestoprocess;
+	}
 	public synchronized void putMessage(String str)
 	{
 
@@ -649,9 +672,7 @@ public class ImportMinasPassageData extends Thread
 		if (progress != null && dialog != null)
 		{
 			progress.firePropertyChange("value", 0, 0);
-			progress.setValue(filestoprocess++);
-			progress.setString(str);
-			dialog.eventprocess();
+			dialog.fireEvent();	
 		}
 	}
 

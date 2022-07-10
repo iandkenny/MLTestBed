@@ -70,7 +70,7 @@ public class ANN extends TestBaseANN
 		@Override
 		protected void initProps()
 		{
-			keySQLString = prop.getProperty(KEY_SQL, keySQLString);
+			keySQLString = prop.getProperty(KEY_SQL, "");
 			prop.setProperty(KEY_SQL, keySQLString);
 			super.initProps();
 		}
@@ -148,11 +148,13 @@ public class ANN extends TestBaseANN
 	@Override
 	protected void createParams()
 	{
+		if (params == null)
+			params = new Properties();
 		// the following three are added to make it easier to generalise the ANN
 		// code initially
-		params.setProperty(TEST_SQL, testSQLString);
-		params.setProperty(TRAIN_SQL, trainSQLString);
-		params.setProperty(KEY_SQL, keySQLString);
+		params.setProperty(TEST_SQL, "");
+		params.setProperty(TRAIN_SQL, "");
+		params.setProperty(KEY_SQL, "");
 		//
 		params.setProperty(KEY, "");
 		params.setProperty(INPUTS, "1");
@@ -267,7 +269,7 @@ public class ANN extends TestBaseANN
 					Log.getLogger().info(e.getMessage());
 					// e.printStackTrace();
 				}
-			
+
 			if (params == null)
 				params = new Properties();
 			else
@@ -331,7 +333,7 @@ public class ANN extends TestBaseANN
 						+ "</Input><RequiredValue>" + expected.toString()
 						+ "</RequiredValue><Predicted>" + outputs.toString()
 						+ "</Predicted><RowRMSE>" + rowRMSE
-						+ "</RowRMSE></Output>",false);
+						+ "</RowRMSE></Output>", false);
 				rmse += rowRMSE;
 			}
 			dataValues = db.getData(false);

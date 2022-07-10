@@ -1,18 +1,17 @@
-﻿
 -- MySQL Migration Toolkit
  -- SQL Create Script
 
 
 SET FOREIGN_KEY_CHECKS = 0;
 
-CREATE DATABASE IF NOT EXISTS `SwarmExperiments_dbo`
-  CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `SwarmExperiments_dbo`;
+CREATE DATABASE IF NOT EXISTS `MLTestBedExperiments`;
+
+USE `MLTestBedExperiments`;
 
  -- Tables
 
-DROP TABLE IF EXISTS `SwarmExperiments_dbo`.`results`;
-CREATE TABLE `SwarmExperiments_dbo`.`results` (
+DROP TABLE IF EXISTS `MLTestBedExperiments`.`results`;
+CREATE TABLE `MLTestBedExperiments`.`results` (
   `ExpNum` INT(10) NOT NULL,
   `RunNum` INT(10) NOT NULL,
   `Iteration` BIGINT(19) NOT NULL,
@@ -27,28 +26,28 @@ CREATE TABLE `SwarmExperiments_dbo`.`results` (
   `ExpSpecific` LONGTEXT NULL,
   PRIMARY KEY (`ExpNum`, `RunNum`, `Iteration`, `Swarm`, `Particle`),
   CONSTRAINT `FK_results_notebook` FOREIGN KEY `FK_results_notebook` (`ExpNum`)
-    REFERENCES `SwarmExperiments_dbo`.`notebook` (`ExpNum`)
+    REFERENCES `MLTestBedExperiments`.`notebook` (`ExpNum`)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 )
 ENGINE = INNODB;
 
-DROP TABLE IF EXISTS `SwarmExperiments_dbo`.`swarms`;
-CREATE TABLE `SwarmExperiments_dbo`.`swarms` (
+DROP TABLE IF EXISTS `MLTestBedExperiments`.`swarms`;
+CREATE TABLE `MLTestBedExperiments`.`swarms` (
   `ExpNum` INT(10) NOT NULL,
   `RunNum` INT(10) NOT NULL,
   `SwarmNo` INT(10) NOT NULL,
   `Params` LONGTEXT NULL,
   PRIMARY KEY (`ExpNum`, `RunNum`, `SwarmNo`),
   CONSTRAINT `FK_swarms_notebook` FOREIGN KEY `FK_swarms_notebook` (`ExpNum`)
-    REFERENCES `SwarmExperiments_dbo`.`notebook` (`ExpNum`)
+    REFERENCES `MLTestBedExperiments`.`notebook` (`ExpNum`)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 )
 ENGINE = INNODB;
 
-DROP TABLE IF EXISTS `SwarmExperiments_dbo`.`notebook`;
-CREATE TABLE `SwarmExperiments_dbo`.`notebook` (
+DROP TABLE IF EXISTS `MLTestBedExperiments`.`notebook`;
+CREATE TABLE `MLTestBedExperiments`.`notebook` (
   `ExpNum` INT(10) NOT NULL,
   `Description` LONGTEXT NOT NULL,
   `Parameters` LONGTEXT NOT NULL,
@@ -59,30 +58,16 @@ CREATE TABLE `SwarmExperiments_dbo`.`notebook` (
 )
 ENGINE = INNODB;
 
-DROP TABLE IF EXISTS `SwarmExperiments_dbo`.`bestresultstable`;
-CREATE TABLE `SwarmExperiments_dbo`.`bestresultstable` (
-  `ExpNum` INT(10) NOT NULL,
-  `Swarm` INT(10) NOT NULL,
-  `Iteration` BIGINT(19) NOT NULL,
-  `Particle` INT(10) NOT NULL,
-  `MinScore` FLOAT(53) NOT NULL,
-  `ExpSpecific` LONGTEXT NULL,
-  `Year` VARCHAR(4) NULL
-)
-ENGINE = INNODB;
-
-
-
 -- --------- -
 -- Views
 
- DROP VIEW IF EXISTS `SwarmExperiments_dbo`.`ParticlePositions`;
+ DROP VIEW IF EXISTS `MLTestBedExperiments`.`ParticlePositions`;
  CREATE VIEW ParticlePositions
  AS
  SELECT     ExpNum, RunNum, Swarm, Iteration, Particle, isBest, CurrentScore, BestScore, Position, Velocity, BestPosition
  FROM         results;
 
- DROP VIEW IF EXISTS `SwarmExperiments_dbo`.`Experiments`;
+ DROP VIEW IF EXISTS `MLTestBedExperiments`.`Experiments`;
  CREATE VIEW Experiments
  AS
  SELECT     notebook.ExpNum, notebook.Description, notebook.Parameters, notebook.Notes, results.RunNum, results.Iteration,
@@ -90,7 +75,7 @@ ENGINE = INNODB;
  FROM         notebook INNER JOIN
                        results ON notebook.ExpNum = results.ExpNum;
 
- DROP VIEW IF EXISTS `SwarmExperiments_dbo`.`Exppos`;
+ DROP VIEW IF EXISTS `MLTestBedExperiments`.`Exppos`;
  CREATE VIEW Exppos
  AS
  SELECT      ExpNum, RunNum, Swarm, Iteration, Particle, isBest, CurrentScore, Position, BestPosition
@@ -122,11 +107,11 @@ ENGINE = INNODB;
                            (SELECT     (Iteration)
                              FROM          results B
                              WHERE      B.ExpNum = A.ExpNum
-                             GROUP BY b.iteration
+                             GROUP BY B.Iteration
                              HAVING      MIN(currentscore) = MIN(bestscore))) AND (isBest = 1)
  ORDER BY ExpNum, RunNum, Iteration, Particle;
 
- DROP VIEW IF EXISTS `SwarmExperiments_dbo`.`ExpIter`;
+ DROP VIEW IF EXISTS `MLTestBedExperiments`.`ExpIter`;
  CREATE VIEW ExpIter
  AS
  SELECT    Exppos.ExpNum, Exppos.RunNum, Exppos.Iteration, Exppos.Swarm, Exppos.Particle, Exppos.isBest, results.BestScore,
@@ -137,7 +122,7 @@ ENGINE = INNODB;
  WHERE     (Exppos.isBest = 1)
  ORDER BY results.ExpNum, Exppos.RunNum, Exppos.Iteration, Exppos.Swarm, Exppos.Particle;
 
- DROP VIEW IF EXISTS `SwarmExperiments_dbo`.`MaxExpIter`;
+ DROP VIEW IF EXISTS `MLTestBedExperiments`.`MaxExpIter`;
  CREATE VIEW MaxExpIter
  AS
  SELECT     *
@@ -147,25 +132,13 @@ ENGINE = INNODB;
                              FROM          notebook))
  ORDER BY ExpNum, Swarm, Iteration;
 
- DROP VIEW IF EXISTS `SwarmExperiments_dbo`.`IterPerExpPerParticle`;
+ DROP VIEW IF EXISTS `MLTestBedExperiments`.`IterPerExpPerParticle`;
  CREATE VIEW IterPerExpPerParticle
  AS
  SELECT  ExpNum, COUNT(*) AS 'Count'
  FROM         results
  GROUP BY ExpNum, RunNum, Swarm, Particle
  ORDER BY ExpNum, RunNum, Swarm, Particle;
-
- DROP VIEW IF EXISTS `SwarmExperiments_dbo`.`NERCMins`;
- CREATE    VIEW NERCMins
- AS
- SELECT     ExpNum, Swarm, Iteration, Particle, CurrentScore AS MinScore, ExpSpecific, SUBSTRING(ExpSpecific,
-                       INSTR('<Key>', ExpSpecific) + 5, 4) AS 'Year'
- FROM         results A
- WHERE     (CurrentScore IN
-                           (SELECT     MIN(CURRENTSCORE)
-                             FROM          results B
-                             WHERE      (ExpNum > 33) AND (isBest = 1) AND A.EXPNUM = B.EXPNUM
-                             GROUP BY ExpNum));
 
 
 

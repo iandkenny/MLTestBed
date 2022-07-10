@@ -11,12 +11,11 @@ import java.util.LinkedList;
 import java.util.Vector;
 
 import org.mltestbed.data.readDB.ReadMinas;
-import org.mltestbed.util.Util;
 
 public class Emd
 {
 
-	public class EmdData
+	class EmdData
 	{
 		protected double[][] imfs;
 		protected int iterations, order, locality;
@@ -31,15 +30,12 @@ public class Emd
 	private static EmdData emdData;
 
 	private static final String linefeed = System.getProperty("line.separator");
-	private static final String EMD_XML_FILE_HEADER = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><?xml-stylesheet type=\"text/xsl\" href=\"emd.xsl\"?>";
-	private static final String MINAS_PASSAGE_EMD_XMl = "MinasPassageEMD.xml";
-	
 	private static final String MINAS_PASSAGE_EMD_CSV = "MinasPassageEMD.csv";
 	private static final String MINAS_PASSAGE_EMD_FOR_STATISTICS_CSV = "MinasPassageEMDForStatistics.csv";
 
 	public static void minasPassage()
 	{
-		/**
+		/*
 		 * This code implements empirical mode decomposition in Java, adapted
 		 * from the original C++. Required parameters include: - order: the
 		 * number of IMFs to return - iterations: the number of iterations per
@@ -54,19 +50,17 @@ public class Emd
 		ArrayList<Double> data = new ArrayList<Double>();
 		ReadMinas db = new ReadMinas();
 		double[] array = null;
-		StringBuilder sb = new StringBuilder();
-
 		db.useMinasT1();
 		LinkedList<ArrayList<Double>> dbdata = db.getData(null);;
 		emd = new Emd();
 		ArrayList<String> names = db.getColumnNames();
-		inputs = names.size();
-//		int order = names.size() + (int) Math.ceil(names.size() / 3) + 1; // +1
+		inputs= names.size();
+		int order = names.size() + (int) Math.ceil(names.size() / 3) + 1; // +1
 																			// to
 																			// allow
 																			// for
 																			// residual
-		int order = (int) Math.ceil(Util.log2(dbdata.size()));
+//		int order = (int) Math.ceil(Util.log2(dbdata.size()))
 		int k = 0;
 		int cols = 0;
 		for (Iterator<ArrayList<Double>> iterator = dbdata.iterator(); iterator
@@ -81,9 +75,15 @@ public class Emd
 			for (int i = 0; i < cols; i++)
 				array[k++] = data.get(i);
 		}
+		Tdic tdic = new Tdic();
 		emdData = emd.processEMD(order, array);
+//		for (int i = 0; i < array.length; i++) {
+//		for (int j = 0; j < order; j++) {
+//			emdData.imfs[j][i];
+//			tdic.tdic(x, y, ifz, ntime, nct, it);
+//		}}
 		k = 0;
-		sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder();
 		for (int l = 0; l < cols; l++)
 			sb.append(names.get(l) + ((l != cols - 1) ? "," : linefeed));
 		for (int i = 0; i < array.length; i++)
@@ -122,45 +122,19 @@ public class Emd
 								? linefeed
 								: ","));
 		}
-
 		k = 0;
 		for (Iterator<Vector<Double>> iterator2 = vi.iterator(); iterator2
 				.hasNext();)
 		{
 			Vector<Double> vector = (Vector<Double>) iterator2.next();
 			for (int i = 0; i < vector.size(); i++)
-				sb.append(vector.get(i) + ((i == order && k == names.size() - 1)
-						? linefeed
-						: ","));
+				sb.append(vector.get(i)
+						+ ((i == order && k == names.size() - 1)
+								? linefeed
+								: ","));
 			k = (k + 1) % names.size();
 		}
 
-		for (int i = 0; i < cols; i++)
-		{
-			ArrayList<Vector<Double>> tmpListIMFs = emd.getOrderedIMFsBySeries()
-					.get(i);
-			double[][] tmpIMFs = new double[tmpListIMFs.size()][tmpListIMFs
-					.get(0).size()];
-			for (int m = 0; m < tmpListIMFs.size(); m++)
-			{
-
-				double[] arr = tmpListIMFs.get(m).stream()
-						.mapToDouble(Double::doubleValue).toArray().clone();
-				tmpIMFs[m] = arr;
-			}
-
-			double[] meanf = (new Tdic()).meanf(tmpIMFs, 1);
-			k = 0;
-			for (int l = 0; l < meanf.length; l++)
-			{
-				if (k == 0)
-					sb.append(names.get(i) + ",");
-				sb.append(meanf[l] + ((i == cols - 1 && l == meanf.length - 1)
-						? linefeed
-						: ","));
-				k = (k + 1) % order;
-			}
-		}
 		file = new File(MINAS_PASSAGE_EMD_FOR_STATISTICS_CSV);
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(file)))
 		{
@@ -171,80 +145,8 @@ public class Emd
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("Completed CSV file write");
 
-		String tdicstr = processTDIC(dbdata, names, cols);
-		String str = "<emd>" + tdicstr + "</emd>";
-		file = new File(MINAS_PASSAGE_EMD_XMl);
-		try (BufferedWriter writer = new BufferedWriter(new FileWriter(file)))
-		{
-			writer.append(EMD_XML_FILE_HEADER+linefeed);
-			writer.append(str);
-			writer.close();
-		} catch (IOException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		System.out.println("Completed: XML file write");
-
-		System.out.println("All Completed");
-	}
-
-	/**
-	 * @return the orderedIMFsBySeries
-	 */
-	public ArrayList<ArrayList<Vector<Double>>> getOrderedIMFsBySeries()
-	{
-		return orderedIMFsBySeries;
-	}
-
-	/**
-	 * @param dbdata
-	 * @param names
-	 * @param cols
-	 * @return tdic output as xml string 
-	 */
-	public static String processTDIC(
-			LinkedList<ArrayList<Double>> dbdata, ArrayList<String> names,
-			int cols)
-	{
-		StringBuilder tdicsb = new StringBuilder();
-		Tdic tdic = new Tdic();
-		tdicsb.append("<tdic>");
-		for (int j = 1; j < cols; j++)
-		{
-//			double[][] =emdData.imfs[j][i];
-//			tdic.tdic(x, y, ifz, ntime, nct, it);
-			int size = dbdata.size();
-			double[][] imf1 = new double[1][emdData.imfs[j-1].length];
-			imf1[0] =emdData.imfs[j-1];
-			double[][] imf2 = new double[1][emdData.imfs[j].length];
-			imf2[0] =emdData.imfs[j];
-			double[] pp = tdic.maxlocalperiod(imf1, imf2);
-			tdicsb.append("<comparison dataseries1=\"" + names.get(j - 1)
-					+ "\" dataseries2=\"" + names.get(j) + "\">");
-			double[] series1=new double[dbdata.size()];
-			double[] series2=new double[dbdata.size()];
-			for (int i = 0; i < dbdata.size(); i++)
-			{
-				series1[i] =dbdata.get(i).get(j-1);
-				series2[i] =dbdata.get(i).get(j);
-			}
-			tdic.tdic(series1, series2, pp, null, null, null);
-			tdicsb.append(tdic.toXML("c", tdic.getCorrelationMatrix())
-					+ linefeed);
-			tdicsb.append(
-					tdic.toXML("p", tdic.getStudentTest()) + linefeed);
-			tdicsb.append(tdic.toXML("tx", tdic.getTimeAxis()) + linefeed);
-			tdicsb.append(
-					tdic.toXML("scale", tdic.getScaleAxis()) + linefeed);
-			tdicsb.append("</comparison>");
-
-		}
-		tdicsb.append("</tdic>");
-		return tdicsb.toString();
+		System.out.println("Completed");
 	}
 
 	public static void main(String[] args)
@@ -566,7 +468,7 @@ public class Emd
 		EmdData emdData = new EmdData();
 		if (order < 4)
 			order = 4;
-		emd.emdCreate(emdData, data.length, order, 20, 0);// was 20
+		emd.emdCreate(emdData, data.length, order, 20, 0);
 		emd.emdDecompose(emdData, data);
 
 		valuedimfs = new ArrayList<Vector<Double>>();

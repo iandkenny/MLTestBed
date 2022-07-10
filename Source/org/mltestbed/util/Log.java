@@ -10,6 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.MemoryHandler;
 
+import org.mltestbed.ui.Main;
+
 /**
  * @author ian
  * 
@@ -36,6 +38,7 @@ public class Log
 	{
 		logger = Logger.getLogger(Log.class.getName());
 		logger.setLevel(Level.ALL);
+		if(Main.isUseLog())
 		try
 		{
 			fh = new FileHandler("mltestbed.%u.%g.log.xml", 1024 * 1024, 100);

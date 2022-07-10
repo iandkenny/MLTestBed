@@ -31,7 +31,7 @@ public class IFSMinasData extends IFS
 		description = "Minas Passage Data - IFS implementation";
 		info = "IFS function for Minas Passage Data";
 		minimised = true;
-		createParams();
+//		createParams();
 	}
 
 	/*
@@ -55,14 +55,21 @@ public class IFSMinasData extends IFS
 	protected void createParams()
 	{
 		super.createParams();;
-		db = new ReadMinas();
-		db.useMinasT1();
+		try
+		{
+			db = new ReadMinas();
+			db.useMinasT1();
 
-		setDims();
-		params.setProperty(DAY, "random");
-		params.setProperty(PERFORM_TEST, "MinasTest1");
-		params.setProperty(RESETDB, "false");
-		params.setProperty(USE_YEAR, "true");
+			setMDimension(0);
+			params.setProperty(DAY, "random");
+			params.setProperty(PERFORM_TEST, "MinasTest1");
+			params.setProperty(RESETDB, "false");
+			params.setProperty(USE_YEAR, "true");
+		} catch (Exception e)
+		{
+			Log.log(Level.SEVERE, e);
+			e.printStackTrace();
+		}
 	}
 	@Override
 	protected void finalize() throws Throwable
@@ -72,7 +79,6 @@ public class IFSMinasData extends IFS
 
 		super.finalize();
 	}
-
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -121,14 +127,7 @@ public class IFSMinasData extends IFS
 		// factorMin = Integer.parseInt(buf);
 		// buf = params.getProperty(FACTOR_MAX, Integer.toString(factorMax));
 		// factorMax = Integer.parseInt(buf);
-		try
-		{
-			setMDimension(0);
-		} catch (Exception e)
-		{
-			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
-		}
+		setDims();
 		if (data == null)
 		{
 			HashMap<String, String> keys = new HashMap<String, String>();
@@ -150,11 +149,11 @@ public class IFSMinasData extends IFS
 	@Override
 	public double Objective(Particle p)
 	{
-		double sum = 0;
+		double sum = Double.NaN;
 		sum = super.Objective(p, data);
 		mResult = Math.sqrt(Math.pow(sum, 2));
 		p.setFuncSpecific(
-				"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><?xml-stylesheet type=\"text/xsl\" href=\"ifsglacierresults.xsl\"?><IterResult><Key>"
+				"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><?xml-stylesheet type=\"text/xsl\" href=\"ifs.xsl\"?><IterResult><Key>"
 						+ key + "</Key>" + toXML() + p.getFuncSpecific()
 						+ "<AvgDiff>"
 						+ ((sum == 0) ? "NA" : (sum / data.size()))
@@ -174,6 +173,7 @@ public class IFSMinasData extends IFS
 		if (buf.equalsIgnoreCase("MinasTest1"))
 			db.useMinasT1();
 	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -213,13 +213,19 @@ public class IFSMinasData extends IFS
 	@Override
 	public void setMDimension(int dimension) throws Exception
 	{
-		if (db == null)
+		try
 		{
-			db = new ReadMinas();
-			db.useMinasT1();
+			if (db == null)
+				db = new ReadMinas();
+			inputs = db.getDim();
+			super.setMDimension(inputs);
+			setRange();
+		} catch (Exception e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
 		}
-		super.setMDimension(db.getDim());
-		setRange();
+
 	}
 
 	/*
@@ -233,6 +239,8 @@ public class IFSMinasData extends IFS
 		mMin = new double[mDimension];
 		mMax = new double[mDimension];
 		// bit of overkill; needs tailoring for each dimension
+		// the super function adjusts the first index in every function
+		// for probability
 		for (int i = 0; i < mDimension; i++)
 		{
 			mMin[i] = -10;

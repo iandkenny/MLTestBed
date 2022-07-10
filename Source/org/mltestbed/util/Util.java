@@ -13,6 +13,7 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 import org.mltestbed.ui.MLUI;
+import org.mltestbed.ui.Main;
 
 /**
  * @author Ian Kenny
@@ -25,7 +26,7 @@ public class Util
 	private static final long MIN_MEM_CALC = Math.floorDiv(runtime.freeMemory(),
 			20);
 	private static MLUI swarmui;
-	private static boolean useMem = true;
+
 	private static long limit = MIN_MEM_CALC;
 
 	public static boolean checkMemFree()
@@ -35,7 +36,7 @@ public class Util
 //			System.out.println("Using Memory Buffers");
 //		else
 //			System.out.println("Not using Memory Buffers");
-		return (useMem) ? runtime.freeMemory() > limit : false;
+		return (Main.isUseMem()) ? runtime.freeMemory() > limit : false;
 
 	}
 	public static void copyFile(File sourceFile, File destFile)
@@ -133,16 +134,9 @@ public class Util
 	}
 	public static boolean isNumeric(String str)
 	{
-		return str.trim().matches("-?\\d+(\\.\\d+)?"); // match a number with
+		return str.trim().matches("-?\\d+(\\.\\d+)?");  // match a number with
 														// optional
-		// '-' and decimal.
-	}
-	/**
-	 * @return the useMem
-	 */
-	public static boolean isUseMem()
-	{
-		return useMem;
+														// '-' and decimal.
 	}
 
 	public static double log2(long l)
@@ -150,13 +144,75 @@ public class Util
 		return Math.log(l) / Math.log(2);
 	}
 
-	/**
-	 * @param useMem
-	 *            the useMem to set
-	 */
-	public static void setUseMem(boolean useMem)
+	public static double[][] zeros(int x, int y)
 	{
-		Util.useMem = useMem;
+		double[][] p = new double[x][y];
+		for (int i = 0; i < p.length; i++)
+			for (int j = 0; j < p[0].length; j++)
+				p[i][j] = 0;
+		return p;
+	}
+	
+	public static double[][] ones(int x, int y)
+	{
+		double[][] p = new double[x][y];
+		for (int i = 0; i < p.length; i++)
+			for (int j = 0; j < p[0].length; j++)
+				p[i][j] = 1;
+		return p;
+	}
+	public static double[][] transpose(double[][] arr)
+	{
+		double[][] ret = new double[arr[0].length][arr.length];
+		// transpose matrix
+		for (int i = 0; i < arr.length; i++)
+			for (int j = 0; j < arr[0].length; j++)
+				ret [j][i] = arr[i][j];
+		return ret;
+	}
+	/**
+	 * @return
+	 */
+	public static double[][] inverse(double[][] arr)
+	{
+		double[][] p = new double[arr.length][arr[0].length];
+		for (int i = 0; i < p.length; i++)
+			for (int j = 0; j < p[0].length; j++)
+				p[i][j] = 1 / arr[i][j];
+		return p;
+	}
+	 
+	public static double[] maxPerColumn(double[][] arr)
+	{
+		double[] maxm = new double[arr[0].length];
+		for (int col = 0; col < arr[0].length; col++)
+		{
+
+			// Initialize max to 0 at beginning
+			// of finding max element of each column
+			maxm[col] = arr[0][col];
+			for (int row = 1; row < arr.length; row++)
+				if (arr[row][col] > maxm[col])
+					maxm[col] = arr[row][col];
+
+//			System.out.println(maxm[col]);
+		}
+		return maxm;
+	}
+	 
+	public static double absmean(double[] a)
+	{
+		int n = a.length;
+		double sum = 0;
+		for (int i = 0; i < n; i++)
+		{
+			sum += Math.abs(a[i]);
+		}
+		return (sum != 0 && n != 0) ? (sum / (double) n) : Double.NaN;
+	}
+	public static boolean isnan(double n)
+	{
+		return Double.NaN ==n;
 	}
 	public Util()
 	{
@@ -165,7 +221,7 @@ public class Util
 	}
 	public Util(boolean useMem)
 	{
-		Util.useMem = useMem;
+		Main.setUseMem(useMem);
 		minMem = MIN_MEM_CALC;
 		limit = minMem * 3;
 	}
@@ -173,7 +229,7 @@ public class Util
 	{
 		swarmui = ui;
 		if (ui != null && ui.getUseMemBuffersCheck() != null)
-			useMem = ui.getUseMemBuffersCheck().isSelected();
+			Main.setUseMem(ui.getUseMemBuffersCheck().isSelected());
 		minMem = runtime.freeMemory() / 10;
 		limit = minMem * 3;
 	}

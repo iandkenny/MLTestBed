@@ -11,9 +11,12 @@ import java.util.concurrent.ExecutorCompletionService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.mltestbed.heuristics.BaseHeuristic;
+import org.mltestbed.util.Particle;
+
 import java.util.Random;
 
-public final class AntColonyOptimization {
+public final class AntColonyOptimization extends BaseHeuristic {
 
         // greedy
         public static final double ALPHA = -0.2d;
@@ -129,7 +132,8 @@ public final class AntColonyOptimization {
                         if (readAhead) {
                                 String[] split = line.trim().split(" ");
                                 records.add(new Record(Double.parseDouble(split[1].trim()), Double
-                                                .parseDouble(split[2].trim())));
+                                                .parseDouble(split[2].trim()), Double
+                                                        .parseDouble(split[2].trim())));
                         }
 
                         if (line.equals("NODE_COORD_SECTION")) {
@@ -175,7 +179,7 @@ public final class AntColonyOptimization {
                 return Math.abs((Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))));
         }
 
-        final double start() throws InterruptedException, ExecutionException {
+        private final double startWalk() throws InterruptedException, ExecutionException {
 
                 WalkedWay bestDistance = null;
 
@@ -223,11 +227,13 @@ public final class AntColonyOptimization {
         static class Record {
                 double x;
                 double y;
+                double cost;
 
-                public Record(double x, double y) {
+                public Record(double x, double y, double cost) {
                         super();
                         this.x = x;
                         this.y = y;
+                        this.cost = cost;
                 }
         }
 
@@ -247,8 +253,64 @@ public final class AntColonyOptimization {
 
                 long start = System.currentTimeMillis();
                 AntColonyOptimization antColonyOptimization = new AntColonyOptimization();
-                antColonyOptimization.start();
+                antColonyOptimization.startWalk();
                 System.out.println("Took: " + (System.currentTimeMillis() - start) + " ms!");
         }
+
+		@Override
+		protected void afterCalc(int index)
+		{
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		protected void afterIter(long iteration)
+		{
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		protected void beforeCalc(int index)
+		{
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		protected void beforeIter(long iteration)
+		{
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		protected Particle calcNew(int index) throws Exception
+		{
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public boolean constraints() throws Exception
+		{
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		protected void copy(BaseHeuristic o)
+		{
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		protected void createParams()
+		{
+			// TODO Auto-generated method stub
+			
+		}
 
 }

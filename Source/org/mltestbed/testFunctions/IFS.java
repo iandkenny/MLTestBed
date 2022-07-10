@@ -27,11 +27,15 @@ import org.mltestbed.util.Util;
  */
 public class IFS extends TestBase
 {
-
 	private static final String FACTOR = "factor";
-	private static final String NUMBER_OF_FUNCTIONS = "Number of Functions";
-	private static final String NUMBER_OF_TRIALS = "Number of Trials";
+	private static final String NUMBER_OF_FUNCTIONS = "NumberOfFunctions";
+	private static final String NUMBER_OF_TRIALS = "NumberOfTrials";
+	
+
 	private static final String SKIP_FIRST = "skipFirst";
+	private static final String USE_LOG_VECTOR = "useLogVector";
+	private static final String USE_OFFSET_VECTOR = "useOffsetVector";
+	private static final String USE_POWER_VECTOR = "usePowerVector";
 
 	protected int factor = 2;
 	private int funcLen = 0;
@@ -39,12 +43,20 @@ public class IFS extends TestBase
 	private HausdorffCalculator hausdorff = new HausdorffCalculator();
 	protected int inputs = 0;
 	private boolean log2n = false;
+	private boolean logVec = false;
+	private double[] logvector = null;
 	private double[][] matrix = null;
 	private int noTrials = 1;
 	private int numFuncs = 4;
+	private boolean powVec = false;
+	private double[] powvector = null;
 	private Random rand;
-	private int skipFirst;
+	private Vector<Double> result;
+	private int skipFirst = 1000;
+	private boolean subVec = false;
+	protected boolean useSum = true;
 	private double[] vector = null;
+
 	/**
 	 * 
 	 */
@@ -60,6 +72,9 @@ public class IFS extends TestBase
 		ArrayList<Double> res = new ArrayList<Double>();
 		Vector<Double> vec = new Vector<Double>(v);
 		Vector<Double> subV = new Vector<Double>();
+		Vector<Double> powV = new Vector<Double>();
+		Vector<Double> logV = new Vector<Double>();
+
 		double A[][] = null;
 		double B[][] = null;
 		double C[][] = null;
@@ -69,7 +84,7 @@ public class IFS extends TestBase
 		//
 		int index = 0;
 		int sizeInput = input.size();
-		// if (sizeInput != sizeA)
+		//if (sizeInput != sizeA)
 		// throw new Exception("Vector sizes don't match for multiplication");
 		int dim = (int) Math.ceil(sizeInput / sizeA);
 		// B = new double[factor][dim];
@@ -77,15 +92,40 @@ public class IFS extends TestBase
 		// C = new double[factor][dim];
 		try
 		{
-			int reduceBy = inputs;
-			while (reduceBy != 0)
+			if (subVec)
 			{
-				Double lastElement = vec.lastElement();
-				subV.add(0, lastElement);
-				vec.remove(lastElement);
-				reduceBy--;
+				int reduceBy = inputs;
+				while (reduceBy != 0)
+				{
+					Double lastElement = vec.lastElement();
+					subV.add(0, lastElement);
+					vec.remove(lastElement);
+					reduceBy--;
+				}
 			}
-			A = new double[factor][sizeA];
+			if (powVec)
+			{
+				int reduceBy = inputs;
+				while (reduceBy != 0)
+				{
+					Double lastElement = vec.lastElement();
+					powV.add(0, lastElement);
+					vec.remove(lastElement);
+					reduceBy--;
+				}
+			}
+			if (logVec)
+			{
+				int reduceBy = inputs;
+				while (reduceBy != 0)
+				{
+					Double lastElement = vec.lastElement();
+					logV.add(0, lastElement);
+					vec.remove(lastElement);
+					reduceBy--;
+				}
+			}
+				A = new double[factor][sizeA];
 			// A = new double[sizeA][factor];
 
 			index = 0;
@@ -155,14 +195,47 @@ public class IFS extends TestBase
 
 				}
 			}
-			int size = subV.size();
-			vector = new double[size];
-			for (int i = 0; i < size; i++)
+			if (subVec)
 			{
-				double vecEle = subV.get(i);
-				res.set(i, res.get(i) - vecEle);
-				vector[i] = vecEle;
+				// int size = subV.size();
+				int size = result.size();
+				vector = new double[size];
+				for (int i = 0; i < size; i++)
+				{
+					double vecEle = subV.get(i);
+					result.set(i, result.get(i) - vecEle);
+					vector[i] = vecEle;
+				}
+
 			}
+			if (powVec)
+			{
+				// int size = subV.size();
+				int size = result.size();
+				powvector = new double[size];
+				for (int i = 0; i < size; i++)
+				{
+					double vecEle = powV.get(i);
+					result.set(i, Math.pow(result.get(i), vecEle));
+					powvector[i] = vecEle;
+				}
+
+			}
+			if (logVec)
+			{
+				// int size = subV.size();
+				int size = result.size();
+				logvector = new double[size];
+				for (int i = 0; i < size; i++)
+				{
+					double vecEle = logV.get(i);
+					double a = vecEle * vecEle;
+					result.set(i, result.get(i) * Math.log10(a));
+					logvector[i] = a;
+				}
+
+			}
+
 
 		} catch (Exception e)
 		{
@@ -173,6 +246,7 @@ public class IFS extends TestBase
 		return res;
 	}
 
+	
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -183,13 +257,19 @@ public class IFS extends TestBase
 	{
 		numFuncs = 4;
 		noTrials = 1;
-		skipFirst = 100;
+		skipFirst = 1000;
 		factor = 2;
 		params.setProperty(FACTOR, Integer.toString(factor));
 		params.setProperty(NUMBER_OF_FUNCTIONS, "auto");
 		params.setProperty(NUMBER_OF_TRIALS, Integer.toString(noTrials));
 		params.setProperty(SKIP_FIRST, Integer.toString(skipFirst));
 
+		params.setProperty(USE_OFFSET_VECTOR, "true");
+		setSubVec(true);
+		params.setProperty(USE_POWER_VECTOR, "false");
+		setPowVec(false);
+		params.setProperty(USE_LOG_VECTOR, "false");
+		setLogVec(false);
 	}
 
 	protected double d(Vector<Double> x, Vector<Double> y) throws Exception
@@ -208,7 +288,7 @@ public class IFS extends TestBase
 		distance = Math.sqrt(sum);
 		return distance;
 	}
-
+	
 	/*
 	 * This function will return the determinant of any two dimensional matrix.
 	 * For this particular function a two dimensional double matrix needs to be
@@ -257,6 +337,7 @@ public class IFS extends TestBase
 		return result;
 
 	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -273,6 +354,32 @@ public class IFS extends TestBase
 
 		rand = RandGen.getLastCreated();
 	}
+
+
+	/**
+	 * @return the logVec
+	 */
+	public boolean isLogVec()
+	{
+		return logVec;
+	}
+
+	/**
+	 * @return the powVec
+	 */
+	public boolean isPowVec()
+	{
+		return powVec;
+	}
+
+	/**
+	 * @return the subVec
+	 */
+	public boolean isSubVec()
+	{
+		return subVec;
+	}
+
 	/*
 	 * Mean Absolute Error
 	 */
@@ -418,9 +525,9 @@ public class IFS extends TestBase
 			}
 			double hausdorffDist = hausdorff.hausdorffDist(data, predictedData);
 			mResult = Math.sqrt(Math.pow(hausdorffDist, 2));
-			p.setFuncSpecific("<Hausdorff>" + hausdorffDist
-					+ "</Hausdorff><Sum>" + sum + "</Sum><ReqSum>" + reqSum
-					+ "</ReqSum><AvgSum>" + (sum / count)
+			p.setFuncSpecific("<HausdorffDistance>" + hausdorffDist
+					+ "</HausdorffDistance><Sum>" + sum + "</Sum><ReqSum>"
+					+ reqSum + "</ReqSum><AvgSum>" + (sum / count)
 					+ "</AvgSum><AvgRequiredSum>" + (reqSum / count)
 					+ "</AvgRequiredSum><AME description = \"Absolute Maximum Error\">"
 					+ biggest
@@ -443,6 +550,7 @@ public class IFS extends TestBase
 
 		return super.Objective(p);
 	}
+
 	protected Vector<Double> oldcalc(Vector<Double> v, Vector<Double> input)
 			throws Exception
 	{
@@ -524,10 +632,7 @@ public class IFS extends TestBase
 		for (int j = 0; j < factor; j++)
 		{
 			for (int i = 0; i < dim; i++)
-			{
 				res.add(index++, C[j][i]);
-
-			}
 		}
 		for (int i = 0; i < size; i++)
 		{
@@ -552,24 +657,31 @@ public class IFS extends TestBase
 			else if (funcsstr.equalsIgnoreCase("log2n"))
 				log2n = true;
 
-			else 
+			else
 				numFuncs = (int) (inputs + Math.floor(inputs / 3));
 			noTrials = Integer.parseInt(params.getProperty(NUMBER_OF_TRIALS,
 					Integer.toString(noTrials)));
 			skipFirst = Integer.parseInt(params.getProperty(SKIP_FIRST,
 					Integer.toString(skipFirst)));
+
+			String buf = params.getProperty(USE_OFFSET_VECTOR, "true");
+			setSubVec(buf.equalsIgnoreCase("true"));
+			buf = params.getProperty(USE_POWER_VECTOR, "false");
+			setPowVec(buf.equalsIgnoreCase("true"));
+			buf = params.getProperty(USE_LOG_VECTOR, "false");
+			setLogVec(buf.equalsIgnoreCase("true"));
+		
 		} catch (NumberFormatException e)
 		{
 			Log.log(Level.SEVERE, e);
 			// e.printStackTrace();
 		}
 	}
-	// very poor; done for backwards compatibility 
+	// very poor; done for backwards compatibility
 	protected Vector<Double> pickFunction(double[][] A)
 	{
 		Vector<Double> selFunction;
 		double r = rand.nextDouble();
-		r = rand.nextDouble();
 		int index = 0;
 		double total = 0.0;
 		do
@@ -592,8 +704,7 @@ public class IFS extends TestBase
 		}
 		return selFunction;
 	}
-
-	/*
+	/**
 	 * Relative Absolute Error
 	 */
 	protected double RAE(Vector<Double> expected, Vector<Double> predicted)
@@ -616,7 +727,7 @@ public class IFS extends TestBase
 		else
 			return Double.NaN;
 	}
-	/*
+	/**
 	 * Root mean square error
 	 */
 	protected double RMSE(Vector<Double> expected, Vector<Double> predicted)
@@ -636,6 +747,11 @@ public class IFS extends TestBase
 		else
 			return Double.NaN;
 	}
+	
+	// SSE=sum((y-ypred).^2);
+	// SST=sum((y-mean(y)).^2)
+	// 1-SSE/SST
+
 	/**
 	 * @param value
 	 * @param oldMin
@@ -650,6 +766,14 @@ public class IFS extends TestBase
 		return (value / ((oldMax - oldMin) / (newMax - newMin))) + newMin;
 	}
 
+	/**
+	 * @param logVec
+	 *            the logVec to set
+	 */
+	public void setLogVec(boolean logVec)
+	{
+		this.logVec = logVec;
+	}
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -663,9 +787,12 @@ public class IFS extends TestBase
 		inputs = dimension + 1;
 		if (log2n && db != null)
 			numFuncs = (int) Util.log2(db.getRecordCount());
+		int add = (subVec) ? inputs : 0;
+		add += (powVec) ? inputs : 0;
+		add += (logVec) ? inputs : 0;
 
 		// +1 to allow for the probability value assigned to each function
-		funcLen = (inputs * factor) + inputs + 1;
+		funcLen = (inputs * factor) + add + 1;
 		super.setMDimension(numFuncs * funcLen);
 	}
 	/*
@@ -679,14 +806,24 @@ public class IFS extends TestBase
 		super.setParams(params);
 		performTest();
 	}
+
+	/**
+	 * @param powVec
+	 *            the powVec to set
+	 */
+	public void setPowVec(boolean powVec)
+	{
+		this.powVec = powVec;
+	}
 	@Override
 	protected void setRange()
 	{
-		for (int i = 0; i < mDimension; i++)
-		{
-			mMax[i] = 10;
-			mMin[i] = -10;
-		}
+		// assumes this has been set by inheritor before call
+//		for (int i = 0; i < mDimension; i++)
+//		{
+//			mMax[i] = 10;
+//			mMin[i] = -10;
+//		}
 
 		for (int i = 0; i < numFuncs; i++)
 		{
@@ -694,6 +831,14 @@ public class IFS extends TestBase
 			mMin[i * funcLen] = 0;
 		}
 
+	}
+	/**
+	 * @param subVec
+	 *            the subVec to set
+	 */
+	public void setSubVec(boolean subVec)
+	{
+		this.subVec = subVec;
 	}
 	/**
 	 * @param A
@@ -773,52 +918,74 @@ public class IFS extends TestBase
 		String xml = toXML(matrix);
 		return xml;
 	}
-
 	private String toXML(double[][] matrix)
 	{
-		StringBuilder xml = new StringBuilder();
-		vector = new double[inputs];
-		xml.append("<Functions>");
-		NumberFormat formatter = new DecimalFormat(
-				"##################0.0##############################");
-		for (int f = 0; f < numFuncs; f++)
+		String xml = "<Matrix>";
+		if (matrix != null)
 		{
-			xml.append("<Function>");
-			xml.append("<Probability>" + formatter.format(matrix[f][0])
-					+ "</Probability>\n<Matrix>");
-
-			for (int i = inputs - 1; i >= 1; i--)
-				vector[i] = matrix[f][i];
+			NumberFormat formatter = new DecimalFormat(
+					"##################0.0##############################");
 
 			int rows = matrix.length;
 			int cols = matrix[0].length;
 			for (int i = 0; i < rows; i++)
 			{
-				xml.append("\n\t<Row>");
-				for (int j = inputs; j < cols; j++)
+				xml += "\n\t<Row>";
+				for (int j = 0; j < cols; j++)
 				{
-					System.out.println("rows = " + rows + "cols= " + cols
-							+ "i= " + i + " inputs = " + inputs + " j= " + j);
-					xml.append("\n\t\t<Cell>" + formatter.format(matrix[i][j])
-							+ "\n\t\t</Cell>");
+					xml += "\n\t\t<Cell>" + formatter.format(matrix[i][j])
+							+ "\n\t\t</Cell>";
 				}
-				xml.append("\n\t</Row>");
+				xml += "\n\t</Row>";
 			}
-			xml.append("\n</Matrix>");
+		}
+		xml += "\n</Matrix>";
+		if (subVec)
+		{
+			xml += "\n<Vector>";
 			if (vector != null)
 			{
-				xml.append("\n<Vector>");
 				for (int i = 0; i < vector.length; i++)
 				{
-					xml.append("\n\t<Cell>");
-					xml.append("\n\t\t" + vector[i]);
-					xml.append("\n\t</Cell>");
+					xml += "\n\t<Cell>";
+					xml += "\n\t\t" + vector[i];
+					xml += "\n\t</Cell>";
 				}
-				xml.append("\n</Vector>");
 			}
-			xml.append("\n<Function>");
+			xml += "\n</Vector>";
+
 		}
-		return xml.toString();
+		if (powVec)
+		{
+			xml += "\n<PowerVector>";
+			if (powvector != null)
+			{
+				for (int i = 0; i < powvector.length; i++)
+				{
+					xml += "\n\t<Cell>";
+					xml += "\n\t\t" + powvector[i];
+					xml += "\n\t</Cell>";
+				}
+			}
+			xml += "\n</PowerVector>";
+
+		}
+		if (logVec)
+		{
+			xml += "\n<LogVector>";
+			if (logvector != null)
+			{
+				for (int i = 0; i < logvector.length; i++)
+				{
+					xml += "\n\t<Cell>";
+					xml += "\n\t\t" + logvector[i];
+					xml += "\n\t</Cell>";
+				}
+			}
+			xml += "\n</LogVector>";
+
+		}
+		return xml;
 	}
 
 }

@@ -9,6 +9,7 @@ package org.mltestbed.data;
 import java.util.Iterator;
 import java.util.logging.Level;
 
+import org.mltestbed.heuristics.BaseHeuristic;
 import org.mltestbed.heuristics.PSO.BaseSwarm;
 import org.mltestbed.util.Log;
 import org.mltestbed.util.Particle;
@@ -44,6 +45,10 @@ public class Results implements Cloneable
 	{
 		output = out;
 
+	}
+	public Results(BaseHeuristic baseHeuristics, OutputResults output2)
+	{
+		// TODO Auto-generated constructor stub
 	}
 	public void destroy()
 	{

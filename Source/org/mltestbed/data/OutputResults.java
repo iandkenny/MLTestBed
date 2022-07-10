@@ -192,7 +192,7 @@ public class OutputResults extends Thread implements Cloneable
 	private static final String LOGGING_RESULTS = "Logging Results, buffered SQL statements: ";
 	private static final String OUTPUT_RESULTS = "OutputResults";
 	private static final String RESULT_STORE = "Results";
-	private static final String RUNTIME_PROPERTIES = "SwarmRuntime.properties";
+	private static final String RUNTIME_PROPERTIES = "MLTestBedRuntime.properties";
 	private static LinkedBlockingQueue<ParticleResult> secondResultsBuffer = new LinkedBlockingQueue<ParticleResult>();
 	private static final String SELECT_RESULTS = "SELECT  expnum,runnum,iteration,swarm,particle,bestscore,currentscore,isbest,position, bestposition, velocity, expspecific FROM results";
 	/**
@@ -315,7 +315,7 @@ public class OutputResults extends Thread implements Cloneable
 	}
 
 	private Connection con = null;
-	private String connectString = "SwarmExperiments";
+	private String connectString = "MLTestBedExperiments";
 	private DateFormat df = new SimpleDateFormat(DATETIME_FORMAT);
 	private Document doc = null;
 	private String driver;

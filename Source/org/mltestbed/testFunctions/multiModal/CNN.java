@@ -65,9 +65,9 @@ public class CNN extends TestBaseANN
 		@Override
 		protected void initProps()
 		{
-			keySQLString = prop.getProperty(KEY_SQL, keySQLString);
-			prop.setProperty(KEY_SQL, keySQLString);
 			super.initProps();
+			keySQLString = prop.getProperty(KEY_SQL,"");
+			prop.setProperty(KEY_SQL, keySQLString);
 		}
 
 		@Override
