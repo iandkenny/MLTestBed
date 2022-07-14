@@ -17,6 +17,7 @@ import java.util.logging.Level;
 import org.mltestbed.heuristics.PSO.BaseSwarm;
 import org.mltestbed.util.Log;
 import org.mltestbed.util.Particle;
+import org.mltestbed.util.RandGen;
 
 public class DSSPSO extends Topology
 {
@@ -88,7 +89,7 @@ public class DSSPSO extends Topology
 
 	private ConcurrentHashMap<Particle, ConcurrentHashMap<Integer, Neighbour>> neighbourhoods = new ConcurrentHashMap<Particle, ConcurrentHashMap<Integer, Neighbour>>();
 	private ConcurrentHashMap<ConcurrentHashMap<Integer, Neighbour>, Long> recruitTime;
-	private Random rnd = new Random();
+	private Random rnd = null;
 	private int initial = 2;
 	private int minNeighbourSize = 2;
 	private int maxNeighbourSize;
@@ -96,8 +97,8 @@ public class DSSPSO extends Topology
 	public DSSPSO(BaseSwarm swarm)
 	{
 		super(swarm);
-		setDescription("DSSPSO Self-Selecting PSO (DSSPSO)");
-		rnd = new Random();
+		setDescription("Dynamic Self-Selecting Network Topology PSO (DSSPSO)");
+		rnd = RandGen.getLastCreated();
 		try
 		{
 			minNeighbourSize = Integer.parseInt(

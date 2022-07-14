@@ -163,14 +163,14 @@ public class ReadMinas extends ReadData
 				+ " minasPassage2015Restricted.avgHourlyHumidity,"
 				+ " minasPassage2015Restricted.avgHourlyRainfallRate,"
 				+ " minasPassage2015Restricted.avgHourlyBarometricPressure"
-				+ " FROM MinasPassage.minasPassage2015Restricted ORDER BY minasPassage2015Restricted.Date, minasPassage2015Restricted.Hour"));
+				+ " FROM MinasPassage.minasPassage2015HourlyRestricted ORDER BY minasPassage2015HourlyRestricted.Date, minasPassage2015HourlyRestricted.Hour"));
 		setSQLString(prop.getProperty("MinasT1"));
 		prop.setProperty("MinasT2", prop.getProperty("MinasT2", "SELECT"
 				+ " minasPassage2015.avgHourlyAirTemp,"
 				+ " minasPassage2015.avgHourlyHumidity,"
 				+ " minasPassage2015.avgHourlyRainfallRate,"
 				+ " minasPassage2015.avgHourlyBarometricPressure"
-				+ " FROM MinasPassage.minasPassage2015 ORDER BY minasPassage2015.Date, minasPassage2015.Hour"));
+				+ " FROM MinasPassage.minasPassage2015Hourly ORDER BY minasPassage2015Hourly.Date, minasPassage2015Hourly.Hour"));
 		setSQLString(prop.getProperty("MinasT2"));
 
 		String connect = prop.getProperty("connection", connectString);
