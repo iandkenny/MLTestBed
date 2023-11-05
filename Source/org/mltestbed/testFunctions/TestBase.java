@@ -23,6 +23,7 @@ import java.util.logging.Level;
 
 import org.mltestbed.data.ReadData;
 import org.mltestbed.util.Log;
+import org.mltestbed.util.MemoryBufferedFile;
 import org.mltestbed.util.Particle;
 import org.mltestbed.util.Util;
 
@@ -39,11 +40,15 @@ public abstract class TestBase implements Cloneable
 	 * 
 	 */
 	private static final int BUFFER_SIZE = 4096;
-	protected ArrayList<Vector<Object>> data = null;
+	private static final String RUN_TEST = "runTest";
+	private static final String USE_CROSS_ENTROPHY = "useCrossEntrophy";
+	protected ArrayList<Vector<Object>> baseData = null;
 	protected ReadData db = null;
 	protected String description = "";
+	private boolean entrophy = false;
 	protected double functEval = 0;
 	protected String info = "";
+	private MemoryBufferedFile mb = null;
 	protected double mBestKnown = Double.NaN;
 	protected int mDimension = 10;
 	protected double mGlobalOptima = 0;
@@ -52,13 +57,11 @@ public abstract class TestBase implements Cloneable
 	protected double mMin[];
 	protected double mResult = Double.NaN;
 	protected Properties params;
+	private boolean test = false;
 	protected ArrayList<Vector<Object>> testdata = null;
 	protected double threshold = 1.e-7;
-	protected File tmpFile = null;
 	protected ArrayList<Vector<Object>> traindata = null;
-	private String tmpBuf = null;
-	private BufferedWriter writer;
-
+	private boolean validate = false;
 	/**
 	 * 
 	 */
@@ -66,90 +69,45 @@ public abstract class TestBase implements Cloneable
 	{
 		super();
 		params = new Properties();
+		mb = new MemoryBufferedFile();
 		createParams();
 		// setRange();
 		functEval = 0;
 	}
-
-	public Object clone()
-	{
-		try
-		{
-			TestBase clone = (TestBase) super.clone();
-			tmpFile = null;
-			return clone;
-		} catch (CloneNotSupportedException e)
-		{
-			throw new InternalError(e.toString());
-		}
-	}
-
 	/**
 	 * 
 	 * 
 	 */
 	protected void appendLocalBuffer(String str, boolean reset)
 	{
-		if (str == null)
+		mb.write(str, reset);
+	}
+	/**
+	 * @param expected
+	 * @param predicted
+	 * @return
+	 */
+	protected double calcError(double expected, double predicted)
+	{
+		double result = Double.NaN;
+		if (isEntrophy())
+			result = -(expected * Math.log(predicted)
+					+ ((1 - expected) * Math.log(predicted)));
+		else
+			result = Math.sqrt(Math.pow((expected - predicted), 2));
+		return result;
+	}
+	public Object clone()
+	{
+		try
 		{
-			reset = true;
-			str = "";
+			TestBase clone = (TestBase) super.clone();
+			mb = new MemoryBufferedFile();
+			return clone;
+		} catch (CloneNotSupportedException e)
+		{
+			throw new InternalError(e.toString());
 		}
-		if (reset && tmpFile != null)
-		{
-			try
-			{
-//				this is done due to problems with FileWriter not clearing the
-				// file and effectively appending content when it shouldn't
-				RandomAccessFile randomAccessFile = new RandomAccessFile(
-						tmpFile, "rw");
-				randomAccessFile.setLength(0);
-				randomAccessFile.close();
-			} catch (FileNotFoundException e)
-			{
-				Log.log(Level.SEVERE, e);
-				e.printStackTrace();
-			} catch (IOException e)
-			{
-				Log.log(Level.SEVERE, e);
-				e.printStackTrace();
-			}
-		}
-		if (Util.checkMemFree() && tmpFile == null)
-		{
-			if (reset || this.tmpBuf == null)
-				this.tmpBuf = new String(str);
-			else
-				this.tmpBuf = this.tmpBuf.concat("\n" + str);
-		} else
-			try
-			{
-				if (tmpFile == null || !tmpFile.exists())
-					tmpFile = Util.createTempFile();
-
-				if (tmpFile.exists())
-				{
-
-					do
-					{
-						synchronized (tmpFile)
-						{
-							writer = new BufferedWriter(
-									new FileWriter(tmpFile, !reset));
-
-							writer.append(str);
-							writer.newLine();
-							writer.flush();
-							writer.close();
-						}
-					} while (writer == null);
-					writer = null;
-				}
-			} catch (IOException e)
-			{
-				Log.log(Level.SEVERE, e);
-				e.printStackTrace();
-			}
 	}
 
 	/**
@@ -160,9 +118,20 @@ public abstract class TestBase implements Cloneable
 	{
 		return true;
 	}
-	abstract protected void createParams();
+	/**
+	 * 
+	 */
+	protected void createParams()
+	{
+		if (params == null)
+			params = new Properties();
+		params.setProperty(USE_CROSS_ENTROPHY, "false");
+		setEntrophy(false);
+		params.setProperty(RUN_TEST, "false");
+		setTest(false);
+	}
 
-	protected double crossentrophy(Vector<Double> expected,
+	protected double crossEntrophy(Vector<Double> expected,
 			Vector<Double> predicted)
 	{
 		double result = 0;
@@ -181,23 +150,11 @@ public abstract class TestBase implements Cloneable
 
 	public synchronized void destroy()
 	{
-		if (writer != null)
+
+		if (mb != null)
 		{
-			try
-			{
-				writer.flush();
-				writer.close();
-				writer = null;
-			} catch (IOException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		if (tmpFile != null)
-		{
-			tmpFile.delete();
-			tmpFile = null;
+			mb.destroy();
+			mb = null;
 		}
 	}
 
@@ -205,66 +162,34 @@ public abstract class TestBase implements Cloneable
 	{
 		destroy();
 	}
+	/**
+	 * @return the baseData
+	 */
+	public ArrayList<Vector<Object>> getBaseData()
+	{
+		return baseData;
+	}
+
+	/**
+	 * @return the db
+	 */
+	public ReadData getDb()
+	{
+		return db;
+	}
 
 	public String getDescription()
 	{
 		return description;
 	}
+
 	public String getFuncSpecific()
 	{
-
-		String funcSpecific = "";
-		if (tmpFile != null)
-		{
-			synchronized (tmpFile)
-			{
-				BufferedReader reader = null;
-				do
-				{
-					try
-					{
-						reader = new BufferedReader(new FileReader(tmpFile));
-						String line;
-						while ((line = reader.readLine()) != null)
-							funcSpecific += line;
-						reader.close();
-
-					} catch (IOException e)
-					{
-						Log.log(Level.SEVERE, e);
-						e.printStackTrace();
-					}
-				} while (reader == null);
-				reader = null;
-			}
-		}
-		return funcSpecific;
+		return mb.read();
 	}
 	public synchronized BufferedReader getFuncSpecificReader()
 	{
-		BufferedReader reader = null;
-		if (tmpFile != null)
-		{
-			synchronized (tmpFile)
-			{
-				try
-				{
-					do
-					{
-						if (tmpFile != null)
-							reader = new BufferedReader(
-									new FileReader(tmpFile));
-
-					} while (reader == null);
-
-				} catch (IOException e)
-				{
-					Log.log(Level.SEVERE, e);
-					e.printStackTrace();
-				}
-			}
-		}
-		return reader;
+		return mb.getReader();
 	}
 
 	/**
@@ -274,10 +199,12 @@ public abstract class TestBase implements Cloneable
 	{
 		return functEval;
 	}
+
 	public String getInfo()
 	{
 		return info;
 	}
+
 	/**
 	 * @return key property
 	 */
@@ -346,17 +273,24 @@ public abstract class TestBase implements Cloneable
 		}
 		return (d == null) ? Double.NaN : d.doubleValue();
 	}
-
 	public int getNumKeys()
 	{
 		return 0;
 	}
+
 	/**
 	 * @return the params
 	 */
 	public Properties getParams()
 	{
 		return params;
+	}
+	/**
+	 * @return the testdata
+	 */
+	public ArrayList<Vector<Object>> getTestdata()
+	{
+		return testdata;
 	}
 	/**
 	 * @return the threshold
@@ -366,13 +300,50 @@ public abstract class TestBase implements Cloneable
 		return threshold;
 	}
 
-	abstract public void init();
+	/**
+	 * @return the traindata
+	 */
+	public ArrayList<Vector<Object>> getTraindata()
+	{
+		return traindata;
+	}
+	public void init()
+	{
+		String buf = params.getProperty(USE_CROSS_ENTROPHY, "false");
+		setEntrophy(buf.equalsIgnoreCase("true"));
+		buf = params.getProperty(RUN_TEST, "false");
+		setTest(buf.equalsIgnoreCase("true"));
+
+	}
+
+	/**
+	 * @return the entrophy
+	 */
+	public boolean isEntrophy()
+	{
+		return entrophy;
+	}
 	/**
 	 * @return Returns minimised
 	 */
 	public boolean isMinimised()
 	{
 		return minimised;
+	}
+	/**
+	 * @return the test
+	 */
+	public boolean isTest()
+	{
+		return test;
+	}
+
+	/**
+	 * @return the validate
+	 */
+	public boolean isValidate()
+	{
+		return validate;
 	}
 	public void load(Properties props)
 	{
@@ -385,7 +356,8 @@ public abstract class TestBase implements Cloneable
 			{
 				String key = (String) keys.nextElement();
 				if (props.containsKey(key))
-					params.setProperty(key, props.getProperty(key));
+					params.setProperty(key,
+							props.getProperty(key, params.getProperty(key)));
 			}
 		}
 	}
@@ -458,7 +430,6 @@ public abstract class TestBase implements Cloneable
 		else
 			return Double.NaN;
 	}
-
 	public Particle min(ArrayList<Particle> arrayList)
 	{
 		Particle minParticle = null;
@@ -496,9 +467,34 @@ public abstract class TestBase implements Cloneable
 	 * 
 	 * @param particle
 	 *            ; vector to evaluate
-	 * @return dblScore; evaluated score
+	 * @return mResult; evaluated score
 	 */
 	public double Objective(Particle particle)
+	{
+		functEval++;
+		if (Double.isNaN(mBestKnown))
+			mBestKnown = mResult;
+		if (minimised)
+		{
+			if (mBestKnown > mResult)
+				mBestKnown = mResult;
+		} else
+		{
+			if (mBestKnown < mResult)
+				mBestKnown = mResult;
+		}
+		return mResult;
+	}
+
+	/**
+	 * Base Objective function ** this must be called by inheriting objective
+	 * functions ** ** must be coded as reentrant
+	 * 
+	 * @param v
+	 *            ; vector to evaluate
+	 * @return mResult; evaluated score
+	 */
+	public double Objective(Vector<Double> v)
 	{
 		functEval++;
 		if (Double.isNaN(mBestKnown))
@@ -520,7 +516,7 @@ public abstract class TestBase implements Cloneable
 	 * 
 	 * @param v1
 	 *            , v2; vectors to evaluate
-	 * @return dblScore; evaluated score
+	 * @return mResult; evaluated score
 	 */
 	protected double Objective(Vector<Double> v1, Vector<Double> v2)
 	{
@@ -561,10 +557,26 @@ public abstract class TestBase implements Cloneable
 		else
 			return Double.NaN;
 	}
+
+	public double relu(Vector<Double> weights, Vector<Double> inputs)
+	{
+		double weightedSum = 0;
+		if (weights.size() == inputs.size())
+		{
+			for (int i = 0; i < inputs.size(); i++)
+			{
+				weightedSum += inputs.get(i) * weights.get(i);
+
+			}
+			return Math.max(0, weightedSum);
+		} else
+			return Double.NaN;
+	}
 	public void reset()
 	{
 
 	}
+
 	protected double RMSE(Vector<Double> expected, Vector<Double> predicted)
 	{
 		double result = 0;
@@ -582,13 +594,11 @@ public abstract class TestBase implements Cloneable
 		else
 			return Double.NaN;
 	}
-
-	protected void runTest(Particle gbest)
+	public Particle runTest(Particle gb)
 	{
-		gbest = new Particle(gbest);
-		gbest.setIdentityNumber(Integer.MIN_VALUE);
-		traindata = data;
-
+		Particle gbest = new Particle(gb);
+		gbest.setFuncSpecific("");
+		gbest.setIdentityNumber(-gbest.getIdentityNumber());
 		try
 		{
 			if (testdata == null)
@@ -596,15 +606,44 @@ public abstract class TestBase implements Cloneable
 				db.useTestData();
 				testdata = db.getData();
 			}
-			data = testdata;
-			Objective(gbest);
+			if (!testdata.isEmpty())
+			{
+				gbest.setPosition(gbest.getPbest());
+				TestBase testFunction = gbest.getTestFunction();
+				traindata = testFunction.getBaseData();
+				testFunction.setBaseData(testdata);
+				gbest.eval();
+				gbest.setBestScore(gbest.getCurrentScore()); // since this is on new data
+				testFunction.setBaseData(traindata);
+				gb.eval(); // evaluate best on training data for the test iteration
+			}
 		} catch (Exception e)
 		{
 			Log.log(Level.SEVERE, e);
 //			e.printStackTrace();
 		}
-		data = traindata;
+		return gbest;
 	}
+	public void runTest(Vector<Double> v)
+	{
+
+	}
+	/**
+	 * @param baseData the baseData to set
+	 */
+	public void setBaseData(ArrayList<Vector<Object>> baseData)
+	{
+		this.baseData = baseData;
+	}
+	/**
+	 * @param db
+	 *            the db to set
+	 */
+	public void setDb(ReadData db)
+	{
+		this.db = db;
+	}
+
 	/**
 	 * @param description
 	 *            The description to set.
@@ -614,61 +653,21 @@ public abstract class TestBase implements Cloneable
 		this.description = description;
 	}
 	/**
+	 * @param entrophy
+	 *            the entrophy to set
+	 */
+	public void setEntrophy(boolean entrophy)
+	{
+		this.entrophy = entrophy;
+	}
+
+	/**
 	 * @param funcSpecific
 	 *            the funcSpecific to set
 	 */
 	public void setFuncSpecific(String funcSpecific, boolean reset)
 	{
-		// this.funcSpecific = new String(funcSpecific);
-
-		try
-		{
-			if (funcSpecific == null || funcSpecific.equals(""))
-				reset = true;
-			// this is done due to problems with FileWriter on Windows not
-			// clearing the
-			// file and effectively appending content when it shouldn't
-
-			if (tmpFile == null)
-				tmpFile = Util.createTempFile();
-			else if (reset)
-			{
-//				tmpFile.delete();
-//				tmpFile = null;
-				RandomAccessFile randomAccessFile = new RandomAccessFile(
-						tmpFile, "rw");
-				randomAccessFile.setLength(0);
-				randomAccessFile.close();
-			}
-			BufferedWriter writer = new BufferedWriter(
-					new FileWriter(tmpFile, true));
-			do
-			{
-				synchronized (tmpFile)
-				{
-					int index = BUFFER_SIZE;
-					do
-					{
-						writer.append(funcSpecific.substring(
-								index - (BUFFER_SIZE),
-								((index + BUFFER_SIZE > funcSpecific.length())
-										? funcSpecific.length()
-										: index)));
-						writer.newLine();
-						writer.flush();
-						index += BUFFER_SIZE;
-					} while (index < funcSpecific.length());
-
-					writer.close();
-				}
-			} while (writer == null);
-			writer = null;
-		} catch (IOException e)
-		{
-			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
-		}
-
+		mb.write(funcSpecific, reset);
 	}
 	/**
 	 * @param info
@@ -678,7 +677,6 @@ public abstract class TestBase implements Cloneable
 	{
 		this.info = info;
 	}
-
 	/**
 	 * @param bestKnown
 	 *            the mBestKnown to set
@@ -687,6 +685,7 @@ public abstract class TestBase implements Cloneable
 	{
 		mBestKnown = bestKnown;
 	}
+
 	/**
 	 * @param dimension
 	 * @throws Exception
@@ -728,6 +727,22 @@ public abstract class TestBase implements Cloneable
 	}
 	abstract protected void setRange();
 	/**
+	 * @param test
+	 *            the test to set
+	 */
+	public void setTest(boolean test)
+	{
+		this.test = test;
+	}
+
+	/**
+	 * @param testdata the testdata to set
+	 */
+	public void setTestData(ArrayList<Vector<Object>> testdata)
+	{
+		this.testdata = testdata;
+	}
+	/**
 	 * @param threshold
 	 *            the threshold to set
 	 */
@@ -735,9 +750,59 @@ public abstract class TestBase implements Cloneable
 	{
 		this.threshold = threshold;
 	}
+	/**
+	 * @param traindata the traindata to set
+	 */
+	public void setTraindata(ArrayList<Vector<Object>> traindata)
+	{
+		this.traindata = traindata;
+	}
+	/**
+	 * @param validate
+	 *            the validate to set
+	 */
+	public void setValidate(boolean validate)
+	{
+		this.validate = validate;
+	}
 	public double sigmod(double beta)
 	{
 		return (double) 1.0 / (1.0 + Math.exp(-beta));
+	}
+
+	public Vector<Double> SoftMax(Vector<Double> input)
+	{
+		Vector<Double> exp = new Vector<Double>();
+		double sum = 0;
+		double max = 0; // for numerical constancy
+		for (int index = 0; index < input.size(); index++)
+			max = input.get(index) > max ? input.get(index) : max;
+
+		for (int index = 0; index < input.size(); index++)
+		{
+			exp.set(index, Math.exp(input.get(index) - max));
+			sum += exp.get(index);
+		}
+
+		Vector<Double> output = new Vector<Double>();
+		for (int index = 0; index < exp.size(); index++)
+		{
+			output.set(index, exp.get(index) / sum);
+		}
+
+		return output;
+	}
+	public Vector<Double> SoftMaxDerivative(Vector<Double> input)
+	{
+		Vector<Double> softmax = SoftMax(input);
+
+		Vector<Double> output = new Vector<Double>();
+		for (int index = 0; index < input.size(); index++)
+		{
+			output.set(index, softmax.get(index) * (1d - softmax.get(index)));
+		}
+
+		return output;
 	}
 	protected double StdDev(Vector<Double> elements)
 	{
@@ -786,32 +851,9 @@ public abstract class TestBase implements Cloneable
 	}
 	protected void transBuf(Particle p)
 	{
-		try
-		{
-			p.setFuncSpecific("<!--begin objective function data-->", false);
-			if (tmpFile != null)
-			{
-				String line = null;
-				FileReader in = new FileReader(tmpFile.getAbsolutePath());
-				BufferedReader reader = new BufferedReader(in,
-						(int) tmpFile.length());
-				do
-				{
-					line = reader.readLine();
-					if (line != null && !"".equals(line))
-						p.setFuncSpecific(line, false);
-				} while (line != null);
-
-				reader.close();
-			} else if (tmpBuf != null && !tmpBuf.toString().isEmpty())
-				p.setFuncSpecific(tmpBuf.toString(), false);
-			p.setFuncSpecific("<!--end objective function data-->", false);
-
-		} catch (IOException e)
-		{
-			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
-		}
+		p.setFuncSpecific("<!--begin objective function data-->", false);
+		p.setFuncSpecific(mb.read(), false);
+		p.setFuncSpecific("<!--end objective function data-->", false);
 
 	}
 

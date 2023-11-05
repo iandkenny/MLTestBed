@@ -1,4 +1,4 @@
-package org.mltestbed.testFunctions.multiModal;
+package org.mltestbed.testFunctions.ANN;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,9 +22,12 @@ import org.mltestbed.heuristics.ANN.activators.LinearActivationStrategy;
 import org.mltestbed.testFunctions.TestBaseANN;
 import org.mltestbed.util.Log;
 import org.mltestbed.util.Particle;
+import org.mltestbed.util.Util;
 
 public class ANN extends TestBaseANN
 {
+	private static final String XML_DEFINITION = "XMLDefinition";
+	private static final String DROPOUT = "Dropout";
 	private static final String INPUTS = "inputs";
 
 	private class ANNData extends ReadData
@@ -100,6 +103,7 @@ public class ANN extends TestBaseANN
 	private String testSQLString = "";
 	private String trainSQLString = "";
 	private String keySQLString = "";
+	private float dropout = 0;
 
 	/**
 	 * 
@@ -114,33 +118,8 @@ public class ANN extends TestBaseANN
 			ArrayList<Integer> neuronsperLayer,
 			ArrayList<ActivationStrategy> activationStrategy)
 	{
-		ArtificialNeuralNetwork ann = new ArtificialNeuralNetwork(name);
-		Layer previousLayer = null;
-		Layer layer;
-		boolean bias;
-		for (int i = 0; i < neuronsperLayer.size(); i++)
-		{
-			String id = name + ".layer";
-			bias = (neuronsperLayer.get(i) < 0) ? true : false;
-			if (bias)
-			{
-				Neuron biasNeuron = new Neuron(id + ".bias",
-						activationStrategy.get(i));
-				layer = new Layer(id, previousLayer, biasNeuron);
-			} else
-				layer = new Layer(id, previousLayer);
-			int absneurons = Math.abs(neuronsperLayer.get(i));
-			for (int j = 0; j < absneurons; j++)
-			{
-				Neuron neuron = new Neuron(layer.getId() + "." + i + "." + j,
-						activationStrategy.get(i));
-				layer.addNeuron(neuron);
-			}
-
-			ann.addLayer(layer);
-			previousLayer = layer;
-		}
-
+		ArtificialNeuralNetwork ann = ArtificialNeuralNetwork.createANN(name,
+				neuronsperLayer, activationStrategy);
 		return ann;
 
 	}
@@ -160,15 +139,13 @@ public class ANN extends TestBaseANN
 		params.setProperty(INPUTS, "1");
 		// outputs defined as the difference between inputs and total number of
 		// variables
+
+		params.setProperty(DROPOUT, "0");
+		params.setProperty(XML_DEFINITION, "");
 	}
 	@Override
 	public void destroy()
 	{
-		if (tmpFile != null)
-		{
-			tmpFile.delete();
-			tmpFile = null;
-		}
 		super.destroy();
 	}
 	public double error(Vector<Double> result, Vector<Double> target)
@@ -208,7 +185,11 @@ public class ANN extends TestBaseANN
 			super.init();
 			trainSQLString = params.getProperty(TRAIN_SQL, trainSQLString);
 			testSQLString = params.getProperty(TEST_SQL, testSQLString);
+			annXML = params.getProperty(XML_DEFINITION);
 			key = params.getProperty(KEY, key);
+			String buf = params.getProperty(DROPOUT, Float.toString(dropout));
+			dropout = Util.isNumeric(buf) ? Float.parseFloat(buf) : 0;
+			ann.setDropout(dropout);
 			int length = trainSQLString.split(",").length;
 			if (length != inputs + outputs)
 				inputs = length - outputs;
@@ -304,6 +285,7 @@ public class ANN extends TestBaseANN
 	public double Objective(Particle particle)
 	{
 		ann.setWeights(particle.getPosition());
+		ann.applyDropout();
 		ArrayList<ArrayList<Object>> dataValues = db.getData(true);
 		ArrayList<Vector<Double>> expected = new ArrayList<Vector<Double>>();
 		ArrayList<Vector<Double>> predicted = new ArrayList<Vector<Double>>();
@@ -349,10 +331,10 @@ public class ANN extends TestBaseANN
 		return super.Objective(particle);
 	}
 	@Override
-	protected void runTest(Particle gbest)
+	public Particle runTest(Particle gbest)
 	{
 		// TODO Auto-generated method stub
-		super.runTest(gbest);
+		return super.runTest(gbest);
 	}
 
 	@Override

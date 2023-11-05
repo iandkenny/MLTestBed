@@ -12,16 +12,11 @@ import java.util.Vector;
 import org.mltestbed.topologies.Topology;
 import org.mltestbed.util.Particle;
 
-
-
-
-
-
 /**
  * @author Ian Kenny
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class ClassicPSO extends BaseSwarm
 {
@@ -43,32 +38,37 @@ public class ClassicPSO extends BaseSwarm
 	public ClassicPSO(BaseSwarm o)
 	{
 		super(o);
-		c1 = ((ClassicPSO)o).c1;
-		c2= ((ClassicPSO)o).c2;
+		c1 = ((ClassicPSO) o).c1;
+		c2 = ((ClassicPSO) o).c2;
 		setDescription(CLASSIC_PSO_NO_INERTIA_WEIGHT);
 	}
 
-	
 	/**
 	 * @throws Exception
-	 *  
+	 * 
 	 */
-	public ClassicPSO(Topology neighbourhood, Properties params, Properties runparams)
+	public ClassicPSO(Topology neighbourhood, Properties params,
+			Properties runparams)
 	{
-		super(neighbourhood, params,runparams);
+		super(neighbourhood, params, runparams);
 		setDescription(CLASSIC_PSO_NO_INERTIA_WEIGHT);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.Particle)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.Particle)
 	 */
 	public void afterCalc(int index)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.mltestbed.heuristics.BaseSwarm#afterIter(long)
 	 */
 	public void afterIter(long iteration)
@@ -76,16 +76,21 @@ public class ClassicPSO extends BaseSwarm
 		// TODO Auto-generated method stub
 
 	}
-	/* (non-Javadoc)
-	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.Particle)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.
+	 * Particle)
 	 */
-	public void beforeCalc(int index )
+	public void beforeCalc(int index)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.mltestbed.heuristics.BaseSwarm#beforeIter(long)
 	 */
 	public void beforeIter(long iteration)
@@ -94,48 +99,48 @@ public class ClassicPSO extends BaseSwarm
 
 	}
 
-	
-	/* (non-Javadoc)
-	 * @see org.mltestbed.heuristics.BaseSwarm#calcNew(org.mltestbed.util.Particle)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.mltestbed.heuristics.BaseSwarm#calcNew(org.mltestbed.util.Particle)
 	 */
 	protected Particle calcNew(int index) throws Exception
 	{
-	
-		
-		if (c1 == Double.NaN || c2 == Double.NaN || VMax == Double.NaN)
+		if (Double.isNaN(c1) || Double.isNaN(c2) || Double.isNaN(VMax))
 			throw new Exception("A parmeter is invalid");
-		
-	
+
 		Particle particle = getSwarmMembers().get((int) index);
 		Vector<Double> position = particle.getPosition();
 		Vector<Double> velocity = particle.getVelocity();
-		for(int i=0; i<testFunction.getMDimension();i++)
+		for (int i = 0; i < testFunction.getMDimension(); i++)
 		{
 			try
 			{
-				double v= velocity.get(i) // get the velocity
-								.doubleValue(); // for the current dimension
+				double v = velocity.get(i) // get the velocity
+						.doubleValue(); // for the current dimension
 				double pb = particle.getPbest().get(i).doubleValue();
 				double p = position.get(i).doubleValue();
-				double gb = neighbourhood.getNbest(index).getPbest().get(i).doubleValue();
+				double gb = neighbourhood.getNbest(index).getPbest().get(i)
+						.doubleValue();
 //				double newv = ((c1 * rnd.nextDouble()) * (pb - p)) + ((c2
 //						* rnd.nextDouble()) * (gb  - p));
-				double newv = add((c1 * rnd.nextDouble()) * (subtract(pb , p)) , ((c2
-						* rnd.nextDouble()) * subtract (gb , p)));
-				v +=newv;
+				double newv = add((c1 * rnd.nextDouble()) * (subtract(pb, p)),
+						((c2 * rnd.nextDouble()) * subtract(gb, p)));
+				v += newv;
 				v = vmaxAdjust(i, v);
 //		    v = v >= -Math.abs(testFunction.getMMin(i)- testFunction.getMMax(i)) ? v : -Math.abs(testFunction.getMMin(i)- testFunction.getMMax(i));
 //			v = v <= Math.abs(testFunction.getMMin(i)- testFunction.getMMax(i)) ? v : Math.abs(testFunction.getMMin(i)- testFunction.getMMax(i));
 				p += v;
 //				p = posAdjust(i, p);
-				velocity.set(i,v);
-				position.set(i,p);
+				velocity.set(i, v);
+				position.set(i, p);
 			} catch (Exception e)
 			{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
 		particle.setPosition(position);
 		particle.setVelocity(velocity);
@@ -147,8 +152,6 @@ public class ClassicPSO extends BaseSwarm
 		// TODO Auto-generated method stub
 		return true;
 	}
-
-
 
 	@Override
 	protected void copy(BaseSwarm o)
@@ -186,42 +189,43 @@ public class ClassicPSO extends BaseSwarm
 		this.timer = o.timer;
 		this.VMax = o.VMax;
 		this.bReset = o.bReset;
-		
-		//ClassicPSO
-		this.c1 = ((ClassicPSO)o).c1;
-		this.c2 = ((ClassicPSO)o).c2;
-		
+
+		// ClassicPSO
+		this.c1 = ((ClassicPSO) o).c1;
+		this.c2 = ((ClassicPSO) o).c2;
+
 	}
 
 	@Override
 	public void createParams()
 	{
 		params = new Properties();
-		params.setProperty("c1","2.0");
-		params.setProperty("c2","2.0");
-		params.setProperty("VMax","2.0");
-		
-		
+		params.setProperty("c1", "2.0");
+		params.setProperty("c2", "2.0");
+		params.setProperty("VMax", "2.0");
+
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.mltestbed.heuristics.PSO.BaseSwarm#init()
 	 */
 	@Override
 	protected void init() throws Exception
 	{
-		c1 = Double.valueOf(params.getProperty("c1"));
-		c2 = Double.valueOf(params.getProperty("c2"));
+		c1 = c2 = 2.0;
+		VMax = 0;
 		try
 		{
-			VMax = Double.valueOf(params.getProperty("VMax"));
+			c1 = Double.valueOf(params.getProperty("c1", "2.0"));
+			c2 = Double.valueOf(params.getProperty("c2", "2.0"));
+			VMax = Double.valueOf(params.getProperty("VMax", "0"));
 		} catch (NumberFormatException e)
 		{
-			VMax =0;
 //			e.printStackTrace();
 		}
 		super.init();
 	}
-
 
 }

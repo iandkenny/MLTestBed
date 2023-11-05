@@ -86,19 +86,8 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 		}
 		public void destroy()
 		{
-			if (particle != null)
-			{
-				particle.destroy();
-				particle = null;
-			}
 			if (particles != null)
 			{
-				for (Iterator<Integer> iterator = particles.keySet()
-						.iterator(); iterator.hasNext();)
-				{
-					Integer key = (Integer) iterator.next();
-					particles.get(key).destroy();
-				}
 				particles.clear();
 				particles = null;
 			}
@@ -229,22 +218,8 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 					}
 				}
 			}
-			if (particle != null)
-			{
-				particle.destroy();
-				particle = null;
-			}
-			if (particles != null)
-			{
-				for (Iterator<Particle> iterator = particles.values()
-						.iterator(); iterator.hasNext();)
-				{
-					Particle p = (Particle) iterator.next();
-					p.destroy();
-				}
-				particles.clear();
-			}
 
+			destroy();
 			super.run();
 
 		}
@@ -643,16 +618,17 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 	{
 		if (evals != null)
 		{
-			for (int k = 0; k < evals.size(); k++)
+
+			for (String key : evals.keySet())
 			{
-				String key = String.valueOf(k);
 				EvalParticle evalParticle = evals.get(key);
 				if (evalParticle != null)
 				{
 					evalParticle.setRunning(false);
+					evalParticle.interrupt();
 					evalParticle.evaluate();
 					evalParticle.destroy();
-					evals.remove(key);
+					evalParticle = null;
 				}
 			}
 			evals.clear();
@@ -664,26 +640,35 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 	 */
 	private void destroyswarm()
 	{
-		if (mSwarm != null)
+		try
 		{
-			for (Iterator<Particle> iterator = mSwarm.iterator(); iterator
-					.hasNext();)
+			if (mSwarm != null)
 			{
-				Particle particle = (Particle) iterator.next();
-				if (particle != null)
+				synchronized (mSwarm)
 				{
-					particle.destroy();
-					particle = null;
+					for (Iterator<Particle> iterator = mSwarm
+							.iterator(); iterator.hasNext();)
+					{
+						Particle particle = (Particle) iterator.next();
+						if (particle != null)
+						{
+							particle.destroy();
+							particle = null;
+						}
+					}
+					mSwarm.clear();
+					mSwarm = null;
 				}
 			}
-			mSwarm.clear();
-			mSwarm = null;
+		} catch (Exception e)
+		{
+//			e.printStackTrace();
 		}
 	}
 
 	protected void eval()
 	{
-		System.out.println("Evalulating...");
+		Log.getLogger().info("Evalulating...");
 		switch (evalType)
 		{
 			case PARA_EVAL :
@@ -697,7 +682,7 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 				singleThreadEval();
 				break;
 		}
-		System.out.println("Completed Evalulation");
+		Log.getLogger().info("Completed Evalulation");
 	}
 	/**
 	 * @return Returns the mDescription.
@@ -1028,7 +1013,6 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 					for (; i < noMembers; i++)
 						mSwarm.add(new Particle(runparams, testFunction, random,
 								i));
-
 				} else
 				{
 					heir.init();
@@ -1098,7 +1082,8 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 			{
 				String key = (String) keys.nextElement();
 				if (props.containsKey(key))
-					params.setProperty(key, props.getProperty(key));
+					params.setProperty(key,
+							props.getProperty(key).toString() + "");
 			}
 		}
 	}
@@ -1403,10 +1388,9 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 								progressBar.setValue((int) iteration);
 
 							int swarmSize = mSwarm.size();
-							if ((noMembers != swarmSize)
-									&& (noMembers + 1 != swarmSize))
+							if (noMembers > swarmSize)
 								throw new Exception(
-										"Swarm size does not match the number of members: noMembers="
+										"Swarm size smaller than expected: noMembers="
 												+ noMembers + " swarm size ="
 												+ swarmSize);
 							Util.getSwarmui()
@@ -1540,8 +1524,23 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 						Util.getSwarmui().updateLog("Cancelling Run...");
 						results.updateNotes(msg);
 					} else
+					{
 						results.updateNotes("Swarm: " + mSwarmNo
 								+ " completed successfully");
+
+						long testResult = getMaxIterations();
+						Particle gb = getGBest();
+						TestBase gbtest = gb.getTestFunction();
+						if (gbtest.isTest())
+						{
+//							gbtest.init();
+							Particle gbtestresult = gbtest.runTest(gb);
+							gbestparticle = gbtestresult;
+							mSwarm.add(gbestparticle);
+							results.store(run, testResult);
+//							recalcGBest();
+						}
+					}
 
 					results.setEndTime();
 					if (bMaster)
@@ -1741,63 +1740,65 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 	public synchronized void setSwarmsBest(Particle sb)
 	{
 		Particle sharedparticle = sb;
-		int noMemsplusone = noMembers + 1;
-		int sharedindex = Integer.MIN_VALUE;
-		int size = mSwarm.size();
-		if (size == noMemsplusone)
-			// sharedparticle = mSwarm.get(noMembers);
-			// cannot guarantee order is preserved
-			for (int i = 0; i < size; i++)
-			{
-				if (mSwarm.get(i).getIdentityNumber() == noMembers)
-				{
-					sharedparticle = mSwarm.get(i);
-					sharedindex = i;
-					break;
-				}
-
-			}
-
-		if (sharedparticle.equals(gbestparticle))
+		if (mSwarm != null)
 		{
-			Particle clone;
-			try
-			{
-				clone = (Particle) sb.clone();
-				clone.setIdentityNumber(noMembers);
-				clone.setTestFunction(testFunction);
-				if (testFunction.isMinimised())
-					clone.setPbest(Double.MAX_VALUE);
-				else
-					clone.setPbest(Double.MIN_VALUE);
-				clone.eval();
-				if (sharedindex != Integer.MIN_VALUE)
-					mSwarm.set(sharedindex, clone);
-				else
-					mSwarm.add(clone); // need to create space
-				if (evals != null)
+			int noMemsplusone = noMembers + 1;
+			int sharedindex = Integer.MIN_VALUE;
+			int size = mSwarm.size();
+			if (size == noMemsplusone)
+				// sharedparticle = mSwarm.get(noMembers);
+				// cannot guarantee order is preserved
+				for (int i = 0; i < size; i++)
 				{
-					EvalParticle evalParticle;
-					if (evals.containsKey(EVAL_SB))
+					if (mSwarm.get(i).getIdentityNumber() == noMembers)
 					{
-						evalParticle = evals.get(EVAL_SB);
-						evalParticle.setParticle(clone,
-								clone.getIdentityNumber());
-					} else
-					{
-						evalParticle = new EvalParticle(mSwarmNo, clone,
-								clone.getIdentityNumber());
-						evals.put(EVAL_SB, evalParticle);
-						evalParticle.start();
+						sharedparticle = mSwarm.get(i);
+						sharedindex = i;
+						break;
 					}
+
+				}
+			if (sharedparticle.equals(gbestparticle))
+			{
+				Particle clone;
+				try
+				{
+					clone = (Particle) sb.clone();
+					clone.setIdentityNumber(noMembers);
+					clone.setTestFunction(testFunction);
+					if (testFunction.isMinimised())
+						clone.setPbest(Double.MAX_VALUE);
+					else
+						clone.setPbest(Double.MIN_VALUE);
+					clone.eval();
+					if (sharedindex != Integer.MIN_VALUE)
+						mSwarm.set(sharedindex, clone);
+					else
+						mSwarm.add(clone); // need to create space
+					if (evals != null)
+					{
+						EvalParticle evalParticle;
+						if (evals.containsKey(EVAL_SB))
+						{
+							evalParticle = evals.get(EVAL_SB);
+							evalParticle.setParticle(clone,
+									clone.getIdentityNumber());
+						} else
+						{
+							evalParticle = new EvalParticle(mSwarmNo, clone,
+									clone.getIdentityNumber());
+							evals.put(EVAL_SB, evalParticle);
+							evalParticle.start();
+						}
+					}
+
+				} catch (CloneNotSupportedException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 
-			} catch (CloneNotSupportedException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-
 		}
 
 	}
@@ -1927,6 +1928,7 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 	{
 		bStop = bStopExecution = true;
 		bRunning = false;
+		destroyevals();
 		if (bMaster)
 		{
 			if (heir != null)
@@ -1949,20 +1951,12 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 			heir.getChildSwarms().clear();
 		} else
 		{
-			if (heir != null)
-			{
-				synchronized (masterSync)
-				{
-					heir.getMasterSwarm().setWait(false);
-					heir.getMasterSwarm().setRunning(false);
-					masterSync.notifyAll();
-				}
-			}
-//			if(gbestparticle!= null)
-//				gbestparticle.getTestFunction().
+			if (passGB && gbestparticle != null)
+				setSwarmsBest(gbestparticle);
+			setWait(false);
 			destroyswarm();
 		}
-		destroyevals();
+
 		if (bMaster || !bHeirarchy)
 			results.stopQueue();
 	}

@@ -13,7 +13,6 @@ import org.mltestbed.topologies.Topology;
 import org.mltestbed.util.Particle;
 import org.mltestbed.util.Util;
 
-
 /**
  * @author Ian Kenny
  * 
@@ -45,11 +44,11 @@ public class LocalSearchIWPSO extends ClassicPSO
 	{
 		super(o);
 		setDescription(DESCRIPTION);
-		w = ((LocalSearchIWPSO)o).w;
-		minw = ((LocalSearchIWPSO)o).minw;
-		maxw = ((LocalSearchIWPSO)o).maxw;
-		decrementW = ((LocalSearchIWPSO)o).decrementW;
-		c3 = ((LocalSearchIWPSO)o).c3;
+		w = ((LocalSearchIWPSO) o).w;
+		minw = ((LocalSearchIWPSO) o).minw;
+		maxw = ((LocalSearchIWPSO) o).maxw;
+		decrementW = ((LocalSearchIWPSO) o).decrementW;
+		c3 = ((LocalSearchIWPSO) o).c3;
 	}
 
 	/**
@@ -71,8 +70,9 @@ public class LocalSearchIWPSO extends ClassicPSO
 	@Override
 	protected Particle calcNew(int index) throws Exception
 	{
-		if (c1 == Double.NaN || c2 == Double.NaN || c3 == Double.NaN || VMax == Double.NaN
-				|| w == Double.NaN || minw == Double.NaN || maxw == Double.NaN)
+		if (Double.isNaN(c1) || Double.isNaN(c2) || Double.isNaN(c3)
+				|| Double.isNaN(VMax) || Double.isNaN(w) || Double.isNaN(minw)
+				|| Double.isNaN(maxw))
 			throw new Exception("A parmeter is invalid");
 
 		// Random rnd = new Random();
@@ -89,15 +89,17 @@ public class LocalSearchIWPSO extends ClassicPSO
 			double p = position.get(i).doubleValue();
 			double gb = gpbest.get(i).doubleValue();
 			int j;
-			do{
-				j= (int) (rnd.nextDouble()*mDimension);
-			}while (j==i);
+			do
+			{
+				j = (int) (rnd.nextDouble() * mDimension);
+			} while (j == i);
 			double d = position.get(j).doubleValue();
-			double newv = add(add(((c1 * rnd.nextDouble()) * subtract(pb, p)),
-					((c2 * rnd.nextDouble()) * subtract(gb, p))),((c3 * rnd.nextDouble()) * subtract(d, p)));
+			double newv = add(
+					add(((c1 * rnd.nextDouble()) * subtract(pb, p)),
+							((c2 * rnd.nextDouble()) * subtract(gb, p))),
+					((c3 * rnd.nextDouble()) * subtract(d, p)));
 			v = w * (v + newv);
-			Util.getSwarmui()
-					.updateLog("particle =" + index + " dim=" + i);
+			Util.getSwarmui().updateLog("particle =" + index + " dim=" + i);
 			Util.getSwarmui().updateLog("w=" + w + " v=" + v);
 
 			v = vmaxAdjust(i, v);
@@ -123,7 +125,8 @@ public class LocalSearchIWPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.Particle)
+	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.
+	 * Particle)
 	 */
 	public void beforeCalc(Particle particle)
 	{
@@ -134,7 +137,8 @@ public class LocalSearchIWPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.Particle)
+	 * @see
+	 * org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.Particle)
 	 */
 	public void afterCalc(Particle particle)
 	{
@@ -150,8 +154,8 @@ public class LocalSearchIWPSO extends ClassicPSO
 	public void afterIter(long iteration)
 	{
 		if (decrementW)
-			w = ((maxw - minw) * (getMaxIterations() - iteration) / getMaxIterations())
-					+ minw;
+			w = ((maxw - minw) * (getMaxIterations() - iteration)
+					/ getMaxIterations()) + minw;
 	}
 	/*
 	 * (non-Javadoc)
@@ -166,6 +170,8 @@ public class LocalSearchIWPSO extends ClassicPSO
 	@Override
 	public void createParams()
 	{
+		super.createParams();
+
 		params.setProperty("c1", "1.5");// after van den bergh
 		params.setProperty("c2", "1.5"); // after van den bergh
 		params.setProperty("c3", "1.5");
@@ -212,15 +218,16 @@ public class LocalSearchIWPSO extends ClassicPSO
 	protected void init() throws Exception
 	{
 		super.init();
-		w = maxw =  Double.valueOf(params.getProperty("w", "0.729")).doubleValue();
+		w = maxw = Double.valueOf(params.getProperty("w", "0.729"))
+				.doubleValue();
 
 		try
 		{
 			// c1 = Double.valueOf(params.getProperty("c1")).doubleValue();
 			// c2 = Double.valueOf(params.getProperty("c2")).doubleValue();
 			// VMax = Double.valueOf(params.getProperty("VMax")).doubleValue();
-			maxw = Double.parseDouble(params.getProperty("maxw", String
-					.valueOf(w)));
+			maxw = Double
+					.parseDouble(params.getProperty("maxw", String.valueOf(w)));
 			minw = Double.parseDouble(params.getProperty("minw", "0.4"));
 			c3 = Double.parseDouble(params.getProperty("c3", "1.5"));
 
@@ -229,8 +236,8 @@ public class LocalSearchIWPSO extends ClassicPSO
 			throw new Exception("A parameter is not a recognised number");
 			// e.printStackTrace();
 		}
-		decrementW = Boolean.parseBoolean(params.getProperty("decrementW",
-				"true"));
+		decrementW = Boolean
+				.parseBoolean(params.getProperty("decrementW", "true"));
 
 	}
 }

@@ -75,13 +75,6 @@ public class MLParkinsons extends PsuedoSVM
 		params.setProperty(DATASET, "train");
 	}
 
-	@Override
-	protected void finalize() throws Throwable
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
-		super.finalize();
-	}
 	/*
 	 * (non-Javadoc)
 	 * 

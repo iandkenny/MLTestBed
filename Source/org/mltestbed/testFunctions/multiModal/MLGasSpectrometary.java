@@ -58,7 +58,6 @@ public class MLGasSpectrometary extends PsuedoSVM implements Cloneable
 	public Object clone()
 	{
 		TestBase clone = (TestBase) super.clone();
-		tmpFile = null;
 		if (data != null)
 			data = new LinkedList<ArrayList<Double>>(data);
 		return clone;
@@ -87,14 +86,6 @@ public class MLGasSpectrometary extends PsuedoSVM implements Cloneable
 		params.setProperty(FACTOR_MAX, Integer.toString(factorMax));
 		// params.setProperty(USE_SUM, "true");
 
-	}
-
-	@Override
-	protected void finalize() throws Throwable
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
-		super.finalize();
 	}
 	/*
 	 * (non-Javadoc)

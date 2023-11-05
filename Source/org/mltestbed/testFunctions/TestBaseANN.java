@@ -7,12 +7,12 @@ import org.mltestbed.util.Log;
 
 public class TestBaseANN extends TestBase
 {
-	private static final String RNN_LAYERS = "rnnLayers";
-	private static final String ANN = "ann";
-	private static final String BIAS = "bias";
-	private static final String HIDDEN_LAYERS = "hiddenLayers";
-	private static final String INPUTS = "inputs";
-	private static final String OUTPUTS = "outputs";
+	protected static final String RNN_LAYERS = "rnnLayers";
+	protected static final String ANN = "ann";
+	protected static final String BIAS = "bias";
+	protected static final String HIDDEN_LAYERS = "hiddenLayers";
+	protected static final String INPUTS = "inputs";
+	protected static final String OUTPUTS = "outputs";
 	protected ArtificialNeuralNetwork ann = null;
 	protected int inputs = 0;
 	protected int hidden = 1;

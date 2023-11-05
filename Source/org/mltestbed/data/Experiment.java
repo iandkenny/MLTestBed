@@ -743,11 +743,17 @@ public class Experiment implements Serializable
 			BaseSwarm masterSwarm = heir.getMasterSwarm();
 			masterSwarm.stopRunning();
 			masterSwarm.interrupt();
+			heir.setMasterSwarm(null);
 		} else
 		{
-			swarm.stopRunning();
-			swarm.interrupt();
+			if (swarm != null)
+			{
+				swarm.stopRunning();
+				swarm.interrupt();
+			}
 		}
+		heir = null;
+		swarm = null;
 		running = false;
 		Runtime.getRuntime().gc();
 	}

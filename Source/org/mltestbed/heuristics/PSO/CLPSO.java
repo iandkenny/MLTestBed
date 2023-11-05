@@ -44,10 +44,10 @@ public class CLPSO extends ClassicPSO
 	{
 		super(o);
 		setDescription(CL_PSO);
-		w = ((CLPSO)o).w;
-		minw = ((CLPSO)o).minw;
-		maxw = ((CLPSO)o).maxw;
-		decrementW = ((CLPSO)o).decrementW;
+		w = ((CLPSO) o).w;
+		minw = ((CLPSO) o).minw;
+		maxw = ((CLPSO) o).maxw;
+		decrementW = ((CLPSO) o).decrementW;
 	}
 
 	/**
@@ -59,7 +59,7 @@ public class CLPSO extends ClassicPSO
 			Properties runparams)
 	{
 		super(neighbourhood, params, runparams);
-		setDescription(CL_PSO);		
+		setDescription(CL_PSO);
 	}
 
 	/*
@@ -70,8 +70,8 @@ public class CLPSO extends ClassicPSO
 	@Override
 	protected Particle calcNew(int index) throws Exception
 	{
-		if (c1 == Double.NaN || c2 == Double.NaN || VMax == Double.NaN
-				|| w == Double.NaN || minw == Double.NaN || maxw == Double.NaN)
+		if (Double.isNaN(c1) || Double.isNaN(c2) || Double.isNaN(VMax)
+				|| Double.isNaN(w) || Double.isNaN(minw) || Double.isNaN(maxw))
 			throw new Exception("A parmeter is invalid");
 
 		// Random rnd = new Random();
@@ -89,8 +89,7 @@ public class CLPSO extends ClassicPSO
 
 			double newv = ((c1 * rnd.nextDouble()) * subtract(pb, p));
 			v = w * (v + newv);
-			Util.getSwarmui()
-					.updateLog("particle =" + index + " dim=" + i);
+			Util.getSwarmui().updateLog("particle =" + index + " dim=" + i);
 			Util.getSwarmui().updateLog("w=" + w + " v=" + v);
 
 			v = vmaxAdjust(i, v);
@@ -121,17 +120,17 @@ public class CLPSO extends ClassicPSO
 	{
 		ArrayList<Particle> swarmMembers = getSwarmMembers();
 		double pb = swarmMembers.get(particle).getPbest().get(dim);
-		// Note: swarm index is 0 based 
-		double pc = 0.05 + 0.45
-				* (Math.exp(10 * particle) / swarmMembers.size() - 1)
-				/ (Math.exp(10) - 1);
+		// Note: swarm index is 0 based
+		double pc = 0.05
+				+ 0.45 * (Math.exp(10 * particle) / swarmMembers.size() - 1)
+						/ (Math.exp(10) - 1);
 		if (rnd.nextDouble() < pc)
 		{
-			Particle p1 = swarmMembers.get(
-					rnd.nextInt(swarmMembers.size()-1));
-			Particle p2 = swarmMembers.get(
-					rnd.nextInt(swarmMembers.size()-1));
-			if (p1.getBestScore()>p2.getBestScore())
+			Particle p1 = swarmMembers
+					.get(rnd.nextInt(swarmMembers.size() - 1));
+			Particle p2 = swarmMembers
+					.get(rnd.nextInt(swarmMembers.size() - 1));
+			if (p1.getBestScore() > p2.getBestScore())
 				pb = p1.getPbest().get(dim);
 			else
 				pb = p2.getPbest().get(dim);
@@ -143,8 +142,7 @@ public class CLPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util
+	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util
 	 * .Particle)
 	 */
 	public void beforeCalc(Particle particle)
@@ -156,8 +154,7 @@ public class CLPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util
+	 * @see org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util
 	 * .Particle)
 	 */
 	public void afterCalc(Particle particle)
@@ -174,8 +171,8 @@ public class CLPSO extends ClassicPSO
 	public void afterIter(long iteration)
 	{
 		if (decrementW)
-			w = ((maxw - minw) * (getMaxIterations() - iteration) / getMaxIterations())
-					+ minw;
+			w = ((maxw - minw) * (getMaxIterations() - iteration)
+					/ getMaxIterations()) + minw;
 	}
 	/*
 	 * (non-Javadoc)
@@ -190,6 +187,8 @@ public class CLPSO extends ClassicPSO
 	@Override
 	public void createParams()
 	{
+		super.createParams();
+
 		params.setProperty("c1", "1.5");// after van den bergh
 		params.setProperty("c2", "1.5"); // after van den bergh
 		params.setProperty("VMax", "4.0");// after van den bergh
@@ -236,23 +235,23 @@ public class CLPSO extends ClassicPSO
 	protected void init() throws Exception
 	{
 		super.init();
-		w = maxw = Double.valueOf(params.getProperty("w", "0.729")).doubleValue();
-
 		try
 		{
-			// c1 = Double.valueOf(params.getProperty("c1")).doubleValue();
-			// c2 = Double.valueOf(params.getProperty("c2")).doubleValue();
-			// VMax = Double.valueOf(params.getProperty("VMax")).doubleValue();
-			maxw = Double.parseDouble(params.getProperty("maxw",
-					String.valueOf(w)));
+			w = maxw = Double.valueOf(params.getProperty("w", "0.729"))
+					.doubleValue();
+			c1 = Double.valueOf(params.getProperty("c1")).doubleValue();
+			c2 = Double.valueOf(params.getProperty("c2")).doubleValue();
+			VMax = Double.valueOf(params.getProperty("VMax")).doubleValue();
+			maxw = Double
+					.parseDouble(params.getProperty("maxw", String.valueOf(w)));
 			minw = Double.parseDouble(params.getProperty("minw", "0.4"));
 		} catch (NumberFormatException e)
 		{
 			throw new Exception("A parameter is not a recognised number");
 			// e.printStackTrace();
 		}
-		decrementW = Boolean.parseBoolean(params.getProperty("decrementW",
-				"true"));
+		decrementW = Boolean
+				.parseBoolean(params.getProperty("decrementW", "true"));
 	}
 
 	/*

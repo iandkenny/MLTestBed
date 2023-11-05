@@ -67,8 +67,7 @@ public class PRIWPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.
+	 * @see org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.
 	 * Particle)
 	 */
 	public void afterCalc(Particle particle)
@@ -92,8 +91,7 @@ public class PRIWPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.
+	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.
 	 * Particle)
 	 */
 	public void beforeCalc(Particle particle)
@@ -119,9 +117,9 @@ public class PRIWPSO extends ClassicPSO
 	@Override
 	protected Particle calcNew(int index) throws Exception
 	{
-		if (c1 == Double.NaN || c2 == Double.NaN || c3 == Double.NaN
-				|| VMax == Double.NaN || w == Double.NaN || minw == Double.NaN
-				|| maxw == Double.NaN)
+		if (Double.isNaN(c1) || Double.isNaN(c2) || Double.isNaN(c3)
+				|| Double.isNaN(VMax) || Double.isNaN(w) || Double.isNaN(minw)
+				|| Double.isNaN(maxw) || Double.isNaN(bias))
 			throw new Exception("A parmeter is invalid");
 
 		Particle particle = getSwarmMembers().get(index);
@@ -134,32 +132,41 @@ public class PRIWPSO extends ClassicPSO
 			double v = velocity.get(i) // get the velocity
 					.doubleValue(); // for the current dimension
 			double pb;
-			double c = c2;
 			double p = position.get(i).doubleValue();
 			double gb;
+			double rb;
+			int ri1;
+			do
+			{
+				ri1 = rnd.nextInt(getNoMembers());
+			} while (ri1 == index);
 			if (rnd.nextDouble() <= bias)
 			{
-				int ri1;
-				do
-				{
-					ri1 = rnd.nextInt(getNoMembers());
-				} while (ri1 == index);
+
 				int ri2;
 				do
 				{
 					ri2 = rnd.nextInt(getNoMembers());
 				} while (ri2 == index || ri2 == ri1);
+				int ri3;
+				do
+				{
+					ri3 = rnd.nextInt(getNoMembers());
+				} while (ri3 == index || ri3 == ri1 || ri3 == ri2);
 
-				c = c3;
 				pb = getSwarmMembers().get(ri1).getPbest().get(i).doubleValue();
 				gb = getSwarmMembers().get(ri2).getPbest().get(i).doubleValue();
+				rb = getSwarmMembers().get(ri3).getPbest().get(i).doubleValue();
 			} else
 			{
 				pb = particle.getPbest().get(i).doubleValue();
 				gb = gpbest.get(i).doubleValue();
+				rb = getSwarmMembers().get(ri1).getPbest().get(i).doubleValue();
 			}
-			double newv = add(((c1 * rnd.nextDouble()) * subtract(pb, p)),
-					((c * rnd.nextDouble()) * subtract(gb, p)));
+			double newv = add(
+					add(((c1 * rnd.nextDouble()) * subtract(pb, p)),
+							((c2 * rnd.nextDouble()) * subtract(gb, p))),
+					((c3 * rnd.nextDouble()) * subtract(gb, p)));
 			v = w * (v + newv);
 			Util.getSwarmui().updateLog("particle =" + index + " dim=" + i);
 			Util.getSwarmui().updateLog("w=" + w + " v=" + v);
@@ -229,17 +236,16 @@ public class PRIWPSO extends ClassicPSO
 	@Override
 	public void createParams()
 	{
-		params.setProperty("c1", "1.5");// after van den bergh
-		params.setProperty("c2", "1.5"); // after van den bergh
-		params.setProperty("c3", "1.5"); // after van den bergh
-		params.setProperty("VMax", "4.0");// after van den bergh
+		params.setProperty("c1", "1.25");
+		params.setProperty("c2", "1.25");
+		params.setProperty("c3", "1.25");
+		params.setProperty("VMax", "4.0");
 
-		params.setProperty("w", "0.729");// after van den
-		// bergh
+		params.setProperty("w", "0.729");
 		params.setProperty("minw", "0.4"); // after Shi
 		params.setProperty("maxw", "0.9"); // after Shi
 		params.setProperty("decrementW", "false");
-		params.setProperty("VMax", "unset");
+//		params.setProperty("VMax", "unset");
 		params.setProperty("selectionBias", "0.2");
 	}
 	/*
@@ -251,14 +257,18 @@ public class PRIWPSO extends ClassicPSO
 	protected void init() throws Exception
 	{
 		super.init();
-		w = maxw = Double.valueOf(params.getProperty("w", "0.729"))
-				.doubleValue();
-
 		try
 		{
+			w = maxw = Double.valueOf(params.getProperty("w", "0.729"))
+					.doubleValue();
 			c1 = Double.valueOf(params.getProperty("c1")).doubleValue();
 			c2 = Double.valueOf(params.getProperty("c2")).doubleValue();
-			VMax = Double.valueOf(params.getProperty("VMax")).doubleValue();
+			c3 = Double.valueOf(params.getProperty("c3")).doubleValue();
+			String buf = params.getProperty("VMax");
+			if (Util.isNumeric(buf))
+				VMax = Double.valueOf(buf).doubleValue();
+			else
+				VMax = Double.POSITIVE_INFINITY;
 			maxw = Double
 					.parseDouble(params.getProperty("maxw", String.valueOf(w)));
 			minw = Double.parseDouble(params.getProperty("minw", "0.4"));

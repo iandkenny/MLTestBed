@@ -26,8 +26,9 @@ public class MarsagliaModifiedRandom extends Random
 	 */
 	public MarsagliaModifiedRandom()
 	{
-//		setSeed(multiplier ^ System.nanoTime());
-		setSeed(Thread.currentThread().getId());
+//		setSeed(System.nanoTime() >>> Thread.currentThread().getId());
+		//setSeed(Thread.currentThread().getId());
+		setSeed(1);
 	}
 
 	/**
@@ -74,7 +75,10 @@ public class MarsagliaModifiedRandom extends Random
 		 * 10.1109/HIS.2010.5601073.
 		 */
 		x = System.nanoTime() + System.nanoTime() * seed;
-//		after L'Ecuyer & Simard (2007)
+		// x ^= (x << 21);
+		// x ^= (x >>> 35);
+		// x ^= (x << 4);
+		// after L'Ecuyer & Simard (2007)
 		x ^= (x << 13);
 		x ^= (x >>> 7);
 		x ^= (x << 17);

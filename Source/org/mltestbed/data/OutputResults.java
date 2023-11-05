@@ -24,6 +24,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.sql.Types;
@@ -141,8 +142,11 @@ public class OutputResults extends Thread implements Cloneable
 		public BufferedReader getFuncSpecificByParticle(Particle particle)
 		{
 			BufferedReader br = null;
-			br = new BufferedReader(
-					new StringReader(funcSpecific.get(particle).read()));
+			MemoryBufferedFile memoryBufferedFile = funcSpecific.get(particle);
+			String read = "";
+			if (memoryBufferedFile != null)
+				read = memoryBufferedFile.read();
+			br = new BufferedReader(new StringReader(read));
 			return br;
 		}
 		/**
@@ -188,8 +192,8 @@ public class OutputResults extends Thread implements Cloneable
 	private static final String INSERT_INTO_NOTEBOOK = "INSERT INTO notebook ( expNum, Description, Parameters, Notes, StartTime ) VALUES ( ?, ?, ?, ?, ? )";
 	private static final String INSERT_INTO_RESULTS = "INSERT INTO results(expnum,runnum,iteration,swarm,particle,bestscore,currentscore,isbest,position, bestposition, velocity, expspecific) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
 	private static final String INSERT_INTO_SWARMS = "INSERT INTO swarms(expnum,runnum,swarmno,params) VALUES(?,?,?,?)";
-
 	private static final String LOGGING_RESULTS = "Logging Results, buffered SQL statements: ";
+
 	private static final String OUTPUT_RESULTS = "OutputResults";
 	private static final String RESULT_STORE = "Results";
 	private static final String RUNTIME_PROPERTIES = "MLTestBedRuntime.properties";
@@ -452,12 +456,15 @@ public class OutputResults extends Thread implements Cloneable
 		}
 		return ret;
 	}
+
 	/**
-	* 
-	*/
+	 * 
+	 */
 	public void clearQueue()
 	{
 		processResults();
+		Util.getSwarmui().updateLog("clearing queued results");
+
 	}
 
 	public Object clone()
@@ -473,7 +480,6 @@ public class OutputResults extends Thread implements Cloneable
 		}
 		return clone;
 	}
-
 	/**
 	 * 
 	 */
@@ -928,11 +934,13 @@ public class OutputResults extends Thread implements Cloneable
 	public void processResults()
 	{
 		ParticleResult result = null;
+		boolean bStop = true;
 		int no = secondResultsBuffer.size();
 		Util.getSwarmui().updateLog(
 				"storing " + (no != 0 ? no : "") + " queued results");
-		while (!secondResultsBuffer.isEmpty())
+		while (!secondResultsBuffer.isEmpty() && bStop)
 		{
+
 			try
 			{
 				result = (ParticleResult) secondResultsBuffer.poll();
@@ -951,6 +959,7 @@ public class OutputResults extends Thread implements Cloneable
 			{
 				Log.log(Level.SEVERE, e);
 				// e.printStackTrace();
+				bStop = false;
 			}
 		}
 		offered = false;
@@ -985,7 +994,7 @@ public class OutputResults extends Thread implements Cloneable
 				{
 					synchronized (secondResultsBuffer)
 					{
-						while(!offered && queue)
+						while (!offered && queue)
 							secondResultsBuffer.wait(10000);
 					}
 				} catch (Exception e)
@@ -995,16 +1004,7 @@ public class OutputResults extends Thread implements Cloneable
 				}
 				try
 				{
-						new Thread()
-						{
-							@Override
-							public void run()
-							{
-								processResults();
-								super.run();
-							}
-
-						}.start();
+					processResults();
 				} catch (Exception e)
 				{
 					Log.log(Level.SEVERE, e);
@@ -1275,7 +1275,7 @@ public class OutputResults extends Thread implements Cloneable
 			Connection con;
 			con = getNewConnection();
 			Statement stmt = con.createStatement();
-			// System.out.println(sql);
+//			System.out.println(sql);
 			try
 			{
 				stmt.executeLargeUpdate(sql);
@@ -1495,32 +1495,33 @@ public class OutputResults extends Thread implements Cloneable
 		long swarmNo = result.getSwarmNo();
 		Particle bestParticle = result.getGbest();
 		bestValue = bestParticle.getBestScore();
-		sql = sql.replaceFirst("\\?", String.valueOf(expNum));
-		sql = sql.replaceFirst("\\?", String.valueOf(result.getRun()));
-		sql = sql.replaceFirst("\\?", String.valueOf(result.getIteration()));
-		sql = sql.replaceFirst("\\?", String.valueOf(swarmNo));
-		sql = sql.replaceFirst("\\?", "-1");
-		sql = sql.replaceFirst("\\?",
-				String.valueOf((Double) bestParticle.getBestScore()));
-		sql = sql.replaceFirst("\\?",
-				String.valueOf((Double) bestParticle.getCurrentScore()));
-		sql = sql.replaceFirst("\\?",
-				(bestValue == bestParticle.getBestScore()) ? "1" : "0");
-		sql = sql.replaceFirst("\\?",
-				"'" + bestParticle.getPosition().toString() + "'");
-		sql = sql.replaceFirst("\\?",
-				"'" + bestParticle.getPbest().toString() + "'");
-		sql = sql.replaceFirst("\\?",
-				"'" + bestParticle.getVelocity().toString() + "'");
-		sql = sql.replaceFirst("\\?",
-				"'" + bestParticle.getFuncSpecific().toString() + "'");
-		storeData(sql);
+//		sql = sql.replaceFirst("\\?", String.valueOf(expNum));
+//		sql = sql.replaceFirst("\\?", String.valueOf(result.getRun()));
+//		sql = sql.replaceFirst("\\?", String.valueOf(result.getIteration()));
+//		sql = sql.replaceFirst("\\?", String.valueOf(swarmNo));
+//		sql = sql.replaceFirst("\\?", "-1");
+//		sql = sql.replaceFirst("\\?",
+//				String.valueOf((Double) bestParticle.getBestScore()));
+//		sql = sql.replaceFirst("\\?",
+//				String.valueOf((Double) bestParticle.getCurrentScore()));
+//		sql = sql.replaceFirst("\\?",
+//				(bestValue == bestParticle.getBestScore()) ? "1" : "0");
+//		sql = sql.replaceFirst("\\?",
+//				"'" + bestParticle.getPosition().toString() + "'");
+//		sql = sql.replaceFirst("\\?",
+//				"'" + bestParticle.getPbest().toString() + "'");
+//		sql = sql.replaceFirst("\\?",
+//				"'" + bestParticle.getVelocity().toString() + "'");
+//		sql = sql.replaceFirst("\\?",
+//				"'" + bestParticle.getFuncSpecific().toString() + "'");
+//		storeData(sql);
 		ArrayList<Particle> particles = result.getSwarm();
-		for (int key = 0; key < particles.size(); key++)
+		for (int index = 0; index < particles.size(); index++)
 		{
-			Particle particle = particles.get(key);
+			Particle particle = particles.get(index);
 			boolean isBest = bestValue == particle.getBestScore();
-			if (isBest || logAll)
+			int id = particle.getIdentityNumber();
+			if (isBest || logAll || id <0) // minus ids are test baseData results
 			{
 				sql = INSERT_INTO_RESULTS;
 				sql = sql.replaceFirst("\\?", String.valueOf(expNum));
@@ -1528,7 +1529,7 @@ public class OutputResults extends Thread implements Cloneable
 				sql = sql.replaceFirst("\\?",
 						String.valueOf(result.getIteration()));
 				sql = sql.replaceFirst("\\?", String.valueOf(swarmNo));
-				sql = sql.replaceFirst("\\?", String.valueOf(key));
+				sql = sql.replaceFirst("\\?", String.valueOf(id));
 				sql = sql.replaceFirst("\\?",
 						String.valueOf((Double) particle.getBestScore()));
 				sql = sql.replaceFirst("\\?",
@@ -1568,38 +1569,46 @@ public class OutputResults extends Thread implements Cloneable
 						.prepareStatement(INSERT_INTO_RESULTS);
 				Particle bestParticle = result.getGbest();
 				double bestValue = bestParticle.getBestScore();
-				pstmt.setLong(1, expNum);
-				pstmt.setLong(2, result.getRun());
-				pstmt.setLong(3, result.getIteration());
-				pstmt.setLong(4, result.getSwarmNo());
-				pstmt.setLong(5, -1);
-				pstmt.setDouble(6, bestParticle.getBestScore());
-				pstmt.setDouble(7, bestParticle.getCurrentScore());
-				pstmt.setBoolean(8, true);
-				StringReader stringReader = new StringReader(
-						bestParticle.getPosition().toString());
-				pstmt.setClob(9, stringReader);
-				stringReader.close();
-				stringReader = new StringReader(
-						bestParticle.getPbest().toString());
-				pstmt.setClob(10, stringReader);
-				stringReader.close();
-				stringReader = new StringReader(
-						bestParticle.getVelocity().toString());
-				pstmt.setClob(11, stringReader);
-				stringReader.close();
-				BufferedReader funcSpecificByid = result
-						.getFuncSpecificByParticle(bestParticle);
-				pstmt.setClob(12, funcSpecificByid);
-				pstmt.executeUpdate();
-				pstmt.close();
-				funcSpecificByid.close();
+				StringReader stringReader;
+				double currentScore = bestParticle.getCurrentScore();
+				BufferedReader funcSpecificByid;
+//				pstmt.setLong(1, expNum);
+//				pstmt.setLong(2, result.getRun());
+//				pstmt.setLong(3, result.getIteration());
+//				pstmt.setLong(4, result.getSwarmNo());
+//				pstmt.setLong(5, -1);
+//				if (!Double.isNaN(bestValue))
+//					pstmt.setDouble(6, bestValue);
+//				else
+//					pstmt.setNull(6, java.sql.Types.DOUBLE);
+//				if (!Double.isNaN(currentScore))
+//					pstmt.setDouble(7, currentScore);
+//				else
+//					pstmt.setNull(7, java.sql.Types.DOUBLE);
+//				pstmt.setBoolean(8, true);
+//				stringReader = new StringReader(
+//						bestParticle.getPosition().toString());
+//				pstmt.setClob(9, stringReader);
+//				stringReader = new StringReader(
+//						bestParticle.getPbest().toString());
+//				pstmt.setClob(10, stringReader);
+//				stringReader = new StringReader(
+//						bestParticle.getVelocity().toString());
+//				pstmt.setClob(11, stringReader);
+//				funcSpecificByid = result
+//						.getFuncSpecificByParticle(bestParticle);
+//				pstmt.setClob(12, funcSpecificByid);
+//				pstmt.executeUpdate();
+//				pstmt.close();
+//				stringReader.close();
+//				funcSpecificByid.close();
 				ArrayList<Particle> particles = result.getSwarm();
-				for (int key = 0; key < particles.size(); key++)
+				for (int index = 0; index < particles.size(); index++)
 				{
-					Particle particle = particles.get(key);
+					Particle particle = particles.get(index);
 					boolean isBest = bestValue == particle.getBestScore();
-					if (isBest || logAll)
+					int id =particle.getIdentityNumber();
+					if (isBest || logAll || id<0)
 					{
 						pstmt = connection
 								.prepareStatement(INSERT_INTO_RESULTS);
@@ -1607,46 +1616,54 @@ public class OutputResults extends Thread implements Cloneable
 						pstmt.setLong(2, result.getRun());
 						pstmt.setLong(3, result.getIteration());
 						pstmt.setLong(4, result.getSwarmNo());
-						pstmt.setLong(5, key);
-						pstmt.setDouble(6, particle.getBestScore());
-						pstmt.setDouble(7, particle.getCurrentScore());
+						pstmt.setLong(5, id);
+						if (bestValue != Double.NaN)
+							pstmt.setDouble(6, bestValue);
+						else
+							pstmt.setNull(6, java.sql.Types.DOUBLE);
+						currentScore = bestParticle.getCurrentScore();
+						if (currentScore != Double.NaN)
+							pstmt.setDouble(7, currentScore);
+						else
+							pstmt.setNull(7, java.sql.Types.DOUBLE);
 						pstmt.setBoolean(8, isBest);
 						stringReader = new StringReader(
 								particle.getPosition().toString());
 						pstmt.setClob(9, stringReader);
-						stringReader.close();
 						stringReader = new StringReader(
 								particle.getPbest().toString());
 						pstmt.setClob(10, stringReader);
-						stringReader.close();
 						stringReader = new StringReader(
 								particle.getVelocity().toString());
 						pstmt.setClob(11, stringReader);
-						stringReader.close();
 						funcSpecificByid = result
 								.getFuncSpecificByParticle(particle);
 						pstmt.setClob(12, funcSpecificByid);
-						funcSpecificByid.close();
 						pstmt.executeUpdate();
 						pstmt.close();
+						stringReader.close();
+						funcSpecificByid.close();
 					}
 				}
 				connection.close();
 				connection = null;
 				success = true;
 			}
+
+		} catch (IOException | SQLSyntaxErrorException e)
+		{
+			// set success because baseData has been lost and we are unable to
+			// recover
+			success = true;
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
 		} catch (SQLException e)
 		{
 			Log.log(Level.SEVERE, e);
 			e.printStackTrace();
-		} catch (IOException e)
-		{
-			// set success because data has been lost and we are unable to
-			// recover
-			success = true;
-			Log.log(Level.SEVERE, e);
-			e.printStackTrace();
+
 		}
+
 		return success;
 	}
 	@SuppressWarnings("unused")
@@ -1663,62 +1680,65 @@ public class OutputResults extends Thread implements Cloneable
 
 			Particle bestParticle = result.getGbest();
 			double bestValue = bestParticle.getBestScore();
-			ResultSet rs = stmt.executeQuery(SELECT_RESULTS + " WHERE expnum ="
-					+ expNum + " AND RunNum =" + result.getRun()
-					+ " AND iteration =" + result.getIteration()
-					+ " AND particle = -1");
-			rs.moveToInsertRow();
-			update(rs, 1, Long.toString(expNum));
-			update(rs, 2, Long.toString(result.getRun()));
-			update(rs, 3, Long.toString(result.getIteration()));
-			update(rs, 4, Long.toString(result.getSwarmNo()));
-			update(rs, 5, "-1");
-			update(rs, 6, Double.toString(bestParticle.getBestScore()));
-			update(rs, 7, Double.toString(bestParticle.getCurrentScore()));
-			update(rs, 8, "true");
-			update(rs, 9, bestParticle.getPosition().toString());
-			update(rs, 10, bestParticle.getPbest().toString());
-			update(rs, 11, bestParticle.getVelocity().toString());
-			BufferedReader br = new BufferedReader(new StringReader(
-					result.getFuncSpecific().get(bestParticle).read()));
+			BufferedReader br = null;
 			String buf = "";
-			if (br != null)
-			{
-				try
-				{
-
-					String line;
-					while ((line = br.readLine()) != null)
-						buf += line;
-					br.close();
-				} catch (IOException e)
-				{
-					Log.log(Level.SEVERE, e);
-					e.printStackTrace();
-				}
-
-			}
-			update(rs, 12, buf);
-			rs.insertRow();
-			rs.close();
-			rs = null;
+//			ResultSet rs = stmt.executeQuery(SELECT_RESULTS + " WHERE expnum ="
+//					+ expNum + " AND RunNum =" + result.getRun()
+//					+ " AND iteration =" + result.getIteration()
+//					+ " AND particle = -1");
+//			rs.moveToInsertRow();
+//			update(rs, 1, Long.toString(expNum));
+//			update(rs, 2, Long.toString(result.getRun()));
+//			update(rs, 3, Long.toString(result.getIteration()));
+//			update(rs, 4, Long.toString(result.getSwarmNo()));
+//			update(rs, 5, "-1");
+//			update(rs, 6, Double.toString(bestParticle.getBestScore()));
+//			update(rs, 7, Double.toString(bestParticle.getCurrentScore()));
+//			update(rs, 8, "true");
+//			update(rs, 9, bestParticle.getPosition().toString());
+//			update(rs, 10, bestParticle.getPbest().toString());
+//			update(rs, 11, bestParticle.getVelocity().toString());
+//			br = new BufferedReader(new StringReader(
+//					result.getFuncSpecific().get(bestParticle).read()));
+			
+//			if (br != null)
+//			{
+//				try
+//				{
+//
+//					String line;
+//					while ((line = br.readLine()) != null)
+//						buf += line;
+//					br.close();
+//				} catch (IOException e)
+//				{
+//					Log.log(Level.SEVERE, e);
+//					e.printStackTrace();
+//				}
+//
+//			}
+//			update(rs, 12, buf);
+//			rs.insertRow();
+//			rs.close();
+//			rs = null;
 			ArrayList<Particle> particles = result.getSwarm();
-			for (int key = 0; key < particles.size(); key++)
+			for (int index = 0; index < particles.size(); index++)
 			{
-				Particle particle = particles.get(key);
+				Particle particle = particles.get(index);
 				boolean isBest = bestValue == particle.getBestScore();
-				if (isBest || logAll)
+				int id = particle.getIdentityNumber();
+				if (isBest || logAll || id < 0) // -ve ids are test baseData results
 				{
 					rs = stmt.executeQuery(SELECT_RESULTS + " WHERE expnum ="
 							+ expNum + " AND RunNum =" + result.getRun()
 							+ " AND iteration =" + result.getIteration()
-							+ " AND particle =" + key);
+							+ " AND particle =" + index);
 					rs.moveToInsertRow();
 					update(rs, 1, Long.toString(expNum));
 					update(rs, 2, Long.toString(result.getRun()));
 					update(rs, 3, Long.toString(result.getIteration()));
 					update(rs, 4, Long.toString(result.getSwarmNo()));
-					update(rs, 5, Long.toString(key));
+					update(rs, 5, Long.toString(particle.getIdentityNumber()));
 					update(rs, 6, Double.toString(particle.getBestScore()));
 					update(rs, 7, Double.toString(particle.getCurrentScore()));
 					update(rs, 8, Boolean.toString(isBest));
@@ -1776,7 +1796,7 @@ public class OutputResults extends Thread implements Cloneable
 			// sql = sql.replaceFirst("\\?", "-1");
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
 			swarm.getParams().storeToXML(out,
-					DateFormat.getDateInstance().format(new Date()));
+					DateFormat.getDateInstance().format(new Date()).toString());
 			sql = sql.replaceFirst("\\?", "'" + out.toString() + "'");
 			storeData(sql);
 		} catch (IOException e)

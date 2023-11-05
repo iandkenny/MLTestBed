@@ -20,7 +20,7 @@ import java.util.logging.Level;
  */
 public class MemoryBufferedFile
 {
-	private String funcSpecific;
+	private String buffer;
 	private File tmpFile;
 
 	public MemoryBufferedFile()
@@ -34,7 +34,7 @@ public class MemoryBufferedFile
 
 	public void destroy()
 	{
-		funcSpecific = null;
+		buffer = null;
 		if (tmpFile != null)
 		{
 			tmpFile.delete();
@@ -48,15 +48,14 @@ public class MemoryBufferedFile
 		{
 			// must return a non null reader
 
-			if (tmpFile != null && this.funcSpecific.isEmpty())
+			if (tmpFile != null && this.buffer.isEmpty())
 				synchronized (tmpFile)
 				{
 					if (tmpFile.exists())
 						reader = new BufferedReader(new FileReader(tmpFile));
 				}
 			else
-				reader = new BufferedReader(
-						new StringReader(this.funcSpecific));
+				reader = new BufferedReader(new StringReader(this.buffer));
 
 		} catch (IOException e)
 		{
@@ -68,14 +67,14 @@ public class MemoryBufferedFile
 	}
 
 	/**
-	 * @return the funcSpecific
+	 * @return the buffer
 	 */
 	public String read()
 	{
 		String str = "";
-		if (tmpFile != null && this.funcSpecific.isEmpty())
+		if (tmpFile != null && this.buffer.isEmpty())
 		{
-			StringBuilder funcSpecific = new StringBuilder("");
+			StringBuilder buf = new StringBuilder("");
 			try
 			{
 				// must return a non null reader
@@ -88,20 +87,20 @@ public class MemoryBufferedFile
 						String line;
 						if (reader != null)
 							while ((line = reader.readLine()) != null)
-								funcSpecific.append(line);
+								buf.append(line);
 
 						reader.close();
 					}
 					reader = null;
 				}
-				str = funcSpecific.toString();
+				str += buf.toString();
 			} catch (IOException e)
 			{
 				Log.log(Level.SEVERE, e);
 				e.printStackTrace();
 			}
 		} else
-			str = this.funcSpecific;
+			str += this.buffer;
 		return str;
 	}
 	public String retrieveBuffer()
@@ -120,7 +119,7 @@ public class MemoryBufferedFile
 				br = null;
 				buf = sb.toString();
 			} else
-				buf = new String(funcSpecific);
+				buf = new String(buffer);
 		} catch (Exception e)
 		{
 			Log.log(Level.SEVERE, e);
@@ -129,9 +128,9 @@ public class MemoryBufferedFile
 		return buf;
 	}
 
-	public void write(BufferedReader funcSpecific)
+	public void write(BufferedReader buffer)
 	{
-		if (funcSpecific != null)
+		if (buffer != null)
 		{
 			try
 			{
@@ -139,13 +138,13 @@ public class MemoryBufferedFile
 				{
 					String line;
 					StringBuilder str = new StringBuilder();
-					if (funcSpecific != null)
-						while ((line = funcSpecific.readLine()) != null)
+					if (buffer != null)
+						while ((line = buffer.readLine()) != null)
 							str.append(line);
-					this.funcSpecific = str.toString();
+					this.buffer = str.toString();
 				} else
 				{
-					this.funcSpecific = "";
+					this.buffer = "";
 					BufferedWriter writer = null;
 					if (tmpFile == null)
 						tmpFile = Util.createTempFile();
@@ -165,7 +164,7 @@ public class MemoryBufferedFile
 							writer = new BufferedWriter(
 									new FileWriter(tmpFile, false));
 							String line;
-							while ((line = funcSpecific.readLine()) != null)
+							while ((line = buffer.readLine()) != null)
 							{
 								writer.write(line);
 								writer.newLine();
@@ -185,16 +184,25 @@ public class MemoryBufferedFile
 
 	}
 
-	public void write(String funcSpecific)
+	public void write(String str)
 	{
-		if (Util.checkMemFree())
-			this.funcSpecific = new String(funcSpecific);
-		else
+		try
 		{
-			this.funcSpecific = "";
-			BufferedWriter writer = null;
-			try
+			if (Util.checkMemFree())
 			{
+				this.buffer = new String(str);
+				if (tmpFile != null)
+				{
+					RandomAccessFile randomAccessFile = new RandomAccessFile(
+							tmpFile, "rw");
+					randomAccessFile.setLength(0);
+					randomAccessFile.close();
+				}
+			} else
+			{
+				this.buffer = "";
+				BufferedWriter writer = null;
+
 				if (tmpFile == null)
 					tmpFile = Util.createTempFile();
 				else
@@ -212,19 +220,20 @@ public class MemoryBufferedFile
 
 						writer = new BufferedWriter(
 								new FileWriter(tmpFile, false));
-						writer.write(funcSpecific);
+						writer.write(str);
 						writer.newLine();
+						writer.flush();
 						writer.close();
 					}
 				} while (writer == null);
 				writer = null;
-			} catch (IOException e)
-			{
-				Log.log(Level.SEVERE, e);
-				e.printStackTrace();
 			}
-
+		} catch (IOException e)
+		{
+			Log.log(Level.SEVERE, e);
+			e.printStackTrace();
 		}
+
 	}
 	public void write(String funcSpecific, boolean reset)
 	{
@@ -255,21 +264,19 @@ public class MemoryBufferedFile
 		}
 		if (Util.checkMemFree() && tmpFile == null)
 		{
-			if (reset || this.funcSpecific == null)
-				this.funcSpecific = new String(funcSpecific);
+			if (reset || this.buffer == null)
+				this.buffer = new String(funcSpecific);
 			else
-				this.funcSpecific = this.funcSpecific
-						.concat("\n" + funcSpecific);
+				this.buffer = this.buffer.concat("\n" + funcSpecific);
 		} else
 			try
 			{
 				if (tmpFile == null || !tmpFile.exists())
 					tmpFile = Util.createTempFile();
-				if (this.funcSpecific != null)
+				if (this.buffer != null)
 				{
-					funcSpecific = this.funcSpecific
-							.concat("\n" + funcSpecific);
-					this.funcSpecific = null;
+					funcSpecific = this.buffer.concat("\n" + funcSpecific);
+					this.buffer = null;
 				}
 				if (tmpFile.exists())
 				{

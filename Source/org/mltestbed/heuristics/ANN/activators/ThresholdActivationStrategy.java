@@ -3,9 +3,15 @@ package org.mltestbed.heuristics.ANN.activators;
 import java.io.Serializable;
 
 /**
- * NOTE: This class should NEVER be used in the backpropagation algorithm! This function is not differentiable at the
- * threshold. I used this class to construct AND and OR networks when I was just starting to learn about neural nets.
- * These networks don't actually end up getting trained. 
+ * NB: This class should NEVER be used in the backpropagation algorithm! This function is not differentiable at the
+ * threshold. This class can be used to construct AND and OR networks when starting to learn about neural nets.
+ * These networks don't actually end up getting trained.
+ * 
+ *  Indeed predicting this class of function is known to be NP-hard:
+ *  S. Ben-David, N. Eiron, and P. M. Long.
+ *  “On the difficulty of approximately maximizing
+ *  agreements”. In: J. Comput. System Sci.
+ *  66.3 (2003), pp. 496–514.
  */
 
 public class ThresholdActivationStrategy extends ActivationStrategy implements Serializable {

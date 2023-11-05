@@ -99,7 +99,6 @@ public class Cosmology extends PsuedoSVM
 	public void init()
 	{
 		super.init();
-		tmpFile = null;
 		key = params.getProperty(KEY, "");
 		if (key.equalsIgnoreCase("random"))
 		{
@@ -174,7 +173,7 @@ public class Cosmology extends PsuedoSVM
 			if (objFunc.equalsIgnoreCase("f1"))
 				score = super.CosmologyObjective(p, row);
 			else if (objFunc.equalsIgnoreCase("f2"))
-				score = super.NERCObjective(p, row);
+				score = super.genericObjective(p, row);
 			else if (objFunc.equalsIgnoreCase("f3"))
 				score = super.CosmologyObjective3(p, row);
 			double abs = Math.abs(score);

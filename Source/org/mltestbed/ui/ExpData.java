@@ -17,6 +17,7 @@ import java.sql.Statement;
 import java.util.Enumeration;
 import java.util.InvalidPropertiesFormatException;
 import java.util.Properties;
+import java.util.Vector;
 import java.util.logging.Level;
 
 import javax.swing.JTree;
@@ -41,24 +42,31 @@ public class ExpData
 {
 	private static final String NO_RESULTS_ARE_AVAILABLE = "No results are available";
 
-	private final String SQLString = "select * from notebook";
-
-	private DefaultMutableTreeNode topNode;
-
-	private String connectString = "SwarmExperiments";
-
-	private Properties runparams;
+	private final String BestSQLString = "select BestPosition from results  where ExpNum =? and isBest=1 and Iteration in (select Max(Iteration) from results where ExpNum = ? group by ExpNum, RunNum)";
+	private String connectString = "MLExperiments";
 
 	private String driver;
 
-	private String url = "jdbc:odbc:";
+	private Vector<Double> lastBest = null;
 
-	private String uid = "";
+	private final String NotebookSQLString = "select * from notebook";
 
 	private String pwd = "";
 
+	private Properties runparams;
+
+	private DefaultMutableTreeNode topNode;
+
 	private JTree tree = null;
 
+	private String uid = "";
+	
+	private String url = "jdbc:odbc:";
+	public ExpData(Properties runparams)
+	{
+		this.runparams = runparams;
+		initProps();
+	}
 	/**
 	 * @throws Exception
 	 * 
@@ -86,23 +94,129 @@ public class ExpData
 		}
 		initProps();
 	}
-	public ExpData(Properties runparams)
+	/**
+	 * @param expno
+	 * @param description
+	 */
+	private void addNode(long expno, String description)
 	{
-		this.runparams = runparams;
-		initProps();
-	}
-	protected void initProps()
-	{
-		// SQLString = prop.getProperty("SQLString",SQLString);
-		if (runparams == null)
-			runparams = new Properties();
-		connectString = runparams.getProperty("connection", connectString);
-		uid = runparams.getProperty("userid", uid);
-		pwd = runparams.getProperty("password", pwd);
-		driver = runparams.getProperty("driver",
-				"sun.jdbc.odbc.JdbcOdbcDriver");
-		url = runparams.getProperty("url", url);
 
+		DefaultMutableTreeNode node1 = new DefaultMutableTreeNode(
+				"Experiment " + expno);
+		topNode.add(node1);
+
+		DefaultMutableTreeNode node2 = new DefaultMutableTreeNode(description);
+		node1.add(node2);
+
+	}
+	private void expandAPath(TreePath p)
+	{
+
+		tree.expandPath(p);
+		if (p != null)
+		{
+			TreeNode currNode = (TreeNode) p.getLastPathComponent();
+			int numChildren = currNode.getChildCount();
+			for (int i = 0; i < numChildren; ++i)
+			{
+
+				TreePath newPath = p.pathByAddingChild(currNode.getChildAt(i));
+				expandAPath(newPath);
+			}
+		}
+	}
+
+	/**
+	 * 
+	 */
+	private JTree getExperiments()
+	{
+		try
+		{
+			if (topNode != null && tree != null)
+			{
+				Statement stmt = getStatement();
+
+				if (stmt != null)
+				{
+					ResultSet rs = stmt.executeQuery(NotebookSQLString);
+					if (rs != null)
+					{
+						topNode.removeAllChildren();
+						tree.setRootVisible(true);
+						while (rs.next())
+						{
+							addNode(rs.getLong(1), rs.getString(2));
+						}
+						expandAPath(tree.getPathForRow(0));
+						if (topNode.getChildCount() != 0 && tree != null)
+							tree.setRootVisible(false);
+
+						tree.revalidate();
+					}
+				}
+			}
+		} catch (SQLException e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
+		} catch (Exception e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
+		}
+
+		return tree;
+	}
+
+	/**
+	 * @return the lastBest
+	 */
+	public Vector<Double> getLastBest()
+	{
+		return lastBest;
+	}
+
+	private Vector<Double> getLastBest(long expNum)
+	{
+		Vector<Double> vec = new Vector<Double>();
+		try
+		{
+			Statement stmt = getStatement();
+
+			if (stmt != null)
+			{
+				ResultSet rs = stmt.executeQuery(
+						BestSQLString.replaceAll("\\?", Long.toString(expNum)));
+				if (rs != null)
+				{
+
+					String buf = "";
+					if (rs.first())
+					{
+						buf = rs.getString(1);
+
+						String[] arr = buf.replace("[", "").replace("]", "")
+								.split(",");
+						for (int i = 0; i < arr.length; i++)
+						{
+							vec.add(Double.parseDouble(arr[i]));
+
+						}
+					}
+				}
+			}
+		} catch (SQLException e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
+		} catch (Exception e)
+		{
+			Log.log(Level.SEVERE, e);
+			// e.printStackTrace();
+		}
+
+		return vec;
 	}
 	/**
 	 * @return
@@ -133,70 +247,19 @@ public class ExpData
 		}
 		return stmt;
 	}
-
-	/**
-	 * 
-	 */
-	private JTree getExperiments()
+	protected void initProps()
 	{
-		try
-		{
-			if (topNode != null && tree != null)
-			{
-				Statement stmt = getStatement();
+		// NotebookSQLString =
+		// prop.getProperty("NotebookSQLString",NotebookSQLString);
+		if (runparams == null)
+			runparams = new Properties();
+		connectString = runparams.getProperty("connection", connectString);
+		uid = runparams.getProperty("userid", uid);
+		pwd = runparams.getProperty("password", pwd);
+		driver = runparams.getProperty("driver",
+				"sun.jdbc.odbc.JdbcOdbcDriver");
+		url = runparams.getProperty("url", url);
 
-				if (stmt != null)
-				{
-					ResultSet rs = stmt.executeQuery(SQLString);
-					if (rs != null)
-					{
-						topNode.removeAllChildren();
-						tree.setRootVisible(true);
-						while (rs.next())
-						{
-							addNode(rs.getLong(1), rs.getString(2));
-						}
-						expandAPath(tree.getPathForRow(0));
-						if (topNode.getChildCount() != 0 && tree != null)
-							tree.setRootVisible(false);
-
-						tree.updateUI();
-					}
-				}
-			}
-		} catch (SQLException e)
-		{
-			Log.log(Level.SEVERE, e);
-			// e.printStackTrace();
-		} catch (Exception e)
-		{
-			Log.log(Level.SEVERE, e);
-			// e.printStackTrace();
-		}
-
-		return tree;
-	}
-	/**
-	 * @param expno
-	 * @param description
-	 */
-	private void addNode(long expno, String description)
-	{
-
-		DefaultMutableTreeNode node1 = new DefaultMutableTreeNode(
-				"Experiment " + expno);
-		topNode.add(node1);
-
-		DefaultMutableTreeNode node2 = new DefaultMutableTreeNode(description);
-		node1.add(node2);
-
-	}
-	/**
-	 * Refreshes the experiment tree
-	 */
-	public JTree refresh()
-	{
-		return getExperiments();
 	}
 	/**
 	 * @param expNo
@@ -214,7 +277,7 @@ public class ExpData
 					sqlWhere = " where Expnum IN (Select Max(Expnum) From notebook)";
 				else
 					sqlWhere = " where Expnum = " + expNo.toString().trim();
-				ResultSet rs = stmt.executeQuery(SQLString + sqlWhere);
+				ResultSet rs = stmt.executeQuery(NotebookSQLString + sqlWhere);
 
 				String buf;
 				if (rs.first())
@@ -244,6 +307,8 @@ public class ExpData
 					rs = null;
 
 				}
+				if(rerun)
+					lastBest = getLastBest(expNo.longValue());
 			}
 		} catch (SQLException e)
 		{
@@ -393,29 +458,22 @@ public class ExpData
 			Enumeration<Object> keys = runparams.keys();
 			while (keys.hasMoreElements())
 			{
-				String key = (String) keys.nextElement();
-				if (props.containsKey(key))
-					params.setProperty((String) key,
-							props.getProperty((String) key));
+				String key = "" + (String) keys.nextElement();
+				if (!key.isEmpty() && props.containsKey(key))
+				{
+					String value = "" + props.getProperty((String) key);
+					params.setProperty((String) key, value);
+				}
 			}
 		}
 		return params;
 	}
-	private void expandAPath(TreePath p)
+	/**
+	 * Refreshes the experiment tree
+	 */
+	public JTree refresh()
 	{
-
-		tree.expandPath(p);
-		if (p != null)
-		{
-			TreeNode currNode = (TreeNode) p.getLastPathComponent();
-			int numChildren = currNode.getChildCount();
-			for (int i = 0; i < numChildren; ++i)
-			{
-
-				TreePath newPath = p.pathByAddingChild(currNode.getChildAt(i));
-				expandAPath(newPath);
-			}
-		}
+		return getExperiments();
 	}
 
 }

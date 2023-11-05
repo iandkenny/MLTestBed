@@ -349,10 +349,16 @@ public class Particle implements Comparable<Particle>, Cloneable, Serializable
 	{
 		this.previousScore = this.currentScore;
 		this.currentScore = currentScore;
+//		if (Double.isNaN(this.currentScore) && Double.isNaN(this.previousScore))
+//			synchronized (mPosition)
+//			{
+//				mPosition = init(testFunction, RandGen.getLastCreated());
+//			}
 	}
 
 	/**
-	 * @param mVelocity the mVelocity to set
+	 * @param mVelocity
+	 *            the mVelocity to set
 	 */
 	public void setmVelocity(Vector<Double> mVelocity)
 	{
@@ -360,7 +366,8 @@ public class Particle implements Comparable<Particle>, Cloneable, Serializable
 	}
 
 	/**
-	 * @param bestScore the bestScore to set
+	 * @param bestScore
+	 *            the bestScore to set
 	 */
 	public void setBestScore(double bestScore)
 	{

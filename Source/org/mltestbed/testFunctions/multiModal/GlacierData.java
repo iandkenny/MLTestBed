@@ -53,9 +53,8 @@ public class GlacierData extends PsuedoSVM implements Cloneable
 	public Object clone()
 	{
 		TestBase clone = (TestBase) super.clone();
-		tmpFile = null;
 		if (data != null)
-//			data = new LinkedList<ArrayList<Double>>(data);
+//			baseData = new LinkedList<ArrayList<Double>>(baseData);
 			data = ((GlacierData) clone).getData(); // this shouldn't be
 													// necessary
 		return clone;
@@ -94,15 +93,6 @@ public class GlacierData extends PsuedoSVM implements Cloneable
 	{
 		destroy();
 		super.finalize();
-	}
-
-	/**
-	 * 
-	 */
-	public void destroy()
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
 	}
 	/*
 	 * (non-Javadoc)
@@ -231,7 +221,7 @@ public class GlacierData extends PsuedoSVM implements Cloneable
 			ArrayList<Double> row = iterator.next();
 			Double expect = row.get(row.size() - 1);
 			reqSum += expect;
-			double score = super.NERCObjective(p, row);
+			double score = super.genericObjective(p, row);
 			appendLocalBuffer(p.getFuncSpecific(), false);
 			double abs = Math.abs(score);
 			if (abs > biggest)

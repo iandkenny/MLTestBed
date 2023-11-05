@@ -8,12 +8,13 @@ import java.util.logging.Level;
 
 import org.mltestbed.data.readDB.ReadMinas;
 import org.mltestbed.testFunctions.IFS;
+import org.mltestbed.testFunctions.TestBase;
 import org.mltestbed.util.Log;
 import org.mltestbed.util.Particle;
 
 public class IFSMinasData extends IFS
 {
-	private static final String DAY = "day";
+	private static final String KEY = "key";
 	private static final String PERFORM_TEST = "performTest";
 	private static final String RESETDB = "resetDB";
 	private static final String USE_YEAR = "useYear";
@@ -61,7 +62,7 @@ public class IFSMinasData extends IFS
 			db.useMinasT1();
 
 			setMDimension(0);
-			params.setProperty(DAY, "random");
+			params.setProperty(KEY, "");
 			params.setProperty(PERFORM_TEST, "MinasTest1");
 			params.setProperty(RESETDB, "false");
 			params.setProperty(USE_YEAR, "true");
@@ -71,14 +72,14 @@ public class IFSMinasData extends IFS
 			e.printStackTrace();
 		}
 	}
-	@Override
-	protected void finalize() throws Throwable
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
+	/**
+		 * @return the data
+		 */
+		public LinkedList<ArrayList<Double>> getData()
+		{
+			return data;
+		}
 
-		super.finalize();
-	}
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -105,7 +106,7 @@ public class IFSMinasData extends IFS
 		String buf;
 		performTest();
 
-		key = params.getProperty(DAY);
+		key = params.getProperty(KEY);
 		if (key.equalsIgnoreCase("random"))
 		{
 			do
@@ -115,7 +116,7 @@ public class IFSMinasData extends IFS
 				else
 					key = db.selectRandomDay();
 			} while (key == null || key.equalsIgnoreCase("random"));
-			// params.setProperty(DAY, key);
+			// params.setProperty(KEY, key);
 		} else if (key.equalsIgnoreCase("all"))
 			key = "";
 		// String buf = params.getProperty(USE_BIGGEST_DIFF);
@@ -140,7 +141,6 @@ public class IFSMinasData extends IFS
 		}
 
 	}
-
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -163,7 +163,7 @@ public class IFSMinasData extends IFS
 		return super.Objective(p);
 	}
 
-	/**
+/**
 	 * 
 	 */
 	public void performTest()
@@ -186,6 +186,32 @@ public class IFSMinasData extends IFS
 			db = new ReadMinas();
 		db.deleteSelectedDays();
 		super.reset();
+	}
+
+@Override
+public Particle runTest(Particle gb)
+{
+	Particle gbest = new Particle(gb);
+	gbest.setIdentityNumber(-gbest.getIdentityNumber());
+	HashMap<String, String> keys = new HashMap<String, String>();
+	if (!key.equals(""))
+		keys.put("Key", key);
+	 IFSMinasData gbtest = (IFSMinasData) gbest.getTestFunction();
+	LinkedList<ArrayList<Double>> olddata = gbtest.getData();
+	db.useTestData();
+	LinkedList<ArrayList<Double>> testdata = db.getData(keys);
+	gbtest.setData(testdata);
+	gbest.eval();
+	gbtest.setData(olddata);
+	return gbest;
+}
+
+	/**
+	 * @param data the data to set
+	 */
+	public void setData(LinkedList<ArrayList<Double>> data)
+	{
+		this.data = data;
 	}
 	/**
 	 * 

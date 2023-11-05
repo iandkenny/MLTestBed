@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><?xml-stylesheet type="text/xsl" href="IEAresults.xsl"?><IterResult>
+<Key>Test Result</Key><Matrix>
+	<Row>
+		<Cell>0.3665135176803365
+		</Cell>
+		<Cell>-0.4790763045159423
+		</Cell>
+		<Cell>0.7748504406522007
+		</Cell>
+		<Cell>-1.9057945939606376
+		</Cell>
+		<Cell>0.7692191685796922
+		</Cell>
+		<Cell>-0.797372282055419
+		</Cell>
+		<Cell>0.5961822555865355
+		</Cell>
+		<Cell>-3.030405967361282
+		</Cell>
+		<Cell>0.23349437944339924
+		</Cell>
+		<Cell>0.7554805352546065
+		</Cell>
+		<Cell>6.669865722185511
+		</Cell>
+	</Row>
+	<Row>
+		<Cell>-2.031270146688806
+		</Cell>
+		<Cell>0.2675793160710375
+		</Cell>
+		<Cell>0.9556196961734099
+		</Cell>
+		<Cell>3.898175819665679
+		</Cell>
+		<Cell>-5.971710636121032
+		</Cell>
+		<Cell>5.430408470306422
+		</Cell>
+		<Cell>5.035969549214307
+		</Cell>
+		<Cell>4.056461774196089
+		</Cell>
+		<Cell>-4.735432471882766
+		</Cell>
+		<Cell>-1.7940715662997595
+		</Cell>
+		<Cell>4.76020914723659
+		</Cell>
+	</Row>
+	<Row>
+		<Cell>-0.9546291510458778
+		</Cell>
+		<Cell>3.1658784069381505
+		</Cell>
+		<Cell>0.14888588829138874
+		</Cell>
+		<Cell>-0.4966230333838352
+		</Cell>
+		<Cell>-0.7073116634265979
+		</Cell>
+		<Cell>-1.7402301265854865
+		</Cell>
+		<Cell>-1.6545731126101444
+		</Cell>
+		<Cell>4.8144133644367715
+		</Cell>
+		<Cell>2.138347993266311
+		</Cell>
+		<Cell>-0.3630087134191222
+		</Cell>
+		<Cell>-4.855696745366177
+		</Cell>
+	</Row>
+	<Row>
+		<Cell>1.8815384015248522
+		</Cell>
+		<Cell>-2.0911811612361824
+		</Cell>
+		<Cell>-0.9369594615775612
+		</Cell>
+		<Cell>2.0717249666625617
+		</Cell>
+		<Cell>-1.8704495009877218
+		</Cell>
+		<Cell>-3.299808448055116
+		</Cell>
+		<Cell>2.1287878913476117
+		</Cell>
+		<Cell>0.7251138868136131
+		</Cell>
+		<Cell>2.4810803532346504
+		</Cell>
+		<Cell>-1.820238007911218
+		</Cell>
+		<Cell>4.688762907333724
+		</Cell>
+	</Row>
+	<Row>
+		<Cell>1.0537323074842349
+		</Cell>
+		<Cell>-1.8628896306417584
+		</Cell>
+		<Cell>-3.134512388136994
+		</Cell>
+		<Cell>4.282278508929122
+		</Cell>
+		<Cell>1.5832285280100429
+		</Cell>
+		<Cell>0.8817983468079812
+		</Cell>
+		<Cell>-2.966761650956421
+		</Cell>
+		<Cell>2.439430905759545
+		</Cell>
+		<Cell>0.032932855353446484
+		</Cell>
+		<Cell>-1.0720538494022192
+		</Cell>
+		<Cell>-0.600688780815561
+		</Cell>
+	</Row>
+</Matrix>
+<LogVector>
+	<Cell>
+		1.4939496395406202
+	</Cell>
+	<Cell>
+		1.07638365017738
+	</Cell>
+	<Cell>
+		1.1342440097634228
+	</Cell>
+	<Cell>
+		0.9924482724062285
+	</Cell>
+	<Cell>
+		1.13873899938537
+	</Cell>
+</LogVector>
+<!--begin objective function baseData-->
+
+<SQL>SELECT REVERSE_3,  Q110,  Q115,  Q123,  Q151,  Q152,  Q176,  Q84,  Q88,  Q96,  Q98,  Q162 AS Predict FROM IEA.IEASurveyTest</SQL>
+<Output><Input>[7.0, 5.0, 6.0, 7.0, 5.0, 1.0, 3.0, 2.0, 1.0, 4.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999997078602452</SumResult><Predict>2</Predict><Result>2.921397548316662E-7</Result></Output>
+<Output><Input>[6.0, 5.0, 5.0, 3.0, 6.0, 5.0, 5.0, 3.0, 4.0, 5.0, 5.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>4.999999675799358</SumResult><Predict>5</Predict><Result>3.9999996757993577</Result></Output>
+<Output><Input>[6.0, 1.0, 1.0, 6.0, 5.0, 5.0, 1.0, 1.0, 5.0, 5.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.0000002268868755</SumResult><Predict>2</Predict><Result>2.2688687550953546E-7</Result></Output>
+<Output><Input>[3.0, 6.0, 6.0, 5.0, 7.0, 7.0, 2.0, 4.0, 4.0, 5.0, 1.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>0.999999444254724</SumResult><Predict>1</Predict><Result>5.557452760207582E-7</Result></Output>
+<Output><Input>[7.0, 2.0, 6.0, 3.0, 6.0, 7.0, 7.0, 3.0, 4.0, 4.0, 1.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>0.9999998581674217</SumResult><Predict>1</Predict><Result>1.4183257834865515E-7</Result></Output>
+<Output><Input>[6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 5.0, 2.0, 2.0, 5.0, 5.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>4.99999934279158</SumResult><Predict>5</Predict><Result>3.99999934279158</Result></Output>
+<Output><Input>[5.0, 3.0, 2.0, 6.0, 6.0, 5.0, 2.0, 1.0, 4.0, 3.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>4.000000088015968</SumResult><Predict>4</Predict><Result>8.801596784735466E-8</Result></Output>
+<Output><Input>[1.0, 1.0, 5.0, 7.0, 6.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>4.000000197694005</SumResult><Predict>4</Predict><Result>1.9769400516622682E-7</Result></Output>
+<Output><Input>[6.0, 3.0, 5.0, 6.0, 3.0, 6.0, 6.0, 3.0, 4.0, 5.0, 5.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>5.0000000952095345</SumResult><Predict>5</Predict><Result>3.0000000952095345</Result></Output>
+<Output><Input>[6.0, 4.0, 5.0, 4.0, 6.0, 6.0, 3.0, 1.0, 4.0, 2.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999999461977729</SumResult><Predict>2</Predict><Result>5.380222711792726E-8</Result></Output>
+<Output><Input>[2.0, 1.0, 2.0, 2.0, 7.0, 6.0, 3.0, 2.0, 2.0, 3.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999993813611794</SumResult><Predict>4</Predict><Result>6.186388206153026E-7</Result></Output>
+<Output><Input>[3.0, 2.0, 3.0, 2.0, 5.0, 6.0, 2.0, 1.0, 2.0, 4.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999993208682425</SumResult><Predict>4</Predict><Result>6.791317574972311E-7</Result></Output>
+<Output><Input>[5.0, 4.0, 6.0, 5.0, 5.0, 6.0, 2.0, 1.0, 4.0, 2.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.999999934983721</SumResult><Predict>3</Predict><Result>6.501627902721907E-8</Result></Output>
+<Output><Input>[5.0, 4.0, 4.0, 2.0, 5.0, 4.0, 2.0, 2.0, 3.0, 4.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.9999995866652283</SumResult><Predict>3</Predict><Result>4.133347717427682E-7</Result></Output>
+<Output><Input>[5.0, 5.0, 4.0, 4.0, 5.0, 4.0, 3.0, 2.0, 4.0, 4.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.999999909877848</SumResult><Predict>4</Predict><Result>9.01221519633566E-8</Result></Output>
+<Output><Input>[7.0, 5.0, 6.0, 7.0, 6.0, 6.0, 2.0, 4.0, 4.0, 4.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.999999827956577</SumResult><Predict>3</Predict><Result>1.7204342306342824E-7</Result></Output>
+<Output><Input>[5.0, 3.0, 5.0, 2.0, 6.0, 4.0, 1.0, 1.0, 4.0, 2.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999997731032124</SumResult><Predict>4</Predict><Result>2.268967875806993E-7</Result></Output>
+<Output><Input>[7.0, 5.0, 6.0, 7.0, 2.0, 6.0, 4.0, 2.0, 2.0, 5.0, 5.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>4.999999708200968</SumResult><Predict>5</Predict><Result>3.999999708200968</Result></Output>
+<Output><Input>[7.0, 7.0, 6.0, 7.0, 3.0, 5.0, 7.0, 2.0, 5.0, 5.0, 1.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>1.0000004452898856</SumResult><Predict>1</Predict><Result>4.4528988563108385E-7</Result></Output>
+<Output><Input>[6.0, 5.0, 5.0, 3.0, 7.0, 5.0, 6.0, 3.0, 4.0, 3.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999999180835986</SumResult><Predict>2</Predict><Result>8.191640143984102E-8</Result></Output>
+<Output><Input>[5.0, 5.0, 5.0, 4.0, 6.0, 7.0, 6.0, 2.0, 2.0, 3.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.999999547643739</SumResult><Predict>3</Predict><Result>4.5235626089379366E-7</Result></Output>
+<Output><Input>[3.0, 5.0, 5.0, 5.0, 5.0, 6.0, 1.0, 1.0, 1.0, 3.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.99999923882614</SumResult><Predict>4</Predict><Result>7.611738599422324E-7</Result></Output>
+<Output><Input>[6.0, 6.0, 5.0, 4.0, 4.0, 6.0, 4.0, 2.0, 2.0, 4.0, 4.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>3.9999995201901184</SumResult><Predict>4</Predict><Result>0.9999995201901184</Result></Output>
+<Output><Input>[5.0, 4.0, 5.0, 4.0, 4.0, 6.0, 1.0, 2.0, 4.0, 3.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999998655985545</SumResult><Predict>2</Predict><Result>1.3440144552845368E-7</Result></Output>
+<Output><Input>[2.0, 2.0, 7.0, 5.0, 6.0, 7.0, 1.0, 2.0, 5.0, 3.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999997418573714</SumResult><Predict>4</Predict><Result>2.581426286063504E-7</Result></Output>
+<Output><Input>[5.0, 5.0, 5.0, 4.0, 6.0, 4.0, 1.0, 1.0, 4.0, 3.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999997805754917</SumResult><Predict>4</Predict><Result>2.19424508340893E-7</Result></Output>
+<Output><Input>[5.0, 3.0, 5.0, 7.0, 6.0, 6.0, 3.0, 1.0, 5.0, 5.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.0000000228944166</SumResult><Predict>2</Predict><Result>2.289441658476221E-8</Result></Output>
+<Output><Input>[7.0, 7.0, 7.0, 2.0, 4.0, 7.0, 7.0, 2.0, 5.0, 5.0, 1.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>0.9999998959144489</SumResult><Predict>1</Predict><Result>1.0408555106700135E-7</Result></Output>
+<Output><Input>[7.0, 5.0, 3.0, 5.0, 6.0, 6.0, 3.0, 3.0, 4.0, 4.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999999290503603</SumResult><Predict>2</Predict><Result>7.09496397188758E-8</Result></Output>
+<Output><Input>[5.0, 6.0, 4.0, 5.0, 5.0, 6.0, 2.0, 2.0, 3.0, 4.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999996240397313</SumResult><Predict>4</Predict><Result>3.7596026869479715E-7</Result></Output>
+<Output><Input>[4.0, 3.0, 5.0, 3.0, 5.0, 5.0, 1.0, 2.0, 4.0, 4.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.999999664766593</SumResult><Predict>3</Predict><Result>3.352334068118523E-7</Result></Output>
+<Output><Input>[3.0, 1.0, 1.0, 7.0, 5.0, 5.0, 1.0, 1.0, 4.0, 2.0, 5.0]</Input><RequiredValue>5.0</RequiredValue><SumResult>5.000000284702057</SumResult><Predict>5</Predict><Result>2.847020565965863E-7</Result></Output>
+<Output><Input>[6.0, 5.0, 6.0, 4.0, 6.0, 6.0, 7.0, 3.0, 4.0, 5.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999998040526412</SumResult><Predict>2</Predict><Result>1.9594735878314395E-7</Result></Output>
+<Output><Input>[2.0, 2.0, 2.0, 5.0, 3.0, 3.0, 1.0, 1.0, 4.0, 3.0, 6.0]</Input><RequiredValue>6.0</RequiredValue><SumResult>6.000000200976272</SumResult><Predict>6</Predict><Result>2.009762720689423E-7</Result></Output>
+<Output><Input>[5.0, 3.0, 6.0, 4.0, 7.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.999999614449889</SumResult><Predict>4</Predict><Result>3.855501109484294E-7</Result></Output>
+<Output><Input>[6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 3.0, 3.0, 5.0, 5.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>4.999999572990851</SumResult><Predict>5</Predict><Result>3.999999572990851</Result></Output>
+<Output><Input>[6.0, 7.0, 7.0, 5.0, 7.0, 7.0, 5.0, 3.0, 5.0, 5.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999997418927484</SumResult><Predict>2</Predict><Result>2.581072515717153E-7</Result></Output>
+<Output><Input>[7.0, 4.0, 6.0, 5.0, 5.0, 6.0, 7.0, 1.0, 5.0, 5.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.0000001410273818</SumResult><Predict>2</Predict><Result>1.410273817725738E-7</Result></Output>
+<Output><Input>[5.0, 5.0, 5.0, 5.0, 4.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.999999965157818</SumResult><Predict>4</Predict><Result>3.484218202842726E-8</Result></Output>
+<Output><Input>[7.0, 7.0, 7.0, 5.0, 6.0, 7.0, 6.0, 1.0, 1.0, 5.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999991249954934</SumResult><Predict>4</Predict><Result>8.75004506628585E-7</Result></Output>
+<Output><Input>[4.0, 4.0, 5.0, 5.0, 6.0, 4.0, 2.0, 1.0, 1.0, 4.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.999999286846321</SumResult><Predict>3</Predict><Result>7.131536792215343E-7</Result></Output>
+<Output><Input>[6.0, 5.0, 6.0, 2.0, 6.0, 2.0, 1.0, 1.0, 5.0, 4.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.999999806659362</SumResult><Predict>4</Predict><Result>1.9334063816600633E-7</Result></Output>
+<Output><Input>[6.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 2.0, 1.0, 4.0, 4.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>3.999999522535569</SumResult><Predict>4</Predict><Result>0.9999995225355689</Result></Output>
+<Output><Input>[7.0, 6.0, 6.0, 7.0, 6.0, 4.0, 3.0, 2.0, 5.0, 4.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.000000173256615</SumResult><Predict>2</Predict><Result>1.7325661483269528E-7</Result></Output>
+<Output><Input>[5.0, 5.0, 5.0, 3.0, 5.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0]</Input><RequiredValue>4.0</RequiredValue><SumResult>3.9999998487311155</SumResult><Predict>4</Predict><Result>1.512688845295429E-7</Result></Output>
+<Output><Input>[5.0, 5.0, 5.0, 5.0, 4.0, 6.0, 4.0, 2.0, 2.0, 5.0, 5.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>4.999999461563491</SumResult><Predict>5</Predict><Result>1.9999994615634913</Result></Output>
+<Output><Input>[6.0, 6.0, 6.0, 5.0, 6.0, 7.0, 6.0, 3.0, 4.0, 4.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.9999998455466448</SumResult><Predict>2</Predict><Result>1.5445335521668824E-7</Result></Output>
+<Output><Input>[2.0, 4.0, 2.0, 2.0, 5.0, 1.0, 1.0, 1.0, 3.0, 4.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.9999997487569616</SumResult><Predict>3</Predict><Result>2.5124303837387174E-7</Result></Output>
+<Output><Input>[7.0, 5.0, 7.0, 5.0, 7.0, 7.0, 6.0, 3.0, 1.0, 4.0, 4.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>3.999999179774604</SumResult><Predict>4</Predict><Result>1.999999179774604</Result></Output>
+<Output><Input>[7.0, 6.0, 7.0, 4.0, 6.0, 7.0, 6.0, 4.0, 3.0, 5.0, 5.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>4.999999408238363</SumResult><Predict>5</Predict><Result>2.999999408238363</Result></Output>
+<Output><Input>[6.0, 4.0, 3.0, 3.0, 6.0, 6.0, 3.0, 2.0, 4.0, 3.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.999999869055647</SumResult><Predict>3</Predict><Result>1.309443531383181E-7</Result></Output>
+<Output><Input>[6.0, 3.0, 4.0, 2.0, 7.0, 7.0, 2.0, 2.0, 2.0, 2.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.999999332741659</SumResult><Predict>3</Predict><Result>6.672583410249899E-7</Result></Output>
+<Output><Input>[3.0, 7.0, 5.0, 3.0, 7.0, 6.0, 2.0, 2.0, 5.0, 4.0, 5.0]</Input><RequiredValue>5.0</RequiredValue><SumResult>4.999999593000391</SumResult><Predict>5</Predict><Result>4.069996091260464E-7</Result></Output>
+<Output><Input>[5.0, 2.0, 3.0, 2.0, 3.0, 5.0, 2.0, 2.0, 4.0, 3.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>3.0000000185785414</SumResult><Predict>3</Predict><Result>1.8578541371994106E-8</Result></Output>
+<Output><Input>[7.0, 6.0, 6.0, 7.0, 4.0, 7.0, 5.0, 1.0, 1.0, 5.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.99999942371713</SumResult><Predict>3</Predict><Result>5.762828698685496E-7</Result></Output>
+<Output><Input>[6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 1.0, 2.0, 5.0, 5.0, 3.0]</Input><RequiredValue>3.0</RequiredValue><SumResult>2.9999997611556046</SumResult><Predict>3</Predict><Result>2.3884439537269486E-7</Result></Output>
+<Output><Input>[7.0, 5.0, 6.0, 5.0, 7.0, 7.0, 7.0, 1.0, 1.0, 4.0, 3.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.9999993041314656</SumResult><Predict>3</Predict><Result>0.9999993041314656</Result></Output>
+<Output><Input>[7.0, 5.0, 7.0, 2.0, 2.0, 6.0, 4.0, 2.0, 4.0, 4.0, 1.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>0.9999998734234339</SumResult><Predict>1</Predict><Result>1.2657656611736456E-7</Result></Output>
+<Output><Input>[7.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 2.0, 4.0, 4.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.000000118783289</SumResult><Predict>2</Predict><Result>1.187832889826268E-7</Result></Output>
+<Output><Input>[7.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 3.0, 5.0, 5.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.0000000600836962</SumResult><Predict>2</Predict><Result>6.008369624055376E-8</Result></Output>
+<Output><Input>[6.0, 3.0, 3.0, 5.0, 6.0, 5.0, 7.0, 3.0, 3.0, 1.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>2.0000003106751048</SumResult><Predict>2</Predict><Result>3.106751047532441E-7</Result></Output>
+<Output><Input>[5.0, 5.0, 5.0, 4.0, 7.0, 5.0, 5.0, 1.0, 3.0, 4.0, 4.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>3.999999593899051</SumResult><Predict>4</Predict><Result>1.9999995938990511</Result></Output>
+<Output><Input>[6.0, 5.0, 4.0, 5.0, 6.0, 6.0, 2.0, 1.0, 5.0, 5.0, 2.0]</Input><RequiredValue>2.0</RequiredValue><SumResult>1.999999886769484</SumResult><Predict>2</Predict><Result>1.1323051607448065E-7</Result></Output>
+<Output><Input>[7.0, 4.0, 4.0, 2.0, 4.0, 5.0, 7.0, 2.0, 3.0, 3.0, 3.0]</Input><RequiredValue>1.0</RequiredValue><SumResult>2.999999991725555</SumResult><Predict>3</Predict><Result>1.9999999917255549</Result></Output>
+<!--end objective function baseData-->
+<Sum>33.00000824131006</Sum><ReqSum>173.0</ReqSum><AvgSum>0.5156251287704697</AvgSum><AvgRequiredSum>2.703125</AvgRequiredSum><AME description = "Absolute Maximum Error">3.999999708200968</AME><MAE description = "Mean Absolute Error">0.515625</MAE><ME description = "Mean Error">-0.515625</ME><RAE description = "Relative Absolute Error">0.5196200949762559</RAE><RMSE description = "Root Mean Squared Error">1.2661653143150793</RMSE><R2 description = "R Squared">0.2970631510229723</R2><Result>33.00000824131006</Result></IterResult>

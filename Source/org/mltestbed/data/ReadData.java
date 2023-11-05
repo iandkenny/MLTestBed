@@ -42,14 +42,18 @@ abstract public class ReadData
 	private static final int MAX_ROWS_RETRIEVED_PER_FETCH = 1000;
 	public static boolean isNumeric(String str)
 	{
-		try
+		if (str != null)
 		{
-			Double.parseDouble(str);
-		} catch (NumberFormatException e)
-		{
+			try
+			{
+				Double.parseDouble(str);
+			} catch (NumberFormatException e)
+			{
+				return false;
+			}
+			return true;
+		} else
 			return false;
-		}
-		return true;
 	}
 	private ArrayList<String> columnNames;
 	protected String connectString = "";
@@ -267,7 +271,6 @@ abstract public class ReadData
 	protected void finalize() throws Throwable
 	{
 		destroy();
-		super.finalize();
 	}
 	/**
 	 * @return the columnNames
@@ -291,20 +294,21 @@ abstract public class ReadData
 		try
 		{
 			ResultSet rs = populateRS(SQLString);
+			rs.first();
 			columnNames(rs);
 			do
 			{
 				currRow = getRow(rs);
 				data.add(currRow);
-			} while (!rs.next());
+			} while (rs.next());
 			rs.close();
 		} catch (SQLException e)
 		{
-			Log.log(Level.SEVERE,e.getMessage());
+			Log.log(Level.SEVERE, e.getMessage());
 			// e.printStackTrace();
 		} catch (Exception e)
 		{
-			Log.log(Level.SEVERE,e.getMessage());
+			Log.log(Level.SEVERE, e.getMessage());
 			// e.printStackTrace();
 		}
 
@@ -312,7 +316,7 @@ abstract public class ReadData
 	}
 	/**
 	 * @param key
-	 * @return the selected data
+	 * @return the selected baseData
 	 */
 	public synchronized ArrayList<ArrayList<Object>> getData(boolean reset)
 	{
@@ -357,7 +361,7 @@ abstract public class ReadData
 				} while (masterRS.next() && k++ < MAX_ROWS_RETRIEVED_PER_FETCH);
 			} else
 				Log.log(Level.SEVERE, new Exception(
-						"There is no data for this query " + bufSQL));
+						"There is no baseData for this query " + bufSQL));
 		} catch (SQLException e)
 		{
 			Log.log(Level.SEVERE, e);
@@ -376,7 +380,7 @@ abstract public class ReadData
 
 	/**
 	 * @param key
-	 * @return the selected data
+	 * @return the selected baseData
 	 */
 	public synchronized LinkedList<ArrayList<Double>> getData(
 			HashMap<String, String> key)
@@ -416,7 +420,7 @@ abstract public class ReadData
 				rs = null;
 			} else
 				Log.log(Level.SEVERE, new Exception(
-						"There is no data for this query " + bufSQL));
+						"There is no baseData for this query " + bufSQL));
 			// rsmd = rs.getMetaData();
 		} catch (SQLException e)
 		{
@@ -551,8 +555,8 @@ abstract public class ReadData
 					} while (masterRS.next()
 							&& k++ < MAX_ROWS_RETRIEVED_PER_FETCH);
 				} else
-					Log.log(Level.SEVERE,
-							new Exception("There is no data for this query "));
+					Log.log(Level.SEVERE, new Exception(
+							"There is no baseData for this query "));
 			}
 		} catch (SQLException e)
 		{
@@ -600,8 +604,8 @@ abstract public class ReadData
 						data.add(row);
 					} while (rs.next() && k++ < MAX_ROWS_RETRIEVED_PER_FETCH);
 				} else
-					Log.log(Level.SEVERE,
-							new Exception("There is no data for this query "));
+					Log.log(Level.SEVERE, new Exception(
+							"There is no baseData for this query "));
 			}
 		} catch (SQLException e)
 		{
@@ -663,7 +667,7 @@ abstract public class ReadData
 			{
 				ResultSetMetaData rsmd = rs.getMetaData();
 				numberOfColumns = rsmd.getColumnCount();
-				for (int i = 0; i < numberOfColumns; i++)
+				for (int i = 1; i <= numberOfColumns; i++)
 				{
 					int type = rsmd.getColumnType(i);
 					switch (type)
@@ -696,7 +700,7 @@ abstract public class ReadData
 				}
 			} catch (SQLException e)
 			{
-				// TODO Auto-generated catch block
+				Log.log(Level.SEVERE, e);
 				e.printStackTrace();
 			}
 

@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+<body>
+<br>
+<h2>Prolific IEA Experiment Result</h2>
+<hr>
+<p>
+<b>
+							Key =
+							</b>
+<br>
+<b>
+								Neighbourhood =
+								Dynamic Self-Selecting Network Topology PSO (DSSPSO)(1,2,20,22,8,27,29,30)</b>
+</p>
+<table cellspacing="1" cellpadding="0" border="0">
+<tr>
+<td>
+<h4>Matrix</h4>
+</td><td width="3"></td><td>
+<h4>Log</h4>
+</td>
+</tr>
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0839493731608317
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.243589754405146
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.4700899836836863
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.300974210949565
+		</td><td style="border: thin solid #000000;">0.5375290205768346
+		</td><td style="border: thin solid #000000;">1.0142051149638966
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.3316346380258708
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.710085766846924
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.9520976629311892
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">6.898233391770572
+		</td><td style="border: thin solid #000000;">3.6387312602731225
+		</td><td style="border: thin solid #000000;">2.9878946822938715
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.8876557350973238
+		</td><td style="border: thin solid #000000;">3.7214055125172476
+		</td><td style="border: thin solid #000000;">2.6831479393925233
+		</td><td style="border: thin solid #000000;">1.8473843365150733
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.3645827498372958
+		</td><td style="border: thin solid #000000;">0.2084772522412992
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.6471655573668933
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.3850740794845393
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.1686625745626982
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.65957621817155
+		</td><td style="border: thin solid #000000;">1.2744722350270876
+		</td><td style="border: thin solid #000000;">0.5146325269230991
+		</td><td style="border: thin solid #000000;">0.6299676386185337
+		</td><td style="border: thin solid #000000;">5.6004450542592235
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.212762444088067
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.663556324922914
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.8517937501811335
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.172025874471758
+		</td><td style="border: thin solid #000000;">3.7138731417767024
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.9722727793161927
+		</td><td style="border: thin solid #000000;">2.3853976850619474
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.534402845694039
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.6741398716454183
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.1966193983253817
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.0577589380055679
+		</td><td style="border: thin solid #000000;">4.605551542736561
+		</td><td style="border: thin solid #000000;">1.0352242030439192
+		</td><td style="border: thin solid #000000;">0.3660527165621678
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.138952607041055
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.083147633873353
+		</td><td style="border: thin solid #000000;">1.399148450388502
+		</td><td style="border: thin solid #000000;">3.345179640973253
+		</td><td style="border: thin solid #000000;">2.009987184447498
+		</td><td style="border: thin solid #000000;">4.530782473645548
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.30866163466061036
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.0767008196034014
+		</td><td style="border: thin solid #000000;">0.5973818602688731
+		</td><td style="border: thin solid #000000;">3.7711503239906805
+		</td><td style="border: thin solid #000000;">1.712012015492785
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.0552651757684277
+		</td><td style="border: thin solid #000000;">3.375799079055934
+		</td><td style="border: thin solid #000000;">0.4875898113370641
+		</td><td style="border: thin solid #000000;">4.1629786432733304
+		</td><td style="border: thin solid #000000;">4.704711615486103
+		</td><td style="border: thin solid #000000;">1.1957540105962705
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.204701632447155
+		</td><td style="border: thin solid #000000;">3.3607662528848
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.6128829023650617
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.3074956515317158
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.5413935425385695
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.3209093108756746
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.557004646847465
+		</td><td style="border: thin solid #000000;">2.4003023526005016
+		</td><td style="border: thin solid #000000;">4.371664335734791
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.129639360692527
+		</td><td style="border: thin solid #000000;">3.3403305520007196
+		</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.557306840673564
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.2779297089157328
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.526907764333455
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.5337263407347512
+		</td><td style="border: thin solid #000000;">-4.732410910387129
+		</td><td style="border: thin solid #000000;">4.531278749673475
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.37986466554668674
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.099853286368089
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.623519180773152
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.9185388186642182
+		</td><td style="border: thin solid #000000;">-2.3584705630150293
+		</td><td style="border: thin solid #000000;">-1.4673986002427317
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.279656339812905
+		</td><td style="border: thin solid #000000;">-3.832467925343097
+		</td><td style="border: thin solid #000000;">-0.8078289706197459
+		</td><td style="border: thin solid #000000;">5.974545398634953
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.20553088771418662
+		</td><td style="border: thin solid #000000;">3.7373249955622234
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.2078555108182137
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.2771078783427938
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.7001573293125807
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.0133743159883213
+		</td><td style="border: thin solid #000000;">-0.5712317668667685
+		</td><td style="border: thin solid #000000;">-0.8996987263145051
+		</td><td style="border: thin solid #000000;">4.682388835222673
+		</td><td style="border: thin solid #000000;">-1.163965771463137
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.032156160780746
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.4182753292580634
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.184940595881909
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.3969990049080856
+		</td><td style="border: thin solid #000000;">-1.2928034582033632
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.4754279045021972
+		</td><td style="border: thin solid #000000;">0.6017406215935001
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.7872854571511725
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.9478375232288097
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.296995084632743
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.303836499440976
+		</td><td style="border: thin solid #000000;">6.429576374168785
+		</td><td style="border: thin solid #000000;">0.6885119453252532
+		</td><td style="border: thin solid #000000;">2.3493392821583945
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.649893680590959
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.120586478212613
+		</td><td style="border: thin solid #000000;">5.002541593408817
+		</td><td style="border: thin solid #000000;">-2.9866134834142466
+		</td><td style="border: thin solid #000000;">-1.7960747215368251
+		</td><td style="border: thin solid #000000;">-2.421437972104498
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.5293442117536276
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.22665198110070237
+		</td><td style="border: thin solid #000000;">3.206621766816734
+		</td><td style="border: thin solid #000000;">0.6689445444031882
+		</td><td style="border: thin solid #000000;">2.692531052611763
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-4.411536044539722
+		</td><td style="border: thin solid #000000;">0.26625449696445286
+		</td><td style="border: thin solid #000000;">-0.22690567205193546
+		</td><td style="border: thin solid #000000;">-3.366367476036604
+		</td><td style="border: thin solid #000000;">0.919572583602807
+		</td><td style="border: thin solid #000000;">2.168015109144132
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-3.8122398530789763
+		</td><td style="border: thin solid #000000;">1.0167843625339754
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.3895139563970664
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.900169233736537
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-4.46048441596143
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.7210308166619854
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.302178966084838
+		</td><td style="border: thin solid #000000;">1.7741873180215681
+		</td><td style="border: thin solid #000000;">-2.4013374212984506
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.109350749580723
+		</td><td style="border: thin solid #000000;">2.7531485012784667
+		</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.4998031590734748
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.3756672193792765
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.8431173251508453
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.019324948440848
+		</td><td style="border: thin solid #000000;">-0.3671568610696909
+		</td><td style="border: thin solid #000000;">0.5291215402760447
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.5080666312733375
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.8208670971342037
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.679362984802383
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-6.660487182822761
+		</td><td style="border: thin solid #000000;">-2.747153140271737
+		</td><td style="border: thin solid #000000;">-0.7857125639305901
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.721522083747626
+		</td><td style="border: thin solid #000000;">1.7681194348714293
+		</td><td style="border: thin solid #000000;">0.8635854135378636
+		</td><td style="border: thin solid #000000;">-2.0681023046336104
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-3.768718574328608
+		</td><td style="border: thin solid #000000;">1.8180700806904821
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-4.291535101113175
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.565251354261137
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.9069958771149618
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.5413038851926126
+		</td><td style="border: thin solid #000000;">0.9547450428180592
+		</td><td style="border: thin solid #000000;">2.336640541349631
+		</td><td style="border: thin solid #000000;">2.385842533490774
+		</td><td style="border: thin solid #000000;">1.6248588903136982
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.1623734672774986
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.3486786300467896
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.164317678123093
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.7502275273934707
+		</td><td style="border: thin solid #000000;">0.5716912426772779
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.266405513721759
+		</td><td style="border: thin solid #000000;">-0.22056169783855348
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.8233857879267162
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.4215742082831424
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.3043675092470475
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.7543700237666954
+		</td><td style="border: thin solid #000000;">1.201183295694854
+		</td><td style="border: thin solid #000000;">-3.284064041360781
+		</td><td style="border: thin solid #000000;">-1.4678343069183557
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.0025822425750275
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-5.243695172133625
+		</td><td style="border: thin solid #000000;">-4.939591074403412
+		</td><td style="border: thin solid #000000;">-1.7201815061364376
+		</td><td style="border: thin solid #000000;">-2.4212521707159564
+		</td><td style="border: thin solid #000000;">3.0767360059229016
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.3365856343674897
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-4.025695937443895
+		</td><td style="border: thin solid #000000;">0.5827032835065978
+		</td><td style="border: thin solid #000000;">-2.1814057636712523
+		</td><td style="border: thin solid #000000;">-1.277057319807947
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-4.371512766345258
+		</td><td style="border: thin solid #000000;">3.4993584689023924
+		</td><td style="border: thin solid #000000;">5.792330881545596
+		</td><td style="border: thin solid #000000;">-5.005150868137467
+		</td><td style="border: thin solid #000000;">0.5111682337784992
+		</td><td style="border: thin solid #000000;">1.1514026676104636
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.5857728120462832
+		</td><td style="border: thin solid #000000;">-1.2264007451532444
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.5010996259093066
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.0069280788275543
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-5.386404121664928
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.9977626608102421
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.697251446783014
+		</td><td style="border: thin solid #000000;">2.179083965064942
+		</td><td style="border: thin solid #000000;">-2.038733823710061
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.29943865050416857
+		</td><td style="border: thin solid #000000;">1.039342127803275
+		</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.1743589744287357
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.21065729261914137
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.424985283737722
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.907217711819518
+		</td><td style="border: thin solid #000000;">0.9614150402624844
+		</td><td style="border: thin solid #000000;">-0.5279459255704391
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.5849796961636191
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.6017740680884396
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.6638945345678315
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.599105594639591
+		</td><td style="border: thin solid #000000;">-0.897831662990261
+		</td><td style="border: thin solid #000000;">-0.36106611386043774
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">6.047895147744974
+		</td><td style="border: thin solid #000000;">1.5100893505612305
+		</td><td style="border: thin solid #000000;">3.34516145387718
+		</td><td style="border: thin solid #000000;">-0.7928456756928275
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.1630455022286583
+		</td><td style="border: thin solid #000000;">-2.5980996664058638
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.8430556193165895
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.6518558629804483
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.2126753743880658
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.8487954138250966
+		</td><td style="border: thin solid #000000;">4.2290077496017755
+		</td><td style="border: thin solid #000000;">5.3940343360727425
+		</td><td style="border: thin solid #000000;">-1.2917523088509295
+		</td><td style="border: thin solid #000000;">0.08494220322468807
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.6767729311236296
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.240091060080425
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.6195451881152494
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.288542862089348
+		</td><td style="border: thin solid #000000;">-0.8924571185312716
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.3967117548840217
+		</td><td style="border: thin solid #000000;">-0.8532898341425628
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.8001608164878664
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.45267835500891024
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.8241534321010646
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.287584129116856
+		</td><td style="border: thin solid #000000;">1.6505869232226822
+		</td><td style="border: thin solid #000000;">2.1380845748602084
+		</td><td style="border: thin solid #000000;">1.944070808878366
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.09678546546102938
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.8954744076033739
+		</td><td style="border: thin solid #000000;">-3.06720340846742
+		</td><td style="border: thin solid #000000;">0.7930925547391501
+		</td><td style="border: thin solid #000000;">3.2146910799908968
+		</td><td style="border: thin solid #000000;">3.6431421448539663
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.566765242859498
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.6832510201747491
+		</td><td style="border: thin solid #000000;">2.907358449565375
+		</td><td style="border: thin solid #000000;">3.5109250272480264
+		</td><td style="border: thin solid #000000;">-1.3973949562948065
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.6869226103391384
+		</td><td style="border: thin solid #000000;">0.4344531602559876
+		</td><td style="border: thin solid #000000;">3.405403826150277
+		</td><td style="border: thin solid #000000;">-1.8512752391552876
+		</td><td style="border: thin solid #000000;">0.4026417333231151
+		</td><td style="border: thin solid #000000;">-3.0075699943898138
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.15615254560307887
+		</td><td style="border: thin solid #000000;">-0.002692539618052164
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.385315282159756
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.6117025623209162
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.777883513018379
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.6239190873615126
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.250383258598996
+		</td><td style="border: thin solid #000000;">-2.3519694571854455
+		</td><td style="border: thin solid #000000;">-1.4949206032791515
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.899887113959376
+		</td><td style="border: thin solid #000000;">8.996418550943208
+		</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.0830013988764624
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.5721220458709809
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.41111110751778457
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.6764686482372609
+		</td><td style="border: thin solid #000000;">4.156157624078293
+		</td><td style="border: thin solid #000000;">1.8336785899717354
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.637633879097954
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.33635212770619743
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.9527721888982312
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.532746518300229
+		</td><td style="border: thin solid #000000;">-1.9590695795352213
+		</td><td style="border: thin solid #000000;">4.474460751919852
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-4.496376378260613
+		</td><td style="border: thin solid #000000;">-3.7225285545751836
+		</td><td style="border: thin solid #000000;">1.1133896611348562
+		</td><td style="border: thin solid #000000;">2.381296195858226
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">2.2862362792320496
+		</td><td style="border: thin solid #000000;">3.4211874480533235
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">3.5057336586409704
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-5.127208566197167
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.365885700306757
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.969511540886262
+		</td><td style="border: thin solid #000000;">3.293322524096569
+		</td><td style="border: thin solid #000000;">1.7391385115143947
+		</td><td style="border: thin solid #000000;">0.6654650742864558
+		</td><td style="border: thin solid #000000;">3.2952567268228234
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.7397896573656862
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.0809127597788444
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-5.182612589304551
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.9502957479240592
+		</td><td style="border: thin solid #000000;">1.3569513780172506
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.609117171722064
+		</td><td style="border: thin solid #000000;">-0.15787289223330886
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.357595115583995
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.013170979966699
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.4564567092492795
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.7970076393682168
+		</td><td style="border: thin solid #000000;">4.633463565953299
+		</td><td style="border: thin solid #000000;">3.268973652004517
+		</td><td style="border: thin solid #000000;">2.158402757220778
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.5423853722849221
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.22693075163073254
+		</td><td style="border: thin solid #000000;">-2.442941097680449
+		</td><td style="border: thin solid #000000;">-3.1898543601526184
+		</td><td style="border: thin solid #000000;">-4.199360506164309
+		</td><td style="border: thin solid #000000;">-3.581693992639155
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.8401575108028834
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.887200283235947
+		</td><td style="border: thin solid #000000;">-4.693940543220613
+		</td><td style="border: thin solid #000000;">-2.92272420542234
+		</td><td style="border: thin solid #000000;">3.4168178758441923
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">1.7078032955876088
+		</td><td style="border: thin solid #000000;">-0.015225413427568578
+		</td><td style="border: thin solid #000000;">-0.9980942240443225
+		</td><td style="border: thin solid #000000;">-1.2009283810852354
+		</td><td style="border: thin solid #000000;">-6.358724158230735
+		</td><td style="border: thin solid #000000;">1.3763130524594462
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.6730735276464913
+		</td><td style="border: thin solid #000000;">2.8390803439662404
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">5.104791849133926
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">4.654186244317225
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-1.0047233436088507
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-0.22218321362182147
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-4.255788099779267
+		</td><td style="border: thin solid #000000;">0.7305031920518376
+		</td><td style="border: thin solid #000000;">0.9018224701999387
+		</td><td style="border: thin solid #000000;">0.0
+		</td><td style="border: thin solid #000000;">-2.8211386866236667
+		</td><td style="border: thin solid #000000;">1.8641452066980937
+		</td>
+</tr>
+</table>
+</td><td width="3"></td><td>
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td style="border: thin solid #000000;">
+		0.9558190991812019
+	</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">
+		1.0296690884480215
+	</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">
+		0.9676222472207529
+	</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">
+		1.1155491637442358
+	</td>
+</tr>
+<tr>
+<td style="border: thin solid #000000;">
+		1.0160821826442965
+	</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h4>Results Table</h4>
+<table border="1">
+<tr cellspacing="0" cellpadding="0" border="1" style="width: 100%; background-color: #3333CC; color: #FFFFFF;">
+<th align="left">Input</th><th align="left">RequiredValue</th><th align="left">SumResult</th><th align="left">Result (Difference)</th>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 5.0, 4.0, 5.0, 4.0, 3.0, 2.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 5.0, 2.0, 5.0, 3.0, 2.0, 5.0, 2.0, 2.0, 3.0, 5.0, 5.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 1.0, 1.0, 5.0, 1.0, 5.0, 6.0, 6.0, 2.0, 6.0, 6.0, 7.0, 4.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 5.0, 6.0, 5.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 1.0, 6.0, 6.0, 1.0, 5.0, 6.0, 6.0, 2.0, 2.0, 7.0, 6.0, 3.0, 6.0, 5.0, 7.0, 6.0, 6.0, 4.0, 3.0, 6.0, 5.0, 5.0, 3.0, 3.0, 6.0, 4.0, 5.0, 5.0, 5.0, 1.0, 3.0, 1.0, 1.0, 2.0, 1.0, 3.0, 2.0, 7.0, 6.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 3.0, 2.0, 3.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>3.8489541491886676</td><td>0.15104585081133237</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 2.0, 5.0, 1.0, 5.0, 3.0, 4.0, 2.0, 4.0, 3.0, 2.0, 3.0, 2.0, 2.0, 3.0, 2.0, 4.0, 4.0, 5.0, 6.0, 6.0, 7.0, 4.0, 5.0, 4.0, 5.0, 6.0, 2.0, 2.0, 4.0, 4.0, 2.0, 5.0, 4.0, 4.0, 3.0, 5.0, 3.0, 3.0, 1.0, 1.0, 1.0, 2.0, 2.0, 5.0, 1.0, 2.0, 4.0, 3.0, 5.0, 6.0, 5.0, 2.0, 3.0, 5.0, 2.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 5.0, 4.0, 6.0, 3.0, 4.0, 6.0, 6.0, 6.0, 4.0, 2.0, 6.0, 6.0, 6.0, 2.0, 4.0, 3.0, 4.0, 2.0, 5.0, 2.0, 7.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 6.0, 6.0, 6.0, 4.0, 6.0, 4.0, 5.0, 6.0, 6.0, 6.0, 4.0, 6.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 1.0, 2.0, 2.0, 2.0, 1.0, 1.0, 3.0, 5.0, 2.0, 4.0, 4.0, 3.0, 2.0, 4.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>4.448912261581234</td><td>0.551087738418766</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 4.0, 4.0, 3.0, 5.0, 4.0, 4.0, 2.0, 4.0, 3.0, 3.0, 3.0, 1.0, 1.0, 5.0, 3.0, 5.0, 6.0, 6.0, 5.0, 4.0, 6.0, 4.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 3.0, 3.0, 5.0, 3.0, 3.0, 2.0, 2.0, 2.0, 3.0, 4.0, 5.0, 2.0, 4.0, 5.0, 5.0, 5.0, 5.0, 2.0, 3.0, 5.0, 3.0, 5.0, 5.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 4.0, 3.0, 3.0, 3.0, 5.0, 3.0, 5.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 6.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 2.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 2.0, 3.0, 4.0, 1.0, 1.0, 2.0, 4.0, 4.0, 4.0, 3.0]</td><td>3.0</td><td>3.85138851443081</td><td>0.85138851443081</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 1.0, 2.0, 2.0, 5.0, 3.0, 5.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 5.0, 2.0, 4.0, 5.0, 4.0, 7.0, 5.0, 6.0, 7.0, 6.0, 2.0, 5.0, 2.0, 3.0, 2.0, 1.0, 3.0, 5.0, 1.0, 3.0, 6.0, 5.0, 2.0, 5.0, 2.0, 7.0, 3.0, 2.0, 5.0, 5.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 6.0, 2.0, 2.0, 3.0, 5.0, 3.0, 2.0, 3.0, 4.0, 7.0, 5.0, 3.0, 3.0, 2.0, 5.0, 3.0, 6.0, 2.0, 2.0, 7.0, 7.0, 6.0, 6.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 3.0, 5.0, 2.0, 3.0, 6.0, 1.0, 7.0, 7.0, 6.0, 7.0, 2.0, 4.0, 3.0, 3.0, 4.0, 2.0, 3.0, 2.0, 5.0, 3.0, 4.0, 4.0, 2.0, 5.0, 5.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>2.2365274460784788</td><td>0.23652744607847875</td>
+</tr>
+<tr>
+<td>[4.0, 5.0, 4.0, 1.0, 4.0, 5.0, 2.0, 4.0, 5.0, 5.0, 3.0, 3.0, 3.0, 4.0, 3.0, 5.0, 2.0, 5.0, 5.0, 6.0, 5.0, 7.0, 7.0, 6.0, 4.0, 3.0, 5.0, 3.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 7.0, 7.0, 6.0, 6.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 1.0, 2.0, 2.0, 1.0, 2.0, 4.0, 2.0, 1.0, 1.0, 1.0, 2.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 7.0, 7.0, 5.0, 6.0, 7.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 2.0, 5.0, 4.0, 3.0, 4.0, 6.0, 6.0, 2.0, 2.0, 5.0, 1.0, 3.0, 2.0, 1.0, 4.0, 3.0, 1.0, 2.0, 5.0, 5.0, 5.0, 4.0, 4.0, 5.0, 5.0, 5.0, 2.0, 3.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>1.3308247400041382</td><td>0.3308247400041382</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 2.0, 3.0, 2.0, 4.0, 3.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 2.0, 2.0, 1.0, 3.0, 4.0, 4.0, 5.0, 6.0, 7.0, 5.0, 6.0, 6.0, 7.0, 6.0, 6.0, 4.0, 5.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 3.0, 1.0, 4.0, 1.0, 3.0, 4.0, 3.0, 4.0, 4.0, 5.0, 2.0, 3.0, 4.0, 2.0, 2.0, 3.0, 1.0, 3.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 4.0, 7.0, 6.0, 5.0, 4.0, 5.0, 6.0, 2.0, 3.0, 2.0, 2.0, 4.0, 3.0, 3.0, 3.0, 2.0, 5.0, 7.0, 5.0, 7.0, 6.0, 6.0, 6.0, 7.0, 5.0, 7.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 6.0, 5.0, 5.0, 4.0, 3.0, 3.0, 2.0, 3.0, 2.0, 2.0, 2.0, 2.0, 5.0, 3.0, 4.0, 5.0, 5.0, 4.0, 3.0, 4.0, 2.0, 4.0, 4.0, 3.0, 6.0]</td><td>6.0</td><td>3.687765705804438</td><td>2.312234294195562</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 5.0, 5.0, 4.0, 3.0, 5.0, 4.0, 2.0, 2.0, 1.0, 2.0, 2.0, 4.0, 4.0, 5.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 2.0, 3.0, 3.0, 4.0, 6.0, 3.0, 6.0, 5.0, 7.0, 2.0, 4.0, 1.0, 1.0, 3.0, 1.0, 2.0, 3.0, 1.0, 4.0, 6.0, 5.0, 3.0, 5.0, 2.0, 5.0, 3.0, 5.0, 5.0, 5.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 7.0, 5.0, 3.0, 2.0, 2.0, 5.0, 2.0, 5.0, 2.0, 2.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 7.0, 7.0, 7.0, 5.0, 3.0, 5.0, 3.0, 6.0, 3.0, 6.0, 5.0, 6.0, 6.0, 2.0, 4.0, 3.0, 2.0, 3.0, 2.0, 2.0, 2.0, 4.0, 3.0, 4.0, 4.0, 3.0, 5.0, 4.0, 4.0, 2.0, 3.0, 3.0, 2.0, 2.0]</td><td>2.0</td><td>2.8354108067177664</td><td>0.8354108067177664</td>
+</tr>
+<tr>
+<td>[4.0, 4.0, 3.0, 4.0, 2.0, 3.0, 3.0, 4.0, 4.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 1.0, 1.0, 5.0, 2.0, 5.0, 7.0, 5.0, 6.0, 5.0, 7.0, 6.0, 6.0, 1.0, 4.0, 6.0, 1.0, 4.0, 6.0, 1.0, 6.0, 6.0, 5.0, 3.0, 7.0, 5.0, 7.0, 6.0, 3.0, 5.0, 5.0, 6.0, 4.0, 5.0, 5.0, 5.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 7.0, 3.0, 7.0, 6.0, 5.0, 7.0, 5.0, 6.0, 1.0, 4.0, 2.0, 5.0, 2.0, 5.0, 2.0, 1.0, 1.0, 5.0, 6.0, 6.0, 5.0, 7.0, 5.0, 6.0, 7.0, 7.0, 7.0, 5.0, 3.0, 4.0, 4.0, 2.0, 3.0, 6.0, 6.0, 4.0, 5.0, 3.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 2.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>1.3689988919577523</td><td>0.36899889195775226</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 5.0, 2.0, 1.0, 4.0, 2.0, 4.0, 2.0, 5.0, 2.0, 3.0, 2.0, 2.0, 1.0, 4.0, 4.0, 5.0, 7.0, 5.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 5.0, 5.0, 4.0, 5.0, 7.0, 5.0, 7.0, 7.0, 6.0, 5.0, 6.0, 4.0, 3.0, 2.0, 5.0, 2.0, 2.0, 4.0, 5.0, 2.0, 5.0, 5.0, 4.0, 3.0, 6.0, 6.0, 4.0, 6.0, 3.0, 5.0, 3.0, 6.0, 5.0, 5.0, 5.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 6.0, 6.0, 1.0, 3.0, 2.0, 2.0, 4.0, 4.0, 4.0, 4.0, 3.0, 5.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 7.0, 6.0, 2.0, 5.0, 4.0, 3.0, 4.0, 4.0, 2.0, 6.0, 5.0, 4.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 2.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>3.4458252061679735</td><td>0.4458252061679735</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 3.0, 2.0, 5.0, 2.0, 3.0, 1.0, 4.0, 1.0, 5.0, 4.0, 5.0, 7.0, 6.0, 5.0, 5.0, 6.0, 5.0, 4.0, 4.0, 7.0, 5.0, 4.0, 3.0, 6.0, 7.0, 5.0, 6.0, 6.0, 5.0, 5.0, 7.0, 3.0, 4.0, 5.0, 7.0, 2.0, 3.0, 5.0, 5.0, 2.0, 6.0, 6.0, 5.0, 6.0, 7.0, 6.0, 5.0, 6.0, 1.0, 3.0, 4.0, 5.0, 5.0, 4.0, 6.0, 7.0, 7.0, 6.0, 3.0, 6.0, 7.0, 6.0, 4.0, 5.0, 4.0, 6.0, 5.0, 5.0, 5.0, 5.0, 6.0, 3.0, 3.0, 3.0, 3.0, 5.0, 4.0, 2.0, 3.0, 3.0, 7.0, 7.0, 7.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 2.0, 3.0, 4.0, 3.0, 4.0, 3.0, 6.0, 5.0, 4.0, 5.0, 3.0, 3.0, 2.0, 3.0, 2.0, 2.0, 2.0, 1.0, 5.0, 2.0, 4.0, 2.0, 4.0, 5.0, 5.0, 2.0, 2.0, 3.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>4.0197136939835865</td><td>0.019713693983586467</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 3.0, 2.0, 1.0, 5.0, 4.0, 4.0, 2.0, 5.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 2.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 2.0, 1.0, 2.0, 2.0, 1.0, 1.0, 2.0, 1.0, 2.0, 5.0, 4.0, 3.0, 3.0, 4.0, 3.0, 4.0, 2.0, 3.0, 4.0, 7.0, 5.0, 5.0, 6.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 6.0, 5.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 2.0, 2.0, 1.0, 1.0, 1.0, 2.0, 2.0, 1.0, 1.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 6.0, 1.0, 2.0, 2.0, 3.0, 2.0, 1.0, 2.0, 2.0, 3.0, 4.0, 5.0, 5.0, 5.0, 4.0, 5.0, 5.0, 5.0, 2.0, 4.0, 4.0, 1.0, 2.0]</td><td>2.0</td><td>1.9297701404143974</td><td>0.07022985958560257</td>
+</tr>
+<tr>
+<td>[3.0, 2.0, 4.0, 4.0, 1.0, 4.0, 1.0, 5.0, 4.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 4.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 5.0, 2.0, 5.0, 5.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 5.0, 7.0, 5.0, 1.0, 5.0, 3.0, 2.0, 4.0, 2.0, 4.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 7.0, 5.0, 7.0, 4.0, 6.0, 6.0, 6.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 7.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 1.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 1.0, 5.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 1.0]</td><td>1.0</td><td>3.960116301749674</td><td>2.960116301749674</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 4.0, 2.0, 4.0, 3.0, 4.0, 5.0, 3.0, 3.0, 3.0, 2.0, 2.0, 1.0, 4.0, 3.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 4.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 2.0, 3.0, 1.0, 3.0, 4.0, 3.0, 2.0, 3.0, 4.0, 3.0, 4.0, 3.0, 2.0, 3.0, 3.0, 2.0, 2.0, 3.0, 7.0, 6.0, 6.0, 5.0, 5.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 5.0, 4.0, 6.0, 5.0, 5.0, 5.0, 6.0, 2.0, 3.0, 2.0, 3.0, 3.0, 2.0, 3.0, 2.0, 2.0, 5.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 2.0, 3.0, 3.0, 2.0, 2.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.1253404745714497</td><td>0.8746595254285503</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 5.0, 4.0, 4.0, 2.0, 5.0, 1.0, 4.0, 2.0, 4.0, 2.0, 4.0, 2.0, 2.0, 1.0, 4.0, 4.0, 5.0, 6.0, 5.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 2.0, 5.0, 3.0, 3.0, 4.0, 4.0, 3.0, 4.0, 5.0, 5.0, 3.0, 5.0, 5.0, 4.0, 5.0, 3.0, 5.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 4.0, 6.0, 6.0, 6.0, 6.0, 7.0, 4.0, 6.0, 6.0, 6.0, 4.0, 2.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 3.0, 4.0, 6.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 6.0, 5.0, 4.0, 4.0, 2.0, 2.0, 1.0, 1.0, 2.0, 1.0, 2.0, 1.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>3.073397413191331</td><td>0.07339741319133086</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 4.0, 4.0, 4.0, 1.0, 5.0, 3.0, 2.0, 4.0, 4.0, 3.0, 2.0, 1.0, 1.0, 5.0, 3.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 6.0, 1.0, 1.0, 2.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 3.0, 7.0, 1.0, 2.0, 3.0, 5.0, 2.0, 5.0, 5.0, 6.0, 4.0, 6.0, 6.0, 1.0, 3.0, 3.0, 3.0, 2.0, 7.0, 6.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 2.0, 2.0, 4.0, 6.0, 5.0, 5.0, 1.0, 5.0, 7.0, 7.0, 2.0, 4.0, 2.0, 2.0, 2.0, 3.0, 3.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 5.0, 1.0, 5.0, 3.0, 2.0, 3.0, 3.0, 1.0, 2.0, 1.0, 6.0, 1.0, 1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 5.0, 3.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>3.2707637060794044</td><td>1.2707637060794044</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 2.0, 1.0, 2.0, 2.0, 5.0, 4.0, 4.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 4.0, 5.0, 7.0, 5.0, 2.0, 7.0, 2.0, 5.0, 7.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 7.0, 5.0, 5.0, 5.0, 6.0, 7.0, 1.0, 3.0, 3.0, 1.0, 3.0, 7.0, 6.0, 5.0, 7.0, 5.0, 3.0, 5.0, 3.0, 3.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 7.0, 4.0, 5.0, 5.0, 5.0, 7.0, 6.0, 7.0, 1.0, 1.0, 7.0, 7.0, 2.0, 3.0, 5.0, 2.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 5.0, 6.0, 5.0, 4.0, 5.0, 4.0, 7.0, 7.0, 4.0, 4.0, 2.0, 3.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 3.0, 1.0, 3.0, 4.0, 3.0, 1.0, 2.0, 2.0, 2.0, 1.0, 3.0]</td><td>3.0</td><td>3.6514900213577017</td><td>0.6514900213577017</td>
+</tr>
+<tr>
+<td>[4.0, 5.0, 1.0, 1.0, 1.0, 4.0, 1.0, 5.0, 4.0, 4.0, 1.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 5.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 5.0, 4.0, 5.0, 4.0, 5.0, 6.0, 5.0, 6.0, 4.0, 3.0, 1.0, 2.0, 1.0, 2.0, 2.0, 3.0, 1.0, 2.0, 3.0, 4.0, 3.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 4.0, 6.0, 6.0, 6.0, 5.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 5.0, 5.0, 4.0, 7.0, 7.0, 5.0, 6.0, 6.0, 7.0, 1.0, 2.0, 2.0, 1.0, 3.0, 2.0, 4.0, 3.0, 4.0, 6.0, 7.0, 6.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 3.0, 3.0, 1.0, 1.0, 2.0, 1.0, 4.0, 5.0, 4.0, 5.0, 3.0, 2.0, 2.0, 3.0, 3.0, 2.0, 2.0, 3.0, 5.0, 4.0, 4.0, 3.0, 2.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 3.0, 1.0]</td><td>1.0</td><td>1.5085803723085665</td><td>0.5085803723085665</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 3.0, 2.0, 3.0, 4.0, 3.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 4.0, 4.0, 5.0, 7.0, 7.0, 5.0, 6.0, 7.0, 5.0, 5.0, 4.0, 5.0, 7.0, 3.0, 5.0, 6.0, 6.0, 4.0, 6.0, 5.0, 5.0, 6.0, 6.0, 4.0, 2.0, 1.0, 1.0, 2.0, 1.0, 2.0, 3.0, 1.0, 2.0, 5.0, 2.0, 3.0, 3.0, 5.0, 1.0, 3.0, 2.0, 3.0, 3.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 3.0, 5.0, 4.0, 5.0, 6.0, 4.0, 5.0, 5.0, 4.0, 2.0, 2.0, 2.0, 1.0, 3.0, 3.0, 2.0, 4.0, 2.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 4.0, 6.0, 2.0, 3.0, 5.0, 2.0, 7.0, 2.0, 6.0, 5.0, 5.0, 6.0, 3.0, 2.0, 2.0, 1.0, 2.0, 2.0, 1.0, 2.0, 5.0, 2.0, 5.0, 1.0, 4.0, 5.0, 5.0, 5.0, 2.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.3348581257507195</td><td>0.6651418742492805</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 1.0, 1.0, 1.0, 4.0, 1.0, 5.0, 4.0, 4.0, 1.0, 1.0, 2.0, 2.0, 5.0, 4.0, 5.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 3.0, 3.0, 6.0, 5.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 3.0, 3.0, 1.0, 3.0, 5.0, 5.0, 3.0, 5.0, 1.0, 6.0, 5.0, 2.0, 3.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 1.0, 2.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 3.0, 4.0, 5.0, 3.0, 4.0, 3.0, 6.0, 6.0, 4.0, 4.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 3.0, 5.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.718791750442632</td><td>0.281208249557368</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 1.0, 1.0, 1.0, 5.0, 1.0, 2.0, 2.0, 5.0, 4.0, 4.0, 3.0, 1.0, 1.0, 5.0, 3.0, 4.0, 6.0, 6.0, 7.0, 7.0, 7.0, 1.0, 7.0, 1.0, 1.0, 1.0, 6.0, 5.0, 6.0, 6.0, 7.0, 2.0, 6.0, 6.0, 7.0, 7.0, 7.0, 5.0, 2.0, 3.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0, 7.0, 3.0, 6.0, 6.0, 6.0, 5.0, 7.0, 2.0, 3.0, 2.0, 5.0, 5.0, 4.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 3.0, 7.0, 5.0, 5.0, 6.0, 7.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 7.0, 7.0, 7.0, 7.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 4.0, 2.0, 1.0, 5.0, 2.0, 1.0, 1.0, 1.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 1.0, 1.0, 2.0, 1.0, 5.0, 5.0, 3.0, 4.0, 4.0, 1.0, 1.0]</td><td>1.0</td><td>1.6289028126440173</td><td>0.6289028126440173</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 2.0, 3.0, 4.0, 3.0, 4.0, 4.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 3.0, 2.0, 2.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 2.0, 1.0, 4.0, 1.0, 4.0, 2.0, 3.0, 2.0, 3.0, 2.0, 2.0, 3.0, 3.0, 2.0, 2.0, 3.0, 4.0, 2.0, 3.0, 7.0, 5.0, 5.0, 5.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 5.0, 5.0, 7.0, 2.0, 3.0, 2.0, 3.0, 3.0, 2.0, 3.0, 3.0, 2.0, 5.0, 6.0, 5.0, 4.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 2.0, 4.0, 4.0, 3.0, 3.0]</td><td>3.0</td><td>2.5322112818303077</td><td>0.46778871816969225</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 4.0, 3.0, 1.0, 4.0, 4.0, 4.0, 5.0, 2.0, 3.0, 1.0, 1.0, 1.0, 4.0, 3.0, 4.0, 4.0, 3.0, 6.0, 6.0, 7.0, 6.0, 4.0, 6.0, 5.0, 5.0, 3.0, 4.0, 3.0, 6.0, 5.0, 7.0, 3.0, 5.0, 5.0, 7.0, 3.0, 4.0, 4.0, 6.0, 2.0, 3.0, 2.0, 3.0, 4.0, 3.0, 3.0, 1.0, 6.0, 3.0, 2.0, 1.0, 2.0, 2.0, 3.0, 2.0, 5.0, 3.0, 3.0, 4.0, 7.0, 5.0, 6.0, 4.0, 7.0, 5.0, 7.0, 5.0, 7.0, 4.0, 7.0, 4.0, 5.0, 6.0, 6.0, 4.0, 5.0, 4.0, 2.0, 1.0, 4.0, 2.0, 5.0, 1.0, 3.0, 6.0, 7.0, 6.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 6.0, 7.0, 3.0, 6.0, 5.0, 7.0, 7.0, 7.0, 3.0, 1.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 3.0, 4.0, 5.0, 3.0, 4.0, 2.0, 3.0, 4.0, 1.0, 2.0]</td><td>2.0</td><td>2.757271807543233</td><td>0.757271807543233</td>
+</tr>
+<tr>
+<td>[5.0, 4.0, 4.0, 1.0, 3.0, 4.0, 3.0, 4.0, 5.0, 2.0, 2.0, 2.0, 2.0, 3.0, 1.0, 4.0, 4.0, 5.0, 5.0, 5.0, 7.0, 4.0, 7.0, 4.0, 7.0, 4.0, 7.0, 6.0, 5.0, 5.0, 5.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 1.0, 1.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 6.0, 1.0, 4.0, 1.0, 2.0, 1.0, 2.0, 1.0, 2.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 4.0, 4.0, 5.0, 6.0, 4.0, 5.0, 4.0, 6.0, 2.0, 1.0, 1.0, 1.0, 4.0, 1.0, 5.0, 2.0, 1.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 3.0, 3.0, 4.0, 3.0, 6.0, 6.0, 4.0, 5.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 2.0, 3.0, 4.0, 3.0, 5.0, 3.0, 2.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>2.5615464144201177</td><td>1.5615464144201177</td>
+</tr>
+<tr>
+<td>[2.0, 5.0, 3.0, 2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 4.0, 3.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 4.0, 3.0, 4.0, 3.0, 4.0, 5.0, 6.0, 4.0, 4.0, 6.0, 5.0, 3.0, 2.0, 5.0, 4.0, 2.0, 4.0, 3.0, 1.0, 3.0, 5.0, 3.0, 2.0, 4.0, 3.0, 2.0, 3.0, 6.0, 1.0, 2.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 2.0, 5.0, 4.0, 5.0, 3.0, 5.0, 3.0, 5.0, 6.0, 2.0, 2.0, 1.0, 2.0, 2.0, 3.0, 3.0, 2.0, 2.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 3.0, 3.0, 4.0, 5.0, 2.0, 4.0, 3.0, 6.0, 4.0, 5.0, 4.0, 2.0, 3.0, 3.0, 1.0, 1.0, 1.0, 2.0, 1.0, 4.0, 3.0, 5.0, 5.0, 3.0, 4.0, 5.0, 4.0, 3.0, 4.0, 4.0, 4.0, 1.0]</td><td>1.0</td><td>2.0983954861948146</td><td>1.0983954861948146</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 3.0, 3.0, 4.0, 5.0, 3.0, 3.0, 4.0, 2.0, 2.0, 2.0, 1.0, 1.0, 2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 6.0, 5.0, 4.0, 5.0, 6.0, 5.0, 4.0, 5.0, 2.0, 1.0, 2.0, 2.0, 4.0, 3.0, 5.0, 3.0, 4.0, 3.0, 5.0, 4.0, 1.0, 5.0, 4.0, 4.0, 5.0, 4.0, 1.0, 6.0, 4.0, 4.0, 5.0, 5.0, 3.0, 2.0, 5.0, 2.0, 5.0, 4.0, 4.0, 5.0, 4.0, 2.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 5.0, 6.0, 2.0, 6.0, 4.0, 5.0, 5.0, 6.0, 4.0, 6.0, 6.0, 6.0, 3.0, 4.0, 6.0, 4.0, 4.0, 4.0, 3.0, 5.0, 4.0, 3.0, 5.0, 4.0, 5.0, 5.0, 4.0, 5.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 5.0, 5.0, 5.0, 7.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>2.9328779781556653</td><td>1.0671220218443347</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 3.0, 4.0, 2.0, 2.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 3.0, 4.0, 2.0, 4.0, 3.0, 4.0, 5.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 6.0, 6.0, 4.0, 5.0, 6.0, 4.0, 3.0, 5.0, 5.0, 5.0, 7.0, 2.0, 1.0, 1.0, 6.0, 2.0, 2.0, 3.0, 3.0, 2.0, 3.0, 3.0, 2.0, 4.0, 4.0, 2.0, 5.0, 2.0, 4.0, 3.0, 3.0, 6.0, 5.0, 3.0, 4.0, 6.0, 4.0, 6.0, 3.0, 7.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 4.0, 6.0, 6.0, 5.0, 7.0, 5.0, 3.0, 3.0, 2.0, 5.0, 5.0, 3.0, 2.0, 1.0, 7.0, 6.0, 6.0, 3.0, 7.0, 7.0, 6.0, 7.0, 6.0, 6.0, 3.0, 3.0, 6.0, 3.0, 6.0, 3.0, 6.0, 4.0, 4.0, 3.0, 2.0, 3.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 4.0, 4.0, 5.0, 3.0, 3.0, 4.0, 4.0, 4.0, 2.0, 3.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>2.893256245325806</td><td>0.8932562453258059</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 3.0, 2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 2.0, 4.0, 3.0, 4.0, 2.0, 5.0, 4.0, 5.0, 5.0, 6.0, 7.0, 6.0, 6.0, 5.0, 3.0, 4.0, 7.0, 7.0, 6.0, 5.0, 5.0, 7.0, 6.0, 7.0, 7.0, 4.0, 6.0, 7.0, 2.0, 2.0, 2.0, 5.0, 2.0, 3.0, 5.0, 4.0, 2.0, 4.0, 2.0, 2.0, 4.0, 2.0, 2.0, 2.0, 3.0, 2.0, 2.0, 2.0, 6.0, 6.0, 5.0, 4.0, 6.0, 6.0, 6.0, 3.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 7.0, 5.0, 6.0, 4.0, 6.0, 4.0, 5.0, 3.0, 3.0, 4.0, 6.0, 5.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 4.0, 6.0, 6.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 6.0, 2.0, 2.0, 6.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 3.0, 2.0, 3.0, 5.0, 5.0, 3.0, 3.0, 4.0, 4.0, 3.0, 5.0]</td><td>5.0</td><td>3.9780694339444067</td><td>1.0219305660555933</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 1.0, 1.0, 3.0, 1.0, 1.0, 5.0, 5.0, 5.0, 1.0, 2.0, 1.0, 2.0, 1.0, 4.0, 3.0, 4.0, 3.0, 4.0, 3.0, 6.0, 5.0, 6.0, 3.0, 7.0, 6.0, 5.0, 4.0, 2.0, 2.0, 5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 7.0, 3.0, 2.0, 1.0, 1.0, 1.0, 3.0, 2.0, 5.0, 2.0, 4.0, 3.0, 1.0, 5.0, 2.0, 3.0, 1.0, 3.0, 1.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 5.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 1.0, 3.0, 1.0, 1.0, 3.0, 4.0, 2.0, 1.0, 1.0, 7.0, 5.0, 7.0, 5.0, 7.0, 6.0, 5.0, 6.0, 1.0, 6.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.0, 7.0, 3.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 3.0, 5.0, 1.0, 5.0, 1.0, 1.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.7796717269943818</td><td>0.2203282730056182</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 4.0, 4.0, 3.0, 2.0, 5.0, 2.0, 5.0, 3.0, 3.0, 2.0, 3.0, 2.0, 5.0, 4.0, 5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 5.0, 5.0, 7.0, 6.0, 5.0, 2.0, 4.0, 4.0, 4.0, 6.0, 5.0, 6.0, 5.0, 6.0, 3.0, 3.0, 2.0, 7.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 5.0, 5.0, 3.0, 5.0, 3.0, 3.0, 5.0, 4.0, 5.0, 5.0, 5.0, 6.0, 7.0, 5.0, 6.0, 5.0, 7.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 4.0, 7.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 4.0, 4.0, 2.0, 5.0, 4.0, 3.0, 4.0, 5.0, 6.0, 7.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 2.0, 3.0, 3.0, 3.0, 4.0, 2.0, 6.0, 6.0, 2.0, 6.0, 2.0, 3.0, 3.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 3.0, 2.0, 3.0, 4.0, 4.0, 3.0, 5.0, 2.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>4.1140139404303255</td><td>0.11401394043032553</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 2.0, 2.0, 4.0, 2.0, 4.0, 1.0, 5.0, 2.0, 4.0, 1.0, 1.0, 1.0, 4.0, 1.0, 4.0, 5.0, 6.0, 5.0, 7.0, 5.0, 7.0, 6.0, 6.0, 7.0, 6.0, 2.0, 3.0, 5.0, 5.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 2.0, 3.0, 1.0, 1.0, 1.0, 2.0, 3.0, 5.0, 1.0, 4.0, 5.0, 5.0, 3.0, 6.0, 3.0, 3.0, 5.0, 5.0, 6.0, 6.0, 7.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 3.0, 5.0, 5.0, 6.0, 5.0, 5.0, 4.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 5.0, 4.0, 5.0, 4.0, 3.0, 2.0, 6.0, 2.0, 6.0, 7.0, 5.0, 6.0, 6.0, 2.0, 6.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 5.0, 5.0, 3.0, 5.0, 2.0, 1.0, 2.0, 1.0, 3.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 3.0, 3.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>3.431810439477448</td><td>0.4318104394774478</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 3.0, 2.0, 2.0, 4.0, 4.0, 4.0, 5.0, 3.0, 3.0, 3.0, 2.0, 2.0, 5.0, 3.0, 5.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 5.0, 3.0, 5.0, 5.0, 3.0, 4.0, 4.0, 6.0, 2.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 1.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 5.0, 3.0, 4.0, 5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 5.0, 7.0, 6.0, 7.0, 6.0, 6.0, 7.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 5.0, 4.0, 3.0, 4.0, 2.0, 7.0, 6.0, 6.0, 4.0, 6.0, 2.0, 3.0, 4.0, 2.0, 6.0, 3.0, 5.0, 4.0, 4.0, 4.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 3.0, 2.0, 3.0, 3.0, 4.0, 5.0, 2.0, 5.0, 4.0, 1.0, 2.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.9551839385012175</td><td>0.04481606149878248</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 5.0, 2.0, 1.0, 4.0, 2.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 5.0, 4.0, 5.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 2.0, 2.0, 3.0, 5.0, 3.0, 3.0, 5.0, 5.0, 6.0, 3.0, 2.0, 1.0, 5.0, 2.0, 3.0, 3.0, 2.0, 1.0, 2.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 3.0, 2.0, 2.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 4.0, 2.0, 5.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 2.0, 1.0, 3.0, 3.0, 2.0, 3.0, 2.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 5.0, 5.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 2.0, 3.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0, 4.0, 3.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 3.0]</td><td>3.0</td><td>2.6174839141058945</td><td>0.38251608589410546</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 1.0, 1.0, 4.0, 4.0, 3.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 4.0, 4.0, 5.0, 6.0, 7.0, 7.0, 5.0, 7.0, 5.0, 6.0, 7.0, 7.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 6.0, 6.0, 2.0, 2.0, 1.0, 2.0, 1.0, 2.0, 4.0, 3.0, 1.0, 3.0, 4.0, 5.0, 2.0, 3.0, 3.0, 2.0, 2.0, 5.0, 3.0, 4.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 4.0, 5.0, 5.0, 7.0, 2.0, 3.0, 5.0, 5.0, 2.0, 3.0, 1.0, 1.0, 2.0, 3.0, 2.0, 5.0, 6.0, 4.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 4.0, 6.0, 2.0, 3.0, 4.0, 3.0, 7.0, 5.0, 5.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 4.0, 3.0, 3.0, 2.0, 4.0, 4.0, 5.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>3.13032619445198</td><td>1.13032619445198</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 4.0, 1.0, 1.0, 1.0, 4.0, 4.0, 5.0, 4.0, 1.0, 1.0, 1.0, 2.0, 2.0, 4.0, 4.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 4.0, 5.0, 5.0, 6.0, 5.0, 4.0, 5.0, 6.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 5.0, 1.0, 6.0, 4.0, 3.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 2.0, 3.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 2.0, 6.0, 6.0, 6.0, 5.0, 7.0, 7.0, 5.0, 5.0, 5.0, 6.0, 2.0, 3.0, 2.0, 2.0, 2.0, 5.0, 5.0, 3.0, 2.0, 4.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 6.0, 6.0, 5.0, 2.0, 2.0, 4.0, 3.0, 6.0, 6.0, 5.0, 5.0, 2.0, 2.0, 3.0, 1.0, 4.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 3.0, 4.0, 5.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>2.8241958850068145</td><td>0.1758041149931855</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 2.0, 2.0, 5.0, 4.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 6.0, 3.0, 2.0, 2.0, 6.0, 2.0, 3.0, 6.0, 3.0, 1.0, 3.0, 4.0, 3.0, 4.0, 4.0, 2.0, 5.0, 3.0, 3.0, 3.0, 4.0, 6.0, 4.0, 3.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 5.0, 6.0, 5.0, 3.0, 3.0, 2.0, 5.0, 3.0, 4.0, 2.0, 2.0, 5.0, 6.0, 6.0, 5.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 3.0, 5.0, 5.0, 5.0, 7.0, 5.0, 6.0, 4.0, 3.0, 4.0, 2.0, 3.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 4.0, 3.0, 5.0, 4.0, 3.0, 4.0, 3.0, 5.0, 2.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>1.465719630277539</td><td>1.534280369722461</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 2.0, 5.0, 4.0, 3.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 1.0, 4.0, 5.0, 5.0, 5.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 4.0, 6.0, 6.0, 4.0, 5.0, 4.0, 2.0, 4.0, 2.0, 2.0, 2.0, 4.0, 5.0, 4.0, 3.0, 3.0, 4.0, 4.0, 6.0, 3.0, 1.0, 6.0, 3.0, 5.0, 2.0, 3.0, 4.0, 7.0, 6.0, 6.0, 6.0, 3.0, 7.0, 6.0, 6.0, 6.0, 6.0, 3.0, 5.0, 3.0, 6.0, 3.0, 5.0, 4.0, 4.0, 4.0, 5.0, 3.0, 2.0, 2.0, 5.0, 4.0, 4.0, 5.0, 4.0, 4.0, 6.0, 7.0, 7.0, 7.0, 5.0, 6.0, 7.0, 6.0, 6.0, 4.0, 4.0, 4.0, 7.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 2.0, 3.0, 4.0, 1.0, 4.0, 2.0, 2.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>1.867714573258716</td><td>1.132285426741284</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 2.0, 4.0, 4.0, 4.0, 2.0, 2.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 5.0, 6.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 6.0, 5.0, 5.0, 6.0, 3.0, 5.0, 5.0, 6.0, 6.0, 3.0, 5.0, 5.0, 3.0, 6.0, 3.0, 3.0, 6.0, 5.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 6.0, 6.0, 5.0, 7.0, 5.0, 6.0, 6.0, 5.0, 6.0, 5.0, 5.0, 5.0, 2.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 2.0, 7.0, 5.0, 3.0, 7.0, 6.0, 2.0, 3.0, 5.0, 3.0, 2.0, 3.0, 2.0, 7.0, 2.0, 3.0, 5.0, 1.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 2.0, 4.0, 4.0, 3.0, 2.0, 4.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>4.40551556826323</td><td>0.5944844317367703</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 4.0, 1.0, 4.0, 4.0, 4.0, 4.0, 5.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 3.0, 5.0, 5.0, 3.0, 3.0, 5.0, 3.0, 3.0, 3.0, 3.0, 6.0, 5.0, 2.0, 3.0, 3.0, 5.0, 3.0, 5.0, 2.0, 5.0, 3.0, 3.0, 3.0, 6.0, 6.0, 6.0, 3.0, 7.0, 6.0, 2.0, 5.0, 4.0, 7.0, 1.0, 4.0, 5.0, 5.0, 5.0, 3.0, 3.0, 2.0, 5.0, 6.0, 6.0, 5.0, 4.0, 5.0, 5.0, 2.0, 2.0, 3.0, 5.0, 3.0, 2.0, 5.0, 6.0, 5.0, 4.0, 3.0, 2.0, 5.0, 6.0, 5.0, 3.0, 3.0, 5.0, 6.0, 6.0, 2.0, 3.0, 6.0, 3.0, 3.0, 5.0, 5.0, 5.0, 3.0, 3.0, 3.0, 3.0, 4.0, 5.0, 5.0, 3.0, 2.0, 3.0, 2.0, 3.0, 5.0, 6.0, 2.0, 1.0, 1.0, 3.0, 4.0, 3.0, 2.0, 5.0, 2.0, 3.0, 5.0, 2.0, 4.0, 3.0, 1.0, 3.0, 2.0, 3.0, 2.0, 4.0, 6.0]</td><td>6.0</td><td>5.122057283896162</td><td>0.8779427161038376</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 2.0, 4.0, 2.0, 4.0, 4.0, 5.0, 5.0, 5.0, 2.0, 2.0, 1.0, 1.0, 1.0, 4.0, 3.0, 4.0, 7.0, 6.0, 7.0, 7.0, 7.0, 3.0, 7.0, 6.0, 7.0, 7.0, 4.0, 2.0, 4.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 5.0, 3.0, 5.0, 3.0, 4.0, 4.0, 4.0, 3.0, 5.0, 6.0, 5.0, 4.0, 5.0, 3.0, 5.0, 6.0, 5.0, 5.0, 4.0, 7.0, 6.0, 6.0, 5.0, 7.0, 6.0, 5.0, 4.0, 6.0, 6.0, 3.0, 5.0, 4.0, 3.0, 5.0, 3.0, 3.0, 3.0, 5.0, 5.0, 4.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 5.0, 3.0, 5.0, 6.0, 3.0, 5.0, 2.0, 3.0, 5.0, 2.0, 3.0, 5.0, 3.0, 3.0, 5.0, 3.0, 5.0, 5.0, 2.0, 6.0, 5.0, 3.0, 2.0, 4.0, 3.0, 2.0, 2.0, 2.0, 4.0, 3.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 3.0, 2.0, 2.0, 3.0]</td><td>3.0</td><td>4.331673123448043</td><td>1.3316731234480432</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 1.0, 2.0, 4.0, 2.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 5.0, 3.0, 5.0, 5.0, 7.0, 6.0, 7.0, 7.0, 6.0, 3.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 7.0, 6.0, 7.0, 7.0, 6.0, 5.0, 1.0, 5.0, 5.0, 2.0, 4.0, 2.0, 1.0, 2.0, 5.0, 4.0, 3.0, 4.0, 2.0, 4.0, 4.0, 5.0, 3.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 6.0, 5.0, 7.0, 5.0, 5.0, 6.0, 6.0, 6.0, 4.0, 4.0, 3.0, 3.0, 6.0, 4.0, 5.0, 3.0, 3.0, 5.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 6.0, 4.0, 5.0, 4.0, 3.0, 5.0, 3.0, 7.0, 6.0, 5.0, 6.0, 2.0, 4.0, 3.0, 2.0, 5.0, 3.0, 2.0, 1.0, 5.0, 4.0, 5.0, 2.0, 5.0, 5.0, 4.0, 1.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>3.0727038735268795</td><td>1.0727038735268795</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 3.0, 2.0, 4.0, 2.0, 3.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 4.0, 4.0, 5.0, 6.0, 3.0, 5.0, 5.0, 4.0, 1.0, 2.0, 4.0, 5.0, 6.0, 5.0, 2.0, 5.0, 2.0, 2.0, 2.0, 6.0, 4.0, 4.0, 2.0, 2.0, 5.0, 3.0, 6.0, 6.0, 2.0, 4.0, 3.0, 6.0, 5.0, 7.0, 7.0, 4.0, 5.0, 3.0, 2.0, 5.0, 1.0, 4.0, 6.0, 5.0, 1.0, 3.0, 6.0, 6.0, 1.0, 3.0, 2.0, 6.0, 6.0, 3.0, 5.0, 5.0, 5.0, 6.0, 6.0, 2.0, 3.0, 5.0, 2.0, 6.0, 3.0, 3.0, 2.0, 6.0, 5.0, 2.0, 6.0, 2.0, 2.0, 5.0, 6.0, 5.0, 2.0, 2.0, 3.0, 6.0, 3.0, 3.0, 5.0, 6.0, 5.0, 2.0, 7.0, 1.0, 1.0, 2.0, 3.0, 7.0, 3.0, 2.0, 5.0, 2.0, 1.0, 2.0, 3.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 2.0, 2.0, 1.0, 2.0, 3.0, 1.0, 1.0, 2.0]</td><td>2.0</td><td>4.301243634663636</td><td>2.301243634663636</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 2.0, 2.0, 4.0, 4.0, 3.0, 1.0, 2.0, 4.0, 1.0, 4.0, 1.0, 1.0, 1.0, 5.0, 3.0, 5.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 4.0, 6.0, 4.0, 5.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 1.0, 1.0, 1.0, 5.0, 3.0, 1.0, 4.0, 2.0, 1.0, 4.0, 2.0, 3.0, 4.0, 4.0, 4.0, 3.0, 5.0, 5.0, 3.0, 3.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 6.0, 6.0, 6.0, 3.0, 2.0, 3.0, 1.0, 2.0, 4.0, 3.0, 4.0, 3.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 2.0, 5.0, 3.0, 5.0, 3.0, 6.0, 7.0, 7.0, 6.0, 1.0, 3.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 2.0, 3.0, 4.0, 3.0, 5.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>1.2317636221541515</td><td>0.7682363778458485</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 5.0, 1.0, 5.0, 5.0, 5.0, 5.0, 1.0, 4.0, 4.0, 1.0, 1.0, 4.0, 4.0, 5.0, 3.0, 6.0, 3.0, 2.0, 1.0, 1.0, 1.0, 4.0, 2.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 6.0, 3.0, 1.0, 5.0, 1.0, 2.0, 7.0, 3.0, 2.0, 7.0, 7.0, 5.0, 5.0, 4.0, 2.0, 6.0, 4.0, 1.0, 3.0, 5.0, 3.0, 2.0, 2.0, 3.0, 5.0, 3.0, 2.0, 2.0, 5.0, 2.0, 7.0, 1.0, 6.0, 6.0, 7.0, 7.0, 6.0, 2.0, 2.0, 2.0, 2.0, 6.0, 1.0, 2.0, 6.0, 4.0, 3.0, 6.0, 4.0, 6.0, 5.0, 5.0, 2.0, 3.0, 7.0, 2.0, 3.0, 3.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 5.0, 3.0, 5.0, 5.0, 2.0, 4.0, 2.0, 4.0, 4.0, 4.0, 2.0]</td><td>2.0</td><td>2.1683066128646438</td><td>0.16830661286464377</td>
+</tr>
+<tr>
+<td>[2.0, 4.0, 1.0, 3.0, 2.0, 4.0, 2.0, 4.0, 1.0, 4.0, 1.0, 4.0, 1.0, 1.0, 2.0, 4.0, 4.0, 5.0, 5.0, 1.0, 5.0, 5.0, 7.0, 3.0, 5.0, 4.0, 6.0, 6.0, 3.0, 2.0, 3.0, 4.0, 3.0, 5.0, 6.0, 1.0, 6.0, 3.0, 2.0, 4.0, 2.0, 7.0, 4.0, 2.0, 4.0, 5.0, 3.0, 3.0, 5.0, 4.0, 3.0, 3.0, 5.0, 3.0, 6.0, 5.0, 5.0, 5.0, 5.0, 7.0, 3.0, 5.0, 5.0, 3.0, 4.0, 5.0, 5.0, 3.0, 4.0, 6.0, 6.0, 5.0, 7.0, 7.0, 5.0, 5.0, 6.0, 1.0, 5.0, 3.0, 4.0, 4.0, 3.0, 4.0, 5.0, 5.0, 5.0, 3.0, 7.0, 7.0, 5.0, 4.0, 5.0, 6.0, 7.0, 5.0, 6.0, 3.0, 2.0, 3.0, 1.0, 5.0, 1.0, 3.0, 4.0, 4.0, 4.0, 1.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 3.0, 4.0, 5.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>5.006184221040362</td><td>0.006184221040362203</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 5.0, 1.0, 4.0, 3.0, 5.0, 2.0, 5.0, 3.0, 3.0, 2.0, 2.0, 2.0, 4.0, 4.0, 5.0, 6.0, 5.0, 7.0, 5.0, 7.0, 5.0, 6.0, 6.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 6.0, 3.0, 5.0, 5.0, 6.0, 2.0, 3.0, 2.0, 6.0, 3.0, 4.0, 6.0, 2.0, 1.0, 3.0, 4.0, 4.0, 3.0, 5.0, 3.0, 2.0, 4.0, 3.0, 3.0, 4.0, 7.0, 2.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 7.0, 6.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 3.0, 3.0, 3.0, 5.0, 5.0, 3.0, 2.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 2.0, 6.0, 6.0, 4.0, 4.0, 2.0, 3.0, 6.0, 5.0, 5.0, 4.0, 3.0, 3.0, 2.0, 2.0, 4.0, 2.0, 2.0, 3.0, 5.0, 4.0, 5.0, 4.0, 3.0, 5.0, 5.0, 3.0, 1.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>2.425093390118019</td><td>0.42509339011801917</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 4.0, 1.0, 4.0, 2.0, 1.0, 4.0, 5.0, 4.0, 2.0, 2.0, 4.0, 4.0, 4.0, 3.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 3.0, 6.0, 7.0, 7.0, 7.0, 1.0, 1.0, 3.0, 2.0, 5.0, 6.0, 5.0, 2.0, 3.0, 6.0, 6.0, 5.0, 1.0, 6.0, 2.0, 3.0, 3.0, 6.0, 3.0, 6.0, 6.0, 5.0, 3.0, 6.0, 3.0, 2.0, 6.0, 5.0, 2.0, 5.0, 5.0, 6.0, 6.0, 7.0, 5.0, 6.0, 5.0, 6.0, 7.0, 6.0, 6.0, 5.0, 7.0, 5.0, 7.0, 2.0, 5.0, 6.0, 5.0, 2.0, 2.0, 5.0, 2.0, 6.0, 3.0, 5.0, 5.0, 4.0, 3.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 1.0, 6.0, 1.0, 2.0, 2.0, 2.0, 5.0, 3.0, 2.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 3.0, 4.0, 2.0, 4.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 3.0]</td><td>3.0</td><td>5.624490840403001</td><td>2.624490840403001</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 5.0, 2.0, 5.0, 2.0, 4.0, 3.0, 2.0, 3.0, 3.0, 2.0, 2.0, 2.0, 4.0, 3.0, 4.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 3.0, 5.0, 3.0, 5.0, 5.0, 5.0, 2.0, 5.0, 2.0, 3.0, 4.0, 3.0, 5.0, 5.0, 3.0, 5.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 4.0, 3.0, 4.0, 4.0, 5.0, 6.0, 6.0, 4.0, 5.0, 5.0, 5.0, 6.0, 4.0, 4.0, 5.0, 7.0, 5.0, 5.0, 7.0, 6.0, 5.0, 5.0, 5.0, 7.0, 2.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 3.0, 3.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 5.0, 2.0, 2.0, 5.0, 5.0, 5.0, 3.0, 2.0, 3.0, 3.0, 3.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>3.240848841638406</td><td>0.7591511583615942</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 4.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 5.0, 3.0, 3.0, 3.0, 2.0, 3.0, 5.0, 3.0, 3.0, 5.0, 6.0, 6.0, 7.0, 1.0, 5.0, 4.0, 3.0, 6.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 3.0, 2.0, 4.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 4.0, 5.0, 6.0, 6.0, 1.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 3.0, 5.0, 4.0, 6.0, 5.0, 5.0, 4.0, 5.0, 7.0, 6.0, 6.0, 7.0, 2.0, 7.0, 7.0, 4.0, 3.0, 2.0, 4.0, 2.0, 5.0, 3.0, 5.0, 5.0, 4.0, 4.0, 5.0, 4.0, 4.0, 1.0, 4.0, 1.0, 4.0, 6.0, 3.0, 4.0, 2.0, 4.0, 2.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 2.0, 5.0, 3.0, 4.0, 5.0, 5.0, 1.0, 3.0, 4.0, 4.0, 4.0, 7.0]</td><td>7.0</td><td>5.33053357275049</td><td>1.6694664272495103</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 4.0, 2.0, 4.0, 3.0, 2.0, 3.0, 2.0, 5.0, 4.0, 4.0, 5.0, 6.0, 7.0, 3.0, 5.0, 2.0, 5.0, 5.0, 6.0, 6.0, 5.0, 3.0, 6.0, 5.0, 5.0, 3.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 2.0, 5.0, 3.0, 3.0, 3.0, 5.0, 1.0, 5.0, 5.0, 6.0, 1.0, 5.0, 5.0, 1.0, 5.0, 2.0, 5.0, 5.0, 7.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 5.0, 5.0, 5.0, 7.0, 3.0, 5.0, 5.0, 5.0, 2.0, 3.0, 4.0, 3.0, 2.0, 3.0, 4.0, 3.0, 4.0, 5.0, 4.0, 6.0, 4.0, 6.0, 6.0, 4.0, 5.0, 6.0, 4.0, 5.0, 2.0, 2.0, 3.0, 2.0, 3.0, 2.0, 5.0, 4.0, 2.0, 6.0, 3.0, 3.0, 4.0, 2.0, 3.0, 1.0, 1.0, 2.0, 5.0, 3.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.3298769339494525</td><td>0.6701230660505475</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 2.0, 5.0, 4.0, 3.0, 4.0, 5.0, 4.0, 3.0, 3.0, 2.0, 1.0, 1.0, 5.0, 4.0, 5.0, 6.0, 7.0, 7.0, 7.0, 7.0, 4.0, 6.0, 7.0, 7.0, 7.0, 5.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 7.0, 6.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 2.0, 5.0, 5.0, 4.0, 2.0, 1.0, 1.0, 3.0, 1.0, 2.0, 2.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 7.0, 3.0, 7.0, 7.0, 4.0, 6.0, 3.0, 4.0, 3.0, 2.0, 1.0, 4.0, 4.0, 1.0, 1.0, 7.0, 7.0, 7.0, 6.0, 7.0, 4.0, 7.0, 7.0, 7.0, 7.0, 4.0, 2.0, 5.0, 6.0, 7.0, 4.0, 6.0, 4.0, 4.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 2.0, 2.0, 3.0, 5.0, 3.0, 4.0, 3.0, 4.0, 3.0, 4.0, 2.0, 1.0, 4.0, 4.0, 1.0, 2.0]</td><td>2.0</td><td>1.1804076365518776</td><td>0.8195923634481224</td>
+</tr>
+<tr>
+<td>[2.0, 4.0, 4.0, 4.0, 1.0, 2.0, 3.0, 3.0, 4.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 3.0, 1.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 4.0, 5.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 6.0, 5.0, 4.0, 5.0, 5.0, 5.0, 3.0, 5.0, 5.0, 4.0, 3.0, 5.0, 3.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 4.0, 5.0, 6.0, 5.0, 5.0, 4.0, 6.0, 4.0, 5.0, 5.0, 4.0, 3.0, 5.0, 6.0, 4.0, 5.0, 5.0, 5.0, 2.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 6.0, 4.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 4.0, 4.0, 2.0, 3.0, 1.0, 1.0, 2.0, 1.0, 1.0, 2.0, 5.0, 3.0, 3.0, 3.0, 2.0, 4.0, 4.0, 4.0, 3.0, 2.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>2.895990539369759</td><td>0.10400946063024108</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 4.0, 3.0, 1.0, 4.0, 4.0, 5.0, 5.0, 4.0, 3.0, 4.0, 2.0, 1.0, 5.0, 3.0, 4.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 2.0, 3.0, 4.0, 4.0, 3.0, 4.0, 6.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 7.0, 5.0, 7.0, 7.0, 5.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 6.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 3.0, 2.0, 3.0, 6.0, 5.0, 5.0, 5.0, 7.0, 6.0, 4.0, 6.0, 3.0, 6.0, 5.0, 7.0, 3.0, 4.0, 3.0, 5.0, 3.0, 5.0, 6.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 2.0, 3.0, 3.0, 1.0, 2.0, 2.0, 4.0, 6.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 3.0, 2.0, 4.0, 2.0, 5.0, 2.0, 4.0, 4.0, 2.0, 1.0, 2.0, 3.0, 3.0, 2.0, 5.0]</td><td>5.0</td><td>4.242271261224053</td><td>0.7577287387759473</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 4.0, 3.0, 3.0, 3.0, 1.0, 4.0, 4.0, 4.0, 1.0, 1.0, 1.0, 2.0, 5.0, 4.0, 5.0, 4.0, 6.0, 6.0, 6.0, 6.0, 4.0, 5.0, 3.0, 5.0, 6.0, 5.0, 5.0, 4.0, 4.0, 5.0, 5.0, 5.0, 4.0, 4.0, 5.0, 5.0, 4.0, 3.0, 5.0, 5.0, 4.0, 3.0, 3.0, 3.0, 3.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 2.0, 4.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 3.0, 5.0, 3.0, 5.0, 5.0, 4.0, 6.0, 7.0, 7.0, 7.0, 4.0, 6.0, 7.0, 6.0, 6.0, 4.0, 2.0, 6.0, 2.0, 3.0, 5.0, 3.0, 4.0, 5.0, 3.0, 2.0, 2.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 1.0, 4.0, 3.0, 4.0, 5.0, 5.0, 3.0, 2.0, 3.0, 3.0, 3.0, 2.0]</td><td>2.0</td><td>3.437202083431422</td><td>1.4372020834314219</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 1.0, 4.0, 3.0, 2.0, 1.0, 2.0, 4.0, 3.0, 4.0, 2.0, 3.0, 2.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 5.0, 6.0, 4.0, 4.0, 3.0, 5.0, 5.0, 2.0, 4.0, 3.0, 4.0, 3.0, 2.0, 3.0, 3.0, 4.0, 5.0, 4.0, 6.0, 3.0, 6.0, 2.0, 2.0, 4.0, 4.0, 2.0, 4.0, 5.0, 4.0, 3.0, 4.0, 3.0, 3.0, 4.0, 4.0, 3.0, 4.0, 6.0, 5.0, 5.0, 6.0, 6.0, 5.0, 6.0, 4.0, 5.0, 3.0, 5.0, 4.0, 5.0, 5.0, 7.0, 4.0, 5.0, 5.0, 5.0, 5.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0, 3.0, 4.0, 5.0, 5.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 5.0, 2.0, 2.0, 3.0, 1.0, 2.0, 2.0, 2.0, 1.0, 5.0, 2.0, 2.0, 3.0, 4.0, 3.0, 4.0, 3.0, 3.0, 2.0, 2.0, 2.0, 4.0]</td><td>4.0</td><td>3.4259626733244146</td><td>0.5740373266755854</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 2.0, 4.0, 5.0, 2.0, 4.0, 4.0, 4.0, 4.0, 1.0, 4.0, 1.0, 1.0, 1.0, 4.0, 4.0, 5.0, 5.0, 5.0, 7.0, 5.0, 7.0, 5.0, 5.0, 7.0, 6.0, 6.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 4.0, 3.0, 6.0, 3.0, 1.0, 5.0, 2.0, 2.0, 3.0, 4.0, 1.0, 3.0, 3.0, 3.0, 4.0, 3.0, 1.0, 5.0, 2.0, 4.0, 3.0, 3.0, 7.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 5.0, 7.0, 5.0, 2.0, 6.0, 5.0, 6.0, 4.0, 5.0, 2.0, 3.0, 3.0, 2.0, 2.0, 3.0, 3.0, 3.0, 2.0, 1.0, 2.0, 6.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 3.0, 6.0, 4.0, 2.0, 4.0, 3.0, 6.0, 5.0, 4.0, 5.0, 1.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 3.0, 3.0, 5.0, 5.0, 2.0, 3.0, 4.0, 4.0, 3.0, 3.0]</td><td>3.0</td><td>2.133534768886439</td><td>0.866465231113561</td>
+</tr>
+<tr>
+<td>[2.0, 3.0, 2.0, 3.0, 4.0, 2.0, 3.0, 3.0, 2.0, 5.0, 1.0, 1.0, 1.0, 1.0, 2.0, 4.0, 3.0, 5.0, 1.0, 3.0, 3.0, 2.0, 4.0, 2.0, 1.0, 4.0, 1.0, 2.0, 2.0, 2.0, 3.0, 2.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 6.0, 4.0, 2.0, 5.0, 5.0, 2.0, 5.0, 3.0, 3.0, 4.0, 3.0, 3.0, 2.0, 4.0, 1.0, 3.0, 3.0, 2.0, 5.0, 6.0, 6.0, 7.0, 4.0, 4.0, 5.0, 6.0, 4.0, 6.0, 4.0, 4.0, 4.0, 6.0, 2.0, 4.0, 3.0, 3.0, 2.0, 3.0, 5.0, 4.0, 3.0, 4.0, 5.0, 5.0, 4.0, 4.0, 5.0, 5.0, 6.0, 6.0, 5.0, 7.0, 6.0, 6.0, 6.0, 5.0, 1.0, 3.0, 1.0, 2.0, 4.0, 1.0, 3.0, 2.0, 1.0, 6.0, 2.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 4.0, 4.0, 3.0, 1.0, 3.0, 3.0, 2.0, 2.0, 2.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.923491820336149</td><td>0.07650817966385093</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 5.0, 5.0, 1.0, 2.0, 1.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 3.0, 5.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 6.0, 3.0, 3.0, 4.0, 4.0, 6.0, 2.0, 2.0, 5.0, 6.0, 4.0, 4.0, 3.0, 7.0, 6.0, 4.0, 3.0, 4.0, 2.0, 5.0, 2.0, 2.0, 6.0, 4.0, 2.0, 1.0, 4.0, 2.0, 3.0, 2.0, 6.0, 5.0, 3.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 4.0, 6.0, 2.0, 6.0, 6.0, 3.0, 3.0, 3.0, 5.0, 2.0, 4.0, 2.0, 2.0, 3.0, 4.0, 5.0, 2.0, 2.0, 4.0, 6.0, 6.0, 4.0, 7.0, 5.0, 5.0, 6.0, 6.0, 6.0, 4.0, 7.0, 3.0, 3.0, 3.0, 4.0, 6.0, 5.0, 3.0, 4.0, 3.0, 2.0, 2.0, 2.0, 5.0, 1.0, 2.0, 1.0, 3.0, 3.0, 3.0, 4.0, 1.0, 2.0, 5.0, 3.0, 4.0, 4.0, 3.0, 3.0, 2.0]</td><td>2.0</td><td>1.635756336462768</td><td>0.3642436635372319</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 2.0, 3.0, 3.0, 2.0, 2.0, 3.0, 2.0, 4.0, 4.0, 3.0, 2.0, 3.0, 4.0, 3.0, 4.0, 6.0, 6.0, 7.0, 4.0, 7.0, 3.0, 6.0, 3.0, 5.0, 6.0, 2.0, 2.0, 3.0, 2.0, 2.0, 2.0, 3.0, 2.0, 4.0, 6.0, 5.0, 5.0, 3.0, 5.0, 3.0, 5.0, 3.0, 5.0, 6.0, 5.0, 5.0, 3.0, 5.0, 6.0, 6.0, 3.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 2.0, 5.0, 6.0, 6.0, 7.0, 4.0, 4.0, 3.0, 2.0, 5.0, 4.0, 4.0, 3.0, 3.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 5.0, 1.0, 1.0, 2.0, 2.0, 5.0, 4.0, 2.0, 7.0, 1.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 4.0, 2.0, 4.0, 5.0, 2.0, 1.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>4.489761897376368</td><td>0.48976189737636844</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 1.0, 4.0, 5.0, 2.0, 2.0, 5.0, 4.0, 5.0, 3.0, 2.0, 2.0, 4.0, 4.0, 5.0, 4.0, 4.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 5.0, 5.0, 6.0, 5.0, 6.0, 7.0, 5.0, 5.0, 4.0, 6.0, 7.0, 1.0, 7.0, 5.0, 3.0, 2.0, 5.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.0, 6.0, 5.0, 5.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 7.0, 7.0, 7.0, 7.0, 3.0, 6.0, 1.0, 1.0, 6.0, 5.0, 7.0, 5.0, 3.0, 1.0, 7.0, 1.0, 6.0, 6.0, 6.0, 3.0, 6.0, 2.0, 3.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 3.0, 1.0, 2.0, 2.0, 3.0, 1.0, 3.0, 2.0, 2.0, 1.0, 5.0, 2.0, 5.0, 2.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 3.0, 5.0]</td><td>5.0</td><td>5.3519148043786275</td><td>0.35191480437862754</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 3.0, 5.0, 2.0, 3.0, 5.0, 4.0, 4.0, 2.0, 4.0, 2.0, 2.0, 1.0, 4.0, 4.0, 5.0, 5.0, 1.0, 6.0, 4.0, 7.0, 4.0, 5.0, 1.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 1.0, 5.0, 2.0, 2.0, 1.0, 6.0, 1.0, 3.0, 5.0, 5.0, 1.0, 3.0, 7.0, 6.0, 6.0, 7.0, 7.0, 3.0, 7.0, 5.0, 7.0, 7.0, 5.0, 6.0, 6.0, 5.0, 6.0, 5.0, 7.0, 6.0, 7.0, 4.0, 6.0, 5.0, 6.0, 1.0, 7.0, 5.0, 5.0, 4.0, 3.0, 5.0, 6.0, 4.0, 5.0, 4.0, 6.0, 5.0, 7.0, 4.0, 3.0, 5.0, 5.0, 5.0, 6.0, 7.0, 7.0, 6.0, 6.0, 5.0, 6.0, 5.0, 7.0, 5.0, 4.0, 3.0, 5.0, 7.0, 6.0, 2.0, 7.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 5.0, 1.0, 1.0, 5.0, 3.0, 2.0, 2.0, 4.0, 4.0, 3.0, 5.0]</td><td>5.0</td><td>5.31833663506297</td><td>0.3183366350629697</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 5.0, 2.0, 4.0, 4.0, 3.0, 2.0, 2.0, 5.0, 1.0, 2.0, 1.0, 3.0, 2.0, 4.0, 2.0, 4.0, 6.0, 4.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 3.0, 5.0, 6.0, 5.0, 4.0, 6.0, 2.0, 5.0, 6.0, 5.0, 2.0, 1.0, 3.0, 2.0, 2.0, 4.0, 4.0, 1.0, 3.0, 6.0, 4.0, 2.0, 5.0, 3.0, 4.0, 5.0, 3.0, 3.0, 4.0, 5.0, 5.0, 6.0, 5.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 5.0, 3.0, 6.0, 5.0, 5.0, 4.0, 3.0, 6.0, 4.0, 5.0, 3.0, 3.0, 5.0, 5.0, 6.0, 6.0, 4.0, 3.0, 3.0, 5.0, 2.0, 6.0, 5.0, 4.0, 5.0, 3.0, 5.0, 5.0, 6.0, 6.0, 5.0, 4.0, 2.0, 6.0, 4.0, 4.0, 2.0, 3.0, 3.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0, 4.0, 3.0, 2.0, 5.0, 4.0, 4.0, 4.0, 3.0, 2.0, 2.0, 3.0, 2.0, 5.0]</td><td>5.0</td><td>6.614147005706361</td><td>1.6141470057063607</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 5.0, 2.0, 1.0, 1.0, 1.0, 4.0, 5.0, 3.0, 1.0, 1.0, 3.0, 3.0, 4.0, 3.0, 5.0, 5.0, 6.0, 7.0, 6.0, 7.0, 5.0, 6.0, 6.0, 2.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 4.0, 2.0, 5.0, 6.0, 7.0, 4.0, 4.0, 3.0, 3.0, 6.0, 5.0, 3.0, 4.0, 4.0, 3.0, 5.0, 3.0, 4.0, 4.0, 6.0, 5.0, 3.0, 5.0, 7.0, 5.0, 6.0, 3.0, 7.0, 6.0, 5.0, 5.0, 4.0, 2.0, 6.0, 4.0, 1.0, 2.0, 2.0, 4.0, 5.0, 3.0, 6.0, 3.0, 5.0, 3.0, 4.0, 3.0, 2.0, 5.0, 1.0, 5.0, 7.0, 5.0, 5.0, 1.0, 1.0, 5.0, 1.0, 7.0, 7.0, 7.0, 3.0, 6.0, 6.0, 3.0, 6.0, 5.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 1.0, 4.0, 1.0, 4.0, 3.0, 5.0, 3.0, 4.0, 4.0, 4.0, 3.0]</td><td>3.0</td><td>4.561360592293478</td><td>1.561360592293478</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 4.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 5.0, 5.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 5.0, 4.0, 3.0, 5.0, 4.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 5.0, 5.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 4.0, 5.0, 3.0, 3.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 5.0, 4.0, 4.0, 5.0, 4.0, 5.0, 3.0, 4.0, 5.0, 4.0, 3.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 5.0, 4.0, 3.0, 3.0, 2.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0]</td><td>3.0</td><td>3.483968104543625</td><td>0.4839681045436248</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 1.0, 1.0, 1.0, 2.0, 4.0, 5.0, 4.0, 2.0, 2.0, 3.0, 2.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0, 2.0, 2.0, 6.0, 4.0, 3.0, 3.0, 3.0, 4.0, 5.0, 3.0, 5.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 3.0, 4.0, 5.0, 3.0, 4.0, 4.0, 6.0, 5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 3.0, 4.0, 5.0, 4.0, 5.0, 3.0, 4.0, 5.0, 3.0, 6.0, 6.0, 3.0, 4.0, 4.0, 3.0, 5.0, 4.0, 3.0, 4.0, 3.0, 4.0, 3.0, 5.0, 5.0, 4.0, 5.0, 4.0, 3.0, 3.0, 4.0, 3.0, 3.0, 4.0, 5.0, 5.0, 5.0, 4.0, 6.0, 2.0, 5.0, 2.0, 3.0, 6.0, 5.0, 4.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 3.0, 2.0, 3.0, 2.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>3.0275168741957423</td><td>0.027516874195742336</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 1.0, 4.0, 5.0, 4.0, 1.0, 4.0, 5.0, 5.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 4.0, 5.0, 5.0, 2.0, 7.0, 7.0, 2.0, 1.0, 2.0, 5.0, 3.0, 3.0, 1.0, 5.0, 2.0, 3.0, 2.0, 3.0, 3.0, 6.0, 5.0, 2.0, 5.0, 5.0, 2.0, 7.0, 5.0, 1.0, 1.0, 6.0, 1.0, 1.0, 7.0, 3.0, 3.0, 3.0, 2.0, 1.0, 4.0, 2.0, 3.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 4.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 1.0, 1.0, 1.0, 2.0, 5.0, 2.0, 2.0, 2.0, 3.0, 7.0, 7.0, 7.0, 1.0, 7.0, 1.0, 1.0, 6.0, 6.0, 2.0, 1.0, 7.0, 6.0, 5.0, 3.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 3.0, 5.0, 5.0, 2.0, 5.0, 4.0, 4.0, 4.0, 4.0, 2.0]</td><td>2.0</td><td>1.5226733070392757</td><td>0.4773266929607243</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 3.0, 5.0, 1.0, 4.0, 2.0, 4.0, 1.0, 5.0, 2.0, 3.0, 1.0, 3.0, 3.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 3.0, 6.0, 2.0, 5.0, 6.0, 4.0, 5.0, 2.0, 2.0, 3.0, 2.0, 3.0, 6.0, 2.0, 2.0, 4.0, 4.0, 3.0, 3.0, 3.0, 5.0, 2.0, 4.0, 5.0, 5.0, 5.0, 5.0, 4.0, 6.0, 4.0, 6.0, 6.0, 5.0, 6.0, 5.0, 3.0, 6.0, 2.0, 2.0, 4.0, 4.0, 5.0, 4.0, 4.0, 3.0, 3.0, 3.0, 6.0, 5.0, 6.0, 2.0, 7.0, 2.0, 6.0, 5.0, 4.0, 4.0, 6.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 6.0, 4.0, 6.0, 6.0, 3.0, 1.0, 2.0, 2.0, 1.0, 2.0, 3.0, 2.0, 2.0, 2.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 4.0, 2.0, 1.0, 3.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0]</td><td>4.0</td><td>3.767777732271912</td><td>0.23222226772808785</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 2.0, 5.0, 5.0, 2.0, 4.0, 5.0, 5.0, 2.0, 2.0, 2.0, 3.0, 1.0, 5.0, 1.0, 5.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 5.0, 4.0, 5.0, 5.0, 5.0, 6.0, 6.0, 4.0, 5.0, 6.0, 6.0, 6.0, 4.0, 7.0, 6.0, 1.0, 1.0, 3.0, 1.0, 4.0, 7.0, 6.0, 1.0, 6.0, 7.0, 6.0, 7.0, 7.0, 1.0, 6.0, 7.0, 1.0, 2.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 4.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 1.0, 1.0, 2.0, 1.0, 1.0, 2.0, 4.0, 2.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 5.0, 1.0, 5.0, 5.0, 3.0, 5.0, 3.0, 1.0, 1.0, 2.0, 2.0]</td><td>2.0</td><td>3.4564366824473094</td><td>1.4564366824473094</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 3.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 1.0, 1.0, 1.0, 2.0, 1.0, 4.0, 5.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 5.0, 4.0, 6.0, 7.0, 6.0, 7.0, 7.0, 5.0, 7.0, 7.0, 4.0, 3.0, 2.0, 4.0, 1.0, 1.0, 4.0, 4.0, 4.0, 5.0, 1.0, 2.0, 4.0, 4.0, 2.0, 3.0, 3.0, 4.0, 3.0, 3.0, 6.0, 4.0, 5.0, 6.0, 7.0, 6.0, 7.0, 5.0, 6.0, 5.0, 7.0, 6.0, 6.0, 5.0, 7.0, 5.0, 6.0, 7.0, 6.0, 7.0, 2.0, 4.0, 2.0, 2.0, 2.0, 5.0, 1.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 1.0, 2.0, 1.0, 2.0, 2.0, 2.0, 4.0, 2.0, 2.0, 6.0, 1.0, 3.0, 3.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 3.0, 2.0, 5.0, 5.0, 5.0, 2.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.474486520971115</td><td>0.5255134790288849</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 5.0, 5.0, 4.0, 2.0, 4.0, 1.0, 5.0, 1.0, 4.0, 1.0, 4.0, 4.0, 3.0, 3.0, 5.0, 6.0, 6.0, 6.0, 6.0, 2.0, 6.0, 6.0, 3.0, 4.0, 5.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 5.0, 5.0, 4.0, 5.0, 6.0, 4.0, 2.0, 2.0, 6.0, 3.0, 3.0, 5.0, 2.0, 3.0, 6.0, 6.0, 3.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 6.0, 5.0, 3.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 5.0, 3.0, 5.0, 6.0, 5.0, 2.0, 2.0, 3.0, 6.0, 4.0, 6.0, 4.0, 5.0, 5.0, 6.0, 6.0, 5.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 2.0, 2.0, 2.0, 5.0, 2.0, 5.0, 4.0, 3.0, 6.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 1.0, 3.0, 5.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>3.453318132692385</td><td>0.546681867307615</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 5.0, 3.0, 1.0, 2.0, 3.0, 2.0, 5.0, 5.0, 4.0, 1.0, 3.0, 4.0, 4.0, 5.0, 4.0, 3.0, 5.0, 7.0, 5.0, 7.0, 7.0, 3.0, 7.0, 6.0, 4.0, 4.0, 4.0, 3.0, 5.0, 4.0, 7.0, 6.0, 4.0, 4.0, 7.0, 5.0, 7.0, 3.0, 7.0, 7.0, 3.0, 6.0, 4.0, 1.0, 5.0, 6.0, 5.0, 2.0, 4.0, 2.0, 5.0, 5.0, 4.0, 4.0, 5.0, 7.0, 6.0, 5.0, 5.0, 5.0, 6.0, 4.0, 6.0, 7.0, 6.0, 5.0, 3.0, 4.0, 5.0, 7.0, 6.0, 5.0, 5.0, 4.0, 1.0, 5.0, 1.0, 2.0, 3.0, 4.0, 7.0, 7.0, 3.0, 6.0, 6.0, 6.0, 5.0, 4.0, 6.0, 4.0, 2.0, 6.0, 6.0, 3.0, 1.0, 3.0, 3.0, 3.0, 6.0, 1.0, 7.0, 4.0, 4.0, 7.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 1.0, 5.0, 4.0, 1.0, 2.0, 2.0, 5.0, 2.0, 3.0, 2.0, 3.0, 4.0, 2.0, 6.0]</td><td>6.0</td><td>5.092334462904294</td><td>0.9076655370957063</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 1.0, 3.0, 2.0, 3.0, 4.0, 5.0, 5.0, 1.0, 1.0, 1.0, 2.0, 3.0, 4.0, 3.0, 4.0, 6.0, 5.0, 6.0, 5.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 4.0, 7.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 6.0, 4.0, 5.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>3.3647559663015443</td><td>0.6352440336984557</td>
+</tr>
+<tr>
+<td>[4.0, 4.0, 3.0, 2.0, 1.0, 4.0, 3.0, 4.0, 4.0, 4.0, 1.0, 3.0, 1.0, 2.0, 3.0, 4.0, 4.0, 5.0, 6.0, 7.0, 6.0, 6.0, 7.0, 5.0, 6.0, 5.0, 6.0, 7.0, 4.0, 3.0, 6.0, 3.0, 5.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 1.0, 1.0, 2.0, 5.0, 1.0, 3.0, 2.0, 1.0, 3.0, 7.0, 6.0, 5.0, 6.0, 6.0, 2.0, 6.0, 5.0, 5.0, 5.0, 5.0, 7.0, 6.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 5.0, 2.0, 7.0, 3.0, 6.0, 7.0, 7.0, 5.0, 6.0, 5.0, 7.0, 4.0, 3.0, 4.0, 2.0, 4.0, 2.0, 3.0, 2.0, 2.0, 3.0, 7.0, 3.0, 6.0, 6.0, 6.0, 7.0, 7.0, 2.0, 6.0, 5.0, 6.0, 5.0, 5.0, 6.0, 6.0, 7.0, 5.0, 4.0, 4.0, 3.0, 4.0, 2.0, 1.0, 3.0, 1.0, 1.0, 1.0, 4.0, 3.0, 5.0, 3.0, 4.0, 5.0, 5.0, 3.0, 2.0, 3.0, 1.0, 2.0, 1.0]</td><td>1.0</td><td>2.9170480936714736</td><td>1.9170480936714736</td>
+</tr>
+<tr>
+<td>[2.0, 4.0, 4.0, 4.0, 5.0, 2.0, 4.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 3.0, 2.0, 4.0, 4.0, 4.0, 6.0, 6.0, 6.0, 2.0, 7.0, 2.0, 2.0, 5.0, 6.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 1.0, 6.0, 4.0, 4.0, 2.0, 7.0, 2.0, 5.0, 6.0, 3.0, 2.0, 2.0, 6.0, 7.0, 5.0, 6.0, 4.0, 5.0, 4.0, 2.0, 4.0, 4.0, 6.0, 6.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 6.0, 2.0, 5.0, 4.0, 5.0, 6.0, 3.0, 3.0, 2.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 5.0, 3.0, 3.0, 4.0, 3.0, 4.0, 3.0, 4.0, 5.0, 3.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 2.0, 4.0, 5.0, 4.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>2.2722523081249406</td><td>0.7277476918750594</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 1.0, 2.0, 2.0, 4.0, 1.0, 4.0, 2.0, 4.0, 5.0, 3.0, 2.0, 4.0, 3.0, 5.0, 3.0, 4.0, 4.0, 6.0, 5.0, 3.0, 6.0, 3.0, 3.0, 5.0, 5.0, 5.0, 5.0, 6.0, 6.0, 7.0, 5.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 5.0, 3.0, 5.0, 3.0, 5.0, 6.0, 5.0, 3.0, 3.0, 6.0, 3.0, 5.0, 6.0, 5.0, 4.0, 6.0, 4.0, 5.0, 4.0, 5.0, 2.0, 3.0, 1.0, 6.0, 6.0, 6.0, 3.0, 6.0, 6.0, 6.0, 5.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 2.0, 3.0, 2.0, 6.0, 2.0, 5.0, 1.0, 2.0, 3.0, 6.0, 3.0, 5.0, 6.0, 7.0, 5.0, 6.0, 3.0, 5.0, 3.0, 4.0, 3.0, 1.0, 2.0, 3.0, 3.0, 4.0, 3.0, 6.0, 3.0, 3.0, 2.0, 2.0, 2.0, 1.0, 1.0, 2.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 2.0, 4.0]</td><td>4.0</td><td>2.769710944027025</td><td>1.230289055972975</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 2.0, 5.0, 1.0, 1.0, 1.0, 1.0, 3.0, 4.0, 4.0, 1.0, 7.0, 5.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 3.0, 7.0, 1.0, 7.0, 6.0, 4.0, 7.0, 6.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 5.0, 1.0, 1.0, 1.0, 4.0, 2.0, 5.0, 4.0, 3.0, 5.0, 3.0, 6.0, 4.0, 4.0, 2.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 2.0, 1.0, 1.0, 2.0, 1.0, 1.0, 2.0, 1.0, 1.0, 7.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 1.0, 7.0, 1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 5.0, 1.0, 5.0, 5.0, 1.0, 3.0, 4.0, 4.0, 4.0, 4.0, 2.0]</td><td>2.0</td><td>1.5758861561231217</td><td>0.42411384387687834</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 4.0, 4.0, 4.0, 2.0, 5.0, 3.0, 5.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 7.0, 5.0, 3.0, 4.0, 4.0, 4.0, 3.0, 5.0, 4.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 7.0, 1.0, 4.0, 3.0, 4.0, 3.0, 5.0, 5.0, 3.0, 4.0, 4.0, 6.0, 4.0, 3.0, 4.0, 4.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 7.0, 3.0, 6.0, 6.0, 6.0, 5.0, 7.0, 6.0, 6.0, 5.0, 4.0, 3.0, 3.0, 4.0, 5.0, 4.0, 5.0, 5.0, 3.0, 5.0, 7.0, 7.0, 7.0, 6.0, 5.0, 7.0, 2.0, 5.0, 3.0, 5.0, 3.0, 6.0, 2.0, 7.0, 1.0, 5.0, 5.0, 3.0, 5.0, 1.0, 3.0, 3.0, 3.0, 2.0, 1.0, 1.0, 3.0, 4.0, 2.0, 4.0, 2.0, 4.0, 5.0, 4.0, 3.0, 3.0, 3.0, 1.0, 2.0, 3.0]</td><td>3.0</td><td>3.452244800099046</td><td>0.452244800099046</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 5.0, 2.0, 3.0, 2.0, 3.0, 1.0, 5.0, 1.0, 2.0, 1.0, 4.0, 2.0, 5.0, 4.0, 5.0, 5.0, 4.0, 5.0, 4.0, 7.0, 3.0, 5.0, 3.0, 5.0, 3.0, 5.0, 2.0, 5.0, 3.0, 3.0, 5.0, 6.0, 7.0, 4.0, 5.0, 4.0, 3.0, 5.0, 6.0, 5.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 5.0, 4.0, 5.0, 3.0, 6.0, 3.0, 6.0, 5.0, 7.0, 6.0, 5.0, 5.0, 3.0, 5.0, 3.0, 5.0, 4.0, 6.0, 3.0, 5.0, 3.0, 5.0, 7.0, 7.0, 5.0, 5.0, 5.0, 4.0, 6.0, 5.0, 3.0, 4.0, 3.0, 5.0, 3.0, 5.0, 3.0, 6.0, 3.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 4.0, 4.0, 2.0, 2.0, 5.0, 1.0, 5.0, 5.0, 5.0, 6.0, 2.0, 2.0, 1.0, 1.0, 3.0, 2.0, 2.0, 3.0, 5.0, 2.0, 4.0, 4.0, 4.0, 2.0, 5.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0]</td><td>3.0</td><td>3.3427770167224073</td><td>0.34277701672240735</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 5.0, 3.0, 5.0, 5.0, 5.0, 3.0, 1.0, 5.0, 1.0, 3.0, 1.0, 2.0, 1.0, 4.0, 4.0, 5.0, 3.0, 6.0, 6.0, 4.0, 7.0, 4.0, 5.0, 3.0, 5.0, 4.0, 2.0, 2.0, 2.0, 4.0, 2.0, 4.0, 4.0, 5.0, 4.0, 4.0, 6.0, 5.0, 3.0, 6.0, 5.0, 4.0, 5.0, 6.0, 2.0, 5.0, 6.0, 7.0, 2.0, 4.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 7.0, 4.0, 4.0, 6.0, 5.0, 6.0, 3.0, 6.0, 6.0, 5.0, 3.0, 6.0, 6.0, 6.0, 6.0, 4.0, 4.0, 5.0, 6.0, 3.0, 3.0, 2.0, 2.0, 4.0, 4.0, 3.0, 2.0, 3.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 4.0, 6.0, 6.0, 4.0, 3.0, 3.0, 2.0, 2.0, 7.0, 4.0, 6.0, 4.0, 1.0, 7.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 4.0, 1.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>2.750439320293813</td><td>1.2495606797061871</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 1.0, 4.0, 4.0, 4.0, 3.0, 4.0, 2.0, 4.0, 4.0, 4.0, 5.0, 4.0, 3.0, 5.0, 4.0, 5.0, 5.0, 6.0, 5.0, 7.0, 7.0, 6.0, 3.0, 5.0, 5.0, 6.0, 5.0, 4.0, 5.0, 6.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 4.0, 3.0, 6.0, 6.0, 4.0, 6.0, 4.0, 4.0, 4.0, 6.0, 7.0, 1.0, 7.0, 7.0, 5.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 4.0, 4.0, 5.0, 4.0, 6.0, 5.0, 6.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 4.0, 4.0, 2.0, 4.0, 4.0, 3.0, 2.0, 2.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 4.0, 3.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 6.0, 2.0, 4.0, 4.0, 1.0, 2.0, 1.0, 3.0, 3.0, 4.0, 3.0, 5.0, 2.0, 4.0, 5.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 2.0]</td><td>2.0</td><td>2.422382042703197</td><td>0.4223820427031968</td>
+</tr>
+<tr>
+<td>[2.0, 5.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 2.0, 4.0, 2.0, 3.0, 2.0, 2.0, 1.0, 3.0, 3.0, 4.0, 5.0, 3.0, 4.0, 5.0, 5.0, 3.0, 3.0, 5.0, 5.0, 2.0, 5.0, 5.0, 5.0, 2.0, 6.0, 3.0, 5.0, 3.0, 5.0, 2.0, 5.0, 5.0, 3.0, 3.0, 5.0, 6.0, 5.0, 5.0, 5.0, 3.0, 2.0, 3.0, 5.0, 6.0, 6.0, 5.0, 2.0, 5.0, 5.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 3.0, 2.0, 5.0, 3.0, 5.0, 5.0, 2.0, 6.0, 2.0, 5.0, 5.0, 3.0, 1.0, 2.0, 5.0, 5.0, 5.0, 6.0, 3.0, 3.0, 5.0, 5.0, 6.0, 2.0, 2.0, 5.0, 3.0, 2.0, 3.0, 3.0, 2.0, 2.0, 3.0, 5.0, 6.0, 6.0, 4.0, 4.0, 5.0, 3.0, 5.0, 6.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 2.0, 1.0, 4.0, 4.0, 3.0, 4.0, 2.0, 2.0, 4.0, 2.0, 1.0, 1.0, 1.0, 1.0, 3.0]</td><td>3.0</td><td>3.0405164367733883</td><td>0.04051643677338834</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 4.0, 1.0, 1.0, 4.0, 3.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 5.0, 5.0, 4.0, 6.0, 5.0, 7.0, 4.0, 6.0, 6.0, 6.0, 4.0, 3.0, 3.0, 5.0, 4.0, 4.0, 4.0, 6.0, 5.0, 5.0, 4.0, 7.0, 5.0, 4.0, 7.0, 5.0, 6.0, 6.0, 4.0, 4.0, 3.0, 3.0, 2.0, 5.0, 4.0, 3.0, 2.0, 6.0, 1.0, 5.0, 3.0, 7.0, 1.0, 3.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 6.0, 5.0, 2.0, 4.0, 7.0, 5.0, 5.0, 5.0, 7.0, 5.0, 2.0, 1.0, 2.0, 7.0, 3.0, 2.0, 2.0, 1.0, 7.0, 6.0, 7.0, 1.0, 6.0, 7.0, 4.0, 6.0, 7.0, 4.0, 1.0, 1.0, 1.0, 2.0, 5.0, 2.0, 4.0, 2.0, 1.0, 6.0, 2.0, 1.0, 4.0, 4.0, 2.0, 3.0, 4.0, 1.0, 4.0, 1.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 1.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>2.064531918976905</td><td>0.06453191897690491</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 2.0, 5.0, 2.0, 4.0, 4.0, 4.0, 1.0, 2.0, 2.0, 2.0, 3.0, 3.0, 2.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 1.0, 7.0, 7.0, 1.0, 1.0, 1.0, 3.0, 2.0, 5.0, 6.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 5.0, 4.0, 4.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 6.0, 3.0, 4.0, 4.0, 4.0, 3.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 5.0, 4.0, 5.0, 3.0, 3.0, 5.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 4.0, 3.0, 5.0, 3.0, 4.0, 3.0, 5.0, 5.0, 3.0, 4.0, 4.0, 5.0, 3.0, 4.0, 5.0, 2.0, 2.0, 3.0, 1.0, 2.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 2.0, 2.0, 3.0, 4.0, 4.0, 3.0, 3.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>1.888502403143395</td><td>1.111497596856605</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 5.0, 4.0, 3.0, 3.0, 4.0, 5.0, 3.0, 2.0, 2.0, 1.0, 2.0, 1.0, 4.0, 4.0, 4.0, 5.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 7.0, 6.0, 7.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 6.0, 5.0, 7.0, 4.0, 1.0, 1.0, 1.0, 1.0, 3.0, 1.0, 4.0, 1.0, 5.0, 4.0, 2.0, 4.0, 2.0, 1.0, 3.0, 3.0, 2.0, 2.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 1.0, 3.0, 1.0, 1.0, 1.0, 3.0, 3.0, 2.0, 1.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 7.0, 6.0, 7.0, 1.0, 3.0, 2.0, 2.0, 2.0, 4.0, 2.0, 1.0, 1.0, 5.0, 4.0, 3.0, 2.0, 4.0, 5.0, 4.0, 5.0, 1.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>1.9388187471939673</td><td>0.061181252806032704</td>
+</tr>
+<tr>
+<td>[2.0, 4.0, 4.0, 2.0, 5.0, 1.0, 3.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 3.0, 4.0, 3.0, 6.0, 4.0, 5.0, 6.0, 5.0, 5.0, 4.0, 5.0, 5.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 2.0, 3.0, 2.0, 5.0, 2.0, 6.0, 5.0, 3.0, 5.0, 4.0, 3.0, 4.0, 4.0, 6.0, 4.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 3.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 4.0, 6.0, 4.0, 6.0, 7.0, 6.0, 6.0, 7.0, 6.0, 5.0, 5.0, 6.0, 6.0, 4.0, 4.0, 5.0, 3.0, 5.0, 5.0, 5.0, 4.0, 3.0, 4.0, 5.0, 4.0, 5.0, 6.0, 6.0, 5.0, 5.0, 4.0, 5.0, 4.0, 4.0, 1.0, 1.0, 1.0, 1.0, 4.0, 1.0, 1.0, 7.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 1.0, 3.0, 2.0, 4.0, 4.0, 4.0, 2.0, 3.0, 3.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>4.110268077248025</td><td>0.11026807724802534</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 1.0, 1.0, 4.0, 4.0, 4.0, 5.0, 2.0, 2.0, 4.0, 4.0, 4.0, 4.0, 3.0, 5.0, 3.0, 4.0, 5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 2.0, 4.0, 3.0, 5.0, 5.0, 6.0, 4.0, 4.0, 6.0, 4.0, 4.0, 2.0, 6.0, 7.0, 3.0, 6.0, 3.0, 2.0, 5.0, 4.0, 3.0, 4.0, 2.0, 2.0, 2.0, 4.0, 2.0, 6.0, 2.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 5.0, 6.0, 3.0, 5.0, 5.0, 5.0, 4.0, 3.0, 4.0, 2.0, 2.0, 3.0, 4.0, 3.0, 2.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0, 4.0, 3.0, 5.0, 4.0, 5.0, 4.0, 6.0, 4.0, 4.0, 5.0, 3.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 3.0, 5.0, 2.0, 2.0, 5.0, 4.0, 3.0, 2.0, 3.0, 3.0, 2.0, 2.0]</td><td>2.0</td><td>2.7275755027007125</td><td>0.7275755027007125</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 1.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 2.0, 1.0, 5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 2.0, 7.0, 2.0, 4.0, 4.0, 5.0, 4.0, 5.0, 6.0, 4.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 4.0, 6.0, 5.0, 2.0, 7.0, 6.0, 4.0, 4.0, 2.0, 1.0, 2.0, 7.0, 6.0, 3.0, 6.0, 1.0, 5.0, 5.0, 4.0, 4.0, 5.0, 3.0, 3.0, 7.0, 6.0, 7.0, 6.0, 5.0, 3.0, 7.0, 4.0, 6.0, 5.0, 6.0, 4.0, 7.0, 4.0, 7.0, 7.0, 6.0, 5.0, 6.0, 4.0, 3.0, 2.0, 4.0, 4.0, 3.0, 5.0, 4.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 5.0, 1.0, 1.0, 4.0, 1.0, 7.0, 5.0, 3.0, 7.0, 3.0, 4.0, 3.0, 3.0, 2.0, 2.0, 1.0, 2.0, 5.0, 4.0, 4.0, 1.0, 4.0, 5.0, 2.0, 3.0, 4.0, 4.0, 3.0, 2.0, 2.0]</td><td>2.0</td><td>1.851049571554956</td><td>0.14895042844504403</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 2.0, 2.0, 5.0, 3.0, 4.0, 4.0, 4.0, 1.0, 3.0, 1.0, 3.0, 2.0, 4.0, 5.0, 5.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 2.0, 4.0, 3.0, 3.0, 3.0, 5.0, 5.0, 3.0, 5.0, 5.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 4.0, 5.0, 6.0, 7.0, 3.0, 5.0, 5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 3.0, 5.0, 5.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0, 1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 4.0, 1.0, 1.0, 7.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 5.0, 2.0, 4.0, 2.0, 3.0, 4.0, 3.0, 3.0, 2.0, 3.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.6426795852181653</td><td>0.35732041478183474</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 4.0, 2.0, 4.0, 2.0, 5.0, 4.0, 5.0, 2.0, 2.0, 2.0, 3.0, 2.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 3.0, 5.0, 3.0, 2.0, 3.0, 3.0, 3.0, 4.0, 3.0, 2.0, 5.0, 5.0, 3.0, 4.0, 5.0, 6.0, 4.0, 5.0, 3.0, 5.0, 2.0, 4.0, 4.0, 2.0, 3.0, 5.0, 4.0, 3.0, 5.0, 3.0, 3.0, 5.0, 6.0, 3.0, 2.0, 3.0, 5.0, 6.0, 7.0, 5.0, 4.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 5.0, 4.0, 5.0, 2.0, 4.0, 3.0, 2.0, 5.0, 4.0, 4.0, 3.0, 3.0, 2.0, 5.0, 5.0, 5.0, 7.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 4.0, 4.0, 3.0, 2.0, 3.0, 3.0, 4.0, 4.0, 4.0, 6.0, 2.0, 2.0, 3.0, 2.0, 2.0, 1.0, 1.0, 1.0, 5.0, 1.0, 4.0, 2.0, 3.0, 5.0, 5.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>2.2918069845024456</td><td>0.7081930154975544</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 4.0, 4.0, 5.0, 2.0, 3.0, 5.0, 4.0, 4.0, 3.0, 2.0, 2.0, 3.0, 4.0, 2.0, 4.0, 7.0, 2.0, 2.0, 5.0, 6.0, 5.0, 2.0, 4.0, 5.0, 5.0, 3.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 6.0, 2.0, 2.0, 6.0, 3.0, 4.0, 2.0, 1.0, 3.0, 3.0, 3.0, 4.0, 4.0, 1.0, 5.0, 5.0, 6.0, 5.0, 4.0, 7.0, 6.0, 7.0, 5.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 4.0, 5.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 3.0, 1.0, 3.0, 2.0, 5.0, 1.0, 7.0, 7.0, 5.0, 5.0, 7.0, 5.0, 7.0, 5.0, 4.0, 7.0, 7.0, 6.0, 7.0, 3.0, 2.0, 1.0, 1.0, 1.0, 2.0, 6.0, 4.0, 2.0, 7.0, 3.0, 5.0, 5.0, 3.0, 3.0, 2.0, 1.0, 3.0, 5.0, 2.0, 3.0, 4.0, 3.0, 5.0, 3.0, 4.0, 2.0, 3.0, 3.0, 2.0, 3.0]</td><td>3.0</td><td>2.0978060346420304</td><td>0.9021939653579696</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 3.0, 5.0, 1.0, 3.0, 4.0, 5.0, 3.0, 1.0, 4.0, 1.0, 4.0, 3.0, 5.0, 4.0, 5.0, 1.0, 5.0, 5.0, 6.0, 7.0, 6.0, 3.0, 3.0, 3.0, 5.0, 4.0, 1.0, 3.0, 1.0, 3.0, 3.0, 7.0, 1.0, 2.0, 3.0, 5.0, 4.0, 4.0, 7.0, 4.0, 5.0, 5.0, 7.0, 2.0, 5.0, 6.0, 6.0, 1.0, 6.0, 7.0, 6.0, 7.0, 3.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 4.0, 7.0, 6.0, 7.0, 7.0, 5.0, 2.0, 6.0, 1.0, 6.0, 5.0, 6.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 4.0, 2.0, 3.0, 6.0, 5.0, 7.0, 4.0, 5.0, 2.0, 3.0, 2.0, 1.0, 1.0, 5.0, 7.0, 5.0, 5.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0, 2.0, 3.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>5.354978485712031</td><td>0.3549784857120306</td>
+</tr>
+<tr>
+<td>[4.0, 2.0, 4.0, 3.0, 4.0, 1.0, 4.0, 4.0, 5.0, 4.0, 2.0, 2.0, 1.0, 1.0, 1.0, 5.0, 1.0, 5.0, 6.0, 5.0, 6.0, 5.0, 6.0, 3.0, 2.0, 2.0, 3.0, 2.0, 1.0, 1.0, 7.0, 1.0, 1.0, 1.0, 1.0, 3.0, 6.0, 2.0, 6.0, 7.0, 7.0, 5.0, 2.0, 2.0, 6.0, 2.0, 2.0, 2.0, 6.0, 3.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 7.0, 6.0, 5.0, 6.0, 5.0, 7.0, 2.0, 3.0, 2.0, 2.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 7.0, 5.0, 1.0, 2.0, 2.0, 6.0, 6.0, 7.0, 7.0, 5.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 1.0, 2.0, 7.0, 2.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 5.0, 1.0, 5.0, 2.0, 1.0, 5.0, 5.0, 5.0, 1.0, 1.0, 3.0, 3.0, 2.0]</td><td>2.0</td><td>2.0386323904300268</td><td>0.03863239043002675</td>
+</tr>
+<tr>
+<td>[2.0, 5.0, 1.0, 5.0, 5.0, 4.0, 1.0, 2.0, 4.0, 1.0, 5.0, 2.0, 2.0, 2.0, 2.0, 1.0, 5.0, 2.0, 5.0, 4.0, 5.0, 5.0, 6.0, 2.0, 5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 6.0, 4.0, 5.0, 5.0, 6.0, 5.0, 5.0, 6.0, 4.0, 4.0, 2.0, 4.0, 2.0, 2.0, 2.0, 3.0, 2.0, 5.0, 5.0, 5.0, 3.0, 2.0, 2.0, 4.0, 5.0, 5.0, 4.0, 3.0, 6.0, 6.0, 3.0, 5.0, 5.0, 7.0, 7.0, 3.0, 6.0, 6.0, 2.0, 6.0, 4.0, 5.0, 7.0, 6.0, 4.0, 6.0, 6.0, 7.0, 5.0, 4.0, 3.0, 6.0, 4.0, 4.0, 3.0, 2.0, 2.0, 3.0, 6.0, 3.0, 7.0, 7.0, 6.0, 5.0, 7.0, 3.0, 5.0, 5.0, 6.0, 5.0, 3.0, 5.0, 3.0, 6.0, 6.0, 5.0, 5.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 5.0, 3.0, 2.0, 5.0, 4.0, 2.0, 2.0, 2.0, 3.0, 2.0, 3.0]</td><td>3.0</td><td>3.803361189144848</td><td>0.803361189144848</td>
+</tr>
+<tr>
+<td>[4.0, 2.0, 5.0, 5.0, 4.0, 1.0, 4.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 5.0, 7.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 4.0, 7.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 2.0, 2.0, 2.0, 6.0, 4.0, 4.0, 6.0, 7.0, 4.0, 2.0, 5.0, 2.0, 3.0, 5.0, 5.0, 3.0, 6.0, 7.0, 7.0, 7.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 5.0, 1.0, 6.0, 2.0, 4.0, 1.0, 1.0, 7.0, 1.0, 7.0, 7.0, 7.0, 5.0, 7.0, 5.0, 7.0, 7.0, 7.0, 3.0, 1.0, 1.0, 5.0, 2.0, 6.0, 2.0, 7.0, 4.0, 6.0, 7.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 1.0, 4.0, 5.0, 3.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 3.0, 1.0]</td><td>1.0</td><td>1.9365600332567592</td><td>0.9365600332567592</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 5.0, 2.0, 2.0, 5.0, 4.0, 5.0, 5.0, 2.0, 4.0, 2.0, 2.0, 2.0, 5.0, 3.0, 4.0, 6.0, 6.0, 6.0, 5.0, 6.0, 3.0, 5.0, 6.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 7.0, 7.0, 5.0, 5.0, 5.0, 5.0, 1.0, 4.0, 4.0, 1.0, 5.0, 5.0, 4.0, 4.0, 5.0, 6.0, 6.0, 4.0, 6.0, 4.0, 6.0, 7.0, 7.0, 5.0, 6.0, 7.0, 1.0, 5.0, 3.0, 5.0, 5.0, 7.0, 6.0, 5.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 5.0, 4.0, 2.0, 1.0, 7.0, 4.0, 6.0, 3.0, 1.0, 5.0, 7.0, 5.0, 7.0, 5.0, 7.0, 6.0, 6.0, 5.0, 6.0, 2.0, 3.0, 3.0, 2.0, 3.0, 3.0, 4.0, 3.0, 1.0, 6.0, 3.0, 4.0, 2.0, 2.0, 2.0, 3.0, 3.0, 1.0, 5.0, 3.0, 4.0, 1.0, 5.0, 5.0, 1.0, 1.0, 2.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>4.756540623618586</td><td>1.7565406236185863</td>
+</tr>
+<tr>
+<td>[2.0, 5.0, 4.0, 1.0, 2.0, 2.0, 1.0, 5.0, 4.0, 4.0, 1.0, 4.0, 1.0, 2.0, 1.0, 4.0, 5.0, 5.0, 6.0, 1.0, 5.0, 5.0, 7.0, 6.0, 5.0, 2.0, 3.0, 1.0, 6.0, 1.0, 7.0, 4.0, 5.0, 5.0, 6.0, 5.0, 4.0, 6.0, 6.0, 5.0, 6.0, 7.0, 5.0, 1.0, 1.0, 3.0, 1.0, 4.0, 7.0, 2.0, 1.0, 3.0, 1.0, 1.0, 2.0, 1.0, 2.0, 2.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 4.0, 7.0, 7.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 2.0, 1.0, 1.0, 4.0, 1.0, 4.0, 1.0, 1.0, 7.0, 1.0, 3.0, 2.0, 1.0, 1.0, 1.0, 2.0, 3.0, 5.0, 3.0, 5.0, 1.0, 5.0, 4.0, 3.0, 2.0, 3.0, 3.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>2.7195840206469413</td><td>1.7195840206469413</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 3.0, 1.0, 2.0, 4.0, 4.0, 5.0, 5.0, 2.0, 3.0, 2.0, 1.0, 1.0, 4.0, 2.0, 3.0, 5.0, 7.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 5.0, 6.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 4.0, 4.0, 2.0, 3.0, 4.0, 4.0, 4.0, 4.0, 1.0, 3.0, 4.0, 3.0, 2.0, 4.0, 3.0, 4.0, 6.0, 4.0, 4.0, 4.0, 7.0, 7.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 2.0, 6.0, 4.0, 6.0, 7.0, 4.0, 4.0, 5.0, 2.0, 2.0, 4.0, 3.0, 4.0, 5.0, 5.0, 3.0, 1.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 5.0, 5.0, 5.0, 4.0, 6.0, 4.0, 6.0, 5.0, 5.0, 4.0, 1.0, 3.0, 3.0, 1.0, 3.0, 1.0, 1.0, 1.0, 4.0, 3.0, 5.0, 5.0, 3.0, 4.0, 5.0, 4.0, 2.0, 4.0, 4.0, 3.0, 3.0]</td><td>3.0</td><td>3.223522766775782</td><td>0.22352276677578198</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 1.0, 5.0, 4.0, 4.0, 6.0, 5.0, 6.0, 6.0, 4.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 5.0, 5.0, 6.0, 5.0, 5.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 5.0, 1.0, 5.0, 3.0, 2.0, 4.0, 4.0, 4.0, 3.0, 5.0, 2.0, 3.0, 3.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 2.0, 4.0, 2.0, 2.0, 3.0, 4.0, 3.0, 3.0, 2.0, 7.0, 7.0, 7.0, 5.0, 7.0, 6.0, 6.0, 7.0, 7.0, 6.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 3.0, 2.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 3.0, 2.0, 3.0, 4.0, 5.0, 3.0, 2.0, 1.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>2.944124975686772</td><td>0.055875024313228216</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 1.0, 2.0, 2.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 2.0, 1.0, 5.0, 4.0, 4.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 2.0, 3.0, 5.0, 5.0, 3.0, 5.0, 5.0, 6.0, 5.0, 6.0, 4.0, 6.0, 2.0, 5.0, 6.0, 1.0, 2.0, 2.0, 2.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 3.0, 4.0, 4.0, 7.0, 7.0, 7.0, 4.0, 4.0, 4.0, 7.0, 4.0, 7.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 7.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 3.0, 2.0, 2.0, 3.0, 4.0, 3.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0, 2.0, 4.0, 3.0, 3.0, 4.0]</td><td>4.0</td><td>2.98834987296793</td><td>1.0116501270320701</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 1.0, 4.0, 4.0, 2.0, 5.0, 2.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 1.0, 1.0, 4.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 3.0, 5.0, 5.0, 3.0, 5.0, 3.0, 4.0, 5.0, 4.0, 3.0, 3.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 4.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 3.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 4.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 2.0, 2.0, 2.0, 3.0, 2.0, 3.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 3.0]</td><td>3.0</td><td>3.6804644816171987</td><td>0.6804644816171987</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 1.0, 5.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 6.0, 5.0, 6.0, 7.0, 5.0, 3.0, 3.0, 2.0, 2.0, 4.0, 6.0, 6.0, 2.0, 2.0, 6.0, 2.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 6.0, 4.0, 3.0, 4.0, 5.0, 1.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 4.0, 3.0, 3.0, 5.0, 5.0, 5.0, 5.0, 3.0, 4.0, 5.0, 3.0, 4.0, 6.0, 3.0, 3.0, 3.0, 5.0, 2.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 2.0, 5.0, 4.0, 4.0, 3.0, 5.0, 5.0, 4.0, 6.0, 7.0, 2.0, 5.0, 7.0, 6.0, 5.0, 6.0, 5.0, 5.0, 4.0, 6.0, 3.0, 2.0, 2.0, 2.0, 4.0, 3.0, 3.0, 6.0, 5.0, 5.0, 3.0, 1.0, 3.0, 3.0, 3.0, 1.0, 4.0, 2.0, 4.0, 4.0, 3.0, 4.0, 2.0, 5.0, 2.0, 1.0, 1.0, 1.0, 2.0]</td><td>2.0</td><td>3.5058613586648963</td><td>1.5058613586648963</td>
+</tr>
+<tr>
+<td>[4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 2.0, 4.0, 4.0, 2.0, 3.0, 1.0, 2.0, 1.0, 5.0, 4.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 7.0, 3.0, 3.0, 2.0, 3.0, 2.0, 2.0, 3.0, 2.0, 1.0, 2.0, 3.0, 4.0, 3.0, 4.0, 3.0, 2.0, 3.0, 2.0, 5.0, 4.0, 7.0, 5.0, 4.0, 6.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 2.0, 1.0, 1.0, 1.0, 2.0, 1.0, 2.0, 1.0, 1.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 3.0, 4.0, 5.0, 4.0, 4.0, 5.0, 3.0, 2.0, 4.0, 3.0, 3.0, 2.0, 3.0, 3.0, 2.0, 2.0, 1.0, 5.0, 1.0, 5.0, 4.0, 4.0, 5.0, 5.0, 4.0, 2.0, 3.0, 1.0, 2.0, 1.0]</td><td>1.0</td><td>0.9613608403328909</td><td>0.03863915966710907</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 1.0, 2.0, 4.0, 2.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 5.0, 5.0, 3.0, 3.0, 5.0, 3.0, 3.0, 3.0, 5.0, 5.0, 5.0, 3.0, 5.0, 5.0, 5.0, 6.0, 6.0, 2.0, 5.0, 3.0, 3.0, 3.0, 5.0, 5.0, 3.0, 5.0, 5.0, 4.0, 4.0, 3.0, 5.0, 4.0, 6.0, 3.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 5.0, 5.0, 5.0, 5.0, 6.0, 2.0, 3.0, 5.0, 5.0, 3.0, 5.0, 5.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 5.0, 5.0, 6.0, 2.0, 3.0, 6.0, 2.0, 2.0, 2.0, 3.0, 2.0, 3.0, 2.0, 5.0, 6.0, 4.0, 6.0, 2.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0, 2.0, 4.0, 5.0, 2.0, 4.0, 2.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>3.240828107028197</td><td>0.240828107028197</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 4.0, 3.0, 1.0, 5.0, 3.0, 3.0, 5.0, 4.0, 3.0, 3.0, 4.0, 3.0, 5.0, 1.0, 2.0, 4.0, 6.0, 7.0, 7.0, 7.0, 6.0, 5.0, 6.0, 7.0, 7.0, 5.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 6.0, 3.0, 1.0, 1.0, 5.0, 2.0, 1.0, 1.0, 7.0, 1.0, 1.0, 4.0, 2.0, 3.0, 4.0, 4.0, 5.0, 6.0, 5.0, 4.0, 4.0, 7.0, 7.0, 6.0, 6.0, 7.0, 6.0, 7.0, 5.0, 6.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 3.0, 5.0, 1.0, 2.0, 3.0, 6.0, 2.0, 5.0, 2.0, 2.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 5.0, 7.0, 7.0, 6.0, 3.0, 4.0, 2.0, 1.0, 3.0, 3.0, 6.0, 5.0, 7.0, 6.0, 2.0, 1.0, 1.0, 2.0, 2.0, 1.0, 2.0, 2.0, 5.0, 2.0, 5.0, 2.0, 3.0, 5.0, 2.0, 4.0, 3.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>1.8069629566783374</td><td>0.1930370433216626</td>
+</tr>
+<tr>
+<td>[2.0, 4.0, 2.0, 5.0, 2.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 2.0, 4.0, 2.0, 2.0, 2.0, 4.0, 4.0, 4.0, 5.0, 6.0, 6.0, 5.0, 6.0, 5.0, 5.0, 6.0, 6.0, 3.0, 2.0, 2.0, 2.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 5.0, 5.0, 5.0, 6.0, 5.0, 4.0, 3.0, 2.0, 3.0, 3.0, 6.0, 6.0, 4.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 4.0, 5.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 3.0, 6.0, 3.0, 3.0, 6.0, 3.0, 3.0, 4.0, 4.0, 3.0, 5.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 6.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 2.0, 6.0, 3.0, 2.0, 3.0, 2.0, 4.0, 3.0, 3.0, 5.0, 1.0, 2.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 4.0, 3.0, 4.0, 2.0, 4.0, 5.0, 3.0, 4.0, 3.0, 2.0, 2.0, 3.0, 3.0]</td><td>3.0</td><td>3.473725343194734</td><td>0.4737253431947339</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 1.0, 1.0, 1.0, 4.0, 4.0, 5.0, 5.0, 5.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 3.0, 3.0, 4.0, 4.0, 6.0, 4.0, 5.0, 5.0, 4.0, 4.0, 2.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 3.0, 4.0, 4.0, 4.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 3.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 5.0, 5.0, 6.0, 4.0, 5.0, 5.0, 4.0, 5.0, 2.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 7.0, 7.0, 7.0, 5.0, 6.0, 4.0, 7.0, 7.0, 7.0, 7.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 4.0, 3.0, 2.0, 6.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 3.0, 4.0, 4.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.6203065050132712</td><td>0.3796934949867288</td>
+</tr>
+<tr>
+<td>[5.0, 4.0, 5.0, 1.0, 4.0, 2.0, 5.0, 4.0, 5.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 3.0, 4.0, 7.0, 6.0, 6.0, 5.0, 7.0, 5.0, 7.0, 6.0, 6.0, 5.0, 2.0, 3.0, 3.0, 5.0, 2.0, 3.0, 3.0, 6.0, 4.0, 6.0, 5.0, 2.0, 1.0, 6.0, 1.0, 1.0, 1.0, 2.0, 1.0, 3.0, 3.0, 2.0, 1.0, 6.0, 2.0, 1.0, 3.0, 1.0, 1.0, 1.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 3.0, 2.0, 5.0, 7.0, 5.0, 3.0, 5.0, 2.0, 2.0, 1.0, 1.0, 2.0, 2.0, 1.0, 1.0, 2.0, 2.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 2.0, 3.0, 5.0, 4.0, 2.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 3.0, 3.0, 5.0, 5.0, 2.0, 2.0, 3.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>1.0341528095963262</td><td>0.03415280959632616</td>
+</tr>
+<tr>
+<td>[5.0, 5.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 4.0, 3.0, 6.0, 5.0, 5.0, 4.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 2.0, 6.0, 5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 1.0, 3.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 4.0, 5.0, 4.0, 4.0, 5.0, 7.0, 6.0, 6.0, 7.0, 4.0, 5.0, 4.0, 7.0, 7.0, 6.0, 5.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 4.0, 1.0, 1.0, 4.0, 1.0, 3.0, 4.0, 1.0, 4.0, 7.0, 7.0, 7.0, 7.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 1.0, 3.0, 1.0, 1.0, 3.0, 1.0, 1.0, 2.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 2.0, 3.0, 2.0, 4.0, 4.0, 4.0, 1.0]</td><td>1.0</td><td>0.853688179166748</td><td>0.146311820833252</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 1.0, 4.0, 1.0, 5.0, 1.0, 5.0, 3.0, 5.0, 1.0, 2.0, 1.0, 4.0, 2.0, 3.0, 4.0, 4.0, 7.0, 6.0, 7.0, 7.0, 7.0, 4.0, 2.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 4.0, 2.0, 6.0, 2.0, 1.0, 4.0, 6.0, 1.0, 2.0, 7.0, 7.0, 4.0, 4.0, 4.0, 5.0, 4.0, 6.0, 6.0, 6.0, 7.0, 2.0, 3.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 5.0, 3.0, 7.0, 4.0, 6.0, 6.0, 6.0, 3.0, 4.0, 2.0, 4.0, 3.0, 4.0, 4.0, 5.0, 4.0, 4.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 4.0, 7.0, 6.0, 7.0, 7.0, 4.0, 5.0, 4.0, 4.0, 4.0, 1.0, 4.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 5.0, 5.0, 1.0, 5.0, 5.0, 3.0, 4.0, 3.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>3.2796302999342126</td><td>1.2796302999342126</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 2.0, 2.0, 1.0, 4.0, 4.0, 2.0, 4.0, 4.0, 4.0, 2.0, 3.0, 2.0, 2.0, 5.0, 4.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 4.0, 5.0, 4.0, 4.0, 5.0, 3.0, 5.0, 5.0, 6.0, 3.0, 6.0, 5.0, 6.0, 3.0, 4.0, 1.0, 2.0, 5.0, 1.0, 4.0, 2.0, 1.0, 4.0, 5.0, 1.0, 3.0, 4.0, 2.0, 1.0, 3.0, 1.0, 2.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 6.0, 3.0, 7.0, 7.0, 5.0, 5.0, 5.0, 7.0, 2.0, 4.0, 1.0, 1.0, 3.0, 4.0, 4.0, 1.0, 1.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 3.0, 7.0, 2.0, 1.0, 1.0, 1.0, 2.0, 4.0, 2.0, 2.0, 7.0, 3.0, 4.0, 4.0, 2.0, 1.0, 2.0, 2.0, 2.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 3.0, 3.0, 2.0, 4.0, 4.0, 3.0, 3.0]</td><td>3.0</td><td>2.82610654781182</td><td>0.17389345218817986</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 2.0, 5.0, 1.0, 2.0, 1.0, 4.0, 4.0, 5.0, 5.0, 2.0, 4.0, 4.0, 2.0, 1.0, 5.0, 4.0, 6.0, 6.0, 3.0, 1.0, 6.0, 1.0, 7.0, 5.0, 5.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 6.0, 1.0, 1.0, 7.0, 6.0, 7.0, 7.0, 7.0, 5.0, 3.0, 5.0, 7.0, 4.0, 7.0, 7.0, 7.0, 6.0, 7.0, 1.0, 6.0, 6.0, 5.0, 6.0, 7.0, 7.0, 5.0, 3.0, 6.0, 7.0, 7.0, 7.0, 3.0, 7.0, 7.0, 7.0, 3.0, 2.0, 5.0, 7.0, 7.0, 5.0, 5.0, 2.0, 7.0, 5.0, 3.0, 3.0, 1.0, 6.0, 5.0, 5.0, 4.0, 3.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 3.0, 3.0, 2.0, 3.0, 5.0, 1.0, 7.0, 5.0, 1.0, 7.0, 3.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 2.0, 4.0, 4.0, 2.0, 4.0, 1.0, 4.0, 4.0, 2.0, 3.0]</td><td>3.0</td><td>4.311492638720029</td><td>1.3114926387200292</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 4.0, 3.0, 3.0, 5.0, 2.0, 4.0, 4.0, 5.0, 2.0, 3.0, 3.0, 1.0, 1.0, 5.0, 4.0, 5.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 2.0, 6.0, 5.0, 4.0, 3.0, 2.0, 2.0, 3.0, 3.0, 2.0, 2.0, 4.0, 2.0, 4.0, 5.0, 3.0, 5.0, 5.0, 7.0, 6.0, 5.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 3.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 5.0, 2.0, 2.0, 2.0, 5.0, 2.0, 3.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 5.0, 5.0, 4.0, 2.0, 4.0, 1.0, 7.0, 5.0, 4.0, 7.0, 3.0, 4.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 3.0, 2.0, 3.0, 5.0, 3.0, 4.0, 3.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>2.033754223286962</td><td>0.03375422328696187</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 2.0, 1.0, 2.0, 2.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 1.0, 4.0, 5.0, 6.0, 7.0, 6.0, 7.0, 6.0, 3.0, 3.0, 3.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 5.0, 7.0, 7.0, 6.0, 6.0, 3.0, 1.0, 3.0, 7.0, 7.0, 1.0, 3.0, 5.0, 6.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 3.0, 3.0, 4.0, 1.0, 2.0, 3.0, 4.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 1.0, 1.0, 3.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 4.0, 1.0, 4.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>3.1508918352597255</td><td>1.1508918352597255</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 5.0, 3.0, 4.0, 2.0, 3.0, 4.0, 3.0, 2.0, 2.0, 1.0, 1.0, 2.0, 4.0, 3.0, 3.0, 5.0, 6.0, 5.0, 3.0, 6.0, 3.0, 3.0, 4.0, 3.0, 5.0, 4.0, 5.0, 4.0, 5.0, 4.0, 3.0, 5.0, 7.0, 6.0, 6.0, 5.0, 4.0, 5.0, 6.0, 5.0, 6.0, 5.0, 3.0, 5.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 4.0, 3.0, 5.0, 3.0, 4.0, 5.0, 5.0, 4.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 4.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 6.0, 6.0, 7.0, 4.0, 3.0, 2.0, 1.0, 3.0, 5.0, 3.0, 4.0, 3.0, 3.0, 6.0, 6.0, 6.0, 5.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 2.0, 3.0, 3.0, 2.0, 4.0, 3.0, 4.0, 4.0, 3.0, 5.0, 3.0, 2.0, 2.0, 1.0, 2.0, 3.0, 3.0, 1.0, 5.0, 4.0, 3.0, 2.0, 2.0, 4.0, 5.0, 4.0, 2.0, 2.0, 2.0, 2.0, 3.0]</td><td>3.0</td><td>2.909176298108729</td><td>0.0908237018912712</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 2.0, 5.0, 4.0, 4.0, 3.0, 4.0, 3.0, 4.0, 2.0, 2.0, 3.0, 2.0, 2.0, 4.0, 4.0, 3.0, 6.0, 3.0, 5.0, 4.0, 5.0, 3.0, 5.0, 3.0, 3.0, 5.0, 5.0, 5.0, 2.0, 6.0, 6.0, 3.0, 5.0, 5.0, 4.0, 3.0, 4.0, 5.0, 3.0, 5.0, 3.0, 3.0, 5.0, 4.0, 3.0, 4.0, 4.0, 5.0, 3.0, 4.0, 3.0, 5.0, 5.0, 5.0, 4.0, 5.0, 6.0, 4.0, 4.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 5.0, 3.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 3.0, 4.0, 5.0, 4.0, 4.0, 4.0, 5.0, 3.0, 4.0, 3.0, 4.0, 3.0, 4.0, 4.0, 3.0, 3.0, 3.0, 5.0, 5.0, 4.0, 4.0, 5.0, 1.0, 3.0, 4.0, 5.0, 4.0, 2.0, 2.0, 3.0, 1.0, 2.0, 1.0, 3.0, 1.0, 4.0, 3.0, 4.0, 3.0, 4.0, 3.0, 2.0, 3.0, 2.0, 2.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>3.9803962985747394</td><td>0.9803962985747394</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 2.0, 2.0, 4.0, 4.0, 1.0, 5.0, 4.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 2.0, 7.0, 3.0, 6.0, 5.0, 2.0, 6.0, 6.0, 6.0, 6.0, 2.0, 2.0, 2.0, 7.0, 1.0, 4.0, 7.0, 2.0, 3.0, 6.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 5.0, 3.0, 3.0, 3.0, 6.0, 5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 5.0, 7.0, 6.0, 6.0, 6.0, 3.0, 6.0, 1.0, 1.0, 2.0, 2.0, 2.0, 3.0, 2.0, 1.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 4.0, 1.0, 1.0, 2.0, 1.0, 3.0, 1.0, 1.0, 7.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 4.0, 1.0, 5.0, 1.0, 5.0, 3.0, 3.0, 4.0, 4.0, 3.0, 2.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>3.3478787193196076</td><td>1.3478787193196076</td>
+</tr>
+<tr>
+<td>[5.0, 5.0, 4.0, 2.0, 5.0, 3.0, 3.0, 4.0, 5.0, 4.0, 3.0, 4.0, 4.0, 3.0, 3.0, 4.0, 3.0, 5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 6.0, 5.0, 3.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 3.0, 4.0, 2.0, 5.0, 4.0, 2.0, 3.0, 4.0, 2.0, 3.0, 3.0, 3.0, 4.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 6.0, 7.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 3.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 4.0, 5.0, 2.0, 2.0, 1.0, 2.0, 2.0, 2.0, 3.0, 4.0, 2.0, 3.0, 6.0, 3.0, 6.0, 7.0, 6.0, 5.0, 6.0, 3.0, 5.0, 4.0, 5.0, 4.0, 3.0, 5.0, 4.0, 6.0, 5.0, 5.0, 5.0, 3.0, 3.0, 3.0, 2.0, 2.0, 1.0, 1.0, 2.0, 5.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 2.0, 1.0, 1.0, 2.0, 2.0]</td><td>2.0</td><td>1.8160795906118359</td><td>0.18392040938816412</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 2.0, 1.0, 2.0, 2.0, 4.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 5.0, 5.0, 7.0, 7.0, 7.0, 7.0, 3.0, 6.0, 6.0, 7.0, 6.0, 4.0, 3.0, 6.0, 6.0, 5.0, 6.0, 7.0, 6.0, 4.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 3.0, 6.0, 4.0, 5.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 6.0, 2.0, 2.0, 5.0, 2.0, 7.0, 6.0, 6.0, 6.0, 6.0, 2.0, 6.0, 6.0, 6.0, 2.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 2.0, 5.0, 2.0, 5.0, 5.0, 3.0, 2.0, 2.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 6.0, 3.0, 2.0, 3.0, 2.0, 3.0, 6.0, 2.0, 6.0, 3.0, 2.0, 3.0, 1.0, 2.0, 1.0, 1.0, 2.0, 5.0, 4.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>3.9596304544165304</td><td>1.0403695455834696</td>
+</tr>
+<tr>
+<td>[2.0, 1.0, 2.0, 4.0, 2.0, 3.0, 3.0, 2.0, 5.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 5.0, 5.0, 5.0, 5.0, 6.0, 2.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 6.0, 3.0, 5.0, 6.0, 5.0, 6.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 2.0, 2.0, 5.0, 3.0, 4.0, 4.0, 5.0, 3.0, 4.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 4.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 5.0, 4.0, 3.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 4.0, 3.0, 2.0, 3.0, 2.0, 4.0, 4.0, 4.0, 3.0, 3.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.9920860437859638</td><td>0.007913956214036233</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 5.0, 4.0, 4.0, 4.0, 3.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 2.0, 5.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 6.0, 5.0, 4.0, 5.0, 5.0, 4.0, 4.0, 3.0, 7.0, 2.0, 5.0, 6.0, 5.0, 2.0, 5.0, 6.0, 7.0, 3.0, 7.0, 7.0, 5.0, 4.0, 4.0, 6.0, 5.0, 4.0, 6.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 4.0, 6.0, 2.0, 6.0, 7.0, 6.0, 5.0, 5.0, 5.0, 5.0, 4.0, 4.0, 4.0, 6.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 4.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 5.0, 3.0, 4.0, 4.0, 2.0, 4.0]</td><td>4.0</td><td>2.965221738354684</td><td>1.0347782616453158</td>
+</tr>
+<tr>
+<td>[4.0, 4.0, 5.0, 4.0, 3.0, 2.0, 2.0, 4.0, 2.0, 4.0, 2.0, 2.0, 2.0, 2.0, 1.0, 4.0, 4.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 5.0, 6.0, 4.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 6.0, 4.0, 6.0, 4.0, 3.0, 2.0, 2.0, 2.0, 1.0, 2.0, 2.0, 1.0, 2.0, 5.0, 3.0, 2.0, 4.0, 2.0, 5.0, 5.0, 3.0, 4.0, 4.0, 6.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 2.0, 1.0, 1.0, 3.0, 1.0, 4.0, 2.0, 2.0, 6.0, 7.0, 7.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 3.0, 5.0, 3.0, 2.0, 4.0, 3.0, 6.0, 5.0, 3.0, 5.0, 3.0, 4.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 5.0, 2.0, 4.0, 3.0, 4.0, 5.0, 4.0, 3.0, 3.0, 4.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>0.7350907609781976</td><td>0.2649092390218024</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 1.0, 4.0, 4.0, 4.0, 2.0, 3.0, 4.0, 1.0, 1.0, 1.0, 2.0, 1.0, 5.0, 4.0, 5.0, 4.0, 5.0, 6.0, 4.0, 7.0, 3.0, 4.0, 4.0, 5.0, 6.0, 5.0, 4.0, 5.0, 5.0, 4.0, 5.0, 3.0, 6.0, 5.0, 6.0, 3.0, 4.0, 3.0, 3.0, 5.0, 4.0, 5.0, 3.0, 2.0, 3.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 6.0, 5.0, 5.0, 6.0, 5.0, 6.0, 7.0, 6.0, 6.0, 5.0, 3.0, 4.0, 5.0, 3.0, 5.0, 6.0, 5.0, 5.0, 4.0, 6.0, 3.0, 2.0, 2.0, 3.0, 3.0, 3.0, 4.0, 2.0, 2.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 4.0, 2.0, 2.0, 2.0, 2.0, 3.0, 4.0, 4.0, 6.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 5.0, 2.0, 4.0, 2.0, 3.0, 4.0, 5.0, 4.0, 2.0, 3.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>2.0317100329993094</td><td>0.03171003299930941</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 3.0, 1.0, 3.0, 3.0, 4.0, 5.0, 4.0, 2.0, 3.0, 3.0, 3.0, 3.0, 4.0, 2.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 6.0, 6.0, 6.0, 2.0, 2.0, 3.0, 4.0, 3.0, 3.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 2.0, 2.0, 2.0, 2.0, 4.0, 3.0, 2.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 3.0, 5.0, 5.0, 5.0, 2.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 6.0, 6.0, 7.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 2.0, 4.0, 4.0, 4.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 2.0]</td><td>2.0</td><td>1.5227812682365112</td><td>0.47721873176348883</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 2.0, 4.0, 4.0, 4.0, 2.0, 3.0, 2.0, 4.0, 1.0, 3.0, 1.0, 2.0, 2.0, 4.0, 3.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 6.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 5.0, 6.0, 4.0, 6.0, 4.0, 5.0, 4.0, 6.0, 4.0, 5.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 6.0, 4.0, 5.0, 5.0, 4.0, 5.0, 6.0, 6.0, 6.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 4.0, 2.0, 4.0]</td><td>4.0</td><td>2.770457188931039</td><td>1.2295428110689608</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 2.0, 4.0, 4.0, 3.0, 3.0, 5.0, 4.0, 1.0, 1.0, 1.0, 3.0, 3.0, 3.0, 3.0, 5.0, 5.0, 7.0, 5.0, 6.0, 7.0, 6.0, 4.0, 5.0, 6.0, 5.0, 5.0, 7.0, 7.0, 7.0, 3.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 5.0, 7.0, 5.0, 4.0, 4.0, 4.0, 1.0, 4.0, 4.0, 5.0, 3.0, 4.0, 3.0, 3.0, 4.0, 5.0, 3.0, 3.0, 7.0, 6.0, 5.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 5.0, 5.0, 3.0, 6.0, 6.0, 5.0, 7.0, 5.0, 3.0, 5.0, 5.0, 4.0, 1.0, 4.0, 5.0, 7.0, 3.0, 3.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 4.0, 3.0, 1.0, 2.0, 3.0, 7.0, 5.0, 5.0, 5.0, 2.0, 2.0, 3.0, 2.0, 4.0, 1.0, 1.0, 1.0, 4.0, 3.0, 4.0, 1.0, 4.0, 5.0, 5.0, 4.0, 2.0, 4.0, 4.0, 3.0, 5.0]</td><td>5.0</td><td>3.046771063990852</td><td>1.9532289360091482</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 2.0, 1.0, 4.0, 2.0, 3.0, 2.0, 5.0, 2.0, 2.0, 2.0, 2.0, 1.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 6.0, 7.0, 6.0, 5.0, 6.0, 3.0, 5.0, 2.0, 1.0, 6.0, 1.0, 1.0, 2.0, 5.0, 1.0, 1.0, 7.0, 2.0, 2.0, 1.0, 6.0, 1.0, 2.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 1.0, 4.0, 5.0, 2.0, 6.0, 1.0, 6.0, 4.0, 5.0, 6.0, 3.0, 5.0, 6.0, 6.0, 7.0, 3.0, 7.0, 4.0, 6.0, 6.0, 5.0, 4.0, 7.0, 7.0, 5.0, 4.0, 4.0, 3.0, 5.0, 4.0, 5.0, 6.0, 6.0, 5.0, 5.0, 4.0, 5.0, 5.0, 6.0, 6.0, 5.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 1.0, 6.0, 1.0, 1.0, 1.0, 1.0, 7.0, 6.0, 5.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 3.0, 1.0, 2.0, 5.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>4.998098042765596</td><td>0.0019019572344038949</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 2.0, 5.0, 5.0, 4.0, 1.0, 5.0, 1.0, 5.0, 2.0, 1.0, 1.0, 3.0, 5.0, 5.0, 4.0, 5.0, 6.0, 6.0, 7.0, 6.0, 5.0, 7.0, 3.0, 3.0, 3.0, 5.0, 6.0, 5.0, 4.0, 7.0, 5.0, 6.0, 6.0, 3.0, 6.0, 6.0, 7.0, 4.0, 5.0, 5.0, 5.0, 2.0, 3.0, 3.0, 4.0, 2.0, 6.0, 6.0, 3.0, 7.0, 7.0, 7.0, 5.0, 6.0, 7.0, 7.0, 6.0, 3.0, 5.0, 5.0, 5.0, 3.0, 3.0, 5.0, 2.0, 2.0, 2.0, 5.0, 1.0, 6.0, 6.0, 3.0, 6.0, 5.0, 5.0, 5.0, 6.0, 4.0, 5.0, 2.0, 2.0, 2.0, 6.0, 6.0, 6.0, 3.0, 5.0, 6.0, 7.0, 3.0, 6.0, 7.0, 3.0, 2.0, 2.0, 4.0, 5.0, 6.0, 5.0, 6.0, 3.0, 4.0, 6.0, 5.0, 3.0, 2.0, 2.0, 3.0, 2.0, 1.0, 1.0, 2.0, 2.0, 3.0, 2.0, 2.0, 2.0, 2.0, 4.0, 3.0, 2.0, 2.0, 4.0, 2.0, 1.0, 5.0]</td><td>5.0</td><td>4.566891382291103</td><td>0.4331086177088972</td>
+</tr>
+<tr>
+<td>[4.0, 5.0, 4.0, 3.0, 2.0, 4.0, 3.0, 3.0, 4.0, 5.0, 4.0, 4.0, 3.0, 3.0, 2.0, 4.0, 3.0, 5.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 5.0, 6.0, 6.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 4.0, 6.0, 4.0, 2.0, 2.0, 2.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 3.0, 4.0, 5.0, 2.0, 4.0, 3.0, 6.0, 6.0, 6.0, 5.0, 7.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 6.0, 5.0, 6.0, 2.0, 5.0, 6.0, 5.0, 3.0, 2.0, 2.0, 3.0, 2.0, 4.0, 2.0, 2.0, 2.0, 2.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 3.0, 2.0, 2.0, 1.0, 3.0, 2.0, 6.0, 6.0, 6.0, 6.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 2.0, 4.0, 2.0, 4.0, 3.0, 5.0, 3.0, 3.0, 4.0, 3.0, 1.0]</td><td>1.0</td><td>1.963747554956381</td><td>0.963747554956381</td>
+</tr>
+<tr>
+<td>[2.0, 4.0, 5.0, 2.0, 3.0, 1.0, 3.0, 4.0, 4.0, 4.0, 3.0, 3.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 5.0, 5.0, 6.0, 4.0, 6.0, 5.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 5.0, 3.0, 5.0, 6.0, 4.0, 2.0, 6.0, 3.0, 4.0, 3.0, 2.0, 2.0, 3.0, 5.0, 4.0, 2.0, 5.0, 4.0, 3.0, 5.0, 5.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 6.0, 4.0, 6.0, 2.0, 6.0, 3.0, 5.0, 5.0, 4.0, 5.0, 3.0, 4.0, 5.0, 5.0, 5.0, 4.0, 5.0, 3.0, 2.0, 6.0, 5.0, 3.0, 3.0, 2.0, 3.0, 4.0, 5.0, 4.0, 6.0, 6.0, 7.0, 6.0, 6.0, 4.0, 5.0, 4.0, 5.0, 3.0, 1.0, 1.0, 1.0, 5.0, 5.0, 2.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 3.0, 2.0, 2.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>3.2869715506651733</td><td>0.2869715506651733</td>
+</tr>
+<tr>
+<td>[2.0, 4.0, 5.0, 3.0, 5.0, 4.0, 4.0, 4.0, 5.0, 2.0, 5.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 5.0, 5.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 2.0, 2.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 2.0, 4.0, 2.0, 7.0, 7.0, 6.0, 4.0, 2.0, 1.0, 3.0, 6.0, 5.0, 6.0, 6.0, 2.0, 2.0, 2.0, 1.0, 1.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 4.0, 7.0, 4.0, 7.0, 5.0, 6.0, 6.0, 4.0, 2.0, 2.0, 2.0, 6.0, 5.0, 2.0, 4.0, 2.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 2.0, 2.0, 1.0, 2.0, 1.0, 6.0, 6.0, 6.0, 7.0, 2.0, 1.0, 1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 5.0, 5.0, 1.0, 4.0, 4.0, 5.0, 1.0, 2.0, 3.0, 3.0, 3.0, 1.0]</td><td>1.0</td><td>1.9831964463233334</td><td>0.9831964463233334</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 5.0, 2.0, 6.0, 6.0, 2.0, 3.0, 5.0, 4.0, 5.0, 5.0, 6.0, 4.0, 5.0, 3.0, 5.0, 5.0, 5.0, 3.0, 5.0, 2.0, 3.0, 3.0, 2.0, 2.0, 6.0, 5.0, 2.0, 2.0, 3.0, 6.0, 3.0, 6.0, 3.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 3.0, 2.0, 3.0, 2.0, 2.0, 2.0, 5.0, 2.0, 5.0, 6.0, 2.0, 5.0, 2.0, 6.0, 2.0, 6.0, 5.0, 2.0, 3.0, 3.0, 2.0, 6.0, 5.0, 6.0, 2.0, 6.0, 5.0, 6.0, 3.0, 6.0, 5.0, 2.0, 3.0, 2.0, 6.0, 2.0, 6.0, 2.0, 6.0, 2.0, 3.0, 5.0, 5.0, 6.0, 1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 4.0, 1.0, 2.0]</td><td>2.0</td><td>4.372658726572561</td><td>2.3726587265725607</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 4.0, 3.0, 1.0, 2.0, 3.0, 2.0, 5.0, 4.0, 4.0, 3.0, 3.0, 3.0, 5.0, 4.0, 5.0, 6.0, 5.0, 6.0, 7.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 4.0, 3.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 6.0, 6.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 1.0, 3.0, 4.0, 2.0, 5.0, 4.0, 2.0, 2.0, 3.0, 1.0, 2.0, 3.0, 6.0, 6.0, 5.0, 6.0, 7.0, 7.0, 6.0, 5.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 5.0, 6.0, 5.0, 5.0, 6.0, 4.0, 3.0, 2.0, 1.0, 4.0, 5.0, 5.0, 3.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 3.0, 5.0, 4.0, 3.0, 3.0, 5.0, 6.0, 5.0, 5.0, 5.0, 2.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 3.0, 2.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>2.2951200825517506</td><td>0.2951200825517506</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 1.0, 2.0, 1.0, 5.0, 1.0, 5.0, 4.0, 2.0, 2.0, 2.0, 1.0, 1.0, 4.0, 2.0, 2.0, 4.0, 6.0, 5.0, 6.0, 7.0, 6.0, 5.0, 6.0, 6.0, 6.0, 1.0, 1.0, 3.0, 2.0, 3.0, 2.0, 2.0, 6.0, 5.0, 6.0, 5.0, 5.0, 2.0, 6.0, 4.0, 4.0, 3.0, 3.0, 1.0, 4.0, 5.0, 5.0, 7.0, 7.0, 7.0, 2.0, 6.0, 3.0, 6.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 4.0, 5.0, 2.0, 6.0, 3.0, 3.0, 2.0, 4.0, 1.0, 5.0, 3.0, 3.0, 2.0, 6.0, 5.0, 3.0, 2.0, 3.0, 6.0, 6.0, 6.0, 5.0, 7.0, 7.0, 6.0, 6.0, 7.0, 6.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 3.0, 3.0, 2.0, 2.0, 2.0, 3.0, 1.0, 1.0, 1.0, 5.0, 4.0, 2.0, 4.0, 1.0, 4.0, 5.0, 3.0, 2.0, 3.0, 3.0, 2.0, 4.0]</td><td>4.0</td><td>3.663137788805038</td><td>0.33686221119496196</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 3.0, 5.0, 4.0, 3.0, 4.0, 2.0, 5.0, 3.0, 3.0, 2.0, 2.0, 2.0, 4.0, 4.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 4.0, 6.0, 3.0, 6.0, 6.0, 5.0, 5.0, 5.0, 7.0, 4.0, 4.0, 6.0, 7.0, 6.0, 7.0, 3.0, 3.0, 1.0, 7.0, 1.0, 6.0, 4.0, 3.0, 1.0, 1.0, 2.0, 1.0, 6.0, 3.0, 1.0, 2.0, 4.0, 2.0, 1.0, 1.0, 6.0, 7.0, 5.0, 6.0, 6.0, 5.0, 6.0, 4.0, 6.0, 4.0, 7.0, 5.0, 5.0, 4.0, 7.0, 5.0, 7.0, 7.0, 7.0, 4.0, 3.0, 4.0, 3.0, 1.0, 4.0, 4.0, 3.0, 4.0, 1.0, 7.0, 7.0, 3.0, 3.0, 6.0, 4.0, 4.0, 7.0, 6.0, 6.0, 3.0, 5.0, 2.0, 2.0, 6.0, 1.0, 5.0, 1.0, 2.0, 6.0, 1.0, 2.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 5.0, 2.0, 5.0, 3.0, 4.0, 5.0, 4.0, 3.0, 2.0, 3.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>2.2997908456452496</td><td>0.2997908456452496</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 1.0, 1.0, 5.0, 4.0, 2.0, 5.0, 3.0, 3.0, 4.0, 4.0, 3.0, 3.0, 3.0, 2.0, 2.0, 5.0, 2.0, 5.0, 4.0, 6.0, 3.0, 4.0, 3.0, 3.0, 5.0, 2.0, 5.0, 5.0, 5.0, 4.0, 3.0, 4.0, 4.0, 3.0, 5.0, 3.0, 5.0, 4.0, 4.0, 2.0, 6.0, 5.0, 4.0, 1.0, 4.0, 4.0, 3.0, 6.0, 5.0, 2.0, 4.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 6.0, 4.0, 3.0, 3.0, 4.0, 7.0, 6.0, 2.0, 1.0, 4.0, 3.0, 4.0, 2.0, 2.0, 3.0, 2.0, 4.0, 6.0, 7.0, 5.0, 2.0, 5.0, 6.0, 4.0, 3.0, 5.0, 4.0, 4.0, 2.0, 2.0, 4.0, 4.0, 6.0, 3.0, 6.0, 1.0, 4.0, 4.0, 5.0, 5.0, 2.0, 2.0, 3.0, 4.0, 2.0, 3.0, 5.0, 3.0, 3.0, 4.0, 4.0, 2.0, 3.0, 4.0, 2.0, 2.0, 2.0, 4.0, 2.0, 3.0, 3.0]</td><td>3.0</td><td>2.775319563963557</td><td>0.22468043603644317</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 5.0, 2.0, 1.0, 1.0, 2.0, 2.0, 4.0, 1.0, 1.0, 1.0, 2.0, 2.0, 4.0, 2.0, 5.0, 5.0, 5.0, 7.0, 6.0, 6.0, 2.0, 3.0, 5.0, 6.0, 2.0, 1.0, 5.0, 5.0, 5.0, 3.0, 3.0, 2.0, 4.0, 5.0, 5.0, 5.0, 5.0, 2.0, 7.0, 3.0, 4.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 5.0, 7.0, 5.0, 3.0, 2.0, 3.0, 3.0, 7.0, 7.0, 5.0, 7.0, 7.0, 5.0, 4.0, 5.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 5.0, 5.0, 1.0, 4.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 5.0, 5.0, 7.0, 6.0, 6.0, 5.0, 7.0, 7.0, 4.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 5.0, 1.0, 3.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0]</td><td>3.0</td><td>1.0875564220219534</td><td>1.9124435779780466</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 2.0, 3.0, 2.0, 2.0, 3.0, 4.0, 3.0, 4.0, 4.0, 3.0, 5.0, 6.0, 5.0, 6.0, 6.0, 2.0, 3.0, 3.0, 5.0, 3.0, 4.0, 3.0, 3.0, 5.0, 6.0, 5.0, 3.0, 3.0, 4.0, 3.0, 5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 3.0, 5.0, 3.0, 4.0, 5.0, 6.0, 5.0, 6.0, 3.0, 3.0, 3.0, 4.0, 3.0, 5.0, 5.0, 3.0, 4.0, 5.0, 4.0, 3.0, 5.0, 4.0, 5.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 5.0, 4.0, 5.0, 5.0, 2.0, 4.0, 5.0, 5.0, 4.0, 5.0, 3.0, 4.0, 3.0, 6.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 3.0, 4.0, 3.0, 3.0, 4.0, 5.0, 3.0, 2.0, 5.0, 5.0, 3.0, 4.0, 5.0, 5.0, 3.0, 2.0, 3.0, 2.0, 4.0, 2.0, 2.0, 2.0, 5.0, 2.0, 4.0, 3.0, 4.0, 3.0, 5.0, 3.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>2.7042355907505984</td><td>0.7042355907505984</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 2.0, 5.0, 2.0, 2.0, 5.0, 3.0, 5.0, 1.0, 2.0, 1.0, 1.0, 2.0, 2.0, 4.0, 5.0, 5.0, 6.0, 6.0, 7.0, 6.0, 3.0, 3.0, 4.0, 3.0, 3.0, 6.0, 6.0, 7.0, 7.0, 6.0, 4.0, 4.0, 5.0, 4.0, 2.0, 6.0, 7.0, 4.0, 7.0, 6.0, 2.0, 2.0, 2.0, 5.0, 4.0, 4.0, 5.0, 2.0, 4.0, 3.0, 5.0, 2.0, 4.0, 3.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 3.0, 2.0, 3.0, 3.0, 2.0, 6.0, 5.0, 3.0, 5.0, 6.0, 4.0, 5.0, 6.0, 7.0, 6.0, 6.0, 5.0, 3.0, 4.0, 3.0, 2.0, 4.0, 5.0, 6.0, 6.0, 4.0, 5.0, 6.0, 3.0, 5.0, 6.0, 5.0, 3.0, 2.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 7.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 5.0, 1.0, 5.0, 1.0, 5.0, 5.0, 1.0, 5.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>2.664325515755538</td><td>0.6643255157555381</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0, 5.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 3.0, 4.0, 5.0, 5.0, 6.0, 6.0, 6.0, 2.0, 5.0, 5.0, 5.0, 5.0, 4.0, 4.0, 3.0, 3.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 5.0, 3.0, 3.0, 2.0, 2.0, 3.0, 3.0, 2.0, 2.0, 2.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 5.0, 2.0, 1.0, 2.0, 3.0, 2.0, 2.0, 3.0, 2.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 5.0, 4.0, 3.0, 6.0, 3.0, 5.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 2.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 2.0]</td><td>2.0</td><td>2.0210822077773467</td><td>0.021082207777346706</td>
+</tr>
+<tr>
+<td>[4.0, 4.0, 5.0, 1.0, 1.0, 3.0, 2.0, 5.0, 4.0, 2.0, 2.0, 2.0, 1.0, 1.0, 3.0, 4.0, 2.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 5.0, 6.0, 6.0, 7.0, 6.0, 3.0, 3.0, 3.0, 3.0, 2.0, 5.0, 6.0, 5.0, 3.0, 7.0, 5.0, 4.0, 2.0, 3.0, 3.0, 4.0, 3.0, 3.0, 1.0, 3.0, 1.0, 1.0, 2.0, 2.0, 1.0, 5.0, 2.0, 2.0, 2.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 3.0, 7.0, 5.0, 6.0, 3.0, 3.0, 3.0, 2.0, 2.0, 3.0, 3.0, 2.0, 1.0, 2.0, 6.0, 7.0, 6.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 5.0, 3.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 3.0, 4.0, 5.0, 4.0, 2.0, 1.0, 4.0, 4.0, 4.0, 1.0]</td><td>1.0</td><td>0.17355076035109118</td><td>0.8264492396489088</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 4.0, 4.0, 3.0, 4.0, 2.0, 4.0, 3.0, 2.0, 4.0, 4.0, 3.0, 2.0, 2.0, 4.0, 3.0, 5.0, 6.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 4.0, 6.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 5.0, 3.0, 5.0, 5.0, 5.0, 3.0, 1.0, 2.0, 4.0, 5.0, 4.0, 5.0, 5.0, 2.0, 3.0, 5.0, 1.0, 3.0, 4.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 1.0, 2.0, 1.0, 2.0, 2.0, 2.0, 4.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 5.0, 5.0, 4.0, 5.0, 6.0, 7.0, 7.0, 5.0, 5.0, 2.0, 3.0, 4.0, 1.0, 2.0, 2.0, 1.0, 1.0, 3.0, 5.0, 5.0, 5.0, 4.0, 4.0, 5.0, 4.0, 5.0, 2.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.3883901052892629</td><td>0.6116098947107371</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 2.0, 2.0, 1.0, 4.0, 2.0, 2.0, 2.0, 1.0, 1.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 6.0, 7.0, 5.0, 6.0, 5.0, 7.0, 7.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 2.0, 1.0, 7.0, 5.0, 6.0, 5.0, 7.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 5.0, 6.0, 4.0, 5.0, 6.0, 6.0, 5.0, 5.0, 2.0, 5.0, 5.0, 3.0, 5.0, 3.0, 1.0, 2.0, 3.0, 5.0, 2.0, 6.0, 5.0, 3.0, 5.0, 5.0, 5.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 4.0, 1.0, 3.0, 1.0, 7.0, 7.0, 7.0, 6.0, 2.0, 1.0, 1.0, 1.0, 2.0, 2.0, 1.0, 1.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>3.120894942313915</td><td>0.12089494231391518</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 2.0, 4.0, 2.0, 5.0, 4.0, 5.0, 1.0, 5.0, 4.0, 4.0, 3.0, 2.0, 4.0, 5.0, 5.0, 6.0, 6.0, 7.0, 5.0, 6.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 5.0, 3.0, 5.0, 6.0, 4.0, 3.0, 3.0, 5.0, 3.0, 5.0, 3.0, 2.0, 5.0, 5.0, 2.0, 4.0, 5.0, 2.0, 3.0, 5.0, 3.0, 3.0, 4.0, 3.0, 6.0, 3.0, 6.0, 3.0, 4.0, 5.0, 3.0, 7.0, 7.0, 7.0, 6.0, 5.0, 6.0, 7.0, 7.0, 5.0, 6.0, 3.0, 6.0, 7.0, 4.0, 5.0, 4.0, 4.0, 3.0, 3.0, 2.0, 4.0, 4.0, 3.0, 3.0, 5.0, 4.0, 4.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 4.0, 6.0, 6.0, 4.0, 4.0, 4.0, 3.0, 2.0, 5.0, 3.0, 4.0, 4.0, 5.0, 6.0, 2.0, 1.0, 3.0, 2.0, 3.0, 2.0, 2.0, 1.0, 4.0, 3.0, 4.0, 3.0, 3.0, 5.0, 3.0, 1.0, 3.0, 4.0, 4.0, 3.0, 3.0]</td><td>3.0</td><td>3.1294461629097894</td><td>0.1294461629097894</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 1.0, 1.0, 4.0, 2.0, 1.0, 5.0, 2.0, 5.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 2.0, 5.0, 6.0, 6.0, 4.0, 6.0, 4.0, 5.0, 4.0, 4.0, 6.0, 5.0, 1.0, 1.0, 3.0, 3.0, 1.0, 2.0, 2.0, 3.0, 3.0, 3.0, 5.0, 4.0, 4.0, 5.0, 4.0, 7.0, 7.0, 4.0, 4.0, 7.0, 7.0, 5.0, 6.0, 6.0, 7.0, 1.0, 7.0, 1.0, 7.0, 5.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 3.0, 5.0, 5.0, 4.0, 6.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 1.0, 1.0, 4.0, 4.0, 4.0, 1.0, 1.0, 1.0, 4.0, 4.0, 4.0, 1.0, 1.0, 7.0, 2.0, 2.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 1.0, 1.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>3.2424421087512894</td><td>0.24244210875128935</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 2.0, 5.0, 2.0, 1.0, 2.0, 2.0, 2.0, 5.0, 4.0, 5.0, 4.0, 7.0, 6.0, 5.0, 7.0, 6.0, 5.0, 4.0, 6.0, 7.0, 2.0, 6.0, 5.0, 7.0, 5.0, 7.0, 7.0, 7.0, 6.0, 7.0, 4.0, 1.0, 1.0, 2.0, 1.0, 2.0, 3.0, 5.0, 1.0, 5.0, 3.0, 4.0, 4.0, 7.0, 7.0, 3.0, 5.0, 3.0, 5.0, 4.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 3.0, 6.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 2.0, 3.0, 2.0, 2.0, 2.0, 4.0, 2.0, 5.0, 6.0, 3.0, 6.0, 6.0, 4.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 6.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 6.0, 1.0, 1.0, 7.0, 2.0, 2.0, 2.0, 1.0, 2.0, 2.0, 1.0, 1.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 3.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>2.634576604590983</td><td>0.6345766045909831</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 3.0, 4.0, 1.0, 3.0, 2.0, 5.0, 4.0, 5.0, 1.0, 3.0, 1.0, 2.0, 1.0, 5.0, 2.0, 2.0, 6.0, 6.0, 6.0, 4.0, 7.0, 4.0, 6.0, 4.0, 7.0, 7.0, 4.0, 3.0, 6.0, 3.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 5.0, 2.0, 7.0, 2.0, 2.0, 6.0, 4.0, 1.0, 3.0, 6.0, 6.0, 7.0, 7.0, 3.0, 5.0, 6.0, 1.0, 7.0, 4.0, 5.0, 7.0, 6.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 6.0, 7.0, 5.0, 7.0, 6.0, 7.0, 7.0, 5.0, 7.0, 7.0, 2.0, 3.0, 4.0, 2.0, 2.0, 5.0, 4.0, 6.0, 4.0, 2.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 7.0, 5.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 2.0, 1.0, 3.0, 3.0, 2.0, 2.0, 3.0, 1.0, 3.0, 1.0, 5.0, 3.0, 4.0, 2.0, 5.0, 5.0, 5.0, 2.0, 3.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>4.468439245254617</td><td>0.46843924525461667</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 2.0, 2.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 3.0, 2.0, 4.0, 2.0, 5.0, 5.0, 5.0, 5.0, 5.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 3.0, 6.0, 4.0, 5.0, 6.0, 6.0, 3.0, 5.0, 6.0, 6.0, 5.0, 2.0, 5.0, 2.0, 4.0, 2.0, 2.0, 1.0, 6.0, 5.0, 3.0, 4.0, 3.0, 3.0, 5.0, 4.0, 5.0, 4.0, 3.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 7.0, 7.0, 7.0, 7.0, 3.0, 7.0, 7.0, 7.0, 4.0, 2.0, 3.0, 1.0, 1.0, 2.0, 4.0, 5.0, 4.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 3.0, 7.0, 7.0, 5.0, 4.0, 5.0, 2.0, 2.0, 2.0, 2.0, 6.0, 5.0, 5.0, 6.0, 1.0, 2.0, 2.0, 1.0, 4.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 3.0, 2.0, 3.0, 3.0, 2.0, 4.0]</td><td>4.0</td><td>4.862979733211685</td><td>0.8629797332116853</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 1.0, 5.0, 3.0, 1.0, 5.0, 1.0, 3.0, 3.0, 4.0, 2.0, 4.0, 3.0, 3.0, 4.0, 5.0, 2.0, 2.0, 1.0, 7.0, 7.0, 7.0, 7.0, 1.0, 1.0, 1.0, 6.0, 4.0, 6.0, 4.0, 3.0, 6.0, 6.0, 6.0, 5.0, 2.0, 6.0, 6.0, 4.0, 7.0, 1.0, 4.0, 4.0, 3.0, 1.0, 1.0, 3.0, 2.0, 1.0, 3.0, 1.0, 5.0, 3.0, 5.0, 1.0, 3.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 7.0, 6.0, 7.0, 7.0, 7.0, 3.0, 5.0, 2.0, 1.0, 1.0, 3.0, 4.0, 5.0, 2.0, 1.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 5.0, 4.0, 5.0, 3.0, 1.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 1.0, 1.0, 5.0, 2.0, 5.0, 2.0, 5.0, 5.0, 3.0, 5.0, 4.0, 4.0, 4.0, 4.0, 3.0]</td><td>3.0</td><td>0.6640056702123001</td><td>2.3359943297876997</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 1.0, 2.0, 2.0, 2.0, 4.0, 4.0, 5.0, 4.0, 2.0, 4.0, 3.0, 2.0, 5.0, 4.0, 5.0, 6.0, 5.0, 7.0, 6.0, 7.0, 6.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 3.0, 5.0, 4.0, 5.0, 3.0, 4.0, 2.0, 3.0, 3.0, 5.0, 3.0, 5.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 3.0, 5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 3.0, 2.0, 4.0, 2.0, 5.0, 2.0, 4.0, 5.0, 3.0, 2.0, 5.0, 6.0, 5.0, 7.0, 6.0, 5.0, 5.0, 6.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 5.0, 3.0, 2.0, 3.0, 1.0, 2.0, 2.0, 1.0, 1.0, 1.0, 5.0, 2.0, 5.0, 2.0, 5.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 2.0, 4.0]</td><td>4.0</td><td>2.9545796473079142</td><td>1.0454203526920858</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 1.0, 1.0, 1.0, 1.0, 4.0, 1.0, 3.0, 3.0, 5.0, 4.0, 2.0, 4.0, 4.0, 6.0, 3.0, 3.0, 4.0, 4.0, 1.0, 4.0, 2.0, 3.0, 5.0, 2.0, 6.0, 2.0, 5.0, 4.0, 6.0, 5.0, 4.0, 4.0, 5.0, 4.0, 4.0, 3.0, 4.0, 2.0, 5.0, 6.0, 4.0, 2.0, 5.0, 4.0, 5.0, 6.0, 4.0, 5.0, 5.0, 6.0, 3.0, 5.0, 4.0, 3.0, 5.0, 4.0, 4.0, 7.0, 3.0, 5.0, 5.0, 6.0, 6.0, 6.0, 2.0, 6.0, 5.0, 5.0, 2.0, 4.0, 3.0, 3.0, 3.0, 5.0, 4.0, 6.0, 4.0, 4.0, 2.0, 6.0, 2.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 3.0, 4.0, 3.0, 1.0, 6.0, 4.0, 4.0, 2.0, 7.0, 1.0, 2.0, 1.0, 3.0, 2.0, 2.0, 2.0, 1.0, 4.0, 3.0, 2.0, 3.0, 4.0, 5.0, 3.0, 5.0, 2.0, 2.0, 2.0, 2.0, 5.0]</td><td>5.0</td><td>3.6446288884150038</td><td>1.3553711115849962</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 4.0, 1.0, 4.0, 2.0, 4.0, 4.0, 5.0, 5.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 3.0, 4.0, 3.0, 5.0, 5.0, 7.0, 7.0, 6.0, 5.0, 4.0, 5.0, 4.0, 3.0, 5.0, 5.0, 5.0, 3.0, 5.0, 6.0, 3.0, 5.0, 5.0, 3.0, 2.0, 2.0, 3.0, 3.0, 2.0, 4.0, 5.0, 2.0, 3.0, 5.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 2.0, 4.0, 5.0, 6.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 7.0, 6.0, 4.0, 5.0, 5.0, 6.0, 3.0, 7.0, 5.0, 6.0, 5.0, 5.0, 4.0, 4.0, 3.0, 3.0, 3.0, 5.0, 4.0, 5.0, 3.0, 3.0, 5.0, 6.0, 6.0, 3.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 5.0, 3.0, 2.0, 3.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 3.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 4.0]</td><td>4.0</td><td>3.5921378904357564</td><td>0.4078621095642436</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 5.0, 5.0, 4.0, 3.0, 4.0, 1.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 5.0, 4.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 3.0, 1.0, 5.0, 4.0, 3.0, 4.0, 3.0, 1.0, 3.0, 6.0, 7.0, 4.0, 6.0, 6.0, 6.0, 6.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 3.0, 4.0, 2.0, 5.0, 3.0, 6.0, 4.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 2.0, 4.0, 5.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 2.0]</td><td>2.0</td><td>3.2980958920150076</td><td>1.2980958920150076</td>
+</tr>
+<tr>
+<td>[4.0, 5.0, 4.0, 4.0, 4.0, 3.0, 2.0, 4.0, 3.0, 5.0, 5.0, 3.0, 5.0, 3.0, 2.0, 4.0, 4.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 5.0, 4.0, 6.0, 6.0, 5.0, 5.0, 5.0, 4.0, 6.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 4.0, 1.0, 4.0, 5.0, 3.0, 3.0, 3.0, 1.0, 2.0, 5.0, 6.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 6.0, 3.0, 3.0, 7.0, 5.0, 5.0, 5.0, 4.0, 5.0, 2.0, 2.0, 2.0, 1.0, 2.0, 2.0, 4.0, 2.0, 2.0, 6.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 4.0, 3.0, 4.0, 3.0, 6.0, 5.0, 5.0, 4.0, 2.0, 2.0, 3.0, 1.0, 1.0, 1.0, 1.0, 2.0, 5.0, 4.0, 2.0, 1.0, 2.0, 5.0, 2.0, 2.0, 3.0, 4.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>1.0744713631251637</td><td>0.07447136312516367</td>
+</tr>
+<tr>
+<td>[5.0, 4.0, 3.0, 2.0, 1.0, 2.0, 2.0, 4.0, 4.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 4.0, 5.0, 7.0, 7.0, 6.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 2.0, 1.0, 5.0, 1.0, 4.0, 5.0, 4.0, 1.0, 4.0, 1.0, 1.0, 3.0, 3.0, 3.0, 2.0, 1.0, 2.0, 2.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 1.0, 1.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 7.0, 7.0, 7.0, 2.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 7.0, 4.0, 3.0, 3.0, 3.0, 1.0, 2.0, 2.0, 2.0, 5.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.0, 3.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>0.836464796792858</td><td>0.163535203207142</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 5.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 2.0, 3.0, 3.0, 2.0, 2.0, 3.0, 3.0, 4.0, 5.0, 5.0, 4.0, 6.0, 7.0, 5.0, 7.0, 5.0, 6.0, 7.0, 4.0, 4.0, 5.0, 5.0, 4.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 2.0, 4.0, 5.0, 5.0, 3.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 4.0, 6.0, 2.0, 6.0, 4.0, 4.0, 3.0, 4.0, 5.0, 5.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 7.0, 7.0, 5.0, 3.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 5.0, 6.0, 4.0, 3.0, 2.0, 2.0, 4.0, 3.0, 4.0, 2.0, 2.0, 6.0, 7.0, 7.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 6.0, 4.0, 3.0, 3.0, 1.0, 3.0, 3.0, 5.0, 4.0, 2.0, 6.0, 1.0, 3.0, 4.0, 1.0, 2.0, 1.0, 1.0, 1.0, 4.0, 2.0, 3.0, 5.0, 3.0, 5.0, 3.0, 4.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.9996385024631063</td><td>3.614975368937401E-4</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 4.0, 2.0, 2.0, 1.0, 2.0, 5.0, 4.0, 4.0, 2.0, 4.0, 4.0, 3.0, 5.0, 3.0, 3.0, 5.0, 6.0, 6.0, 4.0, 5.0, 4.0, 6.0, 5.0, 7.0, 6.0, 5.0, 4.0, 5.0, 6.0, 4.0, 6.0, 6.0, 4.0, 6.0, 4.0, 5.0, 4.0, 1.0, 2.0, 1.0, 2.0, 2.0, 3.0, 1.0, 1.0, 6.0, 4.0, 3.0, 4.0, 3.0, 4.0, 5.0, 3.0, 5.0, 4.0, 5.0, 5.0, 6.0, 4.0, 7.0, 6.0, 6.0, 5.0, 7.0, 6.0, 4.0, 5.0, 6.0, 3.0, 7.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 1.0, 4.0, 2.0, 6.0, 2.0, 6.0, 3.0, 1.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 6.0, 3.0, 3.0, 6.0, 5.0, 7.0, 3.0, 5.0, 5.0, 2.0, 3.0, 3.0, 1.0, 2.0, 1.0, 1.0, 1.0, 5.0, 2.0, 5.0, 3.0, 5.0, 5.0, 5.0, 2.0, 1.0, 4.0, 4.0, 3.0, 3.0]</td><td>3.0</td><td>2.980679990910062</td><td>0.01932000908993814</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 2.0, 3.0, 2.0, 3.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 6.0, 6.0, 6.0, 6.0, 7.0, 4.0, 2.0, 4.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 4.0, 5.0, 6.0, 6.0, 4.0, 7.0, 4.0, 4.0, 6.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 6.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 6.0, 2.0, 6.0, 6.0, 6.0, 4.0, 5.0, 5.0, 5.0, 3.0, 6.0, 4.0, 4.0, 3.0, 4.0, 6.0, 6.0, 5.0, 5.0, 4.0, 4.0, 5.0, 5.0, 3.0, 5.0, 6.0, 6.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 3.0, 2.0, 2.0, 1.0, 4.0, 2.0, 4.0, 2.0, 4.0, 4.0, 2.0, 4.0, 3.0, 3.0, 3.0, 2.0, 4.0]</td><td>4.0</td><td>3.889937340297318</td><td>0.11006265970268192</td>
+</tr>
+<tr>
+<td>[1.0, 2.0, 2.0, 4.0, 3.0, 4.0, 2.0, 4.0, 2.0, 5.0, 2.0, 4.0, 2.0, 3.0, 4.0, 2.0, 1.0, 2.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 1.0, 1.0, 6.0, 5.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 3.0, 5.0, 6.0, 7.0, 4.0, 6.0, 6.0, 5.0, 7.0, 5.0, 5.0, 3.0, 5.0, 5.0, 6.0, 4.0, 5.0, 2.0, 5.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 4.0, 4.0, 7.0, 6.0, 2.0, 5.0, 6.0, 5.0, 7.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 2.0, 1.0, 3.0, 5.0, 5.0, 4.0, 3.0, 6.0, 6.0, 5.0, 7.0, 5.0, 4.0, 6.0, 6.0, 5.0, 6.0, 6.0, 3.0, 6.0, 5.0, 5.0, 3.0, 6.0, 3.0, 5.0, 2.0, 3.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 4.0, 4.0, 2.0, 2.0, 2.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>4.657764914879616</td><td>0.6577649148796159</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 3.0, 4.0, 3.0, 3.0, 3.0, 2.0, 2.0, 1.0, 4.0, 3.0, 5.0, 5.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 6.0, 2.0, 1.0, 1.0, 2.0, 1.0, 2.0, 4.0, 4.0, 3.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 4.0, 5.0, 5.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 5.0, 3.0, 2.0, 2.0, 2.0, 4.0, 2.0, 2.0, 1.0, 1.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 4.0, 6.0, 7.0, 4.0, 5.0, 7.0, 2.0, 4.0, 4.0, 4.0, 6.0, 6.0, 6.0, 4.0, 2.0, 2.0, 1.0, 2.0, 3.0, 1.0, 2.0, 1.0, 5.0, 5.0, 5.0, 4.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.8398689596202853</td><td>0.1601310403797147</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 1.0, 3.0, 1.0, 1.0, 1.0, 5.0, 5.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 1.0, 4.0, 5.0, 5.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 3.0, 4.0, 5.0, 4.0, 4.0, 6.0, 7.0, 4.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 1.0, 4.0, 3.0, 3.0, 3.0, 4.0, 3.0, 1.0, 4.0, 1.0, 4.0, 3.0, 4.0, 3.0, 3.0, 4.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 5.0, 7.0, 6.0, 7.0, 7.0, 6.0, 3.0, 6.0, 6.0, 1.0, 3.0, 4.0, 4.0, 2.0, 4.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 1.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 3.0, 1.0, 1.0, 4.0, 5.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>3.2534792811337954</td><td>0.7465207188662046</td>
+</tr>
+<tr>
+<td>[2.0, 3.0, 3.0, 2.0, 4.0, 3.0, 3.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 2.0, 2.0, 5.0, 4.0, 5.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 4.0, 4.0, 4.0, 5.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 3.0, 5.0, 4.0, 1.0, 4.0, 3.0, 3.0, 2.0, 4.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 4.0, 2.0, 3.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 5.0, 6.0, 3.0, 6.0, 6.0, 6.0, 3.0, 3.0, 3.0, 2.0, 2.0, 3.0, 2.0, 4.0, 3.0, 2.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 4.0, 4.0, 4.0, 2.0, 3.0, 3.0, 5.0, 5.0, 4.0, 6.0, 3.0, 3.0, 1.0, 2.0, 3.0, 1.0, 1.0, 1.0, 5.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 3.0, 1.0, 3.0, 4.0, 1.0, 2.0]</td><td>2.0</td><td>2.1534789762802515</td><td>0.15347897628025153</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 4.0, 4.0, 2.0, 2.0, 3.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 7.0, 5.0, 3.0, 4.0, 5.0, 6.0, 4.0, 5.0, 4.0, 5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 5.0, 2.0, 1.0, 3.0, 2.0, 2.0, 4.0, 4.0, 1.0, 4.0, 4.0, 5.0, 3.0, 5.0, 4.0, 4.0, 5.0, 3.0, 5.0, 5.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 4.0, 5.0, 6.0, 5.0, 6.0, 7.0, 6.0, 4.0, 6.0, 4.0, 6.0, 6.0, 5.0, 4.0, 4.0, 4.0, 2.0, 2.0, 3.0, 4.0, 4.0, 3.0, 3.0, 2.0, 6.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 6.0, 4.0, 3.0, 4.0, 3.0, 4.0, 4.0, 5.0, 4.0, 3.0, 4.0, 2.0, 3.0, 3.0, 2.0, 3.0, 3.0, 2.0, 3.0, 5.0, 2.0, 4.0, 2.0, 4.0, 5.0, 4.0, 3.0, 2.0, 4.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>2.450706021813515</td><td>0.5492939781864852</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 2.0, 4.0, 4.0, 4.0, 2.0, 4.0, 2.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 4.0, 4.0, 3.0, 6.0, 6.0, 6.0, 6.0, 2.0, 6.0, 2.0, 2.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 2.0, 5.0, 2.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 3.0, 2.0, 2.0, 5.0, 5.0, 6.0, 6.0, 6.0, 2.0, 6.0, 6.0, 6.0, 2.0, 6.0, 6.0, 6.0, 2.0, 6.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 6.0, 1.0, 4.0, 3.0, 2.0, 1.0, 1.0, 1.0, 3.0, 5.0, 1.0, 4.0, 2.0, 4.0, 4.0, 2.0, 1.0, 1.0, 1.0, 1.0, 2.0, 5.0]</td><td>5.0</td><td>4.9675731915264425</td><td>0.0324268084735575</td>
+</tr>
+<tr>
+<td>[2.0, 1.0, 3.0, 2.0, 2.0, 5.0, 3.0, 5.0, 2.0, 3.0, 1.0, 1.0, 1.0, 2.0, 2.0, 3.0, 4.0, 4.0, 4.0, 4.0, 6.0, 5.0, 6.0, 4.0, 6.0, 7.0, 7.0, 7.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 5.0, 6.0, 5.0, 2.0, 1.0, 2.0, 2.0, 2.0, 4.0, 3.0, 4.0, 5.0, 2.0, 4.0, 5.0, 6.0, 6.0, 5.0, 6.0, 3.0, 6.0, 5.0, 6.0, 2.0, 4.0, 6.0, 7.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 5.0, 6.0, 4.0, 7.0, 2.0, 4.0, 4.0, 4.0, 6.0, 3.0, 2.0, 4.0, 3.0, 4.0, 4.0, 4.0, 3.0, 2.0, 6.0, 4.0, 4.0, 5.0, 6.0, 7.0, 4.0, 4.0, 4.0, 4.0, 2.0, 3.0, 2.0, 2.0, 2.0, 2.0, 5.0, 4.0, 4.0, 6.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 5.0, 4.0, 3.0, 4.0, 3.0, 4.0, 3.0, 4.0, 2.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.2072152709515183</td><td>0.7927847290484817</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 2.0, 4.0, 4.0, 2.0, 5.0, 4.0, 5.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 3.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 2.0, 6.0, 3.0, 7.0, 7.0, 6.0, 5.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 4.0, 7.0, 5.0, 7.0, 6.0, 1.0, 1.0, 2.0, 1.0, 1.0, 5.0, 5.0, 2.0, 6.0, 1.0, 5.0, 4.0, 7.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 5.0, 4.0, 1.0, 1.0, 1.0, 3.0, 5.0, 5.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 6.0, 7.0, 1.0, 1.0, 4.0, 7.0, 7.0, 5.0, 7.0, 1.0, 3.0, 2.0, 4.0, 3.0, 4.0, 1.0, 1.0, 2.0, 5.0, 1.0, 5.0, 1.0, 5.0, 5.0, 4.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0]</td><td>4.0</td><td>2.553674491090824</td><td>1.446325508909176</td>
+</tr>
+<tr>
+<td>[1.0, 3.0, 2.0, 4.0, 2.0, 4.0, 1.0, 3.0, 2.0, 4.0, 3.0, 3.0, 2.0, 3.0, 2.0, 4.0, 4.0, 5.0, 5.0, 6.0, 4.0, 5.0, 6.0, 5.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 2.0, 3.0, 4.0, 5.0, 4.0, 4.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 3.0, 4.0, 5.0, 6.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 6.0, 5.0, 6.0, 4.0, 6.0, 6.0, 6.0, 4.0, 5.0, 4.0, 2.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 6.0, 4.0, 6.0, 6.0, 6.0, 5.0, 4.0, 5.0, 6.0, 4.0, 4.0, 4.0, 3.0, 2.0, 4.0, 2.0, 4.0, 4.0, 4.0, 6.0, 2.0, 2.0, 2.0, 1.0, 2.0, 1.0, 2.0, 1.0, 4.0, 2.0, 5.0, 2.0, 4.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.2705297358555567</td><td>0.7294702641444433</td>
+</tr>
+<tr>
+<td>[2.0, 5.0, 2.0, 5.0, 2.0, 2.0, 2.0, 3.0, 4.0, 4.0, 1.0, 1.0, 2.0, 1.0, 2.0, 4.0, 4.0, 5.0, 5.0, 3.0, 6.0, 5.0, 6.0, 6.0, 6.0, 4.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 4.0, 4.0, 1.0, 3.0, 2.0, 1.0, 4.0, 3.0, 1.0, 3.0, 5.0, 6.0, 2.0, 6.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 7.0, 6.0, 7.0, 5.0, 5.0, 4.0, 7.0, 3.0, 6.0, 6.0, 5.0, 5.0, 5.0, 3.0, 3.0, 2.0, 4.0, 3.0, 3.0, 3.0, 2.0, 7.0, 6.0, 4.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 2.0, 3.0, 2.0, 2.0, 4.0, 2.0, 4.0, 3.0, 2.0, 6.0, 1.0, 3.0, 3.0, 2.0, 2.0, 1.0, 1.0, 2.0, 5.0, 4.0, 4.0, 4.0, 3.0, 5.0, 5.0, 4.0, 3.0, 4.0, 4.0, 2.0, 4.0]</td><td>4.0</td><td>2.7071953230439543</td><td>1.2928046769560457</td>
+</tr>
+<tr>
+<td>[2.0, 5.0, 3.0, 5.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 1.0, 4.0, 3.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 1.0, 1.0, 2.0, 1.0, 4.0, 5.0, 2.0, 6.0, 4.0, 2.0, 6.0, 2.0, 6.0, 2.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 5.0, 4.0, 3.0, 3.0, 6.0, 4.0, 3.0, 5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 3.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 2.0, 1.0, 1.0, 1.0, 2.0, 1.0, 5.0, 5.0, 5.0, 4.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 3.0, 3.0, 5.0, 6.0, 3.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 2.0, 2.0, 2.0, 2.0, 3.0, 2.0, 2.0, 1.0, 4.0, 2.0, 4.0, 2.0, 3.0, 4.0, 3.0, 2.0, 3.0, 4.0, 4.0, 4.0, 1.0]</td><td>1.0</td><td>1.108298558479527</td><td>0.10829855847952707</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 4.0, 1.0, 2.0, 3.0, 4.0, 5.0, 5.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 4.0, 3.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 4.0, 5.0, 7.0, 6.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 4.0, 3.0, 5.0, 6.0, 2.0, 5.0, 5.0, 1.0, 4.0, 5.0, 4.0, 3.0, 6.0, 7.0, 5.0, 6.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 5.0, 5.0, 7.0, 6.0, 5.0, 3.0, 4.0, 6.0, 3.0, 4.0, 5.0, 3.0, 3.0, 5.0, 4.0, 4.0, 4.0, 5.0, 6.0, 6.0, 5.0, 4.0, 6.0, 5.0, 5.0, 6.0, 6.0, 1.0, 5.0, 4.0, 2.0, 4.0, 4.0, 5.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 5.0, 2.0, 3.0, 3.0, 3.0, 3.0, 2.0, 4.0, 4.0, 3.0, 5.0]</td><td>5.0</td><td>4.172270122909853</td><td>0.8277298770901469</td>
+</tr>
+<tr>
+<td>[4.0, 5.0, 2.0, 4.0, 5.0, 3.0, 3.0, 5.0, 4.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 3.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 3.0, 2.0, 1.0, 3.0, 5.0, 7.0, 7.0, 7.0, 4.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 4.0, 7.0, 7.0, 1.0, 7.0, 1.0, 1.0, 1.0, 7.0, 7.0, 4.0, 7.0, 1.0, 4.0, 1.0, 7.0, 1.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 7.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 4.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 4.0, 1.0, 1.0, 1.0, 7.0, 1.0, 7.0, 7.0, 7.0, 3.0, 5.0, 5.0, 1.0, 5.0, 1.0, 1.0, 4.0, 5.0, 2.0, 5.0, 1.0, 5.0, 5.0, 1.0, 1.0, 4.0, 4.0, 4.0, 4.0, 1.0]</td><td>1.0</td><td>-0.10015916724091278</td><td>1.1001591672409128</td>
+</tr>
+<tr>
+<td>[5.0, 4.0, 4.0, 3.0, 4.0, 2.0, 3.0, 3.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 5.0, 4.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 4.0, 4.0, 2.0, 5.0, 3.0, 2.0, 3.0, 3.0, 1.0, 2.0, 6.0, 6.0, 2.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 4.0, 7.0, 5.0, 5.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 6.0, 5.0, 5.0, 5.0, 3.0, 3.0, 1.0, 2.0, 1.0, 2.0, 2.0, 1.0, 3.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 2.0, 4.0, 2.0, 4.0, 3.0, 4.0, 4.0, 4.0, 2.0, 2.0, 3.0, 4.0, 2.0, 1.0]</td><td>1.0</td><td>1.1426416259473706</td><td>0.14264162594737062</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 2.0, 5.0, 4.0, 4.0, 1.0, 5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 1.0, 6.0, 6.0, 2.0, 2.0, 5.0, 6.0, 4.0, 5.0, 6.0, 7.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 6.0, 7.0, 3.0, 7.0, 7.0, 2.0, 6.0, 7.0, 5.0, 6.0, 7.0, 6.0, 2.0, 6.0, 2.0, 1.0, 2.0, 5.0, 5.0, 6.0, 4.0, 2.0, 4.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 5.0, 5.0, 7.0, 5.0, 6.0, 5.0, 4.0, 4.0, 3.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 2.0, 3.0, 5.0, 2.0, 4.0, 1.0, 4.0, 4.0, 2.0, 2.0, 3.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>2.985170287293533</td><td>2.014829712706467</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 3.0, 2.0, 5.0, 2.0, 5.0, 4.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 3.0, 4.0, 1.0, 7.0, 6.0, 5.0, 5.0, 6.0, 5.0, 7.0, 6.0, 7.0, 7.0, 7.0, 5.0, 7.0, 2.0, 6.0, 5.0, 1.0, 1.0, 3.0, 1.0, 1.0, 6.0, 6.0, 1.0, 5.0, 1.0, 6.0, 3.0, 7.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 7.0, 7.0, 7.0, 3.0, 7.0, 7.0, 7.0, 3.0, 4.0, 5.0, 1.0, 1.0, 1.0, 2.0, 7.0, 6.0, 5.0, 7.0, 6.0, 5.0, 7.0, 7.0, 6.0, 5.0, 7.0, 7.0, 3.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 1.0, 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 1.0, 5.0, 5.0, 5.0, 5.0, 2.0, 4.0, 3.0, 3.0, 4.0]</td><td>4.0</td><td>3.554741764289457</td><td>0.445258235710543</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 3.0, 4.0, 2.0, 1.0, 3.0, 5.0, 4.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 4.0, 3.0, 5.0, 4.0, 7.0, 6.0, 6.0, 6.0, 5.0, 4.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 5.0, 3.0, 2.0, 6.0, 6.0, 4.0, 4.0, 3.0, 4.0, 6.0, 3.0, 4.0, 4.0, 5.0, 5.0, 3.0, 4.0, 5.0, 4.0, 5.0, 5.0, 2.0, 5.0, 5.0, 6.0, 6.0, 4.0, 5.0, 6.0, 6.0, 6.0, 2.0, 6.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 6.0, 6.0, 6.0, 2.0, 3.0, 5.0, 6.0, 5.0, 4.0, 3.0, 3.0, 5.0, 2.0, 4.0, 5.0, 4.0, 5.0, 6.0, 3.0, 6.0, 3.0, 6.0, 2.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 5.0, 2.0, 3.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 5.0, 1.0, 4.0, 1.0, 4.0, 5.0, 3.0, 2.0, 3.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>3.6306181440098713</td><td>0.36938185599012874</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 5.0, 4.0, 4.0, 5.0, 3.0, 4.0, 3.0, 4.0, 2.0, 1.0, 3.0, 1.0, 4.0, 4.0, 4.0, 3.0, 5.0, 6.0, 7.0, 6.0, 7.0, 4.0, 6.0, 4.0, 5.0, 2.0, 2.0, 5.0, 5.0, 5.0, 5.0, 2.0, 2.0, 4.0, 4.0, 4.0, 4.0, 3.0, 4.0, 5.0, 1.0, 4.0, 3.0, 3.0, 3.0, 6.0, 6.0, 3.0, 2.0, 2.0, 5.0, 4.0, 3.0, 3.0, 3.0, 5.0, 5.0, 6.0, 7.0, 7.0, 4.0, 6.0, 4.0, 7.0, 5.0, 5.0, 3.0, 3.0, 3.0, 6.0, 2.0, 3.0, 3.0, 3.0, 4.0, 5.0, 3.0, 3.0, 2.0, 3.0, 3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 7.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 4.0, 5.0, 2.0, 2.0, 3.0, 2.0, 6.0, 2.0, 5.0, 7.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 2.0, 4.0, 2.0, 4.0, 5.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0]</td><td>2.0</td><td>2.9158730082004167</td><td>0.9158730082004167</td>
+</tr>
+<tr>
+<td>[3.0, 4.0, 4.0, 2.0, 1.0, 3.0, 3.0, 4.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 4.0, 3.0, 4.0, 7.0, 7.0, 7.0, 5.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 4.0, 3.0, 6.0, 4.0, 2.0, 5.0, 5.0, 4.0, 5.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 3.0, 2.0, 2.0, 4.0, 3.0, 4.0, 3.0, 4.0, 3.0, 5.0, 3.0, 6.0, 5.0, 4.0, 4.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 2.0, 3.0, 1.0, 1.0, 2.0, 3.0, 3.0, 2.0, 2.0, 6.0, 6.0, 6.0, 7.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 4.0, 6.0, 5.0, 5.0, 6.0, 5.0, 6.0, 5.0, 5.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 2.0, 3.0, 2.0, 5.0, 4.0, 5.0, 4.0, 5.0, 5.0, 5.0, 4.0, 3.0, 3.0, 4.0, 3.0, 1.0]</td><td>1.0</td><td>1.4722269084215607</td><td>0.4722269084215607</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 3.0, 1.0, 1.0, 2.0, 2.0, 4.0, 5.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0, 4.0, 3.0, 3.0, 6.0, 6.0, 6.0, 4.0, 6.0, 4.0, 6.0, 5.0, 6.0, 5.0, 2.0, 4.0, 3.0, 3.0, 4.0, 2.0, 4.0, 5.0, 5.0, 5.0, 6.0, 6.0, 3.0, 5.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 6.0, 6.0, 3.0, 5.0, 4.0, 3.0, 4.0, 2.0, 3.0, 4.0, 6.0, 6.0, 5.0, 5.0, 5.0, 6.0, 7.0, 6.0, 6.0, 6.0, 5.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 5.0, 6.0, 3.0, 4.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 2.0, 2.0, 5.0, 6.0, 6.0, 4.0, 6.0, 5.0, 5.0, 6.0, 6.0, 6.0, 3.0, 5.0, 3.0, 1.0, 3.0, 1.0, 4.0, 3.0, 2.0, 7.0, 2.0, 3.0, 2.0, 3.0, 2.0, 1.0, 1.0, 1.0, 3.0, 3.0, 4.0, 4.0, 3.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0]</td><td>2.0</td><td>3.0268753581964423</td><td>1.0268753581964423</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 1.0, 4.0, 1.0, 2.0, 1.0, 4.0, 5.0, 5.0, 5.0, 2.0, 4.0, 5.0, 2.0, 1.0, 5.0, 4.0, 4.0, 7.0, 5.0, 7.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 5.0, 6.0, 7.0, 7.0, 1.0, 1.0, 2.0, 1.0, 1.0, 2.0, 5.0, 1.0, 2.0, 6.0, 4.0, 2.0, 4.0, 5.0, 6.0, 1.0, 1.0, 3.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 6.0, 5.0, 5.0, 3.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 2.0, 5.0, 1.0, 1.0, 2.0, 3.0, 5.0, 2.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 3.0, 5.0, 2.0, 1.0, 1.0, 1.0, 6.0, 5.0, 7.0, 6.0, 2.0, 2.0, 2.0, 1.0, 3.0, 1.0, 1.0, 1.0, 4.0, 1.0, 5.0, 2.0, 4.0, 5.0, 3.0, 3.0, 1.0, 2.0, 2.0, 2.0, 3.0]</td><td>3.0</td><td>2.2201412193340118</td><td>0.7798587806659882</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 2.0, 4.0, 4.0, 5.0, 4.0, 2.0, 5.0, 2.0, 5.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 5.0, 5.0, 3.0, 7.0, 3.0, 7.0, 6.0, 5.0, 6.0, 5.0, 6.0, 2.0, 2.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 5.0, 3.0, 6.0, 6.0, 3.0, 4.0, 5.0, 5.0, 6.0, 6.0, 4.0, 3.0, 2.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 3.0, 6.0, 6.0, 6.0, 5.0, 4.0, 6.0, 5.0, 3.0, 2.0, 3.0, 2.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 6.0, 6.0, 5.0, 2.0, 6.0, 6.0, 5.0, 6.0, 6.0, 4.0, 2.0, 4.0, 3.0, 2.0, 5.0, 2.0, 2.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 6.0, 1.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 2.0, 4.0, 1.0, 2.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 6.0]</td><td>6.0</td><td>5.923667367451962</td><td>0.0763326325480378</td>
+</tr>
+<tr>
+<td>[4.0, 2.0, 2.0, 3.0, 1.0, 2.0, 4.0, 5.0, 4.0, 5.0, 2.0, 4.0, 2.0, 2.0, 2.0, 5.0, 4.0, 5.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 6.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0, 6.0, 7.0, 7.0, 5.0, 7.0, 1.0, 2.0, 1.0, 5.0, 1.0, 2.0, 1.0, 1.0, 1.0, 1.0, 4.0, 3.0, 2.0, 3.0, 2.0, 3.0, 4.0, 4.0, 3.0, 3.0, 7.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 4.0, 6.0, 6.0, 7.0, 6.0, 2.0, 2.0, 1.0, 2.0, 3.0, 2.0, 3.0, 4.0, 2.0, 4.0, 7.0, 4.0, 5.0, 7.0, 6.0, 6.0, 7.0, 4.0, 7.0, 3.0, 5.0, 2.0, 2.0, 2.0, 3.0, 6.0, 3.0, 5.0, 6.0, 3.0, 4.0, 3.0, 3.0, 2.0, 2.0, 2.0, 3.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 1.0]</td><td>1.0</td><td>0.9997241923146113</td><td>2.7580768538870704E-4</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 4.0, 2.0, 3.0, 4.0, 2.0, 4.0, 4.0, 3.0, 4.0, 3.0, 3.0, 4.0, 3.0, 4.0, 7.0, 6.0, 5.0, 5.0, 7.0, 3.0, 6.0, 4.0, 6.0, 6.0, 5.0, 6.0, 6.0, 7.0, 6.0, 7.0, 6.0, 4.0, 6.0, 6.0, 5.0, 3.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 4.0, 5.0, 3.0, 4.0, 3.0, 5.0, 3.0, 4.0, 3.0, 5.0, 5.0, 6.0, 6.0, 5.0, 6.0, 3.0, 4.0, 4.0, 3.0, 3.0, 3.0, 4.0, 3.0, 6.0, 6.0, 6.0, 3.0, 5.0, 4.0, 4.0, 2.0, 2.0, 5.0, 4.0, 3.0, 4.0, 5.0, 4.0, 5.0, 3.0, 4.0, 5.0, 4.0, 3.0, 5.0, 5.0, 3.0, 2.0, 3.0, 1.0, 5.0, 3.0, 6.0, 3.0, 3.0, 4.0, 5.0, 4.0, 4.0, 3.0, 3.0, 2.0, 1.0, 2.0, 2.0, 1.0, 2.0, 5.0, 3.0, 4.0, 3.0, 4.0, 3.0, 2.0, 3.0, 4.0, 4.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>4.4451870979997805</td><td>0.5548129020002195</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 4.0, 4.0, 3.0, 2.0, 3.0, 2.0, 3.0, 2.0, 4.0, 3.0, 4.0, 5.0, 6.0, 6.0, 6.0, 7.0, 5.0, 5.0, 6.0, 5.0, 6.0, 4.0, 3.0, 5.0, 4.0, 5.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 5.0, 3.0, 6.0, 6.0, 1.0, 4.0, 4.0, 3.0, 4.0, 7.0, 7.0, 6.0, 7.0, 6.0, 5.0, 7.0, 4.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 6.0, 3.0, 7.0, 4.0, 7.0, 4.0, 6.0, 6.0, 5.0, 3.0, 3.0, 2.0, 2.0, 4.0, 3.0, 2.0, 4.0, 2.0, 2.0, 6.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 7.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 6.0, 6.0, 7.0, 2.0, 1.0, 2.0, 1.0, 3.0, 1.0, 1.0, 1.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>2.1571017466896096</td><td>0.15710174668960963</td>
+</tr>
+<tr>
+<td>[1.0, 4.0, 5.0, 2.0, 3.0, 3.0, 2.0, 5.0, 4.0, 4.0, 2.0, 2.0, 2.0, 3.0, 2.0, 4.0, 3.0, 4.0, 4.0, 5.0, 5.0, 4.0, 7.0, 4.0, 5.0, 3.0, 3.0, 4.0, 2.0, 3.0, 5.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 6.0, 4.0, 2.0, 4.0, 3.0, 1.0, 3.0, 5.0, 6.0, 3.0, 6.0, 6.0, 6.0, 4.0, 5.0, 5.0, 5.0, 4.0, 5.0, 5.0, 4.0, 5.0, 4.0, 4.0, 4.0, 5.0, 3.0, 5.0, 6.0, 5.0, 5.0, 5.0, 5.0, 4.0, 5.0, 5.0, 5.0, 3.0, 4.0, 3.0, 3.0, 5.0, 3.0, 6.0, 3.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 4.0, 6.0, 2.0, 4.0, 3.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 2.0, 2.0, 2.0, 1.0, 2.0, 2.0, 2.0, 2.0, 4.0, 3.0, 3.0, 2.0, 3.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0]</td><td>3.0</td><td>2.8888359382287137</td><td>0.11116406177128635</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 2.0, 3.0, 2.0, 2.0, 5.0, 5.0, 5.0, 1.0, 1.0, 1.0, 2.0, 2.0, 5.0, 4.0, 5.0, 5.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 6.0, 2.0, 5.0, 5.0, 1.0, 5.0, 5.0, 7.0, 3.0, 7.0, 6.0, 3.0, 3.0, 1.0, 3.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 4.0, 4.0, 3.0, 5.0, 5.0, 5.0, 5.0, 3.0, 6.0, 7.0, 6.0, 6.0, 7.0, 7.0, 5.0, 7.0, 6.0, 5.0, 1.0, 3.0, 5.0, 1.0, 5.0, 3.0, 6.0, 4.0, 1.0, 5.0, 1.0, 3.0, 2.0, 1.0, 2.0, 1.0, 1.0, 2.0, 5.0, 2.0, 5.0, 1.0, 4.0, 5.0, 4.0, 4.0, 3.0, 4.0, 4.0, 3.0, 4.0]</td><td>4.0</td><td>4.138905005578989</td><td>0.1389050055789891</td>
+</tr>
+<tr>
+<td>[2.0, 5.0, 5.0, 4.0, 2.0, 5.0, 3.0, 4.0, 3.0, 4.0, 2.0, 2.0, 2.0, 3.0, 3.0, 2.0, 3.0, 3.0, 7.0, 7.0, 6.0, 7.0, 6.0, 3.0, 3.0, 6.0, 5.0, 6.0, 6.0, 7.0, 5.0, 7.0, 6.0, 7.0, 7.0, 6.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 2.0, 1.0, 1.0, 1.0, 1.0, 7.0, 7.0, 4.0, 7.0, 7.0, 7.0, 4.0, 7.0, 1.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 7.0, 4.0, 5.0, 6.0, 2.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 6.0, 6.0, 7.0, 4.0, 4.0, 4.0, 4.0, 1.0, 4.0, 4.0, 5.0, 6.0, 4.0, 6.0, 5.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 7.0, 6.0, 4.0, 6.0, 4.0, 2.0, 4.0, 4.0, 3.0, 2.0, 2.0, 4.0, 3.0, 3.0, 2.0, 1.0, 3.0, 2.0, 2.0, 2.0, 4.0, 1.0, 5.0, 1.0, 5.0, 5.0, 4.0, 3.0, 4.0, 4.0, 4.0, 4.0, 1.0]</td><td>1.0</td><td>2.956592628067481</td><td>1.9565926280674808</td>
+</tr>
+<tr>
+<td>[4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 2.0, 3.0, 4.0, 4.0, 4.0, 3.0, 2.0, 4.0, 2.0, 5.0, 5.0, 5.0, 6.0, 5.0, 5.0, 5.0, 3.0, 6.0, 6.0, 7.0, 1.0, 1.0, 1.0, 4.0, 3.0, 2.0, 3.0, 5.0, 4.0, 5.0, 4.0, 5.0, 3.0, 7.0, 3.0, 4.0, 3.0, 3.0, 1.0, 3.0, 5.0, 3.0, 3.0, 3.0, 1.0, 2.0, 1.0, 2.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 7.0, 5.0, 7.0, 3.0, 6.0, 6.0, 7.0, 5.0, 5.0, 4.0, 2.0, 1.0, 1.0, 1.0, 7.0, 1.0, 1.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 3.0, 6.0, 3.0, 5.0, 4.0, 5.0, 5.0, 1.0, 4.0, 2.0, 4.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 4.0, 4.0, 5.0, 4.0, 5.0, 5.0, 4.0, 1.0, 2.0, 2.0, 2.0, 2.0, 1.0]</td><td>1.0</td><td>3.223527065738919</td><td>2.223527065738919</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 4.0, 3.0, 3.0, 2.0, 4.0, 2.0, 2.0, 4.0, 4.0, 2.0, 2.0, 2.0, 5.0, 4.0, 5.0, 6.0, 5.0, 6.0, 5.0, 7.0, 6.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 5.0, 6.0, 6.0, 7.0, 7.0, 6.0, 5.0, 2.0, 1.0, 1.0, 1.0, 1.0, 4.0, 4.0, 2.0, 3.0, 5.0, 6.0, 3.0, 5.0, 5.0, 6.0, 6.0, 5.0, 6.0, 5.0, 7.0, 5.0, 5.0, 4.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 6.0, 7.0, 5.0, 6.0, 6.0, 6.0, 6.0, 2.0, 3.0, 2.0, 2.0, 4.0, 3.0, 3.0, 2.0, 2.0, 7.0, 6.0, 7.0, 6.0, 7.0, 6.0, 7.0, 7.0, 7.0, 6.0, 6.0, 6.0, 7.0, 7.0, 7.0, 3.0, 6.0, 6.0, 3.0, 5.0, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 4.0, 4.0, 5.0, 3.0, 5.0, 3.0, 4.0, 4.0, 3.0, 2.0]</td><td>2.0</td><td>1.770652012253444</td><td>0.22934798774655607</td>
+</tr>
+<tr>
+<td>[1.0, 5.0, 5.0, 5.0, 4.0, 5.0, 1.0, 5.0, 1.0, 5.0, 1.0, 1.0, 1.0, 4.0, 4.0, 4.0, 4.0, 5.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 5.0, 5.0, 5.0, 5.0, 1.0, 7.0, 7.0, 7.0, 1.0, 6.0, 6.0, 7.0, 7.0, 7.0, 7.0, 5.0, 5.0, 7.0, 7.0, 4.0, 4.0, 7.0, 3.0, 4.0, 7.0, 5.0, 4.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 6.0, 7.0, 5.0, 4.0, 6.0, 5.0, 2.0, 6.0, 6.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 2.0, 6.0, 4.0, 4.0, 4.0, 6.0, 4.0, 5.0, 4.0, 4.0, 4.0, 6.0, 6.0, 4.0, 5.0, 6.0, 5.0, 7.0, 7.0, 7.0, 2.0, 6.0, 1.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0, 7.0, 1.0, 3.0, 4.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 3.0, 4.0, 2.0, 4.0, 4.0, 3.0, 3.0, 1.0, 2.0, 3.0, 1.0, 4.0]</td><td>4.0</td><td>4.166823722302972</td><td>0.16682372230297204</td>
+</tr>
+<tr>
+<td>[1.0, 1.0, 4.0, 1.0, 4.0, 5.0, 1.0, 5.0, 2.0, 5.0, 2.0, 4.0, 1.0, 2.0, 2.0, 2.0, 5.0, 5.0, 4.0, 4.0, 4.0, 4.0, 6.0, 3.0, 4.0, 3.0, 4.0, 2.0, 5.0, 4.0, 4.0, 6.0, 4.0, 6.0, 4.0, 4.0, 5.0, 4.0, 5.0, 4.0, 6.0, 6.0, 6.0, 2.0, 3.0, 2.0, 2.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 6.0, 3.0, 6.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 2.0, 4.0, 4.0, 4.0, 4.0, 6.0, 5.0, 6.0, 6.0, 6.0, 5.0, 5.0, 4.0, 6.0, 5.0, 6.0, 2.0, 2.0, 2.0, 6.0, 2.0, 2.0, 4.0, 4.0, 6.0, 6.0, 6.0, 4.0, 6.0, 6.0, 6.0, 4.0, 6.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 4.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 5.0, 3.0, 4.0, 1.0, 5.0, 5.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 5.0]</td><td>5.0</td><td>3.733245571364301</td><td>1.266754428635699</td>
+</tr>
+</table>
+<hr>
+<h4>Table of Statistics</h4>
+<table border="0">
+<tr>
+<td>Sum </td><td>130.05541656036635</td>
+</tr>
+<tr>
+<td>RequiredSum </td><td>548.0</td>
+</tr>
+<tr>
+<td>AvgSum </td><td>0.6917841306402466</td>
+</tr>
+<tr>
+<td>AvgRequiredSum
+						</td><td>2.9148936170212765</td>
+</tr>
+<tr>
+<td>Absolute Maximum Error </td><td>2.960116301749674</td>
+</tr>
+<tr>
+<td>Mean
+							Absolute Error
+						</td><td>0.6329787234042553</td>
+</tr>
+<tr>
+<td>Mean Error </td><td>-0.015957446808510637</td>
+</tr>
+<tr>
+<td>Relative Absolute
+							Error
+						</td><td>0.5955732790921746</td>
+</tr>
+<tr>
+<td>Root Mean Squared Error </td><td>0.945012237138888</td>
+</tr>
+<tr>
+<td>
+							R
+							<sup>2</sup></td><td>0.5211340998405061</td>
+</tr>
+<tr>
+<td>Score Result </td><td>130.05541656036635</td>
+</tr>
+</table>
+</body>
+</html>

@@ -15,43 +15,42 @@ public class SoftMaxActivationStrategy extends ActivationStrategy
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Activation function which enforces that output neurons have probability distribution (sum of all outputs is one)
+	 * Activation function which enforces that output neurons have probability
+	 * distribution (sum of all outputs is one)
 	 */
-	    private Layer layer;
-	    private double totalLayerInput;
+	private Layer layer;
+	private double totalLayerInput;
 
-	    public SoftMaxActivationStrategy(final Layer layer) {
-	        this.layer = layer;
-	    }
+	public SoftMaxActivationStrategy(final Layer layer)
+	{
+		this.layer = layer;
+	}
 
+	@Override
+	public double activate(double netInput)
+	{
+		totalLayerInput = 0;
+		// add max here for numerical stability - find max netInput for all
+		// neurons in this layer
+		double max = 0;
 
-	    public SoftMaxActivationStrategy()
+		for (Neuron neuron : layer.getNeurons())
 		{
-			// TODO Auto-generated constructor stub
+			totalLayerInput += Math.exp(neuron.getOutput() - max);
 		}
 
+		double output = Math.exp(netInput - max) / totalLayerInput;
+		return output;
+	}
 
-		@Override
-		public double activate(double netInput) {
-	        totalLayerInput = 0;
-	                // add max here for numerical stability - find max netInput for all neurons in this lyer
-	        double max = 0;
-	        
-	        for (Neuron neuron : layer.getNeurons()) {
-	            totalLayerInput += Math.exp(neuron.getOutput()-max);
-	        }
-
-	        double output = Math.exp(netInput-max) / totalLayerInput;
-	        return output;
-	    }
-
-	    @Override
-	    public double derivative(double net) {
-	        return activate(net) * (1d - activate(net)); 
-	        // -yi * yj
-	    }
+	@Override
+	public double derivative(double net)
+	{
+		return activate(net) * (1d - activate(net));
+		// -yi * yj
+	}
 	public ActivationStrategy copy()
 	{
-		return new SoftMaxActivationStrategy();
+		return new SoftMaxActivationStrategy(this.layer);
 	}
 }

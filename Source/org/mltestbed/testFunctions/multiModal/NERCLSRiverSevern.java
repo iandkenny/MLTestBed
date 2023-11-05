@@ -78,13 +78,6 @@ public class NERCLSRiverSevern extends PsuedoSVM
 		params.setProperty(FACTOR_MAX, Integer.toString(5));
 	}
 
-	@Override
-	protected void finalize() throws Throwable
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
-		super.finalize();
-	}
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -155,7 +148,7 @@ public class NERCLSRiverSevern extends PsuedoSVM
 			ArrayList<Double> row = (ArrayList<Double>) iterator.next();
 			Double expect = row.get(row.size() - 1);
 			reqSum += expect;
-			double score = super.NERCObjective(p, row);
+			double score = super.genericObjective(p, row);
 			double abs = Math.abs(score);
 			if (abs > biggest)
 				biggest = abs;

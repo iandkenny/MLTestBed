@@ -6,11 +6,13 @@ public class Synapse
 
 	private String id;
 	private Neuron sourceNeuron;
-	private double weight;
+	private double weight = 1e-9;
+	private double output = 0;
 
 	public Synapse(Neuron sourceNeuron, double weight)
 	{
-		this.id = sourceNeuron.getId() + "." + sourceNeuron.getInputs().size();
+		this.id = sourceNeuron.getId() + "."
+				+ sourceNeuron.getSynapses().size();
 		this.sourceNeuron = sourceNeuron;
 		this.weight = weight;
 	}
@@ -26,6 +28,16 @@ public class Synapse
 	public String getId()
 	{
 		return id;
+	}
+
+	public double getOutput()
+	{
+		output = getWeight() * getSourceNeuron().getOutput();
+		return output;
+	}
+	public double getPreviousOutput()
+	{
+		return output;
 	}
 
 	public Neuron getSourceNeuron()
@@ -44,7 +56,6 @@ public class Synapse
 				+ sourceNeuron.getId() + "\" weight = "
 				+ Double.toString(weight) + "/>";
 	}
-
 	public void setWeight(double weight)
 	{
 		this.weight = weight;

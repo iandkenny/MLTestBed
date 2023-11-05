@@ -471,7 +471,7 @@ public class Ingber extends PsuedoSVM
 				+ biggest + "</AME><Result>" + mResult
 				+ "</Result></IterResult>",false
 				);
-		return super.Objective(null);
+		return super.Objective(p);
 	}
 
 	/**

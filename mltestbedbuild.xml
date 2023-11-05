@@ -12,12 +12,12 @@
                 <attribute name="Main-Class" value="org.mltestbed.ui.Main"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
-            <fileset dir="${dir.jarfile}/bin"/>
-            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/activation.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/tar.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/mariadb-java-client-2.4.2.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/mysql-connector-java-8.0.17.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/sqljdbc4.jar"/>
+            <fileset dir="${dir.jarfile}/target/test-classes"/>
+            <fileset dir="${dir.jarfile}/target/classes"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/javatar-2.5/jars/activation.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/javatar-2.5/jars/tar.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/mysql-connector-j-8.1.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/jars/mariadb-java-client-3.1.4.jar"/>
         </jar>
     </target>
 </project>

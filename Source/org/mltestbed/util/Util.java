@@ -3,14 +3,21 @@
  */
 package org.mltestbed.util;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.StringReader;
 import java.nio.channels.FileChannel;
 import java.text.NumberFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.TimeZone;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 import org.mltestbed.ui.MLUI;
 import org.mltestbed.ui.Main;
@@ -21,22 +28,34 @@ import org.mltestbed.ui.Main;
  */
 public class Util
 {
-	private static long minMem;
+	private static final long MIN_MEM_CALC = Math
+			.floorDiv(Runtime.getRuntime().totalMemory(), 10);
 	private static Runtime runtime = Runtime.getRuntime();
-	private static final long MIN_MEM_CALC = Math.floorDiv(runtime.freeMemory(),
-			20);
+
 	private static MLUI swarmui;
 
-	private static long limit = MIN_MEM_CALC;
+	public static double absmean(double[] a)
+	{
+		int n = a.length;
+		double sum = 0;
+		for (int i = 0; i < n; i++)
+		{
+			sum += Math.abs(a[i]);
+		}
+		return (sum != 0 && n != 0) ? (sum / (double) n) : Double.NaN;
+	}
 
 	public static boolean checkMemFree()
 	{
 //		runtime.gc();
-//		if (useMem)
+//		if (Main.isUseMem())
 //			System.out.println("Using Memory Buffers");
 //		else
 //			System.out.println("Not using Memory Buffers");
-		return (Main.isUseMem()) ? runtime.freeMemory() > limit : false;
+
+		long usedMemory = runtime.totalMemory() - runtime.freeMemory();
+		long freeMemory = runtime.maxMemory() - usedMemory;
+		return (Main.isUseMem()) ? freeMemory > MIN_MEM_CALC : false;
 
 	}
 	public static void copyFile(File sourceFile, File destFile)
@@ -97,6 +116,50 @@ public class Util
 		}
 		return file;
 	}
+
+	public static double encodeString(StringReader sb)
+	{
+		BufferedReader br = new BufferedReader(sb);
+		String line;
+		double ret = Double.NaN;
+		boolean flag = true;
+		try
+		{
+			while ((line = br.readLine()) != null)
+			{
+				byte[] bytes = line.getBytes();
+				for (int i = 0; i < bytes.length; i++)
+				{
+
+					double d = (double) bytes[i];
+					if (ret == Double.NaN)
+						ret = Math.sqrt(d);
+					else
+					{
+						if (flag)
+							ret += Math.cos(d);
+						else
+							ret += Math.sin(d);
+						flag = !flag;
+					}
+				}
+			}
+		} catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
+	}
+	public static Object eval(String Exp) throws ScriptException
+	{
+		ScriptEngineManager MyMgr = new ScriptEngineManager(); // Declaring a
+																// "ScriptEngineManager"
+		ScriptEngine MathEng = MyMgr.getEngineByName("JavaScript"); // Declaring
+																	// a
+																	// "ScriptEngine"
+		return MathEng.eval(Exp);
+	}
 	public static String formatRuntime(long l)
 	{
 		String format = "";
@@ -132,44 +195,6 @@ public class Util
 	{
 		return swarmui;
 	}
-	public static boolean isNumeric(String str)
-	{
-		return str.trim().matches("-?\\d+(\\.\\d+)?");  // match a number with
-														// optional
-														// '-' and decimal.
-	}
-
-	public static double log2(long l)
-	{
-		return Math.log(l) / Math.log(2);
-	}
-
-	public static double[][] zeros(int x, int y)
-	{
-		double[][] p = new double[x][y];
-		for (int i = 0; i < p.length; i++)
-			for (int j = 0; j < p[0].length; j++)
-				p[i][j] = 0;
-		return p;
-	}
-	
-	public static double[][] ones(int x, int y)
-	{
-		double[][] p = new double[x][y];
-		for (int i = 0; i < p.length; i++)
-			for (int j = 0; j < p[0].length; j++)
-				p[i][j] = 1;
-		return p;
-	}
-	public static double[][] transpose(double[][] arr)
-	{
-		double[][] ret = new double[arr[0].length][arr.length];
-		// transpose matrix
-		for (int i = 0; i < arr.length; i++)
-			for (int j = 0; j < arr[0].length; j++)
-				ret [j][i] = arr[i][j];
-		return ret;
-	}
 	/**
 	 * @return
 	 */
@@ -181,7 +206,32 @@ public class Util
 				p[i][j] = 1 / arr[i][j];
 		return p;
 	}
-	 
+
+	public static boolean isnan(double n)
+	{
+		return Double.NaN == n;
+	}
+
+	public static boolean isNumeric(String str)
+	{
+		return str.trim().matches("-?\\d+(\\.\\d+)?"); // match a number with
+														// optional
+														// '-' and decimal.
+	}
+
+	public static double log(int N, int b)
+	{
+
+		// calculate log N in base b indirectly
+		// using log() method
+		double result = (Math.log(N) / Math.log(b));
+
+		return result;
+	}
+	public static double log2(long l)
+	{
+		return Math.log(l) / Math.log(2);
+	}
 	public static double[] maxPerColumn(double[][] arr)
 	{
 		double[] maxm = new double[arr[0].length];
@@ -199,38 +249,113 @@ public class Util
 		}
 		return maxm;
 	}
-	 
-	public static double absmean(double[] a)
+
+	public static double mean(double[] m)
 	{
-		int n = a.length;
 		double sum = 0;
-		for (int i = 0; i < n; i++)
+		for (int i = 0; i < m.length; i++)
 		{
-			sum += Math.abs(a[i]);
+			sum += m[i];
 		}
-		return (sum != 0 && n != 0) ? (sum / (double) n) : Double.NaN;
+		return sum / m.length;
 	}
-	public static boolean isnan(double n)
+
+	public static double median(double m[])
 	{
-		return Double.NaN ==n;
+		Arrays.sort(m);
+		int middle = m.length / 2;
+		if (m.length % 2 == 1)
+		{
+			return m[middle];
+		} else
+		{
+			return (m[middle - 1] + m[middle]) / 2.0;
+		}
 	}
+	public static double mode(double a[])
+	{
+		double maxValue = 0;
+		int maxCount = 0;
+
+		for (int i = 0; i < a.length; ++i)
+		{
+			int count = 0;
+			for (int j = 0; j < a.length; ++j)
+			{
+				if (a[j] == a[i])
+					++count;
+			}
+			if (count > maxCount)
+			{
+				maxCount = count;
+				maxValue = a[i];
+			}
+		}
+
+		return maxValue;
+	}
+	public static double[][] ones(int x, int y)
+	{
+		double[][] p = new double[x][y];
+		for (int i = 0; i < p.length; i++)
+			for (int j = 0; j < p[0].length; j++)
+				p[i][j] = 1;
+		return p;
+	}
+
+	public static String spacePunct(String s)
+	{
+		return s.replaceAll("\\p{Punct}", " $0 ");
+	}
+
+	public static double standardDeviation(double s[])
+    {
+        double sum = 0.0, standardDeviation = 0.0;
+        int length = s.length;
+
+        for(double num : s) {
+            sum += num;
+        }
+
+        double mean = sum/length;
+
+        for(double num: s) {
+            standardDeviation += Math.pow(num - mean, 2);
+        }
+
+        return Math.sqrt(standardDeviation/length);
+    }
+
+	public static double[][] transpose(double[][] arr)
+	{
+		double[][] ret = new double[arr[0].length][arr.length];
+		// transpose matrix
+		for (int i = 0; i < arr.length; i++)
+			for (int j = 0; j < arr[0].length; j++)
+				ret[j][i] = arr[i][j];
+		return ret;
+	}
+	public static double[][] zeros(int x, int y)
+	{
+		double[][] p = new double[x][y];
+		for (int i = 0; i < p.length; i++)
+			for (int j = 0; j < p[0].length; j++)
+				p[i][j] = 0;
+		return p;
+	}
+
+
 	public Util()
 	{
-		minMem = MIN_MEM_CALC;
-		limit = minMem * 3;
 	}
 	public Util(boolean useMem)
 	{
 		Main.setUseMem(useMem);
-		minMem = MIN_MEM_CALC;
-		limit = minMem * 3;
 	}
 	public Util(MLUI ui)
 	{
 		swarmui = ui;
 		if (ui != null && ui.getUseMemBuffersCheck() != null)
 			Main.setUseMem(ui.getUseMemBuffersCheck().isSelected());
-		minMem = runtime.freeMemory() / 10;
-		limit = minMem * 3;
 	}
 }

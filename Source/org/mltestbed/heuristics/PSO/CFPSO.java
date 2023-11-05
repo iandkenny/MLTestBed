@@ -58,8 +58,7 @@ public class CFPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.
+	 * @see org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util.
 	 * Particle)
 	 */
 	public void afterCalc(Particle particle)
@@ -81,8 +80,7 @@ public class CFPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.
+	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util.
 	 * Particle)
 	 */
 	public void beforeCalc(Particle particle)
@@ -110,8 +108,8 @@ public class CFPSO extends ClassicPSO
 	@Override
 	protected Particle calcNew(int index) throws Exception
 	{
-		if (c1 == Double.NaN || c2 == Double.NaN || VMax == Double.NaN
-				|| K == Double.NaN)
+		if (Double.isNaN(c1) || Double.isNaN(c2) || Double.isNaN(VMax)
+				|| Double.isNaN(K))
 			throw new Exception("A parmeter is invalid");
 
 		Particle particle = getSwarmMembers().get(index);

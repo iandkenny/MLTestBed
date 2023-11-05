@@ -27,8 +27,8 @@ public class HighQualityRandom extends Random
 	public HighQualityRandom()
 	{
 		l = new ReentrantLock();
-		setSeed(multiplier ^ System.nanoTime());
-//		setSeed(System.nanoTime());
+//		setSeed(multiplier ^ System.nanoTime());
+		setSeed(System.nanoTime());
 	}
 
 	public HighQualityRandom(long seed)

@@ -30,12 +30,12 @@ public class IFS extends TestBase
 	private static final String FACTOR = "factor";
 	private static final String NUMBER_OF_FUNCTIONS = "NumberOfFunctions";
 	private static final String NUMBER_OF_TRIALS = "NumberOfTrials";
-	
-
 	private static final String SKIP_FIRST = "skipFirst";
+
 	private static final String USE_LOG_VECTOR = "useLogVector";
 	private static final String USE_OFFSET_VECTOR = "useOffsetVector";
 	private static final String USE_POWER_VECTOR = "usePowerVector";
+	private static final String VALIDATE = "Validate";
 
 	protected int factor = 2;
 	private int funcLen = 0;
@@ -51,7 +51,6 @@ public class IFS extends TestBase
 	private boolean powVec = false;
 	private double[] powvector = null;
 	private Random rand;
-	private Vector<Double> result;
 	private int skipFirst = 1000;
 	private boolean subVec = false;
 	protected boolean useSum = true;
@@ -69,7 +68,7 @@ public class IFS extends TestBase
 	protected ArrayList<Double> calc(Vector<Double> v, ArrayList<Double> input)
 			throws Exception
 	{
-		ArrayList<Double> res = new ArrayList<Double>();
+		ArrayList<Double> result = new ArrayList<Double>();
 		Vector<Double> vec = new Vector<Double>(v);
 		Vector<Double> subV = new Vector<Double>();
 		Vector<Double> powV = new Vector<Double>();
@@ -84,7 +83,7 @@ public class IFS extends TestBase
 		//
 		int index = 0;
 		int sizeInput = input.size();
-		//if (sizeInput != sizeA)
+		// if (sizeInput != sizeA)
 		// throw new Exception("Vector sizes don't match for multiplication");
 		int dim = (int) Math.ceil(sizeInput / sizeA);
 		// B = new double[factor][dim];
@@ -125,7 +124,7 @@ public class IFS extends TestBase
 					reduceBy--;
 				}
 			}
-				A = new double[factor][sizeA];
+			A = new double[factor][sizeA];
 			// A = new double[sizeA][factor];
 
 			index = 0;
@@ -191,7 +190,7 @@ public class IFS extends TestBase
 			{
 				for (int i = 0; i < dim; i++)
 				{
-					res.add(index++, C[j][i]);
+					result.add(index++, C[j][i]);
 
 				}
 			}
@@ -236,17 +235,15 @@ public class IFS extends TestBase
 
 			}
 
-
 		} catch (Exception e)
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return res;
+		return result;
 	}
 
-	
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -264,12 +261,15 @@ public class IFS extends TestBase
 		params.setProperty(NUMBER_OF_TRIALS, Integer.toString(noTrials));
 		params.setProperty(SKIP_FIRST, Integer.toString(skipFirst));
 
-		params.setProperty(USE_OFFSET_VECTOR, "true");
-		setSubVec(true);
+		params.setProperty(USE_OFFSET_VECTOR, "false");
+		setSubVec(false);
 		params.setProperty(USE_POWER_VECTOR, "false");
 		setPowVec(false);
 		params.setProperty(USE_LOG_VECTOR, "false");
 		setLogVec(false);
+		params.setProperty(VALIDATE, "false");
+		setValidate(false);
+
 	}
 
 	protected double d(Vector<Double> x, Vector<Double> y) throws Exception
@@ -288,7 +288,7 @@ public class IFS extends TestBase
 		distance = Math.sqrt(sum);
 		return distance;
 	}
-	
+
 	/*
 	 * This function will return the determinant of any two dimensional matrix.
 	 * For this particular function a two dimensional double matrix needs to be
@@ -338,6 +338,21 @@ public class IFS extends TestBase
 
 	}
 
+	protected String functionsToXML(double[][] A)
+	{
+		String xml = "<Functions>";
+		for (int i = 0; i < functions.size(); i++)
+		{
+			xml += "<Probability>" + A[i][0] + "</Probability>";
+			xml += "<Function>" + functions.get(i).toString() + "</Function>"; // TODO
+																				// format
+																				// output
+																				// better
+		}
+		xml += "</Functions>";
+		return xml;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -354,7 +369,6 @@ public class IFS extends TestBase
 
 		rand = RandGen.getLastCreated();
 	}
-
 
 	/**
 	 * @return the logVec
@@ -379,7 +393,6 @@ public class IFS extends TestBase
 	{
 		return subVec;
 	}
-
 	/*
 	 * Mean Absolute Error
 	 */
@@ -513,8 +526,8 @@ public class IFS extends TestBase
 				}
 //				mResult += sum;
 			}
-			matrix = A;
-			p.setFuncSpecific(null, true);
+			matrix = A; // not required, but leave for now
+			p.setFuncSpecific(functionsToXML(A), true);
 			for (int i = 0; i < data.size(); i++)
 			{
 				p.setFuncSpecific("<Output><Predicted>"
@@ -670,7 +683,7 @@ public class IFS extends TestBase
 			setPowVec(buf.equalsIgnoreCase("true"));
 			buf = params.getProperty(USE_LOG_VECTOR, "false");
 			setLogVec(buf.equalsIgnoreCase("true"));
-		
+
 		} catch (NumberFormatException e)
 		{
 			Log.log(Level.SEVERE, e);
@@ -682,12 +695,12 @@ public class IFS extends TestBase
 	{
 		Vector<Double> selFunction;
 		double r = rand.nextDouble();
-		int index = 0;
+		int index = -1;
 		double total = 0.0;
 		do
 		{
-			total += A[index][0];
 			index++;
+			total += A[index][0];
 		} while (r > total && index < numFuncs - 1);
 
 		if (functions.containsKey(index))
@@ -747,11 +760,6 @@ public class IFS extends TestBase
 		else
 			return Double.NaN;
 	}
-	
-	// SSE=sum((y-ypred).^2);
-	// SST=sum((y-mean(y)).^2)
-	// 1-SSE/SST
-
 	/**
 	 * @param value
 	 * @param oldMin
@@ -766,6 +774,10 @@ public class IFS extends TestBase
 		return (value / ((oldMax - oldMin) / (newMax - newMin))) + newMin;
 	}
 
+	// SSE=sum((y-ypred).^2);
+	// SST=sum((y-mean(y)).^2)
+	// 1-SSE/SST
+
 	/**
 	 * @param logVec
 	 *            the logVec to set
@@ -774,6 +786,7 @@ public class IFS extends TestBase
 	{
 		this.logVec = logVec;
 	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -806,7 +819,6 @@ public class IFS extends TestBase
 		super.setParams(params);
 		performTest();
 	}
-
 	/**
 	 * @param powVec
 	 *            the powVec to set
@@ -815,6 +827,7 @@ public class IFS extends TestBase
 	{
 		this.powVec = powVec;
 	}
+
 	@Override
 	protected void setRange()
 	{
@@ -840,27 +853,20 @@ public class IFS extends TestBase
 	{
 		this.subVec = subVec;
 	}
+
 	/**
 	 * @param A
 	 * @param skip
 	 */
 	private ArrayList<Double> skip(double[][] A, int skip)
 	{
-		int index = -1;
-		double r = rand.nextDouble();
-		double total = 0;
-		do
-		{
-			index++;
-			total += A[index][0];
-		} while (r > total && index < numFuncs - 1);
 
 		ArrayList<Double> predictedRow = new ArrayList<Double>();
 		Vector<Double> selFunction = new Vector<Double>();
-		for (int j = A[index].length - 1; predictedRow.size() != inputs; j--)
-			predictedRow.add(0, A[index][j]);
 		try
 		{
+			for (int i = 0; i < inputs; i++)
+				predictedRow.add(i, 1.0);
 			for (int i = 0; i < skip; i++)
 			{
 
@@ -870,7 +876,7 @@ public class IFS extends TestBase
 		} catch (Exception e)
 		{
 			Log.log(Level.SEVERE, e);
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 		return predictedRow;
 	}

@@ -139,7 +139,6 @@ public class Results implements Cloneable
 	/**
 	 * @param run
 	 * @param iter
-	 * @param swarm
 	 */
 	public void store(long run, long iter)
 	{

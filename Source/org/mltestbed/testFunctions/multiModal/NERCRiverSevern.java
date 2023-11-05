@@ -161,7 +161,7 @@ public class NERCRiverSevern extends PsuedoSVM
 	{
 		double r2 = 0;
 		SimpleRegression sr = new SimpleRegression();
-		appendLocalBuffer(null, true);
+		appendLocalBuffer(p.getFuncSpecific(), true);
 		double reqSum = 0;
 		double sum = 0;
 		long count = 0;
@@ -174,7 +174,7 @@ public class NERCRiverSevern extends PsuedoSVM
 			ArrayList<Double> row = (ArrayList<Double>) iterator.next();
 			Double expect = row.get(row.size() - 1);
 			reqSum += expect;
-			double score = super.NERCObjective(p, row);
+			double score = super.genericObjective(p, row);
 			double abs = Math.abs(score);
 			if (abs > biggest)
 				biggest = abs;

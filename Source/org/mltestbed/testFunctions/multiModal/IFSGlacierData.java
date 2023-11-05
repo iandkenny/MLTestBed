@@ -64,15 +64,6 @@ public class IFSGlacierData extends IFS
 		params.setProperty(RESETDB, "false");
 		params.setProperty(USE_YEAR, "true");
 	}
-	@Override
-	protected void finalize() throws Throwable
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
-
-		super.finalize();
-	}
-
 	/*
 	 * (non-Javadoc)
 	 * 

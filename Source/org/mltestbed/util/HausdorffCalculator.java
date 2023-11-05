@@ -40,7 +40,7 @@ public class HausdorffCalculator {
 
 
 	/**
-	 * @param data
+	 * @param baseData
 	 * @param predictedData
 	 * @return 
 	 */

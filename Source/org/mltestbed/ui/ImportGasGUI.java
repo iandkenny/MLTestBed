@@ -124,8 +124,9 @@ public class ImportGasGUI extends JDialog
 		Object source = e.getSource();
 		if (source == cancel)
 		{
-			for (int i = 0; i < ing.length; i++)
-				ing[i] = null;
+			if (ing != null)
+				for (int i = 0; i < ing.length; i++)
+					ing[i] = null;
 			setVisible(false);
 		} else if (source == sourceEdit)
 			folder = sourceEdit.getText();

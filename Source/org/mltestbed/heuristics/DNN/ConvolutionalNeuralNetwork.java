@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.mltestbed.heuristics.CNN;
+package org.mltestbed.heuristics.DNN;
 
 import java.io.ByteArrayInputStream;
 import java.io.Serializable;

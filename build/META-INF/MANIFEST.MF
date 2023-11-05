@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: org.mltestbed.ui.Main
+Class-Path: activation.jar tar.jar sqljdbc4.jar  mysql-connector-java-8.0.17.jar mariadb-java-client-2.4.2.jar

@@ -21,6 +21,7 @@ public class ReadMinas extends ReadData
 	private static final String PROPS = "ReadMinas.properties";
 	private boolean MinasT1 = false;
 	private boolean MinasT2 = false;
+	private boolean MinasT3 = false;
 	/**
 	 * 
 	 */
@@ -159,19 +160,41 @@ public class ReadMinas extends ReadData
 		}
 
 		prop.setProperty("MinasT1", prop.getProperty("MinasT1", "SELECT"
-				+ " minasPassage2015Restricted.avgHourlyAirTemp,"
-				+ " minasPassage2015Restricted.avgHourlyHumidity,"
-				+ " minasPassage2015Restricted.avgHourlyRainfallRate,"
-				+ " minasPassage2015Restricted.avgHourlyBarometricPressure"
+				+ " minasPassage2015HourlyRestricted.avgHourlyAirTemp,"
+				+ " minasPassage2015HourlyRestricted.avgHourlyHumidity,"
+				+ " minasPassage2015HourlyRestricted.avgHourlyRainfallRate,"
+				+ " minasPassage2015HourlyRestricted.avgHourlyBarometricPressure"
 				+ " FROM MinasPassage.minasPassage2015HourlyRestricted ORDER BY minasPassage2015HourlyRestricted.Date, minasPassage2015HourlyRestricted.Hour"));
-		setSQLString(prop.getProperty("MinasT1"));
+
 		prop.setProperty("MinasT2", prop.getProperty("MinasT2", "SELECT"
-				+ " minasPassage2015.avgHourlyAirTemp,"
-				+ " minasPassage2015.avgHourlyHumidity,"
-				+ " minasPassage2015.avgHourlyRainfallRate,"
-				+ " minasPassage2015.avgHourlyBarometricPressure"
+				+ " minasPassage2015Hourly.avgHourlyAirTemp,"
+				+ " minasPassage2015Hourly.avgHourlyHumidity,"
+				+ " minasPassage2015Hourly.avgHourlyRainfallRate,"
+				+ " minasPassage2015Hourly.avgHourlyBarometricPressure"
 				+ " FROM MinasPassage.minasPassage2015Hourly ORDER BY minasPassage2015Hourly.Date, minasPassage2015Hourly.Hour"));
-		setSQLString(prop.getProperty("MinasT2"));
+		
+		prop.setProperty("MinasT3", prop.getProperty("MinasT3", "SELECT"
+				+ " minasPassage2015HourlyFirst6Months.avgHourlyAirTemp,"
+				+ " minasPassage2015HourlyFirst6Months.avgHourlyHumidity,"
+				+ " minasPassage2015HourlyFirst6Months.avgHourlyRainfallRate,"
+				+ " minasPassage2015HourlyFirst6Months.avgHourlyBarometricPressure"
+				+ " FROM MinasPassage.minasPassage2015HourlyFirst6Months ORDER BY minasPassage2015HourlyFirst6Months.Date, minasPassage2015HourlyFirst6Months.Hour"));
+
+		prop.setProperty("MinasV1", prop.getProperty("MinasV1", "SELECT"
+				+ " minasPassage2016HourlyRestricted.avgHourlyAirTemp,"
+				+ " minasPassage2016HourlyRestricted.avgHourlyHumidity,"
+				+ " minasPassage2016HourlyRestricted.avgHourlyRainfallRate,"
+				+ " minasPassage2016HourlyRestricted.avgHourlyBarometricPressure"
+				+ " FROM MinasPassage.minasPassage2016HourlyRestricted ORDER BY minasPassage2016HourlyRestricted.Date, minasPassage2016HourlyRestricted.Hour"));
+
+		prop.setProperty("MinasV2", prop.getProperty("MinasV2", "SELECT"
+				+ " minasPassage2016Hourly.avgHourlyAirTemp,"
+				+ " minasPassage2016Hourly.avgHourlyHumidity,"
+				+ " minasPassage2016Hourly.avgHourlyRainfallRate,"
+				+ " minasPassage2016Hourly.avgHourlyBarometricPressure"
+				+ " FROM MinasPassage.minasPassage2016Hourly ORDER BY minasPassage2016Hourly.Date, minasPassage2016Hourly.Hour"));
+
+		setSQLString(prop.getProperty("MinasT1"));
 
 		String connect = prop.getProperty("connection", connectString);
 		connectString = connect.isEmpty() ? connectString : connect;
@@ -210,6 +233,15 @@ public class ReadMinas extends ReadData
 	{
 		return MinasT2;
 	}
+
+	/**
+	 * @return the minasT3
+	 */
+	public boolean isMinasT3()
+	{
+		return MinasT3;
+	}
+
 	public String selectRandomDay()
 	{
 		String key = null;
@@ -240,7 +272,6 @@ public class ReadMinas extends ReadData
 		}
 		return key;
 	}
-
 	/**
 	 * @param minasT1
 	 *            the minasT1 to set
@@ -259,22 +290,52 @@ public class ReadMinas extends ReadData
 		MinasT2 = minasT2;
 	}
 
+	/**
+	 * @param minasT3 the minasT3 to set
+	 */
+	public void setMinasT3(boolean minasT3)
+	{
+		MinasT3 = minasT3;
+	}
+
 	public void useMinasT1()
 	{
 		setMinasT1(true);
+		setMinasT2(false);
+		setMinasT3(false);
 		setSQLString(prop.getProperty("MinasT1"));
 
 	}
 	public void useMinasT2()
 	{
 		setMinasT2(true);
+		setMinasT1(false);
+		setMinasT3(false);
 		setSQLString(prop.getProperty("MinasT2"));
 
 	}
+	public void useMinasT3()
+	{
+		setMinasT3(true);
+		setMinasT2(false);
+		setMinasT1(false);
+		setSQLString(prop.getProperty("MinasT3"));
 
+	}
+	public void useMinasV1()
+	{
+		setSQLString(prop.getProperty("MinasV1"));
+	}
+	public void useMinasV2()
+	{
+		setSQLString(prop.getProperty("MinasV2"));
+	}
 	public void useTestData()
 	{
-
+		if (MinasT1)
+			useMinasV1();
+		else if (MinasT2)
+			useMinasV2();
 	}
 
 	@Override

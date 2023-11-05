@@ -63,29 +63,6 @@ public class MLHeartDisease extends PsuedoSVM
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.mltestbed.testFunctions.TestBase#destroy()
-	 */
-	@Override
-	public void destroy()
-	{
-		if (tmpFile != null)
-		{
-			tmpFile.delete();
-			tmpFile = null;
-		}
-		super.destroy();
-	}
-
-	@Override
-	protected void finalize() throws Throwable
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
-		super.finalize();
-	}
-	/*
-	 * (non-Javadoc)
-	 * 
 	 * @see org.mltestbed.testFunctions.SVM#init()
 	 */
 	@Override

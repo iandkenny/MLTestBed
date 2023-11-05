@@ -52,7 +52,7 @@ public class Detrend
 	{
 				//%DETR} Remove a polynomial tr}.
 				//%   Y = DETR}(X) removes the best straight-line fit linear tr} from the
-				//%   data in vector X and returns the residual in vector Y.  If X is a
+				//%   baseData in vector X and returns the residual in vector Y.  If X is a
 				//%   matrix, DETR} removes the tr} from each column of the matrix.
 				//%
 				//%   Y = DETR}(X,N) removes a polynomial tr} with degree N. N = 1 by
@@ -81,9 +81,9 @@ public class Detrend
 				//%      false        - the fitted tr} is not required to be continuous
 				//%
 				//%   Y = DETR}(___,'SamplePoints',S) also specifies the sample points S
-				//%   associated with the data in X. S must be a floating-point or duration
+				//%   associated with the baseData in X. S must be a floating-point or duration
 				//%   vector. S must be sorted and contain unique points. You can use S to
-				//%   specify time stamps for the data. By default, DETR} assumes the data
+				//%   specify time stamps for the baseData. By default, DETR} assumes the baseData
 				//%   is sampled uniformly at points S = [1 2 3 ... ].
 				//%
 				//%   Examples:

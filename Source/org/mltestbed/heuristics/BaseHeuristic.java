@@ -341,9 +341,9 @@ public abstract class BaseHeuristic extends Thread implements Cloneable
 	/**
 	 * 
 	 */
-		protected void eval()
+	protected void eval()
 	{
-		System.out.println("Evalulating...");
+		Log.getLogger().info("Evalulating...");
 		switch (evalType)
 		{
 			case PARA_EVAL :
@@ -357,7 +357,7 @@ public abstract class BaseHeuristic extends Thread implements Cloneable
 				singleThreadEval();
 				break;
 		}
-		System.out.println("Completed Evalulation");
+		Log.getLogger().info("Completed Evalulation");
 	}
 	/**
 	 * @return Returns the mDescription.
@@ -747,6 +747,15 @@ public abstract class BaseHeuristic extends Thread implements Cloneable
 	@Override
 	public void run()
 	{
+//		mainLoop(); // commented out for now
+		super.run();
+	}
+
+	/**
+	 * 
+	 */
+	public void mainLoop()
+	{
 		bRunning = true;
 		bFinished = false;
 		bStopExecution = false;
@@ -925,7 +934,6 @@ public abstract class BaseHeuristic extends Thread implements Cloneable
 						Util.getSwarmui().updateLog("Cancelling Run...");
 						results.updateNotes(msg);
 					} 
-
 					results.setEndTime();
 					if (bMaster)
 						heir.stopChildren();
@@ -953,7 +961,6 @@ public abstract class BaseHeuristic extends Thread implements Cloneable
 			bFinished = true;
 		stopRunning();
 		bRunning = false;
-		super.run();
 	}
 	/**
 	 * @param description

@@ -216,17 +216,17 @@ public class FFT {
         int n = Integer.parseInt(args[0]);
         Complex[] x = new Complex[n];
 
-        // original data
+        // original baseData
         for (int i = 0; i < n; i++) {
             x[i] = new Complex(i, 0);
         }
         show(x, "x");
 
-        // FFT of original data
+        // FFT of original baseData
         Complex[] y = fft(x);
         show(y, "y = fft(x)");
 
-        // FFT of original data
+        // FFT of original baseData
         Complex[] y2 = dft(x);
         show(y2, "y2 = dft(x)");
 

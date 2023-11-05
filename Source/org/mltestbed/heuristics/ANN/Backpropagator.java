@@ -116,10 +116,10 @@ public class Backpropagator
 
 							int l = 0;
 							boolean found = false;
-							while (l < downstreamNeuron.getInputs().size()
+							while (l < downstreamNeuron.getSynapses().size()
 									&& !found)
 							{
-								Synapse synapse = downstreamNeuron.getInputs()
+								Synapse synapse = downstreamNeuron.getSynapses()
 										.get(l);
 
 								if (synapse.getSourceNeuron() == neuron)
@@ -150,7 +150,7 @@ public class Backpropagator
 				for (Neuron neuron : layer.getNeurons())
 				{
 
-					for (Synapse synapse : neuron.getInputs())
+					for (Synapse synapse : neuron.getSynapses())
 					{
 
 						double newLearningRate = characteristicTime > 0

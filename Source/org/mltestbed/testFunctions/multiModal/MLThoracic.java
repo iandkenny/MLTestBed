@@ -71,13 +71,6 @@ public class MLThoracic extends PsuedoSVM
 		params.setProperty(USE_SUM, "false");
 	}
 
-	@Override
-	protected void finalize() throws Throwable
-	{
-		if (tmpFile != null)
-			tmpFile.delete();
-		super.finalize();
-	}
 	/*
 	 * (non-Javadoc)
 	 * 

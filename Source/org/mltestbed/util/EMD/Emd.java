@@ -48,7 +48,7 @@ public class Emd
 		 * 
 		 * Typical use consists of calling emdCreate(), followed by
 		 * emdDecompose(), and then using the struct's "imfs" field to retrieve
-		 * the data. Call emdClear() to deallocate memory inside the class.
+		 * the baseData. Call emdClear() to deallocate memory inside the class.
 		 */
 
 		ArrayList<Double> data = new ArrayList<Double>();
@@ -56,17 +56,19 @@ public class Emd
 		double[] array = null;
 		StringBuilder sb = new StringBuilder();
 
-		db.useMinasT1();
+		db.useMinasT1(); // first 2 months 2015
+		db.useMinasT2(); // complete 2015
+//		db.useMinasT3(); // first 6 months 2015
 		LinkedList<ArrayList<Double>> dbdata = db.getData(null);;
 		emd = new Emd();
 		ArrayList<String> names = db.getColumnNames();
 		inputs = names.size();
-//		int order = names.size() + (int) Math.ceil(names.size() / 3) + 1; // +1
+		int order = names.size() + (int) Math.ceil(names.size() / 3) + 1; // +1
 																			// to
 																			// allow
 																			// for
 																			// residual
-		int order = (int) Math.ceil(Util.log2(dbdata.size()));
+//		int order = (int) Math.ceil(Util.log2(dbdata.size()));
 		int k = 0;
 		int cols = 0;
 		for (Iterator<ArrayList<Double>> iterator = dbdata.iterator(); iterator
@@ -171,6 +173,7 @@ public class Emd
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		sb = null;
 		System.out.println("Completed CSV file write");
 
 		String tdicstr = processTDIC(dbdata, names, cols);
@@ -266,7 +269,7 @@ public class Emd
 		 * 
 		 * Typical use consists of calling emdCreate(), followed by
 		 * emdDecompose(), and then using the struct's "imfs" field to retrieve
-		 * the data. Call emdClear() to deallocate memory inside the struct.
+		 * the baseData. Call emdClear() to deallocate memory inside the struct.
 		 */
 		double[] data = new double[]
 		{229.49, 231.94, 232.97, 234, 233.36, 235.15, 235.64, 235.78, 238.95,

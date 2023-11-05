@@ -25,19 +25,154 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
 import org.mltestbed.heuristics.ANN.activators.ActivationStrategy;
+import org.mltestbed.heuristics.ANN.activators.RectifiedLinearActivationStrategy;
 import org.mltestbed.util.Log;
+import org.mltestbed.util.RandGen;
+import org.mltestbed.util.Util;
 
 public class ArtificialNeuralNetwork implements Serializable
 {
 
 	private static final String ANN = "ann";
 	private static final String INVALID_XML_FILE_FORMAT = "Invalid XML file format";
+	public static final double eps = 1e-9;
+	private static ConcurrentHashMap<String, Neuron> neuronMap;
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static ConcurrentHashMap<String, Neuron> neuronMap;
 	private static ConcurrentHashMap<String, Synapse> synapseMap;
+	public static void initialize_weight(Layer x)
+	{
+		// nn.init.xavier_uniform_(x.weight)
+		// if (x.bias == null)
+		// nn.init.constant_(x.bias, 0);
+		List<Neuron> neurons = x.getNeurons();
+
+		for (Iterator<Neuron> iterator = neurons.iterator(); iterator
+				.hasNext();)
+		{
+			Neuron neuron = (Neuron) iterator.next();
+			List<Synapse> synapses = neuron.getSynapses();
+			for (Iterator<Synapse> iterator2 = synapses.iterator(); iterator2
+					.hasNext();)
+			{
+				Synapse synapse = (Synapse) iterator2.next();
+				synapse.setWeight(RandGen.getLastCreated().nextGaussian());
+			}
+		}
+	}
+
+	public static ArtificialNeuralNetwork createFeedForwardLinearNetwork(
+			int input_size, int output_size, float dropout_rate)
+	{
+
+		ArtificialNeuralNetwork ffn = new ArtificialNeuralNetwork("FNN");
+		Layer layer1 = new Layer("FFN Layer 1", null);
+		Layer layer2 = new Layer("FFN Layer 2", layer1);
+
+		RectifiedLinearActivationStrategy activate = new RectifiedLinearActivationStrategy();
+		for (int i = 0; i < input_size; i++)
+		{
+			layer1.addNeuron(
+					new Neuron(layer1.getId() + "." + i, activate, false));
+
+		}
+		for (int i = 0; i < output_size; i++)
+		{
+			layer2.addNeuron(
+					new Neuron(layer2.getId() + "." + i, activate, false));
+
+		}
+		layer2.setDropout(dropout_rate);
+		return ffn;
+
+	}
+	public static ArtificialNeuralNetwork createANN(String name,
+			ArrayList<Integer> neuronsperLayer,
+			ArrayList<ActivationStrategy> activationStrategy)
+	{
+		ArtificialNeuralNetwork ann = new ArtificialNeuralNetwork(name);
+		Layer previousLayer = null;
+		Layer layer;
+		boolean bias;
+		for (int i = 0; i < neuronsperLayer.size(); i++)
+		{
+			String id = name + ".layer";
+			bias = (neuronsperLayer.get(i) < 0) ? true : false;
+			if (bias)
+			{
+				Neuron biasNeuron = new Neuron(id + ".bias",
+						activationStrategy.get(i), false);
+				layer = new Layer(id, previousLayer, biasNeuron);
+			} else
+				layer = new Layer(id, previousLayer);
+			int absneurons = Math.abs(neuronsperLayer.get(i));
+			for (int j = 0; j < absneurons; j++)
+			{
+				Neuron neuron = new Neuron(layer.getId() + "." + i + "." + j,
+						activationStrategy.get(i), false);
+				layer.addNeuron(neuron);
+			}
+
+			ann.addLayer(layer);
+			previousLayer = layer;
+		}
+
+		return ann;
+
+	}
+	public static ArrayList<Layer> createLinearLayers(
+			ArtificialNeuralNetwork ann, ArrayList<Integer> neuronsperLayer,
+			ArrayList<ActivationStrategy> activationStrategy, float dropoutRate)
+	{
+		Layer previousLayer = null;
+		Layer layer;
+		ArrayList<Layer> layers = new ArrayList<>();
+
+		for (int i = 0; i < neuronsperLayer.size(); i++)
+		{
+			String id = ann.getName() + ".layer";
+			boolean bBias = (neuronsperLayer.get(i) < 0) ? true : false;
+			if (bBias)
+			{
+				Neuron biasNueron = new Neuron(id + ".bias",
+						activationStrategy.get(i), false);
+				layer = new Layer(id, previousLayer, biasNueron);
+			} else
+				layer = new Layer(id, previousLayer);
+			layer.setDropout(dropoutRate);
+			int absneurons = Math.abs(neuronsperLayer.get(i));
+			for (int j = 0; j < absneurons; j++)
+			{
+				Neuron neuron = new Neuron(layer.getId() + "." + i + "." + j,
+						activationStrategy.get(i), layer.isUseDropout());
+				layer.addNeuron(neuron);
+			}
+
+			ann.addLayer(layer);
+			layers.add(layer);
+			previousLayer = layer;
+		}
+
+		return layers;
+
+	}
+
+	/**
+	 * @return the neuronMap
+	 */
+	public static ConcurrentHashMap<String, Neuron> getNeuronMap()
+	{
+		return neuronMap;
+	}
+	/**
+	 * @return the synapseMap
+	 */
+	public static ConcurrentHashMap<String, Synapse> getSynapseMap()
+	{
+		return synapseMap;
+	}
 	public static ArtificialNeuralNetwork loadANN(String xml)
 	{
 		ArtificialNeuralNetwork ann = null;
@@ -68,7 +203,6 @@ public class ArtificialNeuralNetwork implements Serializable
 						String qName = startElement.getName().getLocalPart();
 						if (qName.equalsIgnoreCase(ANN))
 						{
-							int rnnLayers = 0;
 							@SuppressWarnings("unchecked")
 							Iterator<Attribute> attributes = startElement
 									.getAttributes();
@@ -77,18 +211,31 @@ public class ArtificialNeuralNetwork implements Serializable
 								Attribute attr = attributes.next();
 								String localPart = attr.getName()
 										.getLocalPart();
+								String attrValue = "";
 								if (localPart.equalsIgnoreCase("name"))
 								{
-									String attrName = attr.getValue();
-									ann = new ArtificialNeuralNetwork(attrName);
+									attrValue = attr.getValue();
+									ann = new ArtificialNeuralNetwork(
+											attrValue);
 								} else if (localPart
 										.equalsIgnoreCase("rnnlayers"))
 								{
-									String attrName = attr.getValue();
-									rnnLayers = Integer.parseInt(attrName);
+									attrValue = attr.getValue();
+									if (Util.isNumeric(attrValue))
+										ann.setRnnLayers(new Double(
+												Double.parseDouble(attrValue))
+														.intValue());
+								} else if (localPart
+										.equalsIgnoreCase("dropout"))
+								{
+									attrValue = attr.getValue();
+									if (Util.isNumeric(attrValue))
+										ann.setDropout(new Double(
+												Double.parseDouble(attrValue))
+														.floatValue());
+
 								}
 							}
-							ann.setRnnLayers(rnnLayers);
 						}
 						String biasid = null;
 						if (qName.equalsIgnoreCase("layer"))
@@ -121,22 +268,32 @@ public class ArtificialNeuralNetwork implements Serializable
 									.getAttributes();
 							String attrName = null;
 							ActivationStrategy activate = null;
+							boolean neuronDropout = false;
 							if (attributes.hasNext())
 							{
 								Attribute attr = attributes.next();
 								String localPart = attr.getName()
 										.getLocalPart();
-								if (localPart.equalsIgnoreCase("id"))
+								String value = attr.getValue();
+								if (value != null)
 								{
-									attrName = attr.getValue();
-								}
-								if (localPart.equalsIgnoreCase("activate"))
-								{
-									String clazz = attr.getValue();
-									activate = (ActivationStrategy) Class
-											.forName(clazz)
-											.getDeclaredConstructor()
-											.newInstance();
+									if (localPart.equalsIgnoreCase("id"))
+									{
+										attrName = value;
+									} else if (localPart
+											.equalsIgnoreCase("activate"))
+									{
+										String clazz = value;
+										activate = (ActivationStrategy) Class
+												.forName(clazz)
+												.getDeclaredConstructor()
+												.newInstance();
+									} else if (localPart
+											.equalsIgnoreCase("dropout"))
+									{
+
+										neuronDropout = Boolean.valueOf(value);
+									}
 								}
 							}
 
@@ -146,7 +303,8 @@ public class ArtificialNeuralNetwork implements Serializable
 									neuron = neuronMap.get(attrName);
 								else
 								{
-									neuron = new Neuron(attrName, activate);
+									neuron = new Neuron(attrName, activate,
+											neuronDropout);
 									neuronMap.put(neuron.getId(), neuron);
 									if (attrName.equalsIgnoreCase(biasid))
 									{
@@ -192,10 +350,16 @@ public class ArtificialNeuralNetwork implements Serializable
 
 							if (synapse == null)
 							{
-								if (weight == -2)
-									weight = ((Math.random() * 1) - 0.5);
-								synapse = new Synapse(id, sourceNeuron, weight);
-								synapseMap.put(id, synapse);
+								if (synapseMap.contains(id))
+									synapse = synapseMap.get(id);
+								else
+								{
+									if (weight == Double.NaN)
+										weight = ((Math.random() * 1) - 0.5);
+									synapse = new Synapse(id, sourceNeuron,
+											weight);
+									synapseMap.put(id, synapse);
+								}
 							}
 							neuron.addInput(synapse);
 						}
@@ -246,26 +410,12 @@ public class ArtificialNeuralNetwork implements Serializable
 		return ann;
 	}
 	/**
-	 * @return the neuronMap
-	 */
-	public static ConcurrentHashMap<String, Neuron> getNeuronMap()
-	{
-		return neuronMap;
-	}
-	/**
 	 * @param neuronMap
 	 *            the neuronMap to set
 	 */
 	public static void setNeuronMap(ConcurrentHashMap<String, Neuron> neuronMap)
 	{
 		ArtificialNeuralNetwork.neuronMap = neuronMap;
-	}
-	/**
-	 * @return the synapseMap
-	 */
-	public static ConcurrentHashMap<String, Synapse> getSynapseMap()
-	{
-		return synapseMap;
 	}
 	/**
 	 * @param synapseMap
@@ -276,70 +426,20 @@ public class ArtificialNeuralNetwork implements Serializable
 	{
 		ArtificialNeuralNetwork.synapseMap = synapseMap;
 	}
+
+	private float dropout = 0;
 	private Layer input;
 	private List<Layer> layers;
 	private String name;
-
 	private Layer output;
 	private int rnnLayers = 0;
+	private boolean training = false;
+	private boolean useDropout = false;
 
 	public ArtificialNeuralNetwork(String name)
 	{
 		this.name = name;
 		layers = new ArrayList<Layer>();
-	}
-	public void rnnIter()
-	{
-		if (rnnLayers > 0 && layers.size() >= rnnLayers + 1)
-		{
-			try
-			{
-				Layer layer = input;
-				for (int i = 0; i < rnnLayers; i++)
-					layer = layer.getNextLayer();
-
-				while (layer != input)
-				{
-					int size = layer.getNeurons().size();
-					int size2 = layer.getNextLayer().getNeurons().size();
-					if (size == size2)
-					{
-						for (int j = 0; j < size; j++)
-						{
-							layer.getNeurons().get(j)
-									.setOutput(layer.getPreviousLayer()
-											.getNeurons().get(j).getOutput());
-						}
-
-					} else
-						throw new Exception(
-								"In order for the RNN to work (as currently implemented) the first "
-										+ rnnLayers
-										+ " must have the same number of neurons");
-					layer = layer.getPreviousLayer();
-				}
-			} catch (Exception e)
-			{
-				Log.log(Level.SEVERE, e);
-				e.printStackTrace();
-			}
-		}
-	}
-
-	/**
-	 * @return the rnnLayers
-	 */
-	public int getRnnLayers()
-	{
-		return rnnLayers;
-	}
-	/**
-	 * @param rnnLayers
-	 *            the rnnLayers to set
-	 */
-	public void setRnnLayers(int rnnLayers)
-	{
-		this.rnnLayers = rnnLayers;
 	}
 	public void addLayer(Layer layer)
 	{
@@ -360,6 +460,24 @@ public class ArtificialNeuralNetwork implements Serializable
 
 		output = layers.get(layers.size() - 1);
 	}
+	public void applyDropout()
+	{
+		if (useDropout)
+		{
+			for (Layer layer : layers)
+			{
+				for (Neuron neuron : layer.getNeurons())
+				{
+					if (RandGen.getLastCreated().nextFloat() <= dropout)
+						neuron.setDropout(true);
+					else
+						neuron.setDropout(false);
+
+				}
+			}
+
+		}
+	}
 	public ArtificialNeuralNetwork copy()
 	{
 		ArtificialNeuralNetwork copy = new ArtificialNeuralNetwork(this.name);
@@ -374,7 +492,7 @@ public class ArtificialNeuralNetwork implements Serializable
 			{
 				Neuron bias = layer.getNeurons().get(0);
 				Neuron biasCopy = new Neuron("0",
-						bias.getActivationStrategy().copy());
+						bias.getActivationStrategy().copy(), bias.isDropout());
 				biasCopy.setOutput(bias.getOutput());
 				layerCopy = new Layer(layer.getId() + "x", null, biasCopy);
 			}
@@ -393,11 +511,12 @@ public class ArtificialNeuralNetwork implements Serializable
 				Neuron neuron = layer.getNeurons().get(i);
 
 				Neuron neuronCopy = new Neuron(Integer.toString(i),
-						neuron.getActivationStrategy().copy());
+						neuron.getActivationStrategy().copy(),
+						neuron.isDropout());
 				neuronCopy.setOutput(neuron.getOutput());
 				neuronCopy.setError(neuron.getError());
 
-				if (neuron.getInputs().size() == 0)
+				if (neuron.getSynapses().size() == 0)
 				{
 					layerCopy.addNeuron(neuronCopy);
 				}
@@ -415,7 +534,6 @@ public class ArtificialNeuralNetwork implements Serializable
 
 		return copy;
 	}
-
 	public void copyWeightsFrom(ArtificialNeuralNetwork sourceNeuralNetwork)
 	{
 		if (layers.size() != sourceNeuralNetwork.layers.size())
@@ -448,22 +566,22 @@ public class ArtificialNeuralNetwork implements Serializable
 			{
 				Neuron destinationNeuron = destinationLayer.getNeurons().get(j);
 
-				if (destinationNeuron.getInputs().size() != sourceNeuron
-						.getInputs().size())
+				if (destinationNeuron.getSynapses().size() != sourceNeuron
+						.getSynapses().size())
 				{
 					throw new IllegalArgumentException(
 							"Number of inputs to neuron " + (j + 1)
 									+ " in layer " + (i + 1) + " do not match ("
-									+ sourceNeuron.getInputs().size()
+									+ sourceNeuron.getSynapses().size()
 									+ " in source versus "
-									+ destinationNeuron.getInputs().size()
+									+ destinationNeuron.getSynapses().size()
 									+ " in destination)");
 				}
 
 				int k = 0;
-				for (Synapse sourceSynapse : sourceNeuron.getInputs())
+				for (Synapse sourceSynapse : sourceNeuron.getSynapses())
 				{
-					Synapse destinationSynapse = destinationNeuron.getInputs()
+					Synapse destinationSynapse = destinationNeuron.getSynapses()
 							.get(k);
 
 					destinationSynapse.setWeight(sourceSynapse.getWeight());
@@ -476,12 +594,18 @@ public class ArtificialNeuralNetwork implements Serializable
 			i++;
 		}
 	}
+	/**
+	 * @return the dropout
+	 */
+	public float getDropout()
+	{
+		return dropout;
+	}
 
 	public List<Layer> getLayers()
 	{
 		return layers;
 	}
-
 	public String getName()
 	{
 		return name;
@@ -507,7 +631,13 @@ public class ArtificialNeuralNetwork implements Serializable
 
 		return outputs;
 	}
-
+	/**
+	 * @return the rnnLayers
+	 */
+	public int getRnnLayers()
+	{
+		return rnnLayers;
+	}
 	public Vector<Double> getWeights()
 	{
 
@@ -519,7 +649,7 @@ public class ArtificialNeuralNetwork implements Serializable
 			for (Neuron neuron : layer.getNeurons())
 			{
 
-				for (Synapse synapse : neuron.getInputs())
+				for (Synapse synapse : neuron.getSynapses())
 				{
 					weights.add(synapse.getWeight());
 				}
@@ -528,7 +658,6 @@ public class ArtificialNeuralNetwork implements Serializable
 
 		return weights;
 	}
-
 	public String getXML()
 	{
 		String buf;
@@ -540,6 +669,23 @@ public class ArtificialNeuralNetwork implements Serializable
 		buf = "</ANN>";
 		return buf;
 	}
+
+	/**
+	 * @return the training
+	 */
+	public boolean isTraining()
+	{
+		return training;
+	}
+
+	/**
+	 * @return the useDropout
+	 */
+	public boolean isUseDropout()
+	{
+		return useDropout;
+	}
+
 	public void persist()
 	{
 		String fileName = name.replaceAll(" ", "") + "-" + new Date().getTime()
@@ -580,20 +726,70 @@ public class ArtificialNeuralNetwork implements Serializable
 			}
 		}
 	}
+
 	public void reset()
 	{
 		for (Layer layer : layers)
 		{
 			for (Neuron neuron : layer.getNeurons())
 			{
-				for (Synapse synapse : neuron.getInputs())
+				for (Synapse synapse : neuron.getSynapses())
 				{
-					synapse.setWeight((Math.random() * 1) - 0.5);
+					synapse.setWeight(
+							RandGen.getLastCreated().nextDouble() - 0.5);
 				}
 			}
 		}
 	}
 
+	public void rnnIter()
+	{
+		if (rnnLayers > 0 && layers.size() >= rnnLayers + 1)
+		{
+			try
+			{
+				Layer layer = input;
+				for (int i = 0; i < rnnLayers; i++)
+					layer = layer.getNextLayer();
+
+				while (layer != input)
+				{
+					int size = layer.getNeurons().size();
+					int size2 = layer.getNextLayer().getNeurons().size();
+					if (size == size2)
+					{
+						for (int j = 0; j < size; j++)
+						{
+							layer.getNeurons().get(j)
+									.setOutput(layer.getPreviousLayer()
+											.getNeurons().get(j).getOutput());
+						}
+
+					} else
+						throw new Exception(
+								"In order for the RNN to work (as currently implemented) the first "
+										+ rnnLayers
+										+ " must have the same number of neurons");
+					layer = layer.getPreviousLayer();
+				}
+			} catch (Exception e)
+			{
+				Log.log(Level.SEVERE, e);
+				e.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * @param dropout
+	 *            the dropout to set
+	 */
+	public void setDropout(float dropout)
+	{
+		setUseDropout(dropout > 0.0 && dropout <= 1.0);
+		if (useDropout)
+			this.dropout = dropout;
+	}
 	public void setInputs(Vector<Double> inputs)
 	{
 		if (input != null)
@@ -617,7 +813,43 @@ public class ArtificialNeuralNetwork implements Serializable
 			}
 		}
 	}
+	/**
+	 * @param layers the layers to set
+	 */
+	public void setLayers(List<Layer> layers)
+	{
+		this.layers = layers;
+	}
 
+	/**
+	 * @param rnnLayers
+	 *            the rnnLayers to set
+	 */
+	public void setRnnLayers(int rnnLayers)
+	{
+		this.rnnLayers = rnnLayers;
+	}
+
+	/**
+	 * @param training
+	 *            the training to set
+	 */
+	public void setTraining(boolean training)
+	{
+		this.training = training;
+		if (!training)
+			useDropout = false;
+		applyDropout();
+	}
+
+	/**
+	 * @param useDropout
+	 *            the useDropout to set
+	 */
+	private void setUseDropout(boolean useDropout)
+	{
+		this.useDropout = useDropout;
+	}
 	public void setWeights(Vector<Double> weights)
 	{
 		Enumeration<Double> eles = weights.elements();
@@ -626,7 +858,7 @@ public class ArtificialNeuralNetwork implements Serializable
 
 			for (Neuron neuron : layer.getNeurons())
 			{
-				for (Synapse synapse : neuron.getInputs())
+				for (Synapse synapse : neuron.getSynapses())
 				{
 					if (eles.hasMoreElements())
 						synapse.setWeight(eles.nextElement());
@@ -634,5 +866,4 @@ public class ArtificialNeuralNetwork implements Serializable
 			}
 		}
 	}
-
 }

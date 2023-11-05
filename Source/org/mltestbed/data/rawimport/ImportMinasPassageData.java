@@ -306,7 +306,7 @@ public class ImportMinasPassageData extends Thread
 		Connection con = null;
 		Class.forName(driver);
 		int i = 0;
-		while (con ==null && i<5)
+		while (con == null && i < 5)
 		{
 			con = DriverManager.getConnection(url + connectString);
 			i++;
@@ -351,8 +351,9 @@ public class ImportMinasPassageData extends Thread
 			rs = stmt.executeQuery(sql);
 			if (rs.next())
 				name = rs.getString(1);
+			if (name != null)
+				updateProcessed(name);
 			stmt.close();
-
 		} catch (ClassNotFoundException e)
 		{
 			logger.log(Level.SEVERE, e.getMessage());;
@@ -429,9 +430,7 @@ public class ImportMinasPassageData extends Thread
 			curFilename = getNextFile(subfolder);
 			if (curFilename != null && !curFilename.isEmpty())
 			{
-				updateProcessed(curFilename);
-
-				processfile(curFilename,subfolder);
+				processfile(curFilename, subfolder);
 
 				logger.log(Level.INFO, "Finished: File " + curFilename);
 				curFilename = "";
@@ -439,13 +438,13 @@ public class ImportMinasPassageData extends Thread
 		}
 		logger.log(Level.INFO, "Processing finished");
 		bFinished = true;
-		if(dialog != null)
+		if (dialog != null)
 			dialog.fireEvent();
 	}
 	/**
 	 * @param subfolder
 	 */
-	public void processfile(String curFilename,String subfolder)
+	public void processfile(String curFilename, String subfolder)
 	{
 		FileInputStream file;
 		try
@@ -535,7 +534,7 @@ public class ImportMinasPassageData extends Thread
 //				logger.log(Level.SEVERE,e.getMessage());
 //			}
 
-		logger.log(Level.INFO,"SQL: "+ sql);
+		logger.log(Level.INFO, "SQL: " + sql);
 	}
 	@SuppressWarnings("unused")
 	private void openDB()
@@ -672,7 +671,7 @@ public class ImportMinasPassageData extends Thread
 		if (progress != null && dialog != null)
 		{
 			progress.firePropertyChange("value", 0, 0);
-			dialog.fireEvent();	
+			dialog.fireEvent();
 		}
 	}
 

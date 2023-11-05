@@ -20,7 +20,7 @@ import org.mltestbed.util.Log;
  *
  */
 
-public class CNN extends TestBaseANN
+public class DNN extends TestBaseANN
 {
 	private class CNNData extends ReadData
 	{
@@ -98,10 +98,10 @@ public class CNN extends TestBaseANN
 	/**
 	 * 
 	 */
-	public CNN()
+	public DNN()
 	{
 		super();
-		description = "Default CNN model";
+		description = "Default DNN model";
 		load(new Properties());
 
 	}

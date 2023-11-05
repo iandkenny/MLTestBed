@@ -47,6 +47,17 @@ public class DSSPSO extends Topology
 			this.neighbour = neighbour;
 			this.joinedTime = joinedTime;
 		}
+//		@Override
+//		public int compare(Neighbour o1, Neighbour o2)
+//		{
+//			return Double.compare(Double.isNaN(o1.getKey().getBestScore())?Math.random()-1e9:o1.getKey().getBestScore(),
+//					Double.isNaN(o2.getKey().getBestScore())?Math.random()-1e9:o2.getKey().getBestScore());
+//		}
+//		@Override
+//		public int compareTo(Particle o)
+//		{
+//			return Double.compare(Double.isNaN(neighbour.getBestScore())?Math.random()-1e9:neighbour.getBestScore(),Double.isNaN(o.getBestScore())?Math.random()-1e9:o.getBestScore());
+//		}
 		@Override
 		public int compare(Neighbour o1, Neighbour o2)
 		{
@@ -83,7 +94,7 @@ public class DSSPSO extends Topology
 
 		public int compare(Neighbour obj1, Neighbour obj2)
 		{
-			return (int) (obj1.getValue() - obj2.getValue());
+			return Long.compare(obj1.getValue(), obj2.getValue());
 		}
 	}
 
@@ -193,7 +204,7 @@ public class DSSPSO extends Topology
 		}
 
 	}
-	
+
 	@Override
 	protected ArrayList<Particle> getNeighbourhood(int particle)
 
@@ -229,7 +240,7 @@ public class DSSPSO extends Topology
 		}
 		neighbourhoodXML(particle, neighbourhood);
 		particleObj.setFuncSpecific(neighbourhoodSpecific, false);
-		System.out.println(neighbourhoodSpecific);
+//		System.out.println(neighbourhoodSpecific);
 		return neighbourhood;
 	}
 	private void recruitNeighbour(Particle particle)
@@ -240,7 +251,8 @@ public class DSSPSO extends Topology
 			{
 				if (recruitTime == null)
 					recruitTime = new ConcurrentHashMap<ConcurrentHashMap<Integer, Neighbour>, Long>();
-				ArrayList<Particle> localSwarm = new ArrayList<Particle>(Collections.synchronizedList(swarm.getSwarmMembers()));
+				ArrayList<Particle> localSwarm = new ArrayList<Particle>(
+						Collections.synchronizedList(swarm.getSwarmMembers()));
 				Collections.sort(localSwarm);
 				ConcurrentHashMap<Integer, Neighbour> neighbourhood = neighbourhoods
 						.get(particle);

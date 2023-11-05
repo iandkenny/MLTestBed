@@ -39,7 +39,7 @@
   * model.
   * </li>
   * <li> getters for the statistics always compute values based on the current
-  * set of observations -- i.e., you can get statistics, then add more data
+  * set of observations -- i.e., you can get statistics, then add more baseData
   * and get updated statistics without using a new instance. There is no
   * "compute" method that updates all statistics. Each of the getters performs
   * the necessary computations to return the requested statistic.</li>
@@ -86,7 +86,7 @@
      }
      
      /**
-      * Adds the observation (x,y) to the regression data set.
+      * Adds the observation (x,y) to the regression baseData set.
       * <p>
       * Uses updating formulas for means and sums of squares defined in
       * "Algorithms for Computing the Sample Variance: Analysis and
@@ -118,19 +118,19 @@
 
      /**
       * Adds the observations represented by the elements in
-      * <code>data</code>.
+      * <code>baseData</code>.
       * <p>
-      * <code>(data[0][0],data[0][1])</code> will be the first observation, then
-      * <code>(data[1][0],data[1][1])</code>, etc.
+      * <code>(baseData[0][0],baseData[0][1])</code> will be the first observation, then
+      * <code>(baseData[1][0],baseData[1][1])</code>, etc.
       * <p>
-      * This method does not replace data that has already been added. The
-      * observations represented by <code>data</code> are added to the existing
+      * This method does not replace baseData that has already been added. The
+      * observations represented by <code>baseData</code> are added to the existing
       * dataset.
       * <p>
-      * To replace all data, use <code>clear()</code> before adding the new
-      * data.
+      * To replace all baseData, use <code>clear()</code> before adding the new
+      * baseData.
       *
-      * @param data array of observations to be added
+      * @param baseData array of observations to be added
       */
      public void addData(double[][] data) {
          for (int i = 0; i < data.length; i++) {
@@ -139,7 +139,7 @@
      }
 
      /**
-      * Clears all data from the model.
+      * Clears all baseData from the model.
       */
      public void clear() {
          sumX = 0d;
@@ -161,7 +161,7 @@
 
      /**
       * Returns the "predicted" <code>y</code> value associated with the
-      * supplied <code>x</code> value, based on the data that has been
+      * supplied <code>x</code> value, based on the baseData that has been
       * added to the model when this method is activated.
       * <p>
       * <code> predict(x) = intercept + slope * x </code>
@@ -219,7 +219,7 @@
      */
      public double getSlope() {
          if (n < 2) {
-             return Double.NaN; //not enough data
+             return Double.NaN; //not enough baseData
  }
          if (Math.abs(sumXX) < 10 * Double.MIN_VALUE) {
              return Double.NaN; //not enough variation in x
@@ -286,7 +286,7 @@
       * Returns the sum of squared errors divided by the degrees of freedom,
       * usually abbreviated MSE.
       * <p>
-      * If there are fewer than <strong>three</strong> data pairs in the model,
+      * If there are fewer than <strong>three</strong> baseData pairs in the model,
       * or if there is no variation in <code>x</code>, this returns
       * <code>Double.NaN</code>.
       *
@@ -361,7 +361,7 @@
       * error of the slope estimate</a>,
       * usually denoted s(b1).
       * <p>
-      * If there are fewer that <strong>three</strong> data pairs in the model,
+      * If there are fewer that <strong>three</strong> baseData pairs in the model,
       * or if there is no variation in x, this returns <code>Double.NaN</code>.
       *
       * @return standard error associated with slope estimate

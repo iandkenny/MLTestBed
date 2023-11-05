@@ -29,10 +29,10 @@ public class Regression {
 
    }
 
-   // Apply least squares to raw org.mltestbed.data to determine the coefficients for
+   // Apply least squares to raw baseData to determine the coefficients for
    // an n-order equation: y = a0*X^0 + a1*X^1 + ... + an*X^n.
    // Returns the coefficients for the solved equation, given a number
-   // of y and x org.mltestbed.data points. The rawData input is given in the form of
+   // of y and x baseData points. The rawData input is given in the form of
    // {{y0, x0}, {y1, x1},...,{yn, xn}}.   The coefficients returned by
    // the regression are {a0, a1,...,an} which corresponds to
    // {X^0, X^1,...,X^n}. The number of coefficients returned is the
@@ -43,7 +43,7 @@ public class Regression {
       double term[] = new double[norder+1];
       double ysquare = 0;
 
-      // step through each raw org.mltestbed.data entries
+      // step through each raw baseData entries
       for (int i = 0; i < rawData.length; i++) {
 
          // sum the y values

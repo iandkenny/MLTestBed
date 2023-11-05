@@ -12,6 +12,9 @@ import java.util.Vector;
 import org.mltestbed.topologies.Topology;
 import org.mltestbed.util.Particle;
 import org.mltestbed.util.Util;
+import org.mltestbed.util.interleaver.ARPInterleaver;
+import org.mltestbed.util.interleaver.Interleaver;
+import org.mltestbed.util.interleaver.SRandomInterleaver;
 
 /**
  * @author Ian Kenny
@@ -26,6 +29,9 @@ public class LorenzIWPSO extends ClassicPSO
 	private double maxw = Double.NaN;
 	private double minw = Double.NaN;
 	private double w = Double.NaN;
+	private boolean useSRandomInterleaver;
+	private boolean useARPInterleaver;
+	private Interleaver interleaver = null;;
 
 	/**
 	 * 
@@ -43,10 +49,10 @@ public class LorenzIWPSO extends ClassicPSO
 	{
 		super(o);
 		setDescription(DESCRIPTION);
-		w = ((LorenzIWPSO)o).w;
-		minw = ((LorenzIWPSO)o).minw;
-		maxw = ((LorenzIWPSO)o).maxw;
-		decrementW = ((LorenzIWPSO)o).decrementW;
+		w = ((LorenzIWPSO) o).w;
+		minw = ((LorenzIWPSO) o).minw;
+		maxw = ((LorenzIWPSO) o).maxw;
+		decrementW = ((LorenzIWPSO) o).decrementW;
 	}
 
 	/**
@@ -63,8 +69,7 @@ public class LorenzIWPSO extends ClassicPSO
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util
+	 * @see org.mltestbed.heuristics.BaseSwarm#afterCalc(org.mltestbed.util
 	 * .Particle)
 	 */
 	public void afterCalc(Particle particle)
@@ -80,15 +85,14 @@ public class LorenzIWPSO extends ClassicPSO
 	public void afterIter(long iteration)
 	{
 		if (decrementW)
-			w = ((maxw - minw) * (getMaxIterations() - iteration) / getMaxIterations())
-					+ minw;
+			w = ((maxw - minw) * (getMaxIterations() - iteration)
+					/ getMaxIterations()) + minw;
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util
+	 * @see org.mltestbed.heuristics.BaseSwarm#beforeCalc(org.mltestbed.util
 	 * .Particle)
 	 */
 	public void beforeCalc(Particle particle)
@@ -114,16 +118,16 @@ public class LorenzIWPSO extends ClassicPSO
 	@Override
 	protected Particle calcNew(int index) throws Exception
 	{
-		if (c1 == Double.NaN || c2 == Double.NaN || VMax == Double.NaN
-				|| w == Double.NaN || minw == Double.NaN || maxw == Double.NaN)
+		if (Double.isNaN(c1) || Double.isNaN(c2) || Double.isNaN(VMax)
+				|| Double.isNaN(w) || Double.isNaN(minw) || Double.isNaN(maxw))
 			throw new Exception("A parmeter is invalid");
 
-		// Random rnd = new Random();
 		Particle particle = getSwarmMembers().get(index);
 		Vector<Double> position = particle.getPosition();
 		Vector<Double> velocity = particle.getVelocity();
-		Vector<Double> gpbest = neighbourhood.getNbest(index).getPbest();
+		Vector<Double> nbest = neighbourhood.getNbest(index).getPbest();
 		int mDimension = testFunction.getMDimension();
+//		if ((rnd.nextDouble()<=bias || particle.equals(getGBest())) && mDimension > 2)
 		if (particle.equals(getGBest()) && mDimension > 2)
 		{
 			// Lorenz Attractor equations
@@ -133,27 +137,48 @@ public class LorenzIWPSO extends ClassicPSO
 			// int d = (int) (mIterations * rnd.nextDouble());
 			// for (int j = 0; j < d; j++)
 			Vector<Double> oldposition = new Vector<Double>(position);
-			for (int i = 2; i < mDimension; i += 2)
+			Vector<Double> oldvelocity = new Vector<Double>(velocity);
+			if (useSRandomInterleaver || useARPInterleaver)
 			{
-				position.set(i - 2,
-						rnd.nextDouble()
-								* (oldposition.get(i - 1).doubleValue() - oldposition
-										.get(i - 2).doubleValue()));
-				position.set(
-						i - 1,
-						(rnd.nextDouble() * (oldposition.get(i).doubleValue()) - oldposition
-								.get(i - 1).doubleValue()));
-				position.set(i, (oldposition.get(i - 2) - oldposition.get(i - 1))
-						- (rnd.nextDouble() * oldposition.get(i).doubleValue()));
+				int i = 2;
+				while (i < mDimension)
+				{
+					int j = 0;
+					switch (j)
+					{
+						case 0 :
 
-			}
-			if (mDimension % 2 == 1)
-			{
-				int i = mDimension - 1;
-				position.set(i, rnd.nextDouble()
-						* (oldposition.get(i - 1).doubleValue() - oldposition.get(i)
-								.doubleValue()));
-			}
+							velocity.set(i - 2, rnd.nextDouble() * (oldvelocity
+									.get(interleaver.get(i - 1)).doubleValue()
+									- oldvelocity.get(i - 2).doubleValue()));
+							break;
+						case 1 :
+
+							velocity.set(i - 1, rnd.nextDouble() * (oldvelocity
+									.get(interleaver.get(i - 2)).doubleValue()
+									* (oldvelocity.get(interleaver.get(i))
+											.doubleValue())
+									- oldvelocity.get(interleaver.get(i - 1))
+											.doubleValue()));
+							break;
+						default :
+
+							velocity.set(i,
+									(oldvelocity.get(interleaver.get(i - 2))
+											* oldvelocity.get(
+													interleaver.get(i - 1)))
+											- (rnd.nextDouble() * oldvelocity
+													.get(interleaver.get(i))
+													.doubleValue()));
+							break;
+					}
+					j++;
+					j %= 3;
+					i += 3;
+				}
+			} else
+				effectiveLorenzAlgorithm(position, mDimension, oldposition);
+
 		} else
 		{
 			for (int i = 0; i < mDimension; i++)
@@ -162,13 +187,12 @@ public class LorenzIWPSO extends ClassicPSO
 						.doubleValue(); // for the current dimension
 				double pb = particle.getPbest().get(i).doubleValue();
 				double p = position.get(i).doubleValue();
-				double gb = gpbest.get(i).doubleValue();
+				double gb = nbest.get(i).doubleValue();
 
 				double newv = add(((c1 * rnd.nextDouble()) * subtract(pb, p)),
 						((c2 * rnd.nextDouble()) * subtract(gb, p)));
 				v = w * (v + newv);
-				Util.getSwarmui().updateLog(
-						"particle =" + index + " dim=" + i);
+				Util.getSwarmui().updateLog("particle =" + index + " dim=" + i);
 				Util.getSwarmui().updateLog("w=" + w + " v=" + v);
 
 				v = vmaxAdjust(i, v);
@@ -191,6 +215,41 @@ public class LorenzIWPSO extends ClassicPSO
 		particle.setPosition(position);
 		particle.setVelocity(velocity);
 		return particle;
+	}
+
+	/**
+	 * @param position
+	 * @param mDimension
+	 * @param oldposition
+	 */
+	public void effectiveLorenzAlgorithm(Vector<Double> position,
+			int mDimension, Vector<Double> oldposition)
+	{
+		for (int i = 2; i < mDimension; i += 2)
+		{
+			position.set(i - 2,
+					rnd.nextDouble() * (oldposition.get(i - 1).doubleValue()
+							- oldposition.get(i - 2).doubleValue()));
+			if (true)
+				// original coding error kept for better performance??
+				position.set(i - 1,
+						(rnd.nextDouble() * (oldposition.get(i).doubleValue())
+								- oldposition.get(i - 1).doubleValue()));
+			else
+				position.set(i - 1,
+						rnd.nextDouble() * (oldposition.get(i - 2).doubleValue()
+								* oldposition.get(i).doubleValue()
+								- oldposition.get(i - 1).doubleValue()));
+			position.set(i, (oldposition.get(i - 2) - oldposition.get(i - 1))
+					- (rnd.nextDouble() * oldposition.get(i).doubleValue()));
+
+		}
+		if (mDimension % 2 == 1)
+		{
+			int i = mDimension - 1;
+			position.set(i, (oldposition.get(i - 2) - oldposition.get(i - 1))
+					- (rnd.nextDouble() * oldposition.get(i).doubleValue()));
+		}
 	}
 
 	/*
@@ -221,6 +280,7 @@ public class LorenzIWPSO extends ClassicPSO
 	@Override
 	public void createParams()
 	{
+		super.createParams();
 		params.setProperty("c1", "1.5");// after van den bergh
 		params.setProperty("c2", "1.5"); // after van den bergh
 		params.setProperty("VMax", "4.0");// after van den bergh
@@ -230,7 +290,8 @@ public class LorenzIWPSO extends ClassicPSO
 		params.setProperty("minw", "0.4"); // after Shi
 		params.setProperty("maxw", "0.9"); // after Shi
 		params.setProperty("decrementW", "false");
-
+		params.setProperty("SRandomInterleaver", "false");
+		params.setProperty("ARPInterleaver", "false");
 	}
 	/*
 	 * (non-Javadoc)
@@ -241,15 +302,15 @@ public class LorenzIWPSO extends ClassicPSO
 	protected void init() throws Exception
 	{
 		super.init();
-		w = maxw =  Double.valueOf(params.getProperty("w", "0.729")).doubleValue();
-
 		try
 		{
-			// c1 = Double.valueOf(params.getProperty("c1")).doubleValue();
-			// c2 = Double.valueOf(params.getProperty("c2")).doubleValue();
-			// VMax = Double.valueOf(params.getProperty("VMax")).doubleValue();
-			maxw = Double.parseDouble(params.getProperty("maxw",
-					String.valueOf(w)));
+			w = maxw = Double.valueOf(params.getProperty("w", "0.729"))
+					.doubleValue();
+			c1 = Double.valueOf(params.getProperty("c1")).doubleValue();
+			c2 = Double.valueOf(params.getProperty("c2")).doubleValue();
+			VMax = Double.valueOf(params.getProperty("VMax")).doubleValue();
+			maxw = Double
+					.parseDouble(params.getProperty("maxw", String.valueOf(w)));
 			minw = Double.parseDouble(params.getProperty("minw", "0.4"));
 
 		} catch (NumberFormatException e)
@@ -257,8 +318,24 @@ public class LorenzIWPSO extends ClassicPSO
 			throw new Exception("A parameter is not a recognised number");
 			// e.printStackTrace();
 		}
-		decrementW = Boolean.parseBoolean(params.getProperty("decrementW",
-				"true"));
+		decrementW = Boolean
+				.parseBoolean(params.getProperty("decrementW", "true"));
+		useSRandomInterleaver = Boolean.parseBoolean(
+				params.getProperty("SRandomInterleaver", "false"));
+		useARPInterleaver = Boolean
+				.parseBoolean(params.getProperty("ARPInterleaver", "false"));
+
+		if (useSRandomInterleaver)
+		{
+			interleaver = new SRandomInterleaver(testFunction.getMDimension());
+			useARPInterleaver = false;
+			params.setProperty("ARPInterleaver", "false");
+		} else if (useARPInterleaver)
+		{
+			interleaver = new ARPInterleaver(testFunction.getMDimension());
+			useSRandomInterleaver = false;
+			params.setProperty("SRandomInterleaver", "false");
+		}
 
 	}
 }

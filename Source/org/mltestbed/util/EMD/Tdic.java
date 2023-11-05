@@ -799,7 +799,7 @@ public class Tdic
 	end
 
 	if ~all(isfinite(x))
-	  error('data elements must be finite')
+	  error('baseData elements must be finite')
 	end
 
 	if size(stop,1) > 1
@@ -915,7 +915,7 @@ public class Tdic
 			if (arg2 == null)
 				throw new Exception("The thrid input is empty!");
 
-			/* get input data */
+			/* get input baseData */
 			a = arg0.doubleValue();// mxGetPr(prhs[0]);
 			b = arg1.doubleValue();// mxGetPr(prhs[1]);
 			x = arg2.doubleValue();// mxGetPr(prhs[2]);
@@ -1036,7 +1036,7 @@ public class Tdic
 			if (arg2 == null)
 				throw new Exception("The thrid input is empty!");
 
-			/* get input data */
+			/* get input baseData */
 			a = arg0.doubleValue();// mxGetPr(prhs[0]);
 			b = arg1.doubleValue();// mxGetPr(prhs[1]);
 			x = arg2.doubleValue();// mxGetPr(prhs[2]);
@@ -1141,7 +1141,7 @@ public class Tdic
 				throw new Exception("The second is empty!");
 			if (df <= 0)
 				throw new Exception("The third is not valid!");
-			/* get input data */
+			/* get input baseData */
 //    x=mxGetPr(prhs[0]);
 //    y=mxGetPr(prhs[1]);
 //    df=mxGetPr(prhs[2]);
@@ -1232,7 +1232,7 @@ public class Tdic
 			if (arg1 == null)
 				throw new Exception("df is empty!");
 
-			/* get input data */
+			/* get input baseData */
 			t = arg0.doubleValue();// mxGetPr(prhs[0]);
 			df = arg1.intValue();// mxGetPr(prhs[1]);
 
@@ -1365,7 +1365,7 @@ public class Tdic
 			for (int j = 0; j < cols; j++)
 			{
 				System.out.println("rows = " + rows + "cols= " + cols + "i= "
-						+ i + " j= " + j);
+						+ i + " j= " + j+ " xml size="+xml.length());
 				xml.append("\n\t\t<Cell>" + formatter.format(matrix[i][j])
 						+ "\n\t\t</Cell>");
 			}
@@ -1405,16 +1405,16 @@ public class Tdic
 		 * 04-2012, by Ian Kenny 04-2022
 		 *
 		 * % The function PAZ generates a period using zero-crossing method
-		 * % applied to data(n,k), where n specifies the length of time series,
+		 * % applied to baseData(n,k), where n specifies the length of time series,
 		 * % and k is the number of IMFs.
 		 * % Non MATLAB Library routine used in the function is:
 		 * FINDCRITICALPOINTS.
 		 * %
 		 * % Calling sequence-
-		 * % p=faz(data)
+		 * % p=faz(baseData)
 		 * %
 		 * % Input-
-		 * % data - 2-D matrix of IMF components
+		 * % baseData - 2-D matrix of IMF components
 		 * % dt - time increment per point
 		 * % Output-
 		 * % p - 2-D matrix f(n,k) that specifies frequency
@@ -1424,7 +1424,7 @@ public class Tdic
 		 */
 		if (dt == null)
 			dt = new Integer(1);
-//			[f,a]=fazoi(data,dt);
+//			[f,a]=fazoi(baseData,dt);
 		fazoi(data, dt);
 //		    p=1./f; // element wise division
 		double[][] p = Util.inverse(f);
@@ -1563,10 +1563,10 @@ public class Tdic
 		 * 
 		 * 
 		 * % The function FAZ generates a frequency and amplitude using
-		 * zero-crossing method % applied to data(n,k), where n specifies the
+		 * zero-crossing method % applied to baseData(n,k), where n specifies the
 		 * length of time series, % and k is the number of IMFs. % Non MATLAB
 		 * Library routine used in the function is: FINDCRITICALPOINTS. % %
-		 * Calling sequence- % [f,a]=faz(data,dt) % % Input- % data - 2-D matrix
+		 * Calling sequence- % [f,a]=faz(baseData,dt) % % Input- % baseData - 2-D matrix
 		 * of IMF components % dt - time increment per point % Output- % f - 2-D
 		 * matrix f(n,k) that specifies frequency % a - 2-D matrix a(n,k) that
 		 * specifies amplitude % % Used by- % FA % See also- % ZFAPANLS, which
@@ -1575,16 +1575,16 @@ public class Tdic
 		 * % Kenneth Arnold (NASA GSFC) Summer 2003, Modified
 		 */
 		// %----- Get dimensions
-//			[nPoints, nIMF] = size(data);
+//			[nPoints, nIMF] = size(baseData);
 		int nPoints = data.length;
 		int nIMF = data[0].length;
-		// %----- Flip data if necessary
+		// %----- Flip baseData if necessary
 		boolean flipped = false;
 		if (nPoints < nIMF)
 		{
-			// %----- Flip data set
+			// %----- Flip baseData set
 			data = Util.transpose(data);
-			// [nPoints, nIMF] = size(data);
+			// [nPoints, nIMF] = size(baseData);
 			nPoints = data.length;
 			nIMF = data[0].length;
 			flipped = true;
@@ -1765,7 +1765,7 @@ public class Tdic
 					+ 1); j < nPoints; j++)
 				a[j][c] = a[(int) Math.floor(allX[nCrit - 1])][c];
 
-			// %----- Flip again if data was flipped at the beginning
+			// %----- Flip again if baseData was flipped at the beginning
 			if (flipped)
 			{
 //			    f=f';
@@ -1790,7 +1790,7 @@ public class Tdic
 		 * % ifz is the instantaneous period provided by the zero-crossing method
 		 * % it is the output of the function maxlocalperiod
 		 * % ntime is the maximum window size, the default value is half of the length 
-		 * % of the data
+		 * % of the baseData
 		 * % nct is the maximum size of moving time window
 		 * % - it: definition of degree of freedom
 		 * % - 0: means default, i.e.,d.o.f. = n-2 

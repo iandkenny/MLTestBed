@@ -22,6 +22,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -98,7 +99,7 @@ public class MLUI extends JPanel
 			ListSelectionListener,
 			TreeSelectionListener
 {
-	private static final String ABOUT_VERSION = "Machine Learning Test Bed\n Copyright Ian Kenny (2006-2022)\n Version 2.5.0";
+	private static final String ABOUT_VERSION = "Machine Learning Test Bed\n Copyright Ian Kenny (2006-2023)\n Version 2.5.0";
 
 	private static final String ADD = "Add>>";
 
@@ -148,8 +149,6 @@ public class MLUI extends JPanel
 	private static final String EXPERIMENTS_COMPLETED = "Experiments Completed";
 
 	private static final String EXPERIMENTS_TO_RUN = "Experiments to Run";
-
-	private static JTree experimentTree;
 
 	private static final String functString = "Objective Function: ";
 
@@ -233,13 +232,13 @@ public class MLUI extends JPanel
 	private static final String TYPE_OF_BOUNDARY_HANDLING = "Type of Boundary Handling:";
 
 	private static final String TYPE_OF_VELOCITY_INITIALISATION = "Type of Velocity Initialisation:";
+
 	private static final String URL = "URL:";
+	private static final String USE_FILE_LOG = "Log Errors to File:";
 
 	private static final String USE_FIPS_NEIGHBOURHOOD = "Use FIPS Neighbourhood";
 
 	private static final String USE_MEMORY_BUFFERS = "Use Memory Buffers:";
-	
-	private static final String USE_FILE_LOG = "Log Errors to File:";
 
 	private static final String USE_PARALLEL_PROCESSING_TO_EVALUATE_PARTICLES = "Use Parallel Processing to Evaluate Particles:";
 
@@ -292,6 +291,8 @@ public class MLUI extends JPanel
 	private JLabel evaluationsLabel;
 
 	private JButton exitButton;
+
+	private JTree experimentTree;
 
 	private DefaultMutableTreeNode expNode;
 
@@ -362,6 +363,8 @@ public class MLUI extends JPanel
 	private JCheckBox logCheck;
 
 	private JLabel loggingLabel;
+
+	private JMenuItem MinasPassageMenuItem;
 
 	private JComboBox<String> neighbourhoodCombo;
 
@@ -472,6 +475,10 @@ public class MLUI extends JPanel
 
 	private JCheckBox useFIPSCheckBox;
 
+	private AbstractButton useLogFileCheckBox;
+
+	private JLabel useLogFileLabel;
+
 	private JCheckBox useMemBuffersCheck;
 
 	private JLabel useMemBuffersLabel;
@@ -481,13 +488,6 @@ public class MLUI extends JPanel
 	private JComboBox<String> velInitCombo;
 
 	private JLabel velocityInitLabel;
-
-	private JMenuItem MinasPassageMenuItem;
-
-	private JLabel useLogFileLabel;
-
-	private AbstractButton useLogFileCheckBox;
-
 
 	/**
 	 * @param frame
@@ -709,7 +709,7 @@ public class MLUI extends JPanel
 		useMemBuffersCheck = new JCheckBox();
 		useMemBuffersCheck.setSelected(false);
 		useMemBuffersCheck.addPropertyChangeListener("value", this);
-		
+
 		useLogFileCheckBox = new JCheckBox();
 		useLogFileCheckBox.setSelected(false);
 		useMemBuffersCheck.addPropertyChangeListener("value", this);
@@ -1210,6 +1210,7 @@ public class MLUI extends JPanel
 				.setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
 
 		experimentTree.addTreeSelectionListener(this);
+		experimentTree.setPreferredSize(new Dimension(200, 150));
 		JScrollPane midScrollPane = new JScrollPane(experimentTree);
 		midScrollPane.setPreferredSize(new Dimension(200, 150));
 		c.gridy = 1;
@@ -1229,7 +1230,7 @@ public class MLUI extends JPanel
 		new JLabel(NO_RESULTS_ARE_SELECTED_FOR_DISPLAY);
 		resultTableModal = new ResultTableModel(runparams);
 		resultTable = new JTable(resultTableModal);
-
+		resultTable.setPreferredSize(new Dimension(200, 150));
 		progressLabel = new JLabel(PROGRESS_LOG);
 		loggingLabel = new JLabel(RESULTS_LOG);
 		progressLoggable = new JCheckBox(LOG, false);
@@ -1256,7 +1257,9 @@ public class MLUI extends JPanel
 
 		JPanel rightPanel = new JPanel(new GridBagLayout());
 		rightPanel.add(new JSeparator(SwingConstants.VERTICAL), c);
+		rightPanel.setPreferredSize(new Dimension(700, 300));
 		c.gridx++;
+		
 		rightPanel.add(treeLabel, c);
 		c.gridy++;
 		rightPanel.add(resultTreeScrollPane, c);
@@ -1332,6 +1335,7 @@ public class MLUI extends JPanel
 				{
 					Properties prop = null;
 					ImportIngberUI ing = new ImportIngberUI(prop);
+					ing.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					ing.pack();
 					// Show it.
 					ing.setSize(new Dimension(300, 150));
@@ -1355,6 +1359,7 @@ public class MLUI extends JPanel
 				{
 					Properties prop = null;
 					ImportFDMUI ing = new ImportFDMUI(prop);
+					ing.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					ing.pack();
 					// Show it.
 					ing.setSize(new Dimension(300, 150));
@@ -1379,6 +1384,7 @@ public class MLUI extends JPanel
 				{
 					Properties prop = null;
 					ImportSEMGUI ing = new ImportSEMGUI(prop);
+					ing.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					ing.pack();
 					// Show it.
 					ing.setSize(new Dimension(300, 150));
@@ -1396,6 +1402,7 @@ public class MLUI extends JPanel
 				{
 					Properties prop = null;
 					ImportGasGUI ing = new ImportGasGUI(prop);
+					ing.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					ing.pack();
 					// Show it.
 					ing.setSize(new Dimension(300, 150));
@@ -1414,6 +1421,7 @@ public class MLUI extends JPanel
 				{
 					Properties prop = null;
 					ImportMinasGUI ing = new ImportMinasGUI(prop);
+					ing.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					ing.pack();
 					// Show it.
 					ing.setSize(new Dimension(300, 150));
@@ -1540,20 +1548,6 @@ public class MLUI extends JPanel
 		}
 	}
 
-	/**
-	 * 
-	 */
-	public void fireExperimentsStarted()
-	{
-		progressLabel.setText(STARTING_EXPERIMENTS);
-		startButton.setText(CANCEL_EXPERIMENT);
-		runningExperiment = true;
-		addButton.setEnabled(false);
-		removeButton.setEnabled(false);
-		loadButton.setEnabled(false);
-		applyButton.setEnabled(false);
-	}
-
 	public void addExperiment(Experiment exp)
 	{
 		int index = experiments.size();
@@ -1594,6 +1588,7 @@ public class MLUI extends JPanel
 		experiments.put((String) node1.getUserObject(), exp);
 
 	}
+
 	/**
 	 * applies the settings; storing them in to Property variables
 	 */
@@ -1623,7 +1618,6 @@ public class MLUI extends JPanel
 		resultTable.updateUI();
 
 	}
-
 	@SuppressWarnings("unused")
 	private void collapseAPath(TreePath p)
 	{
@@ -1932,6 +1926,20 @@ public class MLUI extends JPanel
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * 
+	 */
+	public void fireExperimentsStarted()
+	{
+		progressLabel.setText(STARTING_EXPERIMENTS);
+		startButton.setText(CANCEL_EXPERIMENT);
+		runningExperiment = true;
+		addButton.setEnabled(false);
+		removeButton.setEnabled(false);
+		loadButton.setEnabled(false);
+		applyButton.setEnabled(false);
 	}
 
 	/**
@@ -2364,7 +2372,7 @@ public class MLUI extends JPanel
 				particlesField.getValue().toString());
 		runparams.setProperty("iterations",
 				iterationsField.getValue().toString());
-		runparams.setProperty("objective",
+		runparams.setProperty("objectiveclass",
 				testfunctions.get(testFuncCombo.getSelectedItem()));
 		runparams.setProperty("initveltype",
 				velInitCombo.getSelectedItem().toString());
@@ -2451,12 +2459,16 @@ public class MLUI extends JPanel
 					Main.getClasses("org.mltestbed.testFunctions.multiModal"));
 			classes.addAll(
 					Main.getClasses("org.mltestbed.testFunctions.heirarchy"));
+
+			classes.addAll(Main.getClasses("org.mltestbed.testFunctions.ANN"));
+
 			for (int i = 0; i < classes.size(); i++)
 			{
 				Class<Object> class1 = classes.get(i);
 
 				Log.getLogger().info(class1.getName());
 				if (!Modifier.isAbstract(class1.getModifiers())
+						&& !Modifier.isProtected(class1.getModifiers())
 						&& !Modifier.isPrivate(class1.getModifiers())
 						&& !class1.isAnonymousClass()
 						&& !class1.isMemberClass())
@@ -2465,17 +2477,18 @@ public class MLUI extends JPanel
 						testFunct = (TestBase) class1.getDeclaredConstructor()
 								.newInstance();
 
+						String packagename = testFunct.getClass().getPackage()
+								.getName();
 						if (((strList.equalsIgnoreCase("testFuncCombo"))
 								&& (!testFunct.getClass().getPackage().getName()
 										.endsWith("heirarchy")))
 								|| ((strList.equalsIgnoreCase(
 										"heirarchytestFuncCombo"))
-										&& (!testFunct.getClass().getPackage()
-												.getName().endsWith("uniModal")
-												&& (!testFunct.getClass()
-														.getPackage().getName()
-														.endsWith(
-																"multiModal")))))
+										&& (!packagename.endsWith("uniModal")
+												&& (!packagename
+														.endsWith("multiModal"))
+												&& (!packagename
+														.endsWith("ANN")))))
 							bufList.addItem(testFunct.getDescription());
 						testfunctions.put(testFunct.getDescription(),
 								class1.getName().toString());
@@ -2850,7 +2863,8 @@ public class MLUI extends JPanel
 			runparams.setProperty("usemembuffers",
 					Boolean.toString(useMemBuffersCheck.isSelected()));
 			Main.setUseMem(useMemBuffersCheck.isSelected());
-		}if (source == useLogFileCheckBox)
+		}
+		if (source == useLogFileCheckBox)
 		{
 			runparams.setProperty("logerrorstofile",
 					Boolean.toString(useLogFileCheckBox.isSelected()));
@@ -2943,7 +2957,7 @@ public class MLUI extends JPanel
 		while (keys.hasMoreElements())
 		{
 			String key = (String) keys.nextElement();
-			listModel.addElement(key + " = " + params.getProperty(key));
+			listModel.addElement(key + " = " + params.getProperty(key, ""));
 		}
 
 		paramHeirarchyLBox.setModel(listModel);
@@ -2959,7 +2973,7 @@ public class MLUI extends JPanel
 		while (keys.hasMoreElements())
 		{
 			String key = (String) keys.nextElement();
-			listModel.addElement(key + " = " + params.getProperty(key));
+			listModel.addElement(key + " = " + params.getProperty(key, ""));
 		}
 		paramHeuristicLBox.setModel(listModel);
 
@@ -2974,7 +2988,7 @@ public class MLUI extends JPanel
 		while (keys.hasMoreElements())
 		{
 			String key = (String) keys.nextElement();
-			listModel.addElement(key + " = " + params.getProperty(key));
+			listModel.addElement(key + " = " + params.getProperty(key, ""));
 		}
 
 		lbox.setModel(listModel);
@@ -2989,7 +3003,7 @@ public class MLUI extends JPanel
 		while (keys.hasMoreElements())
 		{
 			String key = (String) keys.nextElement();
-			listModel.addElement(key + " = " + params.getProperty(key));
+			listModel.addElement(key + " = " + params.getProperty(key, ""));
 		}
 
 		paramTopologyLBox.setModel(listModel);

@@ -8,6 +8,8 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.FileInputStream;
@@ -80,6 +82,7 @@ public class ImportMinasGUI extends JDialog
 				for (int i = 0; i < ing.length; i++)
 					ing[i] = null;
 			setVisible(false);
+			dispose(); 
 		} else if (source == ok)
 		{
 			folder = sourceEdit.getText();
@@ -105,7 +108,7 @@ public class ImportMinasGUI extends JDialog
 			// importData();
 		}
 	}
-	
+
 	// Method to create a button
 	private JButton createButton(String label)
 	{
@@ -116,6 +119,36 @@ public class ImportMinasGUI extends JDialog
 	}
 	private void createGUI()
 	{
+		 this.addWindowListener(new WindowListener() {
+	            public void windowActivated(WindowEvent e) {
+//	                System.out.println("windowActivated");
+	            }
+
+	            public void windowClosed(WindowEvent e) {
+//	                System.out.println("windowClosed");
+	            }
+
+	            public void windowClosing(WindowEvent e) {
+//	                System.out.println("windowClosing");
+	            }
+
+	            public void windowDeactivated(WindowEvent e) {
+//	                System.out.println("windowDeactivated");
+	            }
+
+	            public void windowDeiconified(WindowEvent e) {
+//	                System.out.println("windowDeiconified");
+	            }
+
+	            public void windowIconified(WindowEvent e) {
+//	                System.out.println("windowIconified");
+	            }
+
+	            public void windowOpened(WindowEvent e) {
+//	                System.out.println("windowOpened");
+	            }
+	        });
+
 		setTitle(IMPORT_MINAS_DATA);
 		JLabel subsetLabel = new JLabel(DATA_SUBSET);
 		subsetBox = new JComboBox<String>();
@@ -140,17 +173,18 @@ public class ImportMinasGUI extends JDialog
 		progressbar.setString("");
 		progressbar.setValue(0);
 		progressbar.addPropertyChangeListener("value", this);
-		
+
 		// Create and add the buttons to the buttonPane
 //		buttonPane.add(progressLabel = new JLabel(""));
 		buttonPane.add(ok = createButton("OK")); // Add the OK button
-		buttonPane.add(cancel = createButton("Cancel")); // Add the Cancel button
+		buttonPane.add(cancel = createButton("Cancel")); // Add the Cancel
+															// button
 //		progressLabel.addPropertyChangeListener("value",this);
 		getContentPane().add(buttonPane, BorderLayout.SOUTH);// Add pane to
 																// content pane
 
 		// Code to create the org.mltestbed.data input panel
-		JPanel dataPane = new JPanel(); // Create the data
+		JPanel dataPane = new JPanel(); // Create the baseData
 										// entry panel
 		dataPane.setBorder(BorderFactory.createCompoundBorder(
 				// Create pane
@@ -221,20 +255,18 @@ public class ImportMinasGUI extends JDialog
 		if (evt.getSource() == progressbar)
 		{
 			eventprocess();
-		}
-		else if (evt.getSource() == progressLabel)
+		} else if (evt.getSource() == progressLabel)
 			eventprocess();
 
 	}
 
-	
 	/**
 	 * 
 	 */
 	private boolean eventprocess()
 	{
 		boolean flag = true;
-		if (progressbar !=null)
+		if (progressbar != null)
 		{
 			// progressbar.setValue( new Integer((String) evt.getNewValue()));
 			// progressbar.updateUI();
@@ -252,12 +284,17 @@ public class ImportMinasGUI extends JDialog
 				}
 			if (flag)
 			{
-				if(ok!= null) ok.setEnabled(true);
-				progressbar.setIndeterminate(false);
-				progressbar.updateUI();
+				if (ok != null)
+					ok.setEnabled(true);
+				if (progressbar != null)
+				{
+					progressbar.setIndeterminate(false);
+					progressbar.updateUI();
+				}
+
 				JOptionPane.showMessageDialog(this, DATA_INPUT_COMPLETE);
 
-			} 
+			}
 		}
 		return flag;
 	}
@@ -267,7 +304,7 @@ public class ImportMinasGUI extends JDialog
 	}
 	public void fireEvent()
 	{
-		eventprocess();		
+		eventprocess();
 	}
 
 }

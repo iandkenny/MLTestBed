@@ -32,11 +32,11 @@ public class KISSRandom extends Random
 	}
 
 	/**
-	 * @param arg0
+	 * @param seed
 	 */
-	public KISSRandom(long arg0)
+	public KISSRandom(long seed)
 	{
-		setSeed(arg0);
+		setSeed(seed);
 	}
 
 	/*
