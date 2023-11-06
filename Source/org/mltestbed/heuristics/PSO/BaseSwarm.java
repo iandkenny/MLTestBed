@@ -1534,11 +1534,15 @@ public abstract class BaseSwarm extends Thread implements Cloneable
 						if (gbtest.isTest())
 						{
 //							gbtest.init();
-							Particle gbtestresult = gbtest.runTest(gb);
+							EvalParticle gbeval = new EvalParticle(mSwarmNo, gb, gb.getIdentityNumber());
+							gbeval.start();
+							Particle gbtestresult = gbtest.doTest(gb);
 							gbestparticle = gbtestresult;
-							mSwarm.add(gbestparticle);
+							mSwarm.add(gbtestresult);
 							results.store(run, testResult);
 //							recalcGBest();
+							while(gbeval.isEvaluate())
+								gbeval.wait(10000);
 						}
 					}
 

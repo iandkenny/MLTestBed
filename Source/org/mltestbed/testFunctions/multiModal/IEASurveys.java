@@ -288,7 +288,7 @@ public class IEASurveys extends PsuedoSVM implements Cloneable
 		super.reset();
 	}
 	@Override
-	public Particle runTest(Particle gb)
+	public Particle doTest(Particle gb)
 	{
 		Particle gbest = new Particle(gb);
 		gbest.setFuncSpecific("");
@@ -309,7 +309,6 @@ public class IEASurveys extends PsuedoSVM implements Cloneable
 		gbest.eval();
 		gbest.setBestScore(gbest.getCurrentScore());
 		gbtest.setData(olddata);
-		gb.eval(); // evaluate best on training data for the test iteration
 		return gbest;
 	}
 

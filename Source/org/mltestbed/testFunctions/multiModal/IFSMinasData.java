@@ -189,7 +189,7 @@ public class IFSMinasData extends IFS
 	}
 
 @Override
-public Particle runTest(Particle gb)
+public Particle doTest(Particle gb)
 {
 	Particle gbest = new Particle(gb);
 	gbest.setIdentityNumber(-gbest.getIdentityNumber());

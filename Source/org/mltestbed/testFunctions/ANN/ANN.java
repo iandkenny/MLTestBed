@@ -331,10 +331,10 @@ public class ANN extends TestBaseANN
 		return super.Objective(particle);
 	}
 	@Override
-	public Particle runTest(Particle gbest)
+	public Particle doTest(Particle gbest)
 	{
 		// TODO Auto-generated method stub
-		return super.runTest(gbest);
+		return super.doTest(gbest);
 	}
 
 	@Override

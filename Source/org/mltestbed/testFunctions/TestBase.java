@@ -594,7 +594,7 @@ public abstract class TestBase implements Cloneable
 		else
 			return Double.NaN;
 	}
-	public Particle runTest(Particle gb)
+	public Particle doTest(Particle gb)
 	{
 		Particle gbest = new Particle(gb);
 		gbest.setFuncSpecific("");
